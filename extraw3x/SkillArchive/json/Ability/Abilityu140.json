@@ -1,0 +1,19 @@
+{
+	"ID":"u140",
+	"NAME":"오염된 식칼",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_slam.blp",
+	"TIER":"1",
+	"COST":"1",
+	"DURATION":"4.0",
+	"IS_WEAPON":"true",
+	"WEAPON_IS_RANGED":"false",
+	"WEAPON_RANGE":"125.0",
+	"WEAPON_DELAY":"1.5",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"0.75",
+	"DAMAGE_AMPLIFIER2":"0.2/20.0",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"DAMAGE_STAT2":"CONFIG_STAT_MAXHP",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+}

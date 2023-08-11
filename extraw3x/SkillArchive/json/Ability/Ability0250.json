@@ -1,0 +1,21 @@
+{
+	"ID":"0250",
+	"NAME":"암흑비전파동",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_ArchonQ.blp",
+	"TIER":"2",
+	"COST":"2",
+	"DELAY":"0.5",
+	"DURATION":"2.5",
+	"RANGE":"450.0",
+	"RANGE_SECONDARY":"1000.0",
+	"BACKSWING":"0.25",
+	"RADIUS2":"80.0",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.1",
+	"DAMAGE_AMPLIFIER1":"2.65",
+	"DAMAGE_STAT1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS2":"CONFIG_STAT_MAGIC_PENET",
+	"DATA_REAL1":"1.25",
+	"DATA_DESCRIPTION_REAL1":"최대 사거리 배율"
+}

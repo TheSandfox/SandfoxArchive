@@ -1,0 +1,22 @@
+{
+	"ID":"0340",
+	"NAME":"바람 칼날",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_WindBlade0.blp",
+	"TIER":"3",
+	"COST":"3",
+	"BACKSWING":"0.25",
+	"STARTAT":"25.0",
+	"VELO":"1600.0",
+	"IS_WEAPON":"true",
+	"WEAPON_IS_RANGED":"true",
+	"WEAPON_RANGE":"755.0",
+	"WEAPON_DELAY":"1.5",
+	"DAMAGE_PER_LEVEL":"0.15",
+	"DAMAGE_AMPLIFIER1":"1.45",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ACCURACY",
+	"DATA_REAL1":"600.0",
+	"DATA_REAL2":"575.0",
+	"DATA_REAL3":"2000.0"
+}

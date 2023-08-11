@@ -1,0 +1,10 @@
+{
+	"ID":"C007",
+	"NAME":"패셔니스타",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRobeOfTheMagi.blp",
+	"TIER":"0",
+	"COST":"0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ATTACK"
+}

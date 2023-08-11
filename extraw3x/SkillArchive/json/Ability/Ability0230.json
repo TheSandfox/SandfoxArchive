@@ -1,0 +1,17 @@
+{
+	"ID":"0230",
+	"NAME":"칼날바람",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNWhirlwind.blp",
+	"TIER":"2",
+	"COST":"2",
+	"RADIUS1":"200.0",
+	"ROTSPEED":"6.0",
+	"INTERVAL":"0.25",
+	"COUNT":"8",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.1",
+	"DAMAGE_AMPLIFIER1":"0.3",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+}

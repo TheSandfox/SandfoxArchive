@@ -1,0 +1,17 @@
+{
+	"ID":"u100",
+	"NAME":"뛰어들기",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGhoulFrenzy.blp",
+	"TIER":"1",
+	"COST":"1",
+	"RANGE":"500.0",
+	"RANGE_SECONDARY":"100.0",
+	"BACKSWING":"0.15",
+	"VELO":"1500.0",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"2.0",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+}

@@ -1,0 +1,12 @@
+{
+	"ID":"i100",
+	"NAME":"힘의 장갑",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGauntletsOfOgrePower.blp",
+	"TIER":"1",
+	"COST":"1",
+	"IS_WEAPON":"false",
+	"DAMAGE_BASE":"0.11",
+	"DAMAGE_PER_LEVEL":"0.01",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+}

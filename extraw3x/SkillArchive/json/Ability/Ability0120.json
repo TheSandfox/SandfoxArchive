@@ -1,0 +1,18 @@
+{
+	"ID":"0120",
+	"NAME":"구식 저격총",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNDwarvenLongRifle.blp",
+	"TIER":"1",
+	"COST":"1",
+	"DELAY":"2.0",
+	"BACKSWING":"0.25",
+	"STARTAT":"45.0",
+	"VELO":"1875.0",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"2.25",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"DAMAGE_STAT2":"CONFIG_STAT_ATTACK_SPEED",
+	"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+}

@@ -1,0 +1,11 @@
+{
+	"ID":"u200",
+	"NAME":"광란",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNUnholyFrenzy.blp",
+	"TIER":"2",
+	"COST":"2",
+	"DURATION":"3.0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+}
