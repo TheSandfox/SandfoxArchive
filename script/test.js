@@ -1,8 +1,9 @@
 
-fetch('extraw3x/SkillArchive/json/Ability/Ability0100.json')
+fetch('extraw3x/SkillArchive/json/Ability/Tooltip0100.json')
 .then(response => response.json())
 .then(data => {
-	const outputDiv = document.getElementById('jsonOutPut');
+	console.log(data)
+	const outputDiv = document.getElementById('jsonOutput');
 	outputDiv.innerHTML = data["TOOLTIP"]
 })
 .catch(error => {
