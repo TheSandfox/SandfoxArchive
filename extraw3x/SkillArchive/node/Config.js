@@ -3,10 +3,12 @@ function main() {
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var fs = require('fs');
 	var outFile = '../json/Config.json'
-	excelReader(xlsx,{ sheet: 'Config' }).then((rows) => {
+	var outputJ = 'C:/war3lib/maps/SkillArchive/Config.j'
+ 	excelReader(xlsx,{ sheet: 'Config' }).then((rows) => {
 		var i = 0;
 		var first = true
 		fs.writeFileSync(outFile,'{','utf-8');
+		fs.writeFileSync(outputJ,"globals\n",'utf-8');
 		while (i<rows.length) {
 			if (rows[i][0]!='annotation') {
 				//멤버네임
@@ -22,10 +24,16 @@ function main() {
 				} else {
 					fs.appendFileSync(outFile,'"'+String(rows[i][2])+'"','utf-8')
 				}
+				//내용J
+				fs.appendFileSync(outputJ, "constant "+rows[i][0]+" "+rows[i][1]+" = "+rows[i][2]+"\n",'utf-8');
+			} else {
+				//주석J
+				fs.appendFileSync(outputJ, "/*"+rows[i][1]+"*/\n",'utf-8');
 			}
 			i++;
 		}
 		fs.appendFileSync(outFile,'\n}','utf-8');
+		fs.appendFileSync(outputJ,'endglobals\n','utf-8');
 	});
 }
 

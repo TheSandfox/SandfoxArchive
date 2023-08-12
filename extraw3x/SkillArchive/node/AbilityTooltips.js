@@ -12,21 +12,23 @@ function modepush(main,par) {
 	let jsn = {}
 	switch (main) {
 		case 'c' :
+			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			var did = jsn[par]
 			jsn = JSON.parse(fs.readFileSync('../json/CustomString/CustomStatString.json','utf-8'))
 			//json
-			rs_json = rs_json+'<span style=\\\"color: #'+jsn[par]["COLOR"]+';\\\">'
+			rs_json = rs_json+'<span style=\\\"color: #'+jsn[did]["COLOR"]+';\\\">'
 			//j
-			rs_j = rs_j+'"|cff'+jsn[par]["COLOR"]+'"+'
+			rs_j = rs_j+'"|cff'+jsn[did]["COLOR"]+'"+'
 			break;
 		case 'xSkillLevel' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json'))
+			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
 			//json
 			rs_json = rs_json+"(1+스킬 레벨 당 "+jsn["DAMAGE_PER_LEVEL"]+")"
 			//j
 			rs_j = rs_j+"(1.+.level*DAMAGE_PER_LEVEL)"
 			break;
 		case 'statName' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json'))
+			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
 			var did = jsn[par]
 			jsn = JSON.parse(fs.readFileSync('../json/CustomString/CustomStatString.json','utf-8'))
 			//json
@@ -36,6 +38,11 @@ function modepush(main,par) {
 			break;
 		case 'real' :
 			rs_j = rs_j+"R2SW("
+			break;
+		case 'shift' :
+			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			rs_j = rs_j+"CustomString.shiftStatTooltip("+jsn[par]+")+"
+			break;
 	}
 }
 
@@ -47,15 +54,20 @@ function modepop(str) {
 			rs_j = rs_j+'"|r"+'
 			break;
 		case 'prop' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json'))
+			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
 			rs_json = rs_json+jsn[str]
 			rs_j = rs_j+jsn[str]
 			break;
 		case 'real' :
-			rs_j = rs_j+",2,2)+"
+			if (param[param.length-1]!='') {
+				rs_j = rs_j+","+param[param.length-1]+")+"
+			} else {
+				rs_j = rs_j+",2,2)+"
+			}
+			break;
 	}
 	mode.pop()
-	param.push()
+	param.pop()
 }
 
 function pars_json(str) {
