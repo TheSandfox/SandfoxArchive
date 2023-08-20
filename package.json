@@ -1,18 +1,16 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "http-server": "^14.1.1",
     "read-excel-file": "^5.6.1",
     "write-excel-file": "^1.4.27"
   },
   "name": "sandfoxarchive",
   "description": "",
   "version": "1.0.0",
-  "main": "script/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node script/index.js",
-    "dev": "nodemon typescript/index.ts",
-    "build": "tsc"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +25,6 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.6",
-    "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "nodemon": "^3.0.1"
   }
 }
