@@ -1,0 +1,20 @@
+{
+	"ID":"0500",
+	"NAME":"화룡의 숨결",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_deathwing_molten_flame.png",
+	"TIER":"5",
+	"COST":"5",
+	"TAGS":"화염",
+	"CAST":"0.75",
+	"RANGE":"800.0",
+	"RADIUS3":"250.0",
+	"INTERVAL":"0.2",
+	"COUNT":"15",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.25",
+	"DAMAGE_AMPLIFIER1":"0.67",
+	"DAMAGE_STAT1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS2":"CONFIG_STAT_MAGIC_PENET",
+	"DATA_REAL1":"0.5"
+}

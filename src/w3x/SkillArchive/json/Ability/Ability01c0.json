@@ -1,0 +1,20 @@
+{
+	"ID":"01c0",
+	"NAME":"뾰족한 가시",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNQuillSprayOff.png",
+	"TIER":"1",
+	"COST":"1",
+	"TAGS":"생체무기",
+	"BACKSWING":"0.25",
+	"STARTAT":"25.0",
+	"VELO":"1485.0",
+	"IS_WEAPON":"true",
+	"WEAPON_IS_RANGED":"true",
+	"WEAPON_RANGE":"500.0",
+	"WEAPON_DELAY":"1.25",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"1.15",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+}

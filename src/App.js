@@ -1,25 +1,71 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import TopBar from './component/TopBar';
+import AbilityParams from './w3x/SkillArchive/json/Ability/AbilityParams.json'
+import AbilityTooltips from './w3x/SkillArchive/json/Ability/AbilityTooltips.json'
+
+//import logo from './logo.png';
 import './App.css';
+import './css/top-bar.css'
+import './css/mid.css'
+import './css/bottom-bar.css'
+import './css/ability-description.css'
+
+//RefineAbilityJSON
+const AbilityJson = []
+let i = 0
+while(i < AbilityParams["params"].length) {
+	let originjson = AbilityParams["params"][i]
+	let abilid = originjson["ID"]
+	let newjson = JSON.parse(JSON.stringify(originjson))
+	if (AbilityTooltips[abilid] != undefined) {
+		newjson["TOOLTIP"] = AbilityTooltips[abilid]["TOOLTIP"]
+	}
+	AbilityJson.push(newjson)
+	i++
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	return (
+		<div className="App">
+			<TopBar/>
+			<div className="mid">
+				<AbilityDescriptionContainer/>
+			</div>
+			<div className="bottom-bar">
+
+			</div>
+		</div>
+	);
+}
+
+function AbilityDescription(props) {
+	let abiljson = props.json
+	return <div className="ability-description-container">
+		<div className="top">
+			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson.ICON_PATH}/>
+			<div>
+				<div className="ability-name">#{abiljson.ID} {abiljson.NAME}</div>
+				<div className="ability-tags">{abiljson.TAGS}</div>
+			</div>
+		</div>
+		<div className="bottom">
+			<div dangerouslySetInnerHTML={{__html:abiljson.TOOLTIP}}></div>
+		</div>
+	</div>
+}
+
+function AbilityDescriptionContainer() {
+
+	return <>
+		{AbilityJson.map(desc=>{
+			if(desc.ID[0]!="e") {
+				return <AbilityDescription key={desc.ID} json={desc}/>
+			} else {
+				return null
+			}
+		})}
+	</>
 }
 
 export default App;

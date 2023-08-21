@@ -1,0 +1,8 @@
+.mid {
+	background-color: rgb(33,33,33);
+	display: flex;
+	flex-direction:column;
+	width: 100%;
+	min-height: 1080px;
+	padding-bottom:16px;
+}

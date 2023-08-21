@@ -1,0 +1,10 @@
+{
+	"ID":"C004",
+	"NAME":"아이돌",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSorceress.png",
+	"TIER":"0",
+	"COST":"0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ATTACK"
+}

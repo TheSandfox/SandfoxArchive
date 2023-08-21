@@ -1,0 +1,21 @@
+{
+	"ID":"0360",
+	"NAME":"갈고리 던지기",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_hook.png",
+	"TIER":"3",
+	"COST":"3",
+	"TAGS":"일반타격, 투척",
+	"RANGE":"1000.0",
+	"RADIUS2":"65.0",
+	"STARTAT":"25.0",
+	"VELO":"1350.0",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.15",
+	"DAMAGE_AMPLIFIER1":"2.85",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET",
+	"DATA_REAL1":"0.2",
+	"DATA_REAL2":"0.5",
+	"DATA_REAL3":"155.0"
+}

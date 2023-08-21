@@ -1,0 +1,23 @@
+{
+	"ID":"0180",
+	"NAME":"다중사격",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Multishot.png",
+	"TIER":"1",
+	"COST":"1",
+	"TAGS":"사격",
+	"DELAY":"0.2",
+	"RANGE":"725.0",
+	"BACKSWING":"0.15",
+	"RADIUS2":"32.5",
+	"STARTAT":"32.5",
+	"VELO":"1400.0",
+	"WIDTH":"30.0",
+	"COUNT":"5",
+	"IS_WEAPON":"false",
+	"DAMAGE_SECONDARY":"0.15",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"1.68",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
+}

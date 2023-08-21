@@ -1,0 +1,17 @@
+{
+	"ID":"01a0",
+	"NAME":"강철검",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSteelMelee.png",
+	"TIER":"1",
+	"COST":"1",
+	"TAGS":"일반타격, 참격",
+	"IS_WEAPON":"true",
+	"WEAPON_IS_RANGED":"false",
+	"WEAPON_RANGE":"125.0",
+	"WEAPON_DELAY":"1.5",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"1.25",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+}

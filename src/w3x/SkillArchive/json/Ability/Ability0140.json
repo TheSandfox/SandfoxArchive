@@ -1,0 +1,22 @@
+{
+	"ID":"0140",
+	"NAME":"연쇄번개",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/btnAbility_swarm-kerrigan-chainreaction.png",
+	"TIER":"1",
+	"COST":"1",
+	"TAGS":"전격",
+	"DELAY":"0.2",
+	"RANGE":"575.0",
+	"RANGE_SECONDARY":"575.0",
+	"BACKSWING":"0.15",
+	"INTERVAL":"0.15",
+	"TARGET_MAX":"4",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"1.55",
+	"DAMAGE_AMPLIFIER2":"0.85",
+	"DAMAGE_STAT1":"CONFIG_STAT_MAGICPOWER",
+	"DAMAGE_STAT2":"CONFIG_STAT_ACCURACY",
+	"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
+}

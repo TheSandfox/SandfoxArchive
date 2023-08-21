@@ -1,0 +1,18 @@
+{
+	"ID":"u120",
+	"NAME":"치고 빠지기",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shadow_Shadowfury.png",
+	"TIER":"1",
+	"COST":"1",
+	"TAGS":"강한타격",
+	"DURATION":"0.55",
+	"RANGE":"600.0",
+	"RANGE_SECONDARY":"500.0",
+	"VELO":"2560.0",
+	"IS_WEAPON":"false",
+	"DAMAGE_PER_LEVEL":"0.05",
+	"DAMAGE_AMPLIFIER1":"1.55",
+	"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
+}

@@ -1,0 +1,51 @@
+.ability-description-container {
+	margin:16px;
+	margin-bottom:0px;
+	padding:16px;
+	background-color: #464546;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+.ability-description-container>.top{
+	display: flex;
+	flex-direction: row;
+	height: 64px;
+}
+
+.ability-description-container>.top>div{
+	display: flex;
+	flex-direction: row;
+	flex:auto;
+}
+
+.ability-description-container>.top>div>div{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex:auto;
+	font-size: 24px;
+}
+
+.ability-description-container>.top>div>.ability-name{
+	color:#cccccc;
+	text-align: right;
+	justify-content: right;
+	font-size: 24px;
+}
+
+.ability-description-container>.top>div>.ability-tags{
+	color:#ffff00;
+	text-align: left;
+	justify-content: left;
+	padding-left:16px;
+	font-size: 16px;
+}
+
+.ability-description-container>.bottom{
+	margin-top:16px;
+	text-align: left;
+	color:#cccccc;
+}

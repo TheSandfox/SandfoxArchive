@@ -1,0 +1,11 @@
+{
+	"ID":"02h0",
+	"NAME":"자연의 결속",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNManaFlare.png",
+	"TIER":"2",
+	"COST":"2",
+	"VELO":"1080.0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_MAXHP",
+	"STAT_BONUS2":"CONFIG_STAT_MAXMP"
+}

@@ -1,0 +1,11 @@
+{
+	"ID":"02j0",
+	"NAME":"늑대의 상",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpiritWolf.png",
+	"TIER":"2",
+	"COST":"2",
+	"TAGS":"변신",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
+	"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
+}

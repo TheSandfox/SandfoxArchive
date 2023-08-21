@@ -1,0 +1,11 @@
+{
+	"ID":"0350",
+	"NAME":"강철 군마",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRiderlessHorse.png",
+	"TIER":"3",
+	"COST":"3",
+	"TAGS":"하수인",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_MAXHP",
+	"STAT_BONUS2":"CONFIG_STAT_EVASION"
+}

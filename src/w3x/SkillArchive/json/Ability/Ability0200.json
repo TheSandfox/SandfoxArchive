@@ -1,0 +1,11 @@
+{
+	"ID":"0200",
+	"NAME":"전투 자극제",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
+	"TIER":"2",
+	"COST":"2",
+	"DURATION":"5.0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+	"STAT_BONUS2":"CONFIG_STAT_HPREGEN"
+}

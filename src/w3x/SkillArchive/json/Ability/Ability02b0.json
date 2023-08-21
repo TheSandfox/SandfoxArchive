@@ -1,0 +1,12 @@
+{
+	"ID":"02b0",
+	"NAME":"퇴마의 장막",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpellBreakerMagicDefend.png",
+	"TIER":"2",
+	"COST":"2",
+	"TAGS":"보호",
+	"DURATION":"9.0",
+	"IS_WEAPON":"false",
+	"STAT_BONUS1":"CONFIG_STAT_RESISTANCE",
+	"STAT_BONUS2":"CONFIG_STAT_ATTACK"
+}

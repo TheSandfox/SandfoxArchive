@@ -1,0 +1,10 @@
+.bottom-bar {
+	background: rgb(228,208,163);
+	color: rgb(90,73,55);
+	display: flex;
+	width:100%;
+	padding-top:20px;
+	padding-bottom:20px;
+	font-weight: 600;
+	font-size:20px;
+}
