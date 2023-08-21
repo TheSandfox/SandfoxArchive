@@ -14,7 +14,7 @@ function modepush(main,par) {
 		case 'c' :
 			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
 			var did = jsn[par]
-			jsn = JSON.parse(fs.readFileSync('../json/CustomString/CustomStatString.json','utf-8'))
+			jsn = JSON.parse(fs.readFileSync('../json/CustomString.json','utf-8'))
 			//json
 			rs_json = rs_json+'<b><span style=\\\"color: #'+jsn[did]["COLOR"]+';\\\">'
 			//j
@@ -30,7 +30,7 @@ function modepush(main,par) {
 		case 'statName' :
 			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
 			var did = jsn[par]
-			jsn = JSON.parse(fs.readFileSync('../json/CustomString/CustomStatString.json','utf-8'))
+			jsn = JSON.parse(fs.readFileSync('../json/CustomString.json','utf-8'))
 			//json
 			rs_json = rs_json+jsn[did]["NAME"]
 			//j
@@ -155,7 +155,7 @@ function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var tooltipsDir = '../json/Ability/'
-	var outFile = '../json/Ability/AbilityTooltips.json'
+	var outFile = '../json/AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
 		var i = 0

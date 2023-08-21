@@ -4,7 +4,7 @@
 	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Web0.png",
 	"TIER":"2",
 	"COST":"2",
-	"TAGS":"독성",
+	"TAGS":"독성, 생체무기",
 	"DELAY":"0.2",
 	"DURATION":"5.0",
 	"RANGE":"800.0",

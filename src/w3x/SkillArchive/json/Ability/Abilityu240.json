@@ -4,7 +4,7 @@
 	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPlagueCloud.png",
 	"TIER":"2",
 	"COST":"2",
-	"TAGS":"독성",
+	"TAGS":"독성, 생체무기",
 	"DURATION":"1.5",
 	"RADIUS3":"200.0",
 	"INTERVAL":"0.5",

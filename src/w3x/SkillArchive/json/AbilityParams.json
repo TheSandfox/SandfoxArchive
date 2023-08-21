@@ -45,7 +45,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNDwarvenLongRifle.png",
 		"TIER":"1",
 		"COST":"1",
-		"TAGS":"관통, 사격",
+		"TAGS":"병기, 사격",
 		"DELAY":"2.0",
 		"BACKSWING":"0.25",
 		"STARTAT":"45.0",
@@ -55,6 +55,7 @@
 		"DAMAGE_AMPLIFIER1":"2.25",
 		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
 		"DAMAGE_STAT2":"CONFIG_STAT_ATTACK_SPEED",
+		"DAMAGE_TYPE1":"CONFIG_DAMAGE_PHYSICAL",
 		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
@@ -64,7 +65,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFireBolt.png",
 		"TIER":"1",
 		"COST":"1",
-		"TAGS":"화염구",
+		"TAGS":"화염",
 		"DELAY":"0.2",
 		"RANGE":"750.",
 		"BACKSWING":"0.15",
@@ -941,7 +942,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Web0.png",
 		"TIER":"2",
 		"COST":"2",
-		"TAGS":"독성",
+		"TAGS":"독성, 생체무기",
 		"DELAY":"0.2",
 		"DURATION":"5.0",
 		"RANGE":"800.0",
@@ -1016,7 +1017,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPlagueCloud.png",
 		"TIER":"2",
 		"COST":"2",
-		"TAGS":"독성",
+		"TAGS":"독성, 생체무기",
 		"DURATION":"1.5",
 		"RADIUS3":"200.0",
 		"INTERVAL":"0.5",
@@ -1282,6 +1283,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNMurgalSlave.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1292,6 +1294,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSacrifice.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1302,6 +1305,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBerserkForTrolls.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1312,6 +1316,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAcorn.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1322,6 +1327,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSorceress.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1332,6 +1338,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRacoon.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1342,6 +1349,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFountainOfLife.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1352,6 +1360,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRobeOfTheMagi.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
@@ -1362,6 +1371,7 @@
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNElunesBlessing.png",
 		"TIER":"0",
 		"COST":"0",
+		"TAGS":"칭호",
 		"IS_WEAPON":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"

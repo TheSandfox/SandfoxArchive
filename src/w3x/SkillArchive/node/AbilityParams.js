@@ -3,7 +3,7 @@ function main() {
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var fs = require('fs');
 	var abilityJSONDir = '../json/Ability/'
-	var outFile = abilityJSONDir+'AbilityParams.json'
+	var outFile = '../json/AbilityParams.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityParams.j'
 	excelReader(xlsx,{ sheet: 'AbilityParams' }).then((rows) => {
 		var i = 0;

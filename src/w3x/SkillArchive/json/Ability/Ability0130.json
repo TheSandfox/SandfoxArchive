@@ -4,7 +4,7 @@
 	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFireBolt.png",
 	"TIER":"1",
 	"COST":"1",
-	"TAGS":"화염구",
+	"TAGS":"화염",
 	"DELAY":"0.2",
 	"RANGE":"750.",
 	"BACKSWING":"0.15",
