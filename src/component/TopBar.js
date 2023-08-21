@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export default function TopBar() {
 	return (
 		<div className="top-bar">
-			<a href="index.html"><div className="title">SandfoxArchive</div></a>
+			<Link to="/"><div className="title">SandfoxArchive</div></Link>
+			<Link to="/w3x/SkillArchive/Ability"><div className="title">Abilities</div></Link>
 		</div>
 	);
 }

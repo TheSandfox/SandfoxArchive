@@ -1,5 +1,11 @@
+//import react
 import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+//import component
 import TopBar from './component/TopBar';
+
+//import JSON
 import AbilityParams from './w3x/SkillArchive/json/AbilityParams.json'
 import AbilityTooltips from './w3x/SkillArchive/json/AbilityTooltips.json'
 import CustomString from './w3x/SkillArchive/json/CustomString.json'
@@ -29,15 +35,20 @@ while(i < AbilityParams["params"].length) {
 function App() {
 
 	return (
+		<BrowserRouter>
 		<div className="App">
 			<TopBar/>
 			<div className="mid">
-				<AbilityDescriptionContainer/>
+			<Routes>
+				<Route exact path="/w3x/SkillArchive/Ability" element={<AbilityDescriptionContainer/>}/>
+			</Routes>
 			</div>
 			<div className="bottom-bar">
 
 			</div>
+			
 		</div>
+		</BrowserRouter>
 	);
 }
 
