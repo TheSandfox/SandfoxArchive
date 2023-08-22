@@ -14,32 +14,63 @@
 	height: 64px;
 }
 
-.ability-description-container>.top>div{
-	display: flex;
-	flex-direction: row;
+.ability-description-container>.top>.name-and-tags{
 	flex:auto;
-}
-
-.ability-description-container>.top>div>div{
-	display: flex;
+	display: inline-flex;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
+}
+
+.ability-description-container>.top>.cooldown-and-manacost{
+	max-width: 192px;
+	flex:0.4;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	max-height: 64px;
+}
+
+.ability-description-container>.top>.cooldown-and-manacost>div{
+	width:100%;
+	position:relative;
+	max-height: 32px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.ability-description-container>.top>.cooldown-and-manacost>div>img{
+	left:16px;
+	position:absolute;
+	max-width:24px;
+	max-height: 24px;
+}
+
+.ability-description-container>.top>.cooldown-and-manacost>div>p{
+	width:100%;
 	flex:auto;
+	max-height: 24px;
+	text-align: left;
+	padding-left:48px;
+	color:#ffffff;
+	font-weight:bold; 
+}
+
+.ability-description-container>.top>.name-and-tags>div{
 	font-size: 24px;
 }
 
 .ability-description-container>.top>div>.ability-name{
 	color:#cccccc;
-	text-align: right;
-	justify-content: right;
 	font-size: 24px;
 }
 
 .ability-description-container>.top>div>.ability-tags{
 	color:#ffff00;
-	text-align: left;
-	justify-content: left;
 	padding-left:16px;
 	font-size: 16px;
 }
@@ -56,4 +87,30 @@
 
 .ability-description-container>.bottom>.cast-type {
 	color: #00ffff;
+}
+
+.ability-description-container>.bottom>.statbonus{
+	position:relative;
+	display:flex;
+	flex-direction: row;
+	margin-top:16px;
+	max-height: 32px;
+	text-align: left;
+	align-items: center;
+	justify-content: left;
+}
+
+.ability-description-container>.bottom>.statbonus>p{
+	display: flex;
+	color:#00ffff;
+	text-align: left;
+	align-items: center;
+	justify-content: left;
+	height: 32px;
+	margin:0px;
+}
+
+.ability-description-container>.bottom>.statbonus>img{
+	margin-left:16px;
+	height:32px;
 }

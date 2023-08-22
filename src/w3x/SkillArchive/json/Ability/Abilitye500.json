@@ -8,5 +8,8 @@
 	"TAG1":"null",
 	"TAG2":"null",
 	"TAG3":"null",
-	"TAG4":"null"
+	"TAG4":"null",
+	"COOLDOWN_MAX":"null",
+	"COOLDOWN_MIN":"null",
+	"MANACOST":"null"
 }

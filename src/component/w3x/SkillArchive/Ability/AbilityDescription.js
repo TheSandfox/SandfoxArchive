@@ -53,7 +53,13 @@ export function AbilityDescription(props) {
 			"TAG3":"null",
 			"TAG4":"null",
 			"TOOLTIP":"<b><span style=\"color:#ff0000;\">Tooltip Missing</span></b>",
-			"CAST_TYPE":"null"
+			"CAST_TYPE":"null",
+			"MANACOST":"0",
+			"COOLDOWN_MAX":"0.0",
+			"COOLDOWN_MIN":"0.0",
+			"STAT_BONUS1":"CONFIG_STAT_CONSTANT",
+			"STAT_BONUS2":"CONFIG_STAT_CONSTANT",
+			"IS_WEAPON":"false",
 		}
 	}
 	let stl = {
@@ -62,7 +68,7 @@ export function AbilityDescription(props) {
 	return <div className="ability-description-container" style={stl}>
 		<div className="top">
 			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-			<div>
+			<div className='name-and-tags'>
 				<div className="ability-name">#{abiljson["ID"]} {abiljson["NAME"]}</div>
 				<div className="ability-tags">
 					{abiljson["TAG1"]!=="null"?CustomString[abiljson["TAG1"]]["NAME"]:""}
@@ -71,14 +77,39 @@ export function AbilityDescription(props) {
 					{abiljson["TAG4"]!=="null"?", "+CustomString[abiljson["TAG4"]]["NAME"]:""}
 				</div>
 			</div>
+			<div className='cooldown-and-manacost'>
+				<div>
+					<img src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/"+(abiljson["IS_WEAPON"]==="true"?"tooltipattackrangeicon":"tooltipmanaicon")+".png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+					<p>{abiljson["IS_WEAPON"]==="true"?abiljson["WEAPON_RANGE"]:abiljson["MANACOST"]}</p>
+				</div>
+				<div>
+					<img src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipcooldownicon.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+					<p>{abiljson["IS_WEAPON"]==="true"?abiljson["WEAPON_DELAY"]:abiljson["COOLDOWN_MAX"]+"/("+abiljson["COOLDOWN_MIN"]+")"}</p>
+				</div>
+			</div>
 		</div>
 		<div className="bottom">
 			<div className="cast-type">
 				{abiljson["CAST_TYPE"]!=="null"?CustomString[abiljson["CAST_TYPE"]]["NAME"]:""}
 			</div>
 			<div className="tooltip" dangerouslySetInnerHTML={{__html:abiljson["TOOLTIP"]}}></div>
+			<div className="statbonus">
+				<p>스탯 보너스 : </p>
+				<img 
+					src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS1"]]["ICON"]}
+					title={CustomString[abiljson["STAT_BONUS1"]]["NAME"]}
+					alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
+				/>
+				<img 
+					src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS2"]]["ICON"]}
+					title={CustomString[abiljson["STAT_BONUS2"]]["NAME"]}
+					alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
+				/>
+			</div>
 		</div>
 	</div>
+
+	//스탯보너스 가져오는거
 }
 
 export function AbilityDescriptionContainer() {
