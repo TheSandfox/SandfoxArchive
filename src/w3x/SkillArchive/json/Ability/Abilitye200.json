@@ -1,3 +1,12 @@
 {
-	"ID":"e200"
+	"ID":"e200",
+	"NAME":"null",
+	"ICON_PATH":"ReplaceableTextures/CommandButtons/null.png",
+	"TIER":"null",
+	"COST":"null",
+	"CAST_TYPE":"null",
+	"TAG1":"null",
+	"TAG2":"null",
+	"TAG3":"null",
+	"TAG4":"null"
 }

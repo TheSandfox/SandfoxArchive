@@ -44,7 +44,7 @@
 	"CONFIG_STAT_EVASION":{
 		"NAME":"회피치",
 		"COLOR":"99ccff",
-		"ICON":"tooltipevationicon",
+		"ICON":"tooltipevasionicon",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ARMOR_PENET":{
@@ -470,6 +470,138 @@
 	"CONFIG_UNIT_CLASS_STRUCTURE":{
 		"NAME":"건물",
 		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_TARGET_LOCATION":{
+		"NAME":"지점 목표물",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_TARGET_UNIT":{
+		"NAME":"유닛 목표물",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_IMMEDIATE":{
+		"NAME":"즉시 사용",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_PASSIVE":{
+		"NAME":"지속효과",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_DRAG_TO_USE":{
+		"NAME":"끌어서 사용",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_WEAPON":{
+		"NAME":"무기",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_CAST_TYPE_TRANSFORM":{
+		"NAME":"변신",
+		"COLOR":"00ffff",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_BASH":{
+		"NAME":"강한타격",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_PIERCE":{
+		"NAME":"관통",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_SLASH":{
+		"NAME":"참격",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_EXPLOSION":{
+		"NAME":"폭발",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_FIRE":{
+		"NAME":"화염",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_FROST":{
+		"NAME":"냉기",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_POISON":{
+		"NAME":"독성",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_LIGHTNING":{
+		"NAME":"전격",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_DIVINE":{
+		"NAME":"신성",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_DARK":{
+		"NAME":"암흑",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_NORMAL":{
+		"NAME":"일반타격",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_THROW":{
+		"NAME":"투척",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_BIO":{
+		"NAME":"생체무기",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_FIREARM":{
+		"NAME":"병기",
+		"COLOR":"ffff00",
+		"ICON":"null",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_NATURE":{
+		"NAME":"자연",
+		"COLOR":"ffff00",
 		"ICON":"null",
 		"DESCRIPTION":"null"
 	}

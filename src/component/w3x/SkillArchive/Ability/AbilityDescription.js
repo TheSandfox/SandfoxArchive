@@ -10,7 +10,7 @@ import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
 //RefineAbilityJSON
 const AbilityJson = []
 let i = 0
-let tempstring = '{'
+let mapstring = '{'
 while(i < AbilityParams["params"].length) {
 	let originjson = AbilityParams["params"][i]
 	let abilid = originjson["ID"]
@@ -21,14 +21,14 @@ while(i < AbilityParams["params"].length) {
 	AbilityJson.push(newjson)
 	//
 	if(i===0) {
-		tempstring = tempstring+'"'+originjson["ID"]+'":"'+String(i)+'"'
+		mapstring = mapstring+'"'+originjson["ID"]+'":"'+String(i)+'"'
 	} else {
-		tempstring = tempstring+',"'+originjson["ID"]+'":"'+String(i)+'"'
+		mapstring = mapstring+',"'+originjson["ID"]+'":"'+String(i)+'"'
 	}
 	i++
 }
-tempstring = tempstring + '}'
-const AbilityMap = JSON.parse(tempstring)
+mapstring = mapstring + '}'
+const AbilityMap = JSON.parse(mapstring)
 
 //어빌리티 설명박스
 export function AbilityDescription(props) {
@@ -42,25 +42,43 @@ export function AbilityDescription(props) {
 		abiljson = props.json
 	}
 	
-	if (abiljson!==undefined) {
-		let stl = {
-			border:'2px solid #'+CustomString[abiljson["TIER"]]["COLOR"]
+	if (abiljson===undefined) {
+		abiljson = {
+			"TIER":"0",
+			"ICON_PATH":"ReplaceableTextures/CommandButtons/btncancel.png",
+			"ID":"???",
+			"NAME":"Missing No.",
+			"TAG1":"null",
+			"TAG2":"null",
+			"TAG3":"null",
+			"TAG4":"null",
+			"TOOLTIP":"<b><span style=\"color:#ff0000;\">Tooltip Missing</span></b>",
+			"CAST_TYPE":"null"
 		}
-		return <div className="ability-description-container" style={stl}>
-			<div className="top">
-				<img src={process.env.PUBLIC_URL+"/resource/"+abiljson.ICON_PATH} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancle.png"}/>
-				<div>
-					<div className="ability-name">#{abiljson.ID} {abiljson.NAME}</div>
-					<div className="ability-tags">{abiljson.TAGS}</div>
+	}
+	let stl = {
+		border:'2px solid #'+CustomString[abiljson["TIER"]]["COLOR"]
+	}
+	return <div className="ability-description-container" style={stl}>
+		<div className="top">
+			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+			<div>
+				<div className="ability-name">#{abiljson["ID"]} {abiljson["NAME"]}</div>
+				<div className="ability-tags">
+					{abiljson["TAG1"]!=="null"?CustomString[abiljson["TAG1"]]["NAME"]:""}
+					{abiljson["TAG2"]!=="null"?", "+CustomString[abiljson["TAG2"]]["NAME"]:""}
+					{abiljson["TAG3"]!=="null"?", "+CustomString[abiljson["TAG3"]]["NAME"]:""}
+					{abiljson["TAG4"]!=="null"?", "+CustomString[abiljson["TAG4"]]["NAME"]:""}
 				</div>
 			</div>
-			<div className="bottom">
-				<div dangerouslySetInnerHTML={{__html:abiljson.TOOLTIP}}></div>
-			</div>
 		</div>
-	} else {
-		return <></>
-	}
+		<div className="bottom">
+			<div className="cast-type">
+				{abiljson["CAST_TYPE"]!=="null"?CustomString[abiljson["CAST_TYPE"]]["NAME"]:""}
+			</div>
+			<div className="tooltip" dangerouslySetInnerHTML={{__html:abiljson["TOOLTIP"]}}></div>
+		</div>
+	</div>
 }
 
 export function AbilityDescriptionContainer() {

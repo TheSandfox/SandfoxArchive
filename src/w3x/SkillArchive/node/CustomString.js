@@ -30,10 +30,23 @@ function main() {
 				} else {
 					fs.appendFileSync(outFile,',\n\t\t"'+rows[0][j]+'":','utf-8')
 				}
-				//내용
-				fs.appendFileSync(outFile,'"'+rows[i][j]+'"','utf-8')
+				//내용JSON
+				switch(j) {
+					case 4 :
+						fs.appendFileSync(outFile,'"ui/widgets/tooltips/human/'+rows[i][j]+'.png"','utf-8')
+						break;
+					default :
+						fs.appendFileSync(outFile,'"'+rows[i][j]+'"','utf-8')
+				}
+				
 				//내용J
 				switch(j) {
+					case 3 :
+						fs.appendFileSync(outputJ,'\n\tset CUSTOM_STRING_'+rows[i][1]+'_'+rows[0][j]+'['+rows[i][0]+'] = "|cff'+rows[i][j]+'"','utf-8')
+						break;
+					case 4 : 
+						fs.appendFileSync(outputJ,'\n\tset CUSTOM_STRING_'+rows[i][1]+'_'+rows[0][j]+'['+rows[i][0]+'] = "ui\\\\widgets\\\\tooltips\\\\human\\\\'+rows[i][j]+'.blp"','utf-8')
+						break;
 					default :
 						fs.appendFileSync(outputJ,'\n\tset CUSTOM_STRING_'+rows[i][1]+'_'+rows[0][j]+'['+rows[i][0]+'] = "'+rows[i][j]+'"','utf-8')
 				}
