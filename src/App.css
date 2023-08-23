@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-logo {
@@ -52,4 +55,23 @@ a:visited {
 
 a:active {
 	color:inherit;
+}
+
+::-webkit-scrollbar {
+	z-index: 200;
+	width:8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #686046;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ffdd6f;
+	transition: background-color 0.25s ease;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #fff1c3;
 }

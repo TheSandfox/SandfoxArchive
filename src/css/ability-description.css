@@ -1,4 +1,27 @@
+.ability-viewmode-switch {
+	position:fixed;
+	top:56px;
+	left:80px;
+}
+
+.ability-container {
+	width:100%;
+	height:100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
 .ability-description-container {
+	display:flex;
+	flex-direction: column;
+	max-width:960px;
+}
+
+.ability-description {
+	/*width:100%;*/
 	margin:16px;
 	margin-bottom:0px;
 	padding:16px;
@@ -8,13 +31,13 @@
 	flex-direction: column;
 }
 
-.ability-description-container>.top{
+.ability-description>.top{
 	display: flex;
 	flex-direction: row;
 	height: 64px;
 }
 
-.ability-description-container>.top>.name-and-tags{
+.ability-description>.top>.name-and-tags{
 	flex:auto;
 	display: inline-flex;
 	text-align: center;
@@ -22,7 +45,7 @@
 	justify-content: center;
 }
 
-.ability-description-container>.top>.cooldown-and-manacost{
+.ability-description>.top>.cooldown-and-manacost{
 	max-width: 192px;
 	flex:0.4;
 	display: flex;
@@ -32,7 +55,7 @@
 	max-height: 64px;
 }
 
-.ability-description-container>.top>.cooldown-and-manacost>div{
+.ability-description>.top>.cooldown-and-manacost>div{
 	width:100%;
 	position:relative;
 	max-height: 32px;
@@ -43,14 +66,14 @@
 	justify-content: center;
 }
 
-.ability-description-container>.top>.cooldown-and-manacost>div>img{
+.ability-description>.top>.cooldown-and-manacost>div>img{
 	left:16px;
 	position:absolute;
 	max-width:24px;
 	max-height: 24px;
 }
 
-.ability-description-container>.top>.cooldown-and-manacost>div>p{
+.ability-description>.top>.cooldown-and-manacost>div>p{
 	width:100%;
 	flex:auto;
 	max-height: 24px;
@@ -60,36 +83,36 @@
 	font-weight:bold; 
 }
 
-.ability-description-container>.top>.name-and-tags>div{
+.ability-description>.top>.name-and-tags>div{
 	font-size: 24px;
 }
 
-.ability-description-container>.top>div>.ability-name{
+.ability-description>.top>div>.ability-name{
 	color:#cccccc;
 	font-size: 24px;
 }
 
-.ability-description-container>.top>div>.ability-tags{
+.ability-description>.top>div>.ability-tags{
 	color:#ffff00;
 	padding-left:16px;
 	font-size: 16px;
 }
 
-.ability-description-container>.bottom{
+.ability-description>.bottom{
 	margin-top:16px;
 	text-align: left;
 	color:#cccccc;
 }
 
-.ability-description-container>.bottom>.tooltip{
+.ability-description>.bottom>.tooltip{
 	margin-top:16px;
 }
 
-.ability-description-container>.bottom>.cast-type {
+.ability-description>.bottom>.cast-type {
 	color: #00ffff;
 }
 
-.ability-description-container>.bottom>.statbonus{
+.ability-description>.bottom>.statbonus{
 	position:relative;
 	display:flex;
 	flex-direction: row;
@@ -100,7 +123,7 @@
 	justify-content: left;
 }
 
-.ability-description-container>.bottom>.statbonus>p{
+.ability-description>.bottom>.statbonus>p{
 	display: flex;
 	color:#00ffff;
 	text-align: left;
@@ -110,7 +133,19 @@
 	margin:0px;
 }
 
-.ability-description-container>.bottom>.statbonus>img{
+.ability-description>.bottom>.statbonus>img{
 	margin-left:16px;
 	height:32px;
+}
+
+.ability-icon-container{
+	max-width: 512px;
+	display:grid;
+	grid-template-columns: repeat(8, 1fr); /* 8개의 열 정의 */
+}
+
+.ability-icon{
+	width:64px;
+	height:64px;
+	display: flex;
 }

@@ -1,8 +1,17 @@
 .mid {
+	flex:1;
 	background-color: rgb(33,33,33);
 	display: flex;
-	flex-direction:column;
+	flex-direction:row;
 	width: 100%;
-	min-height: 1080px;
+	margin-top: 40px;
+	position:relative;
+}
+
+.mid>.contents {
+	flex:1;
 	padding-bottom:16px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
