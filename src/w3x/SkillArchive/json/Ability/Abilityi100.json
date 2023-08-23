@@ -4,7 +4,7 @@
 	"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGauntletsOfOgrePower.png",
 	"TIER":"1",
 	"COST":"1",
-	"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
+	"CAST_TYPE":"CONFIG_CAST_TYPE_EQUIP",
 	"TAG1":"null",
 	"TAG2":"null",
 	"TAG3":"null",

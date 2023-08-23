@@ -1,14 +1,14 @@
 .ability-viewmode-switch {
 	position:fixed;
 	top:56px;
-	left:80px;
+	left:64px;
 }
 
 .ability-container {
 	width:100%;
 	height:100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -149,3 +149,31 @@
 	height:64px;
 	display: flex;
 }
+
+.ability-single-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.ability-single-back-anchor {
+	margin-top: 32px;
+}
+
+.ability-single-back-div {
+	border-radius: 8px;
+	background: rgb(228,208,163);
+	width:64px;
+	height:32px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.ability-single-back-div>i {
+	color: rgb(90,73,55);
+}
+

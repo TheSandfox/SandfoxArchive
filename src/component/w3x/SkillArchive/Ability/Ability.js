@@ -136,10 +136,14 @@ function AbilityDescriptions({mode}) {
 
 function AbilityDescriptionSingle() {
 	return <>
-		<AbilityDescription mode='detail'/>
-		<Link to='/w3x/SkillArchive/Ability'>
-			뒤로가기
-		</Link>
+		<div className='ability-single-container'>
+			<AbilityDescription mode='detail'/>
+			<Link className='ability-single-back-anchor' to='/w3x/SkillArchive/Ability'>
+				<div className='ability-single-back-div'>
+					<i className="fa-solid fa-reply"></i>
+				</div>
+			</Link>
+		</div>
 	</>
 } 
 

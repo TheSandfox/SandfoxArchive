@@ -15,6 +15,7 @@ import './css/mid.css'
 import './css/bottom-bar.css'
 import './css/ability-description.css'
 import './css/nav.css'
+import './css/main.css'
 
 function App() {
 
@@ -31,13 +32,13 @@ function App() {
 				</Routes>
 				</div>
 			</div>
-			<div className="bottom-bar">
 
-			</div>
 			
 		</div>
 		</BrowserRouter>
 	);
+	// <div className="bottom-bar">
+	// </div>
 }
 
 export default App;

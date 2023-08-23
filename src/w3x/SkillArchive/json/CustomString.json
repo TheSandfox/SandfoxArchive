@@ -515,6 +515,12 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_CAST_TYPE_EQUIP":{
+		"NAME":"장비",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_ABILITY_TAG_BASH":{
 		"NAME":"강한타격",
 		"COLOR":"ffff00",
