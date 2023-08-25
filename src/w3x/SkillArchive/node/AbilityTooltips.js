@@ -1,23 +1,42 @@
 const CustomString = require('../json/CustomString.json')
 const AbilityParams = require('../json/AbilityParams.json')
+const BuffParams = require('../json/BuffParams.json')
 
 var mode = [0]
 var param = ['']
+var innertagtemp = ''
+var innertag = []
 var rs = ['','']
 var rs_json = ''
 var rs_jass = ''
 var currentAbilityId = ''
 const fs = require('fs')
 
+function refineMap(ojsn) {
+	var mapstring = '{'
+	var ii = 0
+	while(ii < ojsn["params"].length) {
+		if(ii===0) {
+			mapstring = mapstring+'"'+ojsn["params"][ii]["ID"]+'":"'+String(ii)+'"'
+		} else {
+			mapstring = mapstring+',"'+ojsn["params"][ii]["ID"]+'":"'+String(ii)+'"'
+		}
+		ii++
+	}
+	mapstring = mapstring + '}'
+	return JSON.parse(mapstring)
+}
+
+const AbilityMap = refineMap(AbilityParams)
+const BuffMap = refineMap(BuffParams)
+
 function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
-	var tooltipsDir = '../json/Ability/'
 	var outFile = '../json/AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
 		var i = 0
-		var singleFile = ''
 		//대괄호열기
 		fs.writeFileSync(outFile,'{','utf-8')
 		fs.writeFileSync(outputJ,'','utf-8')
@@ -26,7 +45,6 @@ function main() {
 				break;
 			}
 			currentAbilityId = rows[i][0]
-			singleFile = tooltipsDir+'Tooltip'+currentAbilityId+'.json'
 			fs.appendFileSync(outputJ,"\n//! textmacro abilityTooltip"+rows[i][0],'utf-8')
 			fs.appendFileSync(outputJ,"\nmethod relativeTooltip takes nothing returns string\n\treturn ",'utf-8')
 			//json괄호열기
@@ -37,16 +55,12 @@ function main() {
 			}
 			//멤버네임
 			fs.appendFileSync(outFile,'\n\t\t"ID":"'+currentAbilityId+'",','utf-8')
-			fs.writeFileSync(singleFile,'{"TOOLTIP":','utf-8')
 			//내용JSON
 			fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
-			fs.appendFileSync(singleFile,'"','utf-8')
 			if (rows[i][1]!=null || rows[i][1]!=undefined) {
 				fs.appendFileSync(outFile,pars_json(rows[i][1])["JSON"],'utf-8')
-				fs.appendFileSync(singleFile,pars_json(rows[i][1])["JSON"],'utf-8')
 			}
 			fs.appendFileSync(outFile,'"','utf-8')
-			fs.appendFileSync(singleFile,'"}','utf-8')
 			//내용J
 			let jstring = pars_json(rows[i][1])["J"]
 			if (jstring[jstring.length-1]=='+') {
@@ -67,49 +81,100 @@ function main() {
 
 function monotag(main,par) {
 	let jsn = {}
-	//console.log(main+", "+par)
 	switch (main) {
 		case 'br' :
 			rs_json = rs_json+"<br>"
 			rs_jass = rs_jass+'"\\n"+'
 			break;
 		case 'customString' :
-			//json
-			rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[par]["COLOR"]+';\\\">'+CustomString[par]["NAME"]+'</span></b>'
-			//j
-			rs_jass = rs_jass+"CUSTOM_STRING"+CustomString[par]["ARRNAME"]+"_COLOR["+CustomString[par]["NAME"]+"]"
-			rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[par]["ARRNAME"]+"_NAME["+CustomString[par]["NAME"]+"]+"+'+"|r"'
+			if (par[0]=='#') {
+				//
+				
+			} else if (par[0]=='$') {
+				//커스텀 스트링
+				var did = par.substring(1,par.length)
+				//json
+				rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
+				//j
+				rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
+				rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+			} else { 
+				//프로퍼티 참조형
+				jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+				//jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+				var did = jsn[par]
+				//json
+				rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
+				//j
+				rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
+				rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+			}
 			break;
 		case 'prop' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
-			rs_json = rs_json+jsn[par]
-			rs_jass = rs_jass+jsn[par]
+			switch (par[0]) {
+				case '#' :
+					rs_json = rs_json+par.substring(1,par.length)
+					rs_jass = rs_jass+par.substring(1,par.length)
+					break;
+				case '%' :
+					//버프테이블에서 참조
+					let buffid = par.substring(1,5)
+					let par2 = par.substring(5,par.length)
+					jsn = BuffParams["params"][BuffMap[buffid]]
+					rs_json = rs_json+jsn[par2]
+					rs_jass = rs_jass+"Buff"+buffid+"_"+par2
+					break;
+				default :
+					jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+					rs_json = rs_json+jsn[par]
+					rs_jass = rs_jass+jsn[par]
+			}
 			break;
 		case 'propString' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 			rs_json = rs_json+jsn[par]
 			rs_jass = rs_jass+'"'+jsn[par]+'"+'
 			break;
 		case 'second' :
 			//초("초"문자열 붙여서)
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 			rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString["CONFIG_STAT_CONSTANT"]["COLOR"]+';\\\">'+jsn[par]+'초</span></b>'
 			rs_jass = rs_jass+'CUSTOM_STRING_STAT_COLOR[CONFIG_STAT_CONSTANT]+"'+jsn[par]+'초|r"+'
 			break;
+		case 'percentString' :
+			//퍼센트("%"문자열 붙여서)
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+			rs_json = rs_json+jsn[par]+'%'
+			rs_jass = rs_jass+'"'+jsn[par]+'%"+'
+			break;
 		case 'shift' :
 			//쉬프트 스탯 툴팁(jass에서만 보임, json작성 불필요)
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 			rs_jass = rs_jass+"CustomString.shiftStatTooltip("+jsn[par]+")+"
 			break;
 		case 'xSkillLevel' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 			//json
 			rs_json = rs_json+"(1+스킬 레벨 당 "+jsn["DAMAGE_PER_LEVEL"]+")"
 			//j
 			rs_jass = rs_jass+"(1.+.level*DAMAGE_PER_LEVEL)"
 			break;
-		case 'statName' :
-			jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+		case 'skillLevel' :
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+			//json
+			rs_json = rs_json+"스킬 레벨"
+			//j
+			rs_jass = rs_jass+".level"
+			break;
+		case 'heroLevel' :
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+			//json
+			rs_json = rs_json+"시전자 레벨"
+			//j
+			rs_jass = rs_jass+".owner.level"
+			break;
+		case 'statValue' :
+			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 			var did = jsn[par]
 			//json
 			rs_json = rs_json+CustomString[did]["NAME"]
@@ -122,6 +187,9 @@ function monotag(main,par) {
 function modepush(main,par) {
 	mode.push(main)
 	param.push(par)
+	innertag[innertag.length-1] = innertag[innertag.length-1]+innertagtemp
+	innertag.push('')
+	innertagtemp = ''
 	let jsn = {}
 	switch (main) {
 		case 'c' :
@@ -129,9 +197,12 @@ function modepush(main,par) {
 			if (par[0]=='#') {
 				//색상코드형
 				color = par.substring(1,par.length)
+			} else if (par[0]=='$') {
+				//커스텀 스트링 색상
+				color = CustomString[par.substring(1,par.length)]["COLOR"]
 			} else {
 				//프로퍼티참조형
-				jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
+				jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 				var did = jsn[par]
 				color = CustomString[did]["COLOR"]
 			}
@@ -146,7 +217,7 @@ function modepush(main,par) {
 	}
 }
 
-function modepop(str) {
+function modepop() {
 	let jsn = {}
 	switch (mode[mode.length-1]) {
 		case 'c' :
@@ -163,14 +234,16 @@ function modepop(str) {
 	}
 	mode.pop()
 	param.pop()
+	innertag.pop()
+	innertag[innertag.length-1] = innertag[innertag.length-1]+innertagtemp
+	innertagtemp = ''
 }
 
 function pars_json(str) {
 	rs_json = ''
 	rs_jass = ''
 	var char = ''
-	var tagstring = ''
-	var innertag = ''
+	var tagstring = '' //꺾쇠안쪽(태그이름&속성값)
 	var normalstring = ''
 	var i = 0
 	while (i<str.length) {
@@ -189,7 +262,7 @@ function pars_json(str) {
 				if (char=='>') {
 					if (tagstring[0]=='/') {
 						/*닫기태그임*/
-						modepop(innertag)
+						modepop()
 					} else if (tagstring[tagstring.length-1]=='/') {
 						/*모노태그임*/
 						if (tagstring.includes(':')) {
@@ -211,7 +284,6 @@ function pars_json(str) {
 				/*꺾쇠 안 문자열을 추가*/
 				tagstring = tagstring + char
 			}
-			innertag = ''
 		} else {
 			switch (mode[mode.length-1]) {
 				case 0 :
@@ -234,10 +306,11 @@ function pars_json(str) {
 					break;
 				default :
 					//json
-					innertag = innertag + char;
+					//
 					//j
 					break;
 			}
+			innertagtemp = innertagtemp + char;
 			if (i==str.length-1) {
 				if(normalstring!='') {
 					rs_jass = rs_jass+'"'+normalstring+'"'

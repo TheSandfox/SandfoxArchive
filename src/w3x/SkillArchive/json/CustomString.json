@@ -1,611 +1,720 @@
 {
 	"CONFIG_STAT_MAXHP":{
+		"ARRNAME":"STAT",
 		"NAME":"체력",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/tooltiphpicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAXMP":{
+		"ARRNAME":"STAT",
 		"NAME":"마나",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipmanaicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ATTACK":{
+		"ARRNAME":"STAT",
 		"NAME":"공격력",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/tooltipattackicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_DEFENSE":{
+		"ARRNAME":"STAT",
 		"NAME":"방어력",
 		"COLOR":"999999",
 		"ICON":"ui/widgets/tooltips/human/tooltipdefenceicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGICPOWER":{
+		"ARRNAME":"STAT",
 		"NAME":"주문력",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipmagicpowericon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_RESISTANCE":{
+		"ARRNAME":"STAT",
 		"NAME":"저항력",
 		"COLOR":"00ff99",
 		"ICON":"ui/widgets/tooltips/human/tooltipresistanceicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ACCURACY":{
+		"ARRNAME":"STAT",
 		"NAME":"정확도",
 		"COLOR":"ff00ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipaccuracyicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_EVASION":{
+		"ARRNAME":"STAT",
 		"NAME":"회피치",
 		"COLOR":"99ccff",
 		"ICON":"ui/widgets/tooltips/human/tooltipevasionicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ARMOR_PENET":{
+		"ARRNAME":"STAT",
 		"NAME":"방어관통",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/tooltiparmorpeneticon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGIC_PENET":{
+		"ARRNAME":"STAT",
 		"NAME":"저항관통",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipmagicpeneticon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SPELL_BOOST":{
+		"ARRNAME":"STAT",
 		"NAME":"주문가속",
 		"COLOR":"ff99ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipspellboosticon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MOVEMENT_SPEED":{
+		"ARRNAME":"STAT",
 		"NAME":"이동속도",
 		"COLOR":"ffff99",
 		"ICON":"ui/widgets/tooltips/human/tooltipmovementspeedicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ATTACK_SPEED":{
+		"ARRNAME":"STAT",
 		"NAME":"공격속도",
 		"COLOR":"ffff99",
 		"ICON":"ui/widgets/tooltips/human/tooltipattackspeedicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_LUCK":{
+		"ARRNAME":"STAT",
 		"NAME":"행운",
 		"COLOR":"00cc00",
 		"ICON":"ui/widgets/tooltips/human/tooltipluckicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ATTACK_RANGE":{
+		"ARRNAME":"STAT",
 		"NAME":"공격 사거리",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/tooltipattackrangeicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HPREGEN":{
+		"ARRNAME":"STAT",
 		"NAME":"체력재생",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/tooltiphpregenicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MPREGEN":{
+		"ARRNAME":"STAT",
 		"NAME":"마나재생",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipmpregenicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HEAL_AMP":{
+		"ARRNAME":"STAT",
 		"NAME":"받는 회복량",
 		"COLOR":"ff3333",
 		"ICON":"ui/widgets/tooltips/human/tooltiphealampicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_UNIT_LEVEL":{
+		"ARRNAME":"STAT",
 		"NAME":"레벨",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SKILL_LEVEL":{
+		"ARRNAME":"STAT",
 		"NAME":"기술레벨",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SUMMON_DURATION":{
+		"ARRNAME":"STAT",
 		"NAME":"소환 지속시간",
 		"COLOR":"c3dbff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_CONSTANT":{
+		"ARRNAME":"STAT",
 		"NAME":"null",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_PHYSICAL":{
+		"ARRNAME":"STAT",
 		"NAME":"물리",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGICAL":{
+		"ARRNAME":"STAT",
 		"NAME":"마법",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HP":{
+		"ARRNAME":"STAT",
 		"NAME":"체력",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MP":{
+		"ARRNAME":"STAT",
 		"NAME":"마나",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HP_LOST":{
+		"ARRNAME":"STAT",
 		"NAME":"잃은 체력",
 		"COLOR":"ff3333",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MP_LOST":{
+		"ARRNAME":"STAT",
 		"NAME":"잃은 마나",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HP_CURRENT":{
+		"ARRNAME":"STAT",
 		"NAME":"현재 체력",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MP_CURRENT":{
+		"ARRNAME":"STAT",
 		"NAME":"현재 마나",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SHIELD":{
+		"ARRNAME":"STAT",
 		"NAME":"보호막",
 		"COLOR":"c690e1",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_BASIC_ATTACK":{
+		"ARRNAME":"STAT",
 		"NAME":"기본공격",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SPELL_ATTACK":{
+		"ARRNAME":"STAT",
 		"NAME":"기술공격",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_RANGED":{
+		"ARRNAME":"STAT",
 		"NAME":"원거리",
 		"COLOR":"ff00ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MELEE":{
+		"ARRNAME":"STAT",
 		"NAME":"근접",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_STUN":{
+		"ARRNAME":"STATUS",
 		"NAME":"기절",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_ENSNARE":{
+		"ARRNAME":"STATUS",
 		"NAME":"속박",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_DISARM":{
+		"ARRNAME":"STATUS",
 		"NAME":"무장해제",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_CAST":{
+		"ARRNAME":"STATUS",
 		"NAME":"동작중",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_INVINCIBLE":{
+		"ARRNAME":"STATUS",
 		"NAME":"무적",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_SILENCE":{
+		"ARRNAME":"STATUS",
 		"NAME":"침묵",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_EVASION":{
+		"ARRNAME":"STATUS",
 		"NAME":"회피",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_BLIND":{
+		"ARRNAME":"STATUS",
 		"NAME":"실명",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_GRABBED":{
+		"ARRNAME":"STATUS",
 		"NAME":"붙잡힘",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_DEAD":{
+		"ARRNAME":"STATUS",
 		"NAME":"죽음",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_UNSTOP":{
+		"ARRNAME":"STATUS",
 		"NAME":"저지불가",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_GHOST":{
+		"ARRNAME":"STATUS",
 		"NAME":"충돌무시",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_HIDE":{
+		"ARRNAME":"STATUS",
 		"NAME":"숨김",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_DISABLED":{
+		"ARRNAME":"STATUS",
 		"NAME":"행동불가",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_ROOT":{
+		"ARRNAME":"STATUS",
 		"NAME":"고정",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_RIDING":{
+		"ARRNAME":"STATUS",
 		"NAME":"탑승",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_HEAVY":{
+		"ARRNAME":"STATUS",
 		"NAME":"중량화",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STATUS_LOCUST":{
+		"ARRNAME":"STATUS",
 		"NAME":"대상지정불가",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_BASIC":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"기본공격",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_SPELL":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"기술공격",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_HYBRID":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"복합공격",
 		"COLOR":"ff00ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_ETC":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"추가피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_PHYSICAL":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"물리피해",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_MAGICAL":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"마법피해",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_TRUE":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"고정피해",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_SINGLE":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"단일피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_PERIODIC":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"지속피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_OUTTER":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"외부피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_INNER":{
+		"ARRNAME":"DAMAGE",
 		"NAME":"내부피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"0":{
+		"ARRNAME":"TIER",
 		"NAME":"null",
 		"COLOR":"cccccc",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"1":{
+		"ARRNAME":"TIER",
 		"NAME":"1티어",
 		"COLOR":"ffffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"2":{
+		"ARRNAME":"TIER",
 		"NAME":"2티어",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"3":{
+		"ARRNAME":"TIER",
 		"NAME":"3티어",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"4":{
+		"ARRNAME":"TIER",
 		"NAME":"4티어",
 		"COLOR":"cc00ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"5":{
+		"ARRNAME":"TIER",
 		"NAME":"5티어",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_UNDEAD":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"언데드",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_MECHANICAL":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"기계",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_PLANT":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"식물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_ILLUSION":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"환영",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_GUARDIAN":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"수호자",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_SUMMON":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"소환물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_SERVANT":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"하수인",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_MINERAL":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"광물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_STRUCTURE":{
+		"ARRNAME":"UNIT_CLASS",
 		"NAME":"건물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_TARGET_LOCATION":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"지점 목표물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_TARGET_UNIT":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"유닛 목표물",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_IMMEDIATE":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"즉시 사용",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_PASSIVE":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"지속효과",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_DRAG_TO_USE":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"끌어서 사용",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_WEAPON":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"무기",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_TRANSFORM":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"변신",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_CAST_TYPE_EQUIP":{
+		"ARRNAME":"CAST_TYPE",
 		"NAME":"장비",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_CAST_TYPE_CHINGHO":{
+		"ARRNAME":"CAST_TYPE",
+		"NAME":"칭호",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_ABILITY_TAG_BASH":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"강한타격",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_PIERCE":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"관통",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_SLASH":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"참격",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_EXPLOSION":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"폭발",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_FIRE":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"화염",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_FROST":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"냉기",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_POISON":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"독성",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_LIGHTNING":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"전격",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_DIVINE":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"신성",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_DARK":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"암흑",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_NORMAL":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"일반타격",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_THROW":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"투척",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_BIO":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"생체무기",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_FIREARM":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"병기",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_ABILITY_TAG_NATURE":{
+		"ARRNAME":"ABILITY_TAG",
 		"NAME":"자연",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",

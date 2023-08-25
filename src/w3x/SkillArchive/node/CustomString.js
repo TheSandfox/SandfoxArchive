@@ -7,13 +7,13 @@ function main() {
 	excelReader(xlsx,{ sheet: 'CustomString' }).then((rows) => {
 		//json
 		var i = 1;
-		var j = 2;
+		var j = 1;
 		var first = true
 		var firstsub = true
 		fs.writeFileSync(outFile,'{','utf-8');
 		fs.writeFileSync(outputJ,'//! textmacro generatedCustomString','utf-8')
 		while (i<rows.length) {
-			j = 2;
+			j = 1;
 			firstsub = true
 			//멤버네임
 			if (first) {
@@ -41,6 +41,8 @@ function main() {
 				
 				//내용J
 				switch(j) {
+					case 1 :
+						break;
 					case 3 :
 						fs.appendFileSync(outputJ,'\n\tset CUSTOM_STRING_'+rows[i][1]+'_'+rows[0][j]+'['+rows[i][0]+'] = "|cff'+rows[i][j]+'"','utf-8')
 						break;

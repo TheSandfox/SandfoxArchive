@@ -1,0 +1,19 @@
+{"params":[
+	{
+		"ID":"01d0",
+		"NAME":"사기의 외침",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shout1.png",
+		"INDIVISUAL":"2",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.5",
+		"DAMAGE_STAT1":"CONFIG_STAT_HPREGEN",
+		"DATA_REAL1":"0.15",
+		"DATA_REAL2":"0.01",
+		"DATA_DESCRIPTION_REAL1":"공격력 증폭",
+		"DATA_DESCRIPTION_REAL2":"공격력 증폭(레벨 당)"
+	}
+]}
