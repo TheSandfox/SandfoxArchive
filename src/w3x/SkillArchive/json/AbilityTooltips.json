@@ -53,6 +53,6 @@
 	},
 	"01d0":{
 		"ID":"01d0",
-		"TOOLTIP":"0.06"
+		"TOOLTIP":"<b><span style=\"color: #ffff00;\">8.0초</span></b> 동안 자신을 제외한 주변 아군들의 <b><span style=\"color: #00ff00;\">체력재생</span></b><b><span style=\"color: #00ff00;\">이 (체력재생*0.5)*(1+스킬 레벨*0.06)</span></b>, <b><span style=\"color: #ff9900;\">공격력</span></b><b><span style=\"color: #ff9900;\">이 (15+스킬 레벨*1)%</span></b> 증가합니다. 대상이 <b><span style=\"color: #00ffff;\">소환물</span></b>일 경우 <b><span style=\"color: #c3dbff;\">소환 지속시간</span></b><b><span style=\"color: #c3dbff;\">을 5.0초</span></b> 연장시킵니다."
 	}
 }

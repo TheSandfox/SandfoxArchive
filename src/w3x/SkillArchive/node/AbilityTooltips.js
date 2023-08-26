@@ -11,6 +11,7 @@ var rs_json = ''
 var rs_jass = ''
 var currentAbilityId = ''
 const fs = require('fs')
+const { faBriefcaseClock } = require('@fortawesome/free-solid-svg-icons')
 
 function refineMap(ojsn) {
 	var mapstring = '{'
@@ -79,108 +80,125 @@ function main() {
 	});
 }
 
+function getProperty(par) {
+	let jsn = {}
+	switch (par[0]) {
+	case '#' :
+		return par.substring(1,par.length) //받은 문자열 샾 빼서 반환
+	case '$' :
+		return CustomString[par.substring(1,par.length)]// JSON 형태로 리턴함(알아서 잘 쓰기)
+	case '%' :
+		jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
+		return jsn[par.substring(5,par.length)] //버프테이블의 값을 반환
+	default :
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		return jsn[par] //어빌리티테이블의 값을 반환
+	}
+}
+
 function monotag(main,par) {
 	let jsn = {}
 	switch (main) {
-		case 'br' :
-			rs_json = rs_json+"<br>"
-			rs_jass = rs_jass+'"\\n"+'
+	case 'br' :
+		rs_json = rs_json+"<br>"
+		rs_jass = rs_jass+'"\\n"+'
+		break;
+	case 'customString' :
+		var did = ''
+		switch (par[0]) {
+		case '$' :
+			//커스텀 스트링
+			did = par.substring(1,par.length)
 			break;
-		case 'customString' :
-			if (par[0]=='#') {
-				//
-				
-			} else if (par[0]=='$') {
-				//커스텀 스트링
-				var did = par.substring(1,par.length)
-				//json
-				rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
-				//j
-				rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
-				rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
-			} else { 
-				//프로퍼티 참조형
-				jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-				//jsn = JSON.parse(fs.readFileSync('../json/Ability/Ability'+currentAbilityId+'.json','utf-8'))
-				var did = jsn[par]
-				//json
-				rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
-				//j
-				rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
-				rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
-			}
+		default :
+			did = getProperty(par)
+		}
+		//json
+		rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
+		//j
+		rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
+		rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+		break;
+	case 'prop' :
+		var did = ''
+		switch (par[0]) {
+		case '%' :
+			//버프테이블에서 참조
+			did = getProperty(par)
+			rs_json = rs_json+did
+			rs_jass = rs_jass+"Buff"+par.substring(1,5)+"_"+par.substring(5,par.length)
 			break;
-		case 'prop' :
-			switch (par[0]) {
-				case '#' :
-					rs_json = rs_json+par.substring(1,par.length)
-					rs_jass = rs_jass+par.substring(1,par.length)
-					break;
-				case '%' :
-					//버프테이블에서 참조
-					let buffid = par.substring(1,5)
-					let par2 = par.substring(5,par.length)
-					jsn = BuffParams["params"][BuffMap[buffid]]
-					rs_json = rs_json+jsn[par2]
-					rs_jass = rs_jass+"Buff"+buffid+"_"+par2
-					break;
-				default :
-					jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-					rs_json = rs_json+jsn[par]
-					rs_jass = rs_jass+jsn[par]
-			}
+		default :
+			did = getProperty(par)
+			rs_json = rs_json+did
+			rs_jass = rs_jass+did
+		}
+		break;
+	case 'propString' :
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		rs_json = rs_json+jsn[par]
+		rs_jass = rs_jass+'"'+jsn[par]+'"+'
+		break;
+	case 'second' :
+		//초("초"문자열 붙여서)
+		var did = ''
+		switch (par[0]) {
+		case '$' :
+			did = getProperty(par)["NAME"]
 			break;
-		case 'propString' :
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			rs_json = rs_json+jsn[par]
-			rs_jass = rs_jass+'"'+jsn[par]+'"+'
+		default :
+			did = getProperty(par)
+		}
+		rs_json = rs_json+did+'초'
+		rs_jass = rs_jass+'"'+did+'초"+'
+		break;
+	case 'percent' :
+		//퍼센트("%"문자열 붙여서)
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		rs_json = rs_json+jsn[par]+'%'
+		rs_jass = rs_jass+'"'+jsn[par]+'%"+'
+		break;
+	case 'shift' :
+		//쉬프트 스탯 툴팁(jass에서만 보임, json작성 불필요)
+		var did = ''
+		switch (par[0]) {
+		case '$' :
+			did = par.substring(1,par.length)
 			break;
-		case 'second' :
-			//초("초"문자열 붙여서)
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString["CONFIG_STAT_CONSTANT"]["COLOR"]+';\\\">'+jsn[par]+'초</span></b>'
-			rs_jass = rs_jass+'CUSTOM_STRING_STAT_COLOR[CONFIG_STAT_CONSTANT]+"'+jsn[par]+'초|r"+'
-			break;
-		case 'percentString' :
-			//퍼센트("%"문자열 붙여서)
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			rs_json = rs_json+jsn[par]+'%'
-			rs_jass = rs_jass+'"'+jsn[par]+'%"+'
-			break;
-		case 'shift' :
-			//쉬프트 스탯 툴팁(jass에서만 보임, json작성 불필요)
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			rs_jass = rs_jass+"CustomString.shiftStatTooltip("+jsn[par]+")+"
-			break;
-		case 'xSkillLevel' :
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			//json
-			rs_json = rs_json+"(1+스킬 레벨 당 "+jsn["DAMAGE_PER_LEVEL"]+")"
-			//j
-			rs_jass = rs_jass+"(1.+.level*DAMAGE_PER_LEVEL)"
-			break;
-		case 'skillLevel' :
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			//json
-			rs_json = rs_json+"스킬 레벨"
-			//j
-			rs_jass = rs_jass+".level"
-			break;
-		case 'heroLevel' :
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			//json
-			rs_json = rs_json+"시전자 레벨"
-			//j
-			rs_jass = rs_jass+".owner.level"
-			break;
-		case 'statValue' :
-			jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-			var did = jsn[par]
-			//json
-			rs_json = rs_json+CustomString[did]["NAME"]
-			//j
-			rs_jass = rs_jass+"owner.getCarculatedStatValue("+did+")"
-			break;
+		default :
+			did = getProperty(par)
+		}
+		rs_jass = rs_jass+"CustomString.shiftStatTooltip("+did+")+"
+		break;
+	case 'xSkillLevel' :
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		//json
+		rs_json = rs_json+"(1+스킬 레벨 당 "+jsn["DAMAGE_PER_LEVEL"]+")"
+		//j
+		rs_jass = rs_jass+"(1.+.level*DAMAGE_PER_LEVEL)"
+		break;
+	case 'skillLevel' :
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		//json
+		rs_json = rs_json+"스킬 레벨"
+		//j
+		rs_jass = rs_jass+".level"
+		break;
+	case 'heroLevel' :
+		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		//json
+		rs_json = rs_json+"시전자 레벨"
+		//j
+		rs_jass = rs_jass+".owner.level"
+		break;
+	case 'statValue' :
+		//jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
+		var did = getProperty(par)
+		//json
+		rs_json = rs_json+CustomString[did]["NAME"]
+		//j
+		rs_jass = rs_jass+"owner.getCarculatedStatValue("+did+")"
+		break;
 	}
 }
 
@@ -194,13 +212,22 @@ function modepush(main,par) {
 	switch (main) {
 		case 'c' :
 			var color = ''
-			if (par[0]=='#') {
+			switch (par[0]) {
+			case '#' :
 				//색상코드형
 				color = par.substring(1,par.length)
-			} else if (par[0]=='$') {
+				break;
+			case '$' :
 				//커스텀 스트링 색상
 				color = CustomString[par.substring(1,par.length)]["COLOR"]
-			} else {
+				break;
+			case '%' :
+				//버프테이블에서 참조
+				jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
+				var did = jsn[par.substring(5,par.length)]
+				color = CustomString[did]["COLOR"]
+				break;
+			default :
 				//프로퍼티참조형
 				jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 				var did = jsn[par]
@@ -213,6 +240,10 @@ function modepush(main,par) {
 			break;
 		case 'real' :
 			rs_jass = rs_jass+"R2SW("
+			break;
+		case 'percent' :
+			rs_json = rs_json+"("
+			rs_jass = rs_jass+"R2SW(("
 			break;
 	}
 }
@@ -229,6 +260,14 @@ function modepop() {
 				rs_jass = rs_jass+","+param[param.length-1]+")+"
 			} else {
 				rs_jass = rs_jass+",2,2)+"
+			}
+			break;
+		case 'percent' :
+			rs_json = rs_json+')%'
+			if (param[param.length-1]!='') {
+				rs_jass = rs_jass+","+param[param.length-1]+")+"
+			} else {
+				rs_jass = rs_jass+')*100.0,1,1)+"%"+'
 			}
 			break;
 	}
@@ -299,6 +338,12 @@ function pars_json(str) {
 					normalstring = normalstring + char;
 					break;
 				case 'real' :
+					//json
+					rs_json = rs_json + char;
+					//j
+					rs_jass = rs_jass +char;
+					break;
+				case 'percent' :
 					//json
 					rs_json = rs_json + char;
 					//j

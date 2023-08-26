@@ -39,7 +39,7 @@ function main() {
 				fs.appendFileSync(outFile, ',\n\t\{','utf-8');
 			}
 			//텍매열기J
-			fs.appendFileSync(outputJ, '//! textmacro abilityDataHeader'+rows[0][j]+"\nglobals\n",'utf-8');
+			fs.appendFileSync(outputJ, '//! textmacro '+mode+'DataHeader'+rows[0][j]+"\nglobals\n",'utf-8');
 			//셀 데이터 기록
 			i = 0;
 			while (true) {
