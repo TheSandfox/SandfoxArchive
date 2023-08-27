@@ -86,7 +86,7 @@ function getProperty(par) {
 	case '#' :
 		return par.substring(1,par.length) //받은 문자열 샾 빼서 반환
 	case '$' :
-		return CustomString[par.substring(1,par.length)]// JSON 형태로 리턴함(알아서 잘 쓰기)
+		return CustomString["CONFIG_"+par.substring(1,par.length)]// JSON 형태로 리턴함(알아서 잘 쓰기)
 	case '%' :
 		jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
 		return jsn[par.substring(5,par.length)] //버프테이블의 값을 반환
@@ -108,7 +108,7 @@ function monotag(main,par) {
 		switch (par[0]) {
 		case '$' :
 			//커스텀 스트링
-			did = par.substring(1,par.length)
+			did = "CONFIG_"+par.substring(1,par.length)
 			break;
 		default :
 			did = getProperty(par)
@@ -163,7 +163,7 @@ function monotag(main,par) {
 		var did = ''
 		switch (par[0]) {
 		case '$' :
-			did = par.substring(1,par.length)
+			did = "CONFIG_"+par.substring(1,par.length)
 			break;
 		default :
 			did = getProperty(par)
@@ -180,14 +180,14 @@ function monotag(main,par) {
 	case 'skillLevel' :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		//json
-		rs_json = rs_json+"스킬 레벨"
+		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["NAME"]+'\\\"/>'
 		//j
 		rs_jass = rs_jass+".level"
 		break;
 	case 'heroLevel' :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		//json
-		rs_json = rs_json+"시전자 레벨"
+		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_UNIT_LEVEL"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_UNIT_LEVEL"]["NAME"]+'\\\"/>'
 		//j
 		rs_jass = rs_jass+".owner.level"
 		break;
@@ -195,7 +195,7 @@ function monotag(main,par) {
 		//jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		var did = getProperty(par)
 		//json
-		rs_json = rs_json+CustomString[did]["NAME"]
+		rs_json = rs_json+/*CustomString[did]["NAME"]*/''+'<img src=\\\"/resource/'+CustomString[did]["ICON"]+'\\\" title=\\\"'+CustomString[did]["NAME"]+'\\\"/>'
 		//j
 		rs_jass = rs_jass+"owner.getCarculatedStatValue("+did+")"
 		break;
@@ -219,7 +219,7 @@ function modepush(main,par) {
 				break;
 			case '$' :
 				//커스텀 스트링 색상
-				color = CustomString[par.substring(1,par.length)]["COLOR"]
+				color = CustomString["CONFIG_"+par.substring(1,par.length)]["COLOR"]
 				break;
 			case '%' :
 				//버프테이블에서 참조

@@ -129,14 +129,14 @@
 		"ARRNAME":"STAT",
 		"NAME":"레벨",
 		"COLOR":"ffff00",
-		"ICON":"ui/widgets/tooltips/human/null.png",
+		"ICON":"ui/widgets/tooltips/human/tooltipunitlevelicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SKILL_LEVEL":{
 		"ARRNAME":"STAT",
 		"NAME":"기술레벨",
 		"COLOR":"ffff00",
-		"ICON":"ui/widgets/tooltips/human/null.png",
+		"ICON":"ui/widgets/tooltips/human/tooltipskilllevelicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SUMMON_DURATION":{

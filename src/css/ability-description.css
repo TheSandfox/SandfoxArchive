@@ -108,6 +108,12 @@
 	margin-top:16px;
 }
 
+.ability-description>.bottom>.tooltip img{
+	width: 24px; /* 폰트 크기와 동일한 크기로 설정 */
+	height: 24px; /* 폰트 크기와 동일한 크기로 설정 */
+	vertical-align: middle; /* 이미지를 텍스트의 중앙에 맞춤 */
+}
+
 .ability-description>.bottom>.cast-type {
 	color: #00ffff;
 }
