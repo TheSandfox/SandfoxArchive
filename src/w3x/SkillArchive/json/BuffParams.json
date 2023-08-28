@@ -16,5 +16,48 @@
 		"DATA_REAL2":"1",
 		"DATA_DESCRIPTION_REAL1":"공격력 증폭",
 		"DATA_DESCRIPTION_REAL2":"공격력 증폭(레벨 당)"
+	},
+	{
+		"ID":"01g0",
+		"NAME":"그물 던지기",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNEnsnare.png",
+		"INDIVISUAL":"0",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.4",
+		"DAMAGE_STAT1":"CONFIG_STAT_ACCURACY",
+		"DATA_REAL1":"45",
+		"DATA_DESCRIPTION_REAL1":"둔화율"
+	},
+	{
+		"ID":"u110",
+		"NAME":"끈적 거미",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_MonsterSpiderCarapace_01.png",
+		"INDIVISUAL":"1",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.03",
+		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+		"DATA_REAL1":"5.0",
+		"DATA_DESCRIPTION_REAL1":"둔화량"
+	},
+	{
+		"ID":"u140",
+		"NAME":"오염된 식칼",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_slam.png",
+		"INDIVISUAL":"1",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.025",
+		"DAMAGE_STAT1":"CONFIG_STAT_MAXHP"
 	}
 ]}

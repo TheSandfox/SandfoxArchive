@@ -1,14 +1,14 @@
 {
 	"CONFIG_STAT_MAXHP":{
 		"ARRNAME":"STAT",
-		"NAME":"체력",
+		"NAME":"최대체력",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/tooltiphpicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAXMP":{
 		"ARRNAME":"STAT",
-		"NAME":"마나",
+		"NAME":"최대마나",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipmanaicon.png",
 		"DESCRIPTION":"null"
@@ -134,7 +134,7 @@
 	},
 	"CONFIG_STAT_SKILL_LEVEL":{
 		"ARRNAME":"STAT",
-		"NAME":"기술레벨",
+		"NAME":"스킬레벨",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/tooltipskilllevelicon.png",
 		"DESCRIPTION":"null"
@@ -225,7 +225,7 @@
 	},
 	"CONFIG_STAT_SPELL_ATTACK":{
 		"ARRNAME":"STAT",
-		"NAME":"기술공격",
+		"NAME":"스킬공격",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -379,7 +379,7 @@
 	},
 	"CONFIG_DAMAGE_SPELL":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"기술공격",
+		"NAME":"스킬공격",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -421,7 +421,7 @@
 	},
 	"CONFIG_DAMAGE_SINGLE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"단일피해",
+		"NAME":"단발피해",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -447,42 +447,70 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"0":{
+	"CONFIG_DAMAGE_TARGET":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"단일피해",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_AOE":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"범위피해",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_RANGED":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"원거리공격",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_MELEE":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"근접공격",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_TIER_0":{
 		"ARRNAME":"TIER",
 		"NAME":"null",
 		"COLOR":"cccccc",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"1":{
+	"CONFIG_TIER_1":{
 		"ARRNAME":"TIER",
 		"NAME":"1티어",
 		"COLOR":"ffffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"2":{
+	"CONFIG_TIER_2":{
 		"ARRNAME":"TIER",
 		"NAME":"2티어",
 		"COLOR":"00ff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"3":{
+	"CONFIG_TIER_3":{
 		"ARRNAME":"TIER",
 		"NAME":"3티어",
 		"COLOR":"0099ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"4":{
+	"CONFIG_TIER_4":{
 		"ARRNAME":"TIER",
 		"NAME":"4티어",
 		"COLOR":"cc00ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"5":{
+	"CONFIG_TIER_5":{
 		"ARRNAME":"TIER",
 		"NAME":"5티어",
 		"COLOR":"ff9900",

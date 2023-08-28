@@ -66,7 +66,7 @@ export function AbilityDescription(props) {
 	if(props.mode==='detail') {
 		//디테일모드
 		let stl = {
-			border:'2px solid #'+CustomString[abiljson["TIER"]]["COLOR"]
+			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
 		return <div className="ability-description" style={stl}>
 			<div className="top">

@@ -90,6 +90,9 @@ function getProperty(par) {
 	case '%' :
 		jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
 		return jsn[par.substring(5,par.length)] //버프테이블의 값을 반환
+	case '^' :
+		jsn = AbilityParams["params"][AbilityMap[par.substring(1,5)]]
+		return jsn[par.substring(5,par.length)] //다른 어빌리티의 값을 반환
 	default :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		return jsn[par] //어빌리티테이블의 값을 반환
@@ -116,18 +119,19 @@ function monotag(main,par) {
 		//json
 		rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
 		//j
-		rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
-		rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+		// rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
+		// rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+		rs_jass = rs_jass+'"|cff'+CustomString[did]["COLOR"]+CustomString[did]["NAME"]+'|r"+'
 		break;
 	case 'prop' :
 		var did = ''
 		switch (par[0]) {
-		case '%' :
-			//버프테이블에서 참조
-			did = getProperty(par)
-			rs_json = rs_json+did
-			rs_jass = rs_jass+"Buff"+par.substring(1,5)+"_"+par.substring(5,par.length)
-			break;
+		// case '%' :
+		// 	//버프테이블에서 참조
+		// 	did = getProperty(par)
+		// 	rs_json = rs_json+did
+		// 	rs_jass = rs_jass+"Buff"+par.substring(1,5)+"_"+par.substring(5,par.length)
+		// 	break;
 		default :
 			did = getProperty(par)
 			rs_json = rs_json+did
@@ -135,9 +139,13 @@ function monotag(main,par) {
 		}
 		break;
 	case 'propString' :
-		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-		rs_json = rs_json+jsn[par]
-		rs_jass = rs_jass+'"'+jsn[par]+'"+'
+		var did = ''
+		switch (par[0]) {
+		default :
+			did = getProperty(par)
+		}
+		rs_json = rs_json+did
+		rs_jass = rs_jass+'"'+did+'"+'
 		break;
 	case 'second' :
 		//초("초"문자열 붙여서)
@@ -154,9 +162,13 @@ function monotag(main,par) {
 		break;
 	case 'percent' :
 		//퍼센트("%"문자열 붙여서)
-		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-		rs_json = rs_json+jsn[par]+'%'
-		rs_jass = rs_jass+'"'+jsn[par]+'%"+'
+		var did = ''
+		switch (par[0]) {
+		default :
+			did = getProperty(par)
+		}
+		rs_json = rs_json+did+'%'
+		rs_jass = rs_jass+'"'+did+'%"+'
 		break;
 	case 'shift' :
 		//쉬프트 스탯 툴팁(jass에서만 보임, json작성 불필요)
@@ -241,6 +253,9 @@ function modepush(main,par) {
 		case 'real' :
 			rs_jass = rs_jass+"R2SW("
 			break;
+		case 'int' :
+			rs_jass = rs_jass+"I2S("
+			break;
 		case 'percent' :
 			rs_json = rs_json+"("
 			rs_jass = rs_jass+"R2SW(("
@@ -262,12 +277,15 @@ function modepop() {
 				rs_jass = rs_jass+",2,2)+"
 			}
 			break;
+		case 'int' :
+			rs_jass = rs_jass+")+"
+			break;
 		case 'percent' :
 			rs_json = rs_json+')%'
 			if (param[param.length-1]!='') {
 				rs_jass = rs_jass+","+param[param.length-1]+")+"
 			} else {
-				rs_jass = rs_jass+')*100.0,1,1)+"%"+'
+				rs_jass = rs_jass+'),1,1)+"%"+'
 			}
 			break;
 	}
@@ -343,6 +361,12 @@ function pars_json(str) {
 					//j
 					rs_jass = rs_jass +char;
 					break;
+				case 'int' :
+					//json
+					rs_json = rs_json + char;
+					//j
+					rs_jass = rs_jass +char;
+					break;
 				case 'percent' :
 					//json
 					rs_json = rs_json + char;
@@ -366,7 +390,7 @@ function pars_json(str) {
 		//
 		i++;
 	}
-	rs["JSON"] = rs_json;
+	rs["JSON"] = rs_json.replace(/\*/g,'×')
 	rs["J"] = rs_jass
 	return rs;
 } 
