@@ -36,6 +36,7 @@ function main() {
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var outFile = '../json/AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
+	var descriptioncol = 2
 	excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
 		var i = 0
 		//대괄호열기
@@ -58,12 +59,12 @@ function main() {
 			fs.appendFileSync(outFile,'\n\t\t"ID":"'+currentAbilityId+'",','utf-8')
 			//내용JSON
 			fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
-			if (rows[i][1]!=null || rows[i][1]!=undefined) {
-				fs.appendFileSync(outFile,pars_json(rows[i][1])["JSON"],'utf-8')
+			if (rows[i][descriptioncol]!=null || rows[i][descriptioncol]!=undefined) {
+				fs.appendFileSync(outFile,pars_json(rows[i][descriptioncol])["JSON"],'utf-8')
 			}
 			fs.appendFileSync(outFile,'"','utf-8')
 			//내용J
-			let jstring = pars_json(rows[i][1])["J"]
+			let jstring = pars_json(rows[i][descriptioncol])["J"]
 			if (jstring[jstring.length-1]=='+') {
 				jstring = jstring.slice(0,-1)
 			}
@@ -117,7 +118,7 @@ function monotag(main,par) {
 			did = getProperty(par)
 		}
 		//json
-		rs_json = rs_json+'<b><span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span></b>'
+		rs_json = rs_json+'<span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span>'
 		//j
 		// rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
 		// rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
@@ -209,8 +210,24 @@ function monotag(main,par) {
 		//json
 		rs_json = rs_json+/*CustomString[did]["NAME"]*/''+'<img src=\\\"/resource/'+CustomString[did]["ICON"]+'\\\" title=\\\"'+CustomString[did]["NAME"]+'\\\"/>'
 		//j
-		rs_jass = rs_jass+"owner.getCarculatedStatValue("+did+")"
+		rs_jass = rs_jass+".owner.getCarculatedStatValue("+did+")"
 		break;
+	case 'lucky' :
+		var quoteind = par.indexOf(',')
+		var p1 = getProperty(par.substring(0,quoteind))
+		var p2 = getProperty(par.substring(quoteind+1,par.length))
+		//json
+		rs_json = rs_json+'<span style=\\\"color: #'+CustomString["CONFIG_STAT_LUCK"]["COLOR"]+';\\\">'+p1+'%</span>'
+		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_LUCK"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_LUCK"]["NAME"]+'\\\"/>'
+		//jass
+		rs_jass = rs_jass+'R2SW(.owner.getLuckyPercent('+(p1/100.)+','+p2+')*100.,1,1)+"%"+'
+		break;
+	case 'unitinfo' :
+		var did = getProperty(par)
+		//json
+		rs_json = rs_json+'<a class=\\\"unitinfo\\\" href=\\\"/'+''+'\\\">'+"임시"+"</a>"
+		//jass
+		rs_jass = rs_jass+'"'+'임시'+'"+'
 	}
 }
 
@@ -246,7 +263,7 @@ function modepush(main,par) {
 				color = CustomString[did]["COLOR"]
 			}
 			//json
-			rs_json = rs_json+'<b><span style=\\\"color: #'+color+';\\\">'
+			rs_json = rs_json+'<span style=\\\"color: #'+color+';\\\">'
 			//j
 			rs_jass = rs_jass+'"|cff'+color+'"+'
 			break;
@@ -267,7 +284,7 @@ function modepop() {
 	let jsn = {}
 	switch (mode[mode.length-1]) {
 		case 'c' :
-			rs_json = rs_json+'</span></b>'
+			rs_json = rs_json+'</span>'
 			rs_jass = rs_jass+'"|r"+'
 			break;
 		case 'real' :

@@ -28,10 +28,6 @@ function main() {
 			if (j==rows[0].length||rows[0][j]==null) {
 				break;
 			}
-			if (rows[0][j][0]==='e') {
-				j++
-				continue;
-			}
 			//괄호 열기
 			if (j==datafromX) {
 				fs.appendFileSync(outFile, '\n\t\{','utf-8');

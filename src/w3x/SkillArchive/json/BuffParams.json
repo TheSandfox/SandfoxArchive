@@ -59,5 +59,22 @@
 		"DAMAGE_PER_LEVEL":"0.06",
 		"DAMAGE_AMPLIFIER1":"0.025",
 		"DAMAGE_STAT1":"CONFIG_STAT_MAXHP"
+	},
+	{
+		"ID":"0200",
+		"NAME":"전투자극제",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
+		"INDIVISUAL":"0",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_PER_LEVEL":"0.07",
+		"DAMAGE_AMPLIFIER1":"0.175",
+		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+		"DATA_REAL1":"30",
+		"DATA_REAL2":"10",
+		"DATA_DESCRIPTION_REAL1":"공속증가",
+		"DATA_DESCRIPTION_REAL2":"이속증가"
 	}
 ]}
