@@ -1,6 +1,7 @@
 const CustomString = require('../json/CustomString.json')
 const AbilityParams = require('../json/AbilityParams.json')
 const BuffParams = require('../json/BuffParams.json')
+const UnitParams = require('../json/UnitParams.json')
 
 var mode = [0]
 var param = ['']
@@ -30,6 +31,7 @@ function refineMap(ojsn) {
 
 const AbilityMap = refineMap(AbilityParams)
 const BuffMap = refineMap(BuffParams)
+const UnitMap = refineMap(UnitParams)
 
 function main() {
 	var excelReader = require('read-excel-file/node')
@@ -83,17 +85,30 @@ function main() {
 
 function getProperty(par) {
 	let jsn = {}
+	let subparam = ''
+	let context = ''
+	if (par[1]=='(') {
+		//참조의참조인거임..
+		subparam = getProperty(par.substring(2,par.lastIndexOf(')')))
+		context = par.substring(par.lastIndexOf(')')+1,par.length)
+	} else {
+		subparam = par.substring(1,5)
+		context = par.substring(5,par.length)
+	}
 	switch (par[0]) {
 	case '#' :
 		return par.substring(1,par.length) //받은 문자열 샾 빼서 반환
 	case '$' :
 		return CustomString["CONFIG_"+par.substring(1,par.length)]// JSON 형태로 리턴함(알아서 잘 쓰기)
 	case '%' :
-		jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
-		return jsn[par.substring(5,par.length)] //버프테이블의 값을 반환
+		jsn = BuffParams["params"][BuffMap[subparam]]
+		return jsn[context] //버프테이블의 값을 반환
 	case '^' :
-		jsn = AbilityParams["params"][AbilityMap[par.substring(1,5)]]
-		return jsn[par.substring(5,par.length)] //다른 어빌리티의 값을 반환
+		jsn = AbilityParams["params"][AbilityMap[subparam]]
+		return jsn[context] //다른 어빌리티의 값을 반환
+	case '&' :
+		jsn = UnitParams["params"][UnitMap[subparam]]
+		return jsn[context] //유닛 테이블의 값을 반환
 	default :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		return jsn[par] //어빌리티테이블의 값을 반환
@@ -127,12 +142,6 @@ function monotag(main,par) {
 	case 'prop' :
 		var did = ''
 		switch (par[0]) {
-		// case '%' :
-		// 	//버프테이블에서 참조
-		// 	did = getProperty(par)
-		// 	rs_json = rs_json+did
-		// 	rs_jass = rs_jass+"Buff"+par.substring(1,5)+"_"+par.substring(5,par.length)
-		// 	break;
 		default :
 			did = getProperty(par)
 			rs_json = rs_json+did
@@ -220,14 +229,23 @@ function monotag(main,par) {
 		rs_json = rs_json+'<span style=\\\"color: #'+CustomString["CONFIG_STAT_LUCK"]["COLOR"]+';\\\">'+p1+'%</span>'
 		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_LUCK"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_LUCK"]["NAME"]+'\\\"/>'
 		//jass
-		rs_jass = rs_jass+'R2SW(.owner.getLuckyPercent('+(p1/100.)+','+p2+')*100.,1,1)+"%"+'
+		rs_jass = rs_jass+'"|cff'+CustomString["CONFIG_STAT_LUCK"]["COLOR"]+'"+'+'R2SW(.owner.getLuckyPercent('+(p1/100.)+','+p2+')*100.,1,1)+"%|r"+'
+		rs_jass = rs_jass+'CustomString.shiftStatTooltip(CONFIG_STAT_LUCK)+'
 		break;
-	case 'unitinfo' :
+	case 'unitInfo' :
 		var did = getProperty(par)
 		//json
-		rs_json = rs_json+'<a class=\\\"unitinfo\\\" href=\\\"/'+''+'\\\">'+"임시"+"</a>"
+		rs_json = rs_json+'<a class=\\\"unitinfo\\\" href=\\\"/w3x/SkillArchive/Unit/'+did+'\\\">'+UnitParams["params"][UnitMap[did]]["NAME"]+"</a>"
 		//jass
-		rs_jass = rs_jass+'"'+'임시'+'"+'
+		rs_jass = rs_jass+'"'+UnitParams["params"][UnitMap[did]]["NAME"]+'"+'
+		break;
+	case 'abilityInfo' :
+		var did = getProperty(par)
+		//json
+		rs_json = rs_json+'<a class=\\\"unitinfo\\\" href=\\\"/w3x/SkillArchive/Ability/'+did+'\\\">'+AbilityParams["params"][AbilityMap[did]]["NAME"]+"</a>"
+		//jass
+		rs_jass = rs_jass+'"'+AbilityParams["params"][AbilityMap[did]]["NAME"]+'"+'
+		break;
 	}
 }
 
@@ -237,30 +255,18 @@ function modepush(main,par) {
 	innertag[innertag.length-1] = innertag[innertag.length-1]+innertagtemp
 	innertag.push('')
 	innertagtemp = ''
-	let jsn = {}
 	switch (main) {
 		case 'c' :
 			var color = ''
 			switch (par[0]) {
 			case '#' :
-				//색상코드형
-				color = par.substring(1,par.length)
+				color = getProperty(par)
 				break;
 			case '$' :
-				//커스텀 스트링 색상
 				color = CustomString["CONFIG_"+par.substring(1,par.length)]["COLOR"]
 				break;
-			case '%' :
-				//버프테이블에서 참조
-				jsn = BuffParams["params"][BuffMap[par.substring(1,5)]]
-				var did = jsn[par.substring(5,par.length)]
-				color = CustomString[did]["COLOR"]
-				break;
 			default :
-				//프로퍼티참조형
-				jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
-				var did = jsn[par]
-				color = CustomString[did]["COLOR"]
+				color = CustomString[getProperty(par)]["COLOR"]
 			}
 			//json
 			rs_json = rs_json+'<span style=\\\"color: #'+color+';\\\">'

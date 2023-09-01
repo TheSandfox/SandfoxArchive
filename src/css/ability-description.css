@@ -186,11 +186,8 @@
 	justify-content: center;
 }
 
-.ability-single-back-anchor {
-	margin-top: 32px;
-}
-
 .ability-single-back-div {
+	margin-top: 32px;
 	border-radius: 8px;
 	background: rgb(228,208,163);
 	width:64px;
@@ -199,6 +196,7 @@
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	cursor: pointer;
 }
 
 .ability-single-back-div>i {

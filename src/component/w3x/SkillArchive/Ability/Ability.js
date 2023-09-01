@@ -1,6 +1,6 @@
 //import react
-import { useParams, Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 //import JSON
 import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
@@ -135,20 +135,29 @@ function AbilityDescriptions({mode}) {
 }
 
 function AbilityDescriptionSingle() {
+	var navigate = useNavigate()
+	function goBack() {
+		navigate(-1)
+	}
+	//어빌툴팁 상세
+	//뒤로가기버튼
 	return <>
 		<div className='ability-single-container'>
 			<AbilityDescription mode='detail'/>
-			<Link className='ability-single-back-anchor' to='/w3x/SkillArchive/Ability'>
-				<div className='ability-single-back-div'>
-					<i className="fa-solid fa-reply"></i>
-				</div>
-			</Link>
+			<div className='ability-single-back-div' onClick={goBack}>
+				<i className="fa-solid fa-reply"></i>
+			</div>
 		</div>
 	</>
 } 
 
 function AbilityDescriptionContainer() {
 	let [viewMode,setViewMode] = useState(false)
+
+	useEffect(() => {
+		// 초기화 로직
+	  }, []);
+
 	//viewmode에 따라 분기
 	return <>
 		<div className="ability-viewmode-switch">

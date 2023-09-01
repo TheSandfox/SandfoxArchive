@@ -85,7 +85,7 @@
 	},
 	"01l0":{
 		"ID":"01l0",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">레벨  1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> 전기충격기를 건설합니다. <span style=\"color: #ffff00;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 보유 능력 : </span><span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> 전기충격</span>"
+		"TOOLTIP":"<span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP06\">전기충격기</a>를 건설합니다. <span style=\"color: #ffff00;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 사용 무기 : </span><span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/01m0\">전기충격</a></span>"
 	},
 	"01m0":{
 		"ID":"01m0",
@@ -134,5 +134,17 @@
 	"0240":{
 		"ID":"0240",
 		"TOOLTIP":"대상에게 <span style=\"color: #ffff00;\">0.6×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 무작위 카드를 투척합니다. <span style=\"color: #00cc00;\">25%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 한 장의 카드를 추가로 투척합니다. 피해유형과 공격유형이 카드의 색깔에 따라 달라집니다.<br><br><span style=\"color: #ff0000;\">빨간색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #3333ff;\">파란색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #ffff00;\">황금색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #9999ff;\">스킬공격</span><br><span style=\"color: #ff00ff;\">보라색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #9999ff;\">스킬공격</span>"
+	},
+	"02l0":{
+		"ID":"02l0",
+		"TOOLTIP":"대상에게 글레이브를 던져 <span style=\"color: #ff9900;\">1.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 글레이브는 적중한 뒤 가까운 다른 대상에게 튕겨 <span style=\"color: #ffff00;\">이전 피해량의 80%</span>에 해당하는 피해를 입힙니다. 튕김 횟수가 남은 상태에서 튕길 대상이 없을 경우 마지막으로 타격한 적을 한 번 더 타격하여 <span style=\"color: #ffff00;\">이전 피해량의 33%</span>에 해당하는 피해를 입힙니다.<br><br> - 주 대상을 포함하여 최대 <span style=\"color: #ffff00;\">3기</span>의 대상을 공격할 수 있습니다."
+	},
+	"02m0":{
+		"ID":"02m0",
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 창을 던집니다. 빈 땅을 우클릭하면 창을 던진 뒤 지정한 방향으로 짧은 거리 도약합니다."
+	},
+	"0370":{
+		"ID":"0370",
+		"TOOLTIP":"전방의 적들을 휩쓸어 <span style=\"color: #9999ff;\">(0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>)×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffff00;\">매 3번째</span> 공격은 직선상의 적들에게 <span style=\"color: #ffff00;\">150%</span>의 피해를 입힙니다."
 	}
 }

@@ -1,9 +1,11 @@
 var convertConfig = require('./Config.js')
 var convertCustomString = require('./CustomString.js')
 var convertAbilityParams = require('./AbilityParams.js')
+var convertUnitParams = require('./UnitParams.js')
 var convertAbilityTooltips = require('./AbilityTooltips.js')
 
 convertConfig()
 convertCustomString()
 convertAbilityParams()
+convertUnitParams()
 convertAbilityTooltips()
