@@ -152,7 +152,7 @@ function AbilityDescriptionSingle() {
 } 
 
 function AbilityDescriptionContainer() {
-	let [viewMode,setViewMode] = useState(false)
+	const [viewMode,setViewMode] = useState(false)
 
 	useEffect(() => {
 		// 초기화 로직

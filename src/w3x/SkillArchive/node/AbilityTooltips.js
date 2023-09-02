@@ -122,7 +122,7 @@ function monotag(main,par) {
 		rs_json = rs_json+"<br>"
 		rs_jass = rs_jass+'"\\n"+'
 		break;
-	case 'customString' :
+	case 'customStringColored' :
 		var did = ''
 		switch (par[0]) {
 		case '$' :
@@ -137,6 +137,34 @@ function monotag(main,par) {
 		//j
 		// rs_jass = rs_jass+"CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_COLOR["+did+"]"
 		// rs_jass = rs_jass+"+CUSTOM_STRING_"+CustomString[did]["ARRNAME"]+"_NAME["+did+"]"+'+"|r"+'
+		rs_jass = rs_jass+'"|cff'+CustomString[did]["COLOR"]+CustomString[did]["NAME"]+'|r"+'
+		break;
+	case 'customString' :
+		var did = ''
+		switch (par[0]) {
+		case '$' :
+			//커스텀 스트링
+			did = "CONFIG_"+par.substring(1,par.length)
+			break;
+		default :
+			did = getProperty(par)
+		}
+		//json
+		rs_json = rs_json+CustomString[did]["NAME"]
+		//j
+		rs_jass = rs_jass+'"'+CustomString[did]["NAME"]+'"+'
+		break;
+	case 'abilityTag' :
+		var did = ''
+		switch (par[0]) {
+		case '$' :
+			did = "CONFIG_ABILITY_TAG_"+par.substring(1,par.length)
+		default :
+			did = getProperty(par)
+		}
+		//json
+		rs_json = rs_json+'<span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span>'
+		//j
 		rs_jass = rs_jass+'"|cff'+CustomString[did]["COLOR"]+CustomString[did]["NAME"]+'|r"+'
 		break;
 	case 'prop' :
