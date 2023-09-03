@@ -1,7 +1,47 @@
-.ability-viewmode-switch {
+.ability-view-controller {
 	position:fixed;
 	top:56px;
-	left:64px;
+	right:16px;
+	display: flex;
+	flex-direction: column;
+	background-color: #1a2864;
+	border-radius: 8px;
+	padding:16px;
+	color:#ffffff;
+}
+
+.ability-view-controller>* {
+	height:24px;
+	padding:none;
+	margin-bottom:4px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	align-items: center;
+	justify-content: center;
+}
+
+.ability-view-controller>*>* {
+	box-sizing: border-box;
+}
+
+
+.ability-view-controller>*>p {
+	width:64px;
+}
+
+.ability-view-controller>*>input[type="checkbox"] {
+	text-align: center;
+	height:16px;
+}
+
+.ability-view-controller>*>input[type="text"] {
+	width:192px;
+}
+
+.ability-view-controller>*>select{
+	width:192px;
 }
 
 .ability-container {

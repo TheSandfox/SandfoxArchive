@@ -1,7 +1,7 @@
 {
 	"0100":{
 		"ID":"0100",
-		"TOOLTIP":"지정한 방향으로 약진하여 충돌하는 대상과 대상 주변의 적들에게 <span style=\"color: #ff9900;\">1.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipdefenceicon.png\" title=\"방어력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 밀쳐냅니다. 가장 가까운 적에게는 <span style=\"color: #ffff00;\">133%</span>의 피해를 입힙니다."
+		"TOOLTIP":"지정한 방향으로 약진하여 충돌하는 대상과 대상 주변의 적들에게 <span style=\"color: #ff9900;\">1.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipdefenceicon.png\" title=\"방어력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 밀쳐냅니다. 가장 가까운 적에게는 <span style=\"color: #ffffff;\">133%</span>의 피해를 입힙니다."
 	},
 	"0110":{
 		"ID":"0110",
@@ -9,7 +9,7 @@
 	},
 	"0120":{
 		"ID":"0120",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">2.0초</span> 동안 정신집중 후 대상에게 <span style=\"color: #ff9900;\">2.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackspeedicon.png\" title=\"공격속도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br><span style=\"color: #999999;\">고정된 공격속도를 가집니다.</span>"
+		"TOOLTIP":"<span style=\"color: #ffffff;\">2.0초</span> 동안 정신집중 후 대상에게 <span style=\"color: #ff9900;\">2.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackspeedicon.png\" title=\"공격속도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br><span style=\"color: #999999;\">고정된 공격속도를 가집니다.</span>"
 	},
 	"0130":{
 		"ID":"0130",
@@ -17,7 +17,7 @@
 	},
 	"0140":{
 		"ID":"0140",
-		"TOOLTIP":"대상을 포함한 최대 <span style=\"color: #ffff00;\">4기</span>의 적들에게 <span style=\"color: #9999ff;\">1.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br>첫 대상에게는 피해량이 <span style=\"color: #ff00ff;\">0.85×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다."
+		"TOOLTIP":"대상을 포함한 최대 <span style=\"color: #ffffff;\">4기</span>의 적들에게 <span style=\"color: #9999ff;\">1.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br>첫 대상에게는 피해량이 <span style=\"color: #ff00ff;\">0.85×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다."
 	},
 	"0150":{
 		"ID":"0150",
@@ -33,7 +33,7 @@
 	},
 	"0180":{
 		"ID":"0180",
-		"TOOLTIP":"지정한 방향으로 <span style=\"color: #ffff00;\">5개</span>의 화살을 일제히 발사하여 처음 맞힌 적에게 각각 <span style=\"color: #ff9900;\">1.68×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 같은 유닛에 여러 화살을 맞추는 경우 두 번째 화살부터 <span style=\"color: #ffff00;\">15%</span>의 피해를 입힙니다."
+		"TOOLTIP":"지정한 방향으로 <span style=\"color: #ffffff;\">5개</span>의 화살을 일제히 발사하여 처음 맞힌 적에게 각각 <span style=\"color: #ff9900;\">1.68×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 같은 유닛에 여러 화살을 맞추는 경우 두 번째 화살부터 <span style=\"color: #ffffff;\">15%</span>의 피해를 입힙니다."
 	},
 	"0190":{
 		"ID":"0190",
@@ -53,7 +53,7 @@
 	},
 	"01d0":{
 		"ID":"01d0",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">8.0초</span> 동안 자신을 제외한 주변 아군들의 <span style=\"color: #00ff00;\">체력재생</span><span style=\"color: #00ff00;\">이 (0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 (15+<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>×1)%</span> 증가합니다. 대상이 <span style=\"color: #00ffff;\">소환물</span>일 경우 <span style=\"color: #c3dbff;\">소환 지속시간</span><span style=\"color: #c3dbff;\">을 5.0초</span> 연장시킵니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">8.0초</span> 동안 자신을 제외한 주변 아군들의 <span style=\"color: #00ff00;\">체력재생</span><span style=\"color: #00ff00;\">이 (0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 (15+<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>×1)%</span> 증가합니다. 대상이 <span style=\"color: #00ffff;\">소환물</span>일 경우 <span style=\"color: #c3dbff;\">소환 지속시간</span><span style=\"color: #c3dbff;\">을 5.0초</span> 연장시킵니다."
 	},
 	"01e0":{
 		"ID":"01e0",
@@ -65,15 +65,15 @@
 	},
 	"01g0":{
 		"ID":"01g0",
-		"TOOLTIP":"그물을 던져 처음 적중한 적에게 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 적중당한 대상은 <span style=\"color: #ffff00;\">4.0초</span> 동안 <span style=\"color: #99ccff;\">회피치</span><span style=\"color: #99ccff;\">가 0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 45%</span> 감소하며 이동기 사용이 제한됩니다."
+		"TOOLTIP":"그물을 던져 처음 적중한 적에게 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 적중당한 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #99ccff;\">회피치</span><span style=\"color: #99ccff;\">가 0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 45%</span> 감소하며 이동기 사용이 제한됩니다."
 	},
 	"01h0":{
 		"ID":"01h0",
-		"TOOLTIP":"대상에게 <span style=\"color: #ffff00;\">2개</span>의 도끼를 던져 각각 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ffffff;\">2개</span>의 도끼를 던져 각각 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다."
 	},
 	"01i0":{
 		"ID":"01i0",
-		"TOOLTIP":"대상을 향해 <span style=\"color: #ffff00;\">3발</span>의 탄환을 발사하여 각각 처음 적중하는 적에게 <span style=\"color: #ff9900;\">0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br> - 첫 탄환만 적중 시 발생효과를 발생시킵니다."
+		"TOOLTIP":"대상을 향해 <span style=\"color: #ffffff;\">3발</span>의 탄환을 발사하여 각각 처음 적중하는 적에게 <span style=\"color: #ff9900;\">0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br> - 첫 탄환만 적중 시 발생효과를 발생시킵니다."
 	},
 	"01j0":{
 		"ID":"01j0",
@@ -85,11 +85,11 @@
 	},
 	"01l0":{
 		"ID":"01l0",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP06\">전기충격기</a>를 건설합니다. <span style=\"color: #c3dbff;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 사용 무기 : </span><span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/01m0\">전기충격</a></span>"
+		"TOOLTIP":"<span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP06\">전기충격기</a>를 건설합니다. <span style=\"color: #c3dbff;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 사용 무기 : </span><span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/01m0\">전기충격</a></span>"
 	},
 	"01m0":{
 		"ID":"01m0",
-		"TOOLTIP":"대상을 포함한 최대 <span style=\"color: #ffff00;\">4기</span>의 적들에게 <span style=\"color: #9999ff;\">0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br>첫 대상에게는 피해량이 <span style=\"color: #ff00ff;\">0.35×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다.<br><br>- 첫 대상에게만 적중 시 발생효과를 발생시킵니다."
+		"TOOLTIP":"대상을 포함한 최대 <span style=\"color: #ffffff;\">4기</span>의 적들에게 <span style=\"color: #9999ff;\">0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br>첫 대상에게는 피해량이 <span style=\"color: #ff00ff;\">0.35×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다.<br><br>- 첫 대상에게만 적중 시 발생효과를 발생시킵니다."
 	},
 	"01n0":{
 		"ID":"01n0",
@@ -101,7 +101,7 @@
 	},
 	"u110":{
 		"ID":"u110",
-		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 거미뗴를 날립니다. 적중당한 대상은 <span style=\"color: #ffff00;\">4.0초</span> 동안 <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 0.03×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 5.0</span> 감소합니다.<br><br> - 해당 약화효과는 중첩됩니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 거미뗴를 날립니다. 적중당한 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 0.03×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 5.0</span> 감소합니다.<br><br> - 해당 약화효과는 중첩됩니다."
 	},
 	"u120":{
 		"ID":"u120",
@@ -113,27 +113,27 @@
 	},
 	"u140":{
 		"ID":"u140",
-		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">(0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.01×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 대상은 <span style=\"color: #ffff00;\">4.0초</span> 동안 <span style=\"color: #00ff00;\">최대체력</span><span style=\"color: #00ff00;\">이 0.025×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소합니다.<br><br> - 해당 약화효과는 중첩됩니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">(0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.01×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #00ff00;\">최대체력</span><span style=\"color: #00ff00;\">이 0.025×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소합니다.<br><br> - 해당 약화효과는 중첩됩니다."
 	},
 	"i100":{
 		"ID":"i100",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">강한타격</span>계열 공격과 <span style=\"color: #00ffff;\">근접공격</span>의 피해량이 <span style=\"color: #ffff00;\">(10+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffff00;\">강한타격</span>계열 공격과 <span style=\"color: #00ffff;\">근접공격</span>의 피해량이 <span style=\"color: #ffffff;\">(10+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
 	},
 	"i110":{
 		"ID":"i110",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">참격</span>, <span style=\"color: #ffff00;\">관통</span>계열 공격의 피해량이 <span style=\"color: #ffff00;\">(10+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffff00;\">참격</span>, <span style=\"color: #ffff00;\">관통</span>계열 공격의 피해량이 <span style=\"color: #ffffff;\">(10+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
 	},
 	"0200":{
 		"ID":"0200",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도</span><span style=\"color: #ffff99;\">가 30%</span>, <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 10%</span> 증가하며 <span style=\"color: #ff9900;\">기본공격</span><span style=\"color: #ff9900;\">의 적중 피해량이 0.175×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도</span><span style=\"color: #ffff99;\">가 30%</span>, <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 10%</span> 증가하며 <span style=\"color: #ff9900;\">기본공격</span><span style=\"color: #ff9900;\">의 적중 피해량이 0.175×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>증가합니다."
 	},
 	"0230":{
 		"ID":"0230",
-		"TOOLTIP":"주변의 적들을 무자비하게 도륙하여 <span style=\"color: #ffff00;\">0.25초</span> 마다 <span style=\"color: #ff9900;\">0.3×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 총 <span style=\"color: #ffff00;\">8회</span> 공격합니다."
+		"TOOLTIP":"주변의 적들을 무자비하게 도륙하여 <span style=\"color: #ffffff;\">0.25초</span> 마다 <span style=\"color: #ff9900;\">0.3×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 총 <span style=\"color: #ffffff;\">8회</span> 공격합니다."
 	},
 	"0240":{
 		"ID":"0240",
-		"TOOLTIP":"대상에게 <span style=\"color: #ffff00;\">0.6×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 무작위 카드를 투척합니다. <span style=\"color: #00cc00;\">25%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 한 장의 카드를 추가로 투척합니다. 피해유형과 공격유형이 카드의 색깔에 따라 달라집니다.<br><br><span style=\"color: #ff0000;\">빨간색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #3333ff;\">파란색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #ffff00;\">황금색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #9999ff;\">스킬공격</span><br><span style=\"color: #ff00ff;\">보라색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #9999ff;\">스킬공격</span>"
+		"TOOLTIP":"대상에게 <span style=\"color: #ffffff;\">0.6×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 무작위 카드를 투척합니다. <span style=\"color: #00cc00;\">25%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 한 장의 카드를 추가로 투척합니다. 피해유형과 공격유형이 카드의 색깔에 따라 달라집니다.<br><br><span style=\"color: #ff0000;\">빨간색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #3333ff;\">파란색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #ffff00;\">황금색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #9999ff;\">스킬공격</span><br><span style=\"color: #ff00ff;\">보라색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #9999ff;\">스킬공격</span>"
 	},
 	"0250":{
 		"ID":"0250",
@@ -141,11 +141,11 @@
 	},
 	"0260":{
 		"ID":"0260",
-		"TOOLTIP":"지정한 방향으로 수리검 <span style=\"color: #ffff00;\">3개</span>를 투척하여 적중 시 각각 <span style=\"color: #ff9900;\">(0.15×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>)×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 최대 <span style=\"color: #ffff00;\">3회</span> 충전됩니다.<br><br> - 사용 중에 움직일 수 있습니다."
+		"TOOLTIP":"지정한 방향으로 수리검 <span style=\"color: #ffffff;\">3개</span>를 투척하여 적중 시 각각 <span style=\"color: #ff9900;\">(0.15×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>)×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 최대 <span style=\"color: #ffffff;\">3회</span> 충전됩니다.<br><br> - 사용 중에 움직일 수 있습니다."
 	},
 	"0270":{
 		"ID":"0270",
-		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffff00;\">3번째</span> 공격은 <span style=\"color: #ffff00;\">5.0초</span> 동안 대상을 불태워 매 초 <span style=\"color: #9999ff;\">0.85×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span><span style=\"color: #9999ff;\">+(대상의 체력재생×1.0)</span> 에 해당하는 <span style=\"color: #ffff00;\">화염</span>계열 피해를 입힙니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffffff;\">3번째</span> 공격은 <span style=\"color: #ffffff;\">5.0초</span> 동안 대상을 불태워 매 초 <span style=\"color: #9999ff;\">0.85×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span><span style=\"color: #9999ff;\">+(대상의 체력재생×1.0)</span> 에 해당하는 <span style=\"color: #ffff00;\">화염</span>계열 피해를 입힙니다."
 	},
 	"0280":{
 		"ID":"0280",
@@ -157,23 +157,23 @@
 	},
 	"02a0":{
 		"ID":"02a0",
-		"TOOLTIP":"<span style=\"color: #c3dbff;\">5.0초</span> 동안 대상을 공격하는 <span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipunitlevelicon.png\" title=\"레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP03\">돼지</a>를 소환합니다. <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP03\">돼지</a>는 <span style=\"color: #ff9900;\">공격력이 <img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackspeedicon.png\" title=\"공격속도\"/>×(0.2+0.02×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가하는 대신 적에게 <span style=\"color: #ffff00;\">50%</span>의 피해를 입히며 소멸할 때 <span style=\"color: #ff3333;\">잃은 체력의 25%</span>에 해당하는 만큼 시전자가 <span style=\"color: #00ff00;\">체력을 2.5초에 걸쳐</span> 잃습니다.<br><br><span style=\"color: #00ffff;\">돼지 사용 무기 : </span><span style=\"color: #ffff00;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipunitlevelicon.png\" title=\"레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/01c0\">뾰족한 가시</a></span><br><br><span style=\"color: #999999;\">고정된 공격속도를 가집니다.</span>"
+		"TOOLTIP":"<span style=\"color: #c3dbff;\">5.0초</span> 동안 대상을 공격하는 <span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipunitlevelicon.png\" title=\"레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP03\">돼지</a>를 소환합니다. <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP03\">돼지</a>는 <span style=\"color: #ff9900;\">공격력이 <img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackspeedicon.png\" title=\"공격속도\"/>×(0.2+0.02×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가하는 대신 적에게 <span style=\"color: #ffffff;\">50%</span>의 피해를 입히며 소멸할 때 <span style=\"color: #ff3333;\">잃은 체력의 25%</span>에 해당하는 만큼 시전자가 <span style=\"color: #00ff00;\">체력을 2.5초에 걸쳐</span> 잃습니다.<br><br><span style=\"color: #00ffff;\">돼지 사용 무기 : </span><span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipunitlevelicon.png\" title=\"레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/01c0\">뾰족한 가시</a></span><br><br><span style=\"color: #999999;\">고정된 공격속도를 가집니다.</span>"
 	},
 	"02b0":{
 		"ID":"02b0",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">9.0초</span> 동안 <span style=\"color: #c690e1;\">내구도 1.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)의 보호막</span>을 전개합니다. 보호막이 지속되는 동안 <span style=\"color: #00ff99;\">저항력이 0.45×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ffff99;\">공격속도가 20%</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">9.0초</span> 동안 <span style=\"color: #c690e1;\">내구도 1.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)의 보호막</span>을 전개합니다. 보호막이 지속되는 동안 <span style=\"color: #00ff99;\">저항력이 0.45×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ffff99;\">공격속도가 20%</span> 증가합니다."
 	},
 	"02c0":{
 		"ID":"02c0",
-		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #ffff00;\">5.0초</span> 동안 대상을 중독시켜 매 초 <span style=\"color: #ff9900;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 에 해당하는 <span style=\"color: #ffff00;\">독성</span>계열 피해를 입힙니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #ffffff;\">5.0초</span> 동안 대상을 중독시켜 매 초 <span style=\"color: #ff9900;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 에 해당하는 <span style=\"color: #ffff00;\">독성</span>계열 피해를 입힙니다."
 	},
 	"02d0":{
 		"ID":"02d0",
-		"TOOLTIP":"<span style=\"color: #ffff00;\">1.5초</span> 동안 <span style=\"color: #ffff99;\">이동속도</span>가 대폭 감소하며 해당 효과가 만료되면 <span style=\"color: #ffff00;\">5.0초</span> 내에 적중하는 다음 <span style=\"color: #ff9900;\">기본공격의 피해량이 1.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다.<br><br> - 다른 행동 중에 사용할 수 있습니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">1.5초</span> 동안 <span style=\"color: #ffff99;\">이동속도</span>가 대폭 감소하며 해당 효과가 만료되면 <span style=\"color: #ffffff;\">5.0초</span> 내에 적중하는 다음 <span style=\"color: #ff9900;\">기본공격의 피해량이 1.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가합니다.<br><br> - 다른 행동 중에 사용할 수 있습니다."
 	},
 	"02l0":{
 		"ID":"02l0",
-		"TOOLTIP":"대상에게 글레이브를 던져 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 글레이브는 적중한 뒤 가까운 다른 대상에게 튕겨 <span style=\"color: #ffff00;\">이전 피해량의 75%</span>에 해당하는 피해를 입힙니다. 튕김 횟수가 남은 상태에서 튕길 대상이 없을 경우 마지막으로 타격한 적을 한 번 더 타격하여 <span style=\"color: #ffff00;\">이전 피해량의 40%</span>에 해당하는 피해를 입힙니다.<br><br> - 주 대상을 포함하여 최대 <span style=\"color: #ffff00;\">3기</span>의 대상을 공격할 수 있습니다."
+		"TOOLTIP":"대상에게 글레이브를 던져 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 글레이브는 적중한 뒤 가까운 다른 대상에게 튕겨 <span style=\"color: #ffffff;\">이전 피해량의 75%</span>에 해당하는 피해를 입힙니다. 튕김 횟수가 남은 상태에서 튕길 대상이 없을 경우 마지막으로 타격한 적을 한 번 더 타격하여 <span style=\"color: #ffffff;\">이전 피해량의 40%</span>에 해당하는 피해를 입힙니다.<br><br> - 주 대상을 포함하여 최대 <span style=\"color: #ffffff;\">3기</span>의 대상을 공격할 수 있습니다."
 	},
 	"02m0":{
 		"ID":"02m0",
@@ -181,6 +181,6 @@
 	},
 	"0370":{
 		"ID":"0370",
-		"TOOLTIP":"전방의 적들을 휩쓸어 <span style=\"color: #9999ff;\">(0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>)×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffff00;\">매 3번째</span> 공격은 직선상의 적들에게 <span style=\"color: #ffff00;\">150%</span>의 피해를 입힙니다."
+		"TOOLTIP":"전방의 적들을 휩쓸어 <span style=\"color: #9999ff;\">(0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>)×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffffff;\">매 3번째</span> 공격은 직선상의 적들에게 <span style=\"color: #ffffff;\">150%</span>의 피해를 입힙니다."
 	}
 }

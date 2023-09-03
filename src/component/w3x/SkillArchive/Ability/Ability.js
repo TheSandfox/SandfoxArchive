@@ -1,6 +1,6 @@
 //import react
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 //import JSON
 import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
@@ -30,6 +30,12 @@ while(i < AbilityParams["params"].length) {
 }
 mapstring = mapstring + '}'
 const AbilityMap = JSON.parse(mapstring)
+const SearchField = {
+	NAME : "",
+	TIER : "",
+	TAG : "",
+	CAST_TYPE : ""
+}
 
 //어빌리티 설명박스
 export function AbilityDescription(props) {
@@ -114,7 +120,7 @@ export function AbilityDescription(props) {
 	} else {
 		//아이콘모드
 		return <div className='ability-icon'>
-			<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]}>
+			<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]} title={abiljson["NAME"]}>
 			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 			</Link>
 		</div>
@@ -122,9 +128,11 @@ export function AbilityDescription(props) {
 
 }
 
-function AbilityDescriptions({mode}) {
+function AbilityDescriptions(props) {
+	let mode = props.mode
+	let abilityJson = props.abilityJson
 	return <>
-		{AbilityJson.map(desc=>{
+		{abilityJson.map(desc=>{
 			if(desc.ID[0] !== "e") {
 				return <AbilityDescription key={desc.ID} json={desc} mode={mode}/>		
 			} else {
@@ -151,40 +159,140 @@ function AbilityDescriptionSingle() {
 	</>
 } 
 
-function AbilityDescriptionContainer() {
-	const [viewMode,setViewMode] = useState(false)
+function AbilityDescriptionContainer(props) {
+	const [searchField,modifySearchField] = useState(SearchField)
+	let viewMode = props.viewMode
+	let setViewMode = props.viewModeModifier
+	let abilityJsonModifier = props.abilityJsonModifier
 
-	useEffect(() => {
-		// 초기화 로직
-	  }, []);
+	function modifier_modifySearchField(field,val) {
+		let sf = JSON.parse(JSON.stringify(searchField))
+		sf[field] = val
+		modifySearchField(sf)
+		abilityJsonModifier.query(AbilityJson,sf)
+	}
 
 	//viewmode에 따라 분기
 	return <>
-		<div className="ability-viewmode-switch">
-			<input
-				type="checkbox"
-				checked={viewMode}
-				onChange={(event)=>{setViewMode(event.target.checked)}}
-			/>
+		{/*컨트롤러 */}
+		<div className="ability-view-controller">
+			{/*체크박스 */}
+			<div className="ability-viewmode-switch">
+				<p>상세보기</p>
+				<input
+					type="checkbox"
+					checked={viewMode}
+					onChange={(event)=>{setViewMode(event.target.checked)}}
+				/>
+			</div>
+			{/*이름검색*/}
+			<div>
+				<p>이름 : </p>
+				<input 
+					type="text"
+					value={searchField["NAME"]}
+					onChange={(event)=>{modifier_modifySearchField("NAME",event.target.value)}}
+				/>
+			</div>
+			{/*티어필터링*/}
+			<div>
+				<p>티어 : </p>
+				<select 
+					value={searchField["TIER"]}
+					onChange={(event)=>{modifier_modifySearchField("TIER",event.target.value)}}
+				>
+					<option value="">전체</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			{/*태그검색*/}
+			<div>
+				<p>태그 : </p>
+				<input 
+					type="text"
+					value={searchField["TAG"]}
+					onChange={(event)=>{modifier_modifySearchField("TAG",event.target.value)}}
+				/>
+			</div>
+			{/*캐스트타입검색*/}
+			<div>
+				<p>유형 : </p>
+				<select
+					value={searchField["CAST_TYPE"]}
+					onChange={(event)=>{modifier_modifySearchField("CAST_TYPE",event.target.value)}}
+				>
+					<option value="">전체</option>
+					<option value="지점 목표물">지점 목표물</option>
+					<option value="유닛 목표물">유닛 목표물</option>
+					<option value="즉시 사용">즉시 사용</option>
+					<option value="끌어서 사용">끌어서 사용</option>
+					<option value="지속효과">지속효과</option>
+					<option value="무기">무기</option>
+					<option value="장비">장비</option>
+				</select>
+			</div>
 		</div>
+		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
 			<div className="ability-description-container">
-				<AbilityDescriptions mode='detail'/>
+				<AbilityDescriptions mode='detail' abilityJson={props.abilityJson} abilityJsonModifier={props.abilityJsonModifier}/>
 			</div>
 			:
 			<div className="ability-icon-container">
-				<AbilityDescriptions mode='icon'/>
+				<AbilityDescriptions mode='icon' abilityJson={props.abilityJson} abilityJsonModifier={props.abilityJsonModifier}/>
 			</div>
 		}
 	</>
 }
 
 export function Ability(props) {
+	const [viewMode,setViewMode] = useState(false)
+	const [abilityJson,modifyAbilityJson] = useState(AbilityJson)
+	function modifier_setViewMode(val) {
+		setViewMode(val)
+	}
+	const modifier_modifyAbilityJson = {
+		generic:(val) => {
+			modifyAbilityJson(val)
+		},
+		query:(target,form) => {
+			modifyAbilityJson(target.filter(item =>
+				/*어빌리티이름*/ 
+				( form["NAME"]===""?true:
+					item["NAME"].includes(form["NAME"]) 
+				) &&
+				/*어빌리티티어*/
+				( form["TIER"]===""?true:
+					item["TIER"].includes(form["TIER"]) 
+				) &&
+				/*어빌리티태그(좀무거움)*/
+				( form["TAG"]===""?true:
+					(CustomString[item["TAG1"]]!==undefined?CustomString[item["TAG1"]]["NAME"].includes(form["TAG"]):false)||
+					(CustomString[item["TAG2"]]!==undefined?CustomString[item["TAG2"]]["NAME"].includes(form["TAG"]):false)||
+					(CustomString[item["TAG3"]]!==undefined?CustomString[item["TAG3"]]["NAME"].includes(form["TAG"]):false)||
+					(CustomString[item["TAG4"]]!==undefined?CustomString[item["TAG4"]]["NAME"].includes(form["TAG"]):false) 
+				) &&
+				/*캐스트타입*/
+				( form["CAST_TYPE"]===""?true:
+					/*(CustomString[item["CAST_TYPE"]]!==undefined?*/CustomString[item["CAST_TYPE"]]["NAME"].includes(form["CAST_TYPE"])/*:false)*/
+				)
+			))
+		}
+	}
 	return <div className="ability-container">
 		{props.mode==='single'?
 			<AbilityDescriptionSingle/>
 			:
-			<AbilityDescriptionContainer/>
+			<AbilityDescriptionContainer 
+				viewMode={viewMode} 
+				viewModeModifier={modifier_setViewMode} 
+				abilityJson={abilityJson} 
+				abilityJsonModifier={modifier_modifyAbilityJson}
+			/>
 		}
 	</div>
 }

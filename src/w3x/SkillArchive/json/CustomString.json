@@ -149,7 +149,7 @@
 	"CONFIG_STAT_CONSTANT":{
 		"ARRNAME":"STAT",
 		"NAME":"null",
-		"COLOR":"ffff00",
+		"COLOR":"ffffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},

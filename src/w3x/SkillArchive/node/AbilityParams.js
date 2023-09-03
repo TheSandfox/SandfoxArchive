@@ -1,3 +1,5 @@
+const CustomString = require('../json/CustomString.json')
+
 function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
