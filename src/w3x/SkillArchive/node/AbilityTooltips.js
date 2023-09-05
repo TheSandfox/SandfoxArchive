@@ -12,7 +12,6 @@ var rs_json = ''
 var rs_jass = ''
 var currentAbilityId = ''
 const fs = require('fs')
-const { faBriefcaseClock } = require('@fortawesome/free-solid-svg-icons')
 
 function refineMap(ojsn) {
 	var mapstring = '{'
@@ -39,8 +38,10 @@ function main() {
 	var outFile = '../json/AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	var descriptioncol = 2
+	var customcostcol = 3
 	excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
 		var i = 0
+		var j = descriptioncol
 		//대괄호열기
 		fs.writeFileSync(outFile,'{','utf-8')
 		fs.writeFileSync(outputJ,'','utf-8')
@@ -49,32 +50,55 @@ function main() {
 				break;
 			}
 			currentAbilityId = rows[i][0]
+			j = descriptioncol
+			//텍매열기
 			fs.appendFileSync(outputJ,"\n//! textmacro abilityTooltip"+rows[i][0],'utf-8')
-			fs.appendFileSync(outputJ,"\nmethod relativeTooltip takes nothing returns string\n\treturn ",'utf-8')
 			//json괄호열기
 			if (i==0) {
 				fs.appendFileSync(outFile,'\n\t"'+currentAbilityId+'":{','utf-8')
 			} else {
 				fs.appendFileSync(outFile,',\n\t"'+currentAbilityId+'":{','utf-8')
 			}
-			//멤버네임
+			//ID JSON
 			fs.appendFileSync(outFile,'\n\t\t"ID":"'+currentAbilityId+'",','utf-8')
-			//내용JSON
-			fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
-			if (rows[i][descriptioncol]!=null || rows[i][descriptioncol]!=undefined) {
-				fs.appendFileSync(outFile,pars_json(rows[i][descriptioncol])["JSON"],'utf-8')
+			while(j<=customcostcol) {
+				if (rows[i][j]===null||rows[i][j]===undefined) {
+					j++;
+					continue;
+				}
+				//함수이름
+				switch (j) {
+				case descriptioncol :
+					fs.appendFileSync(outputJ,"\nmethod relativeTooltip takes nothing returns string\n\treturn ",'utf-8')
+					break;
+				case customcostcol :
+					fs.appendFileSync(outputJ,"\nmethod customCostTooltip takes nothing returns string\n\treturn ",'utf-8')
+					break;
+				}
+				//내용JSON
+				switch (j) {
+				case descriptioncol:
+					fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
+					break;
+				case customcostcol:
+					fs.appendFileSync(outFile,',\n\t\t"CUSTOM_COST":"','utf-8')
+					break;
+				}
+				fs.appendFileSync(outFile,pars_json(rows[i][j])["JSON"],'utf-8')
+				fs.appendFileSync(outFile,'"','utf-8')
+				//내용J
+				let jstring = pars_json(rows[i][j])["J"]
+				if (jstring[jstring.length-1]=='+') {
+					jstring = jstring.slice(0,-1)
+				}
+				fs.appendFileSync(outputJ,jstring,'utf-8')
+				//괄호닫기
+				fs.appendFileSync(outputJ,"\nendmethod",'utf-8')
+				j++;
 			}
-			fs.appendFileSync(outFile,'"','utf-8')
-			//내용J
-			let jstring = pars_json(rows[i][descriptioncol])["J"]
-			if (jstring[jstring.length-1]=='+') {
-				jstring = jstring.slice(0,-1)
-			}
-			fs.appendFileSync(outputJ,jstring,'utf-8')
 			//json괄호닫기
 			fs.appendFileSync(outFile,"\n\t}")
-			//괄호닫기
-			fs.appendFileSync(outputJ,"\nendmethod",'utf-8')
+			//텍매닫기
 			fs.appendFileSync(outputJ,"\n//! endtextmacro",'utf-8')
 			i++;
 		}

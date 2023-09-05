@@ -77,7 +77,8 @@
 	},
 	"01j0":{
 		"ID":"01j0",
-		"TOOLTIP":"주변의 적들에게 <span style=\"color: #9999ff;\">(0.0375×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>+0.075×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmanaicon.png\" title=\"최대마나\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #00ffff;\">탑승</span> 상태에서 사용 시 탑승물의 위치를 기준으로 사용합니다."
+		"TOOLTIP":"주변의 적들에게 <span style=\"color: #9999ff;\">(0.0375×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>+0.075×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmanaicon.png\" title=\"최대마나\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #00ffff;\">탑승</span> 상태에서 사용 시 탑승물의 위치를 기준으로 사용합니다.",
+		"CUSTOM_COST":"<span style=\"color: #00ff00;\">현재 체력의 12%</span>"
 	},
 	"01k0":{
 		"ID":"01k0",

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Nav() {
 	return <div id="nav">
-		<div className="fixedwidgetcontainer">
+		<div className="fixedwidgetcontainer w3font">
 			<Link to="/w3x/SkillArchive/Ability" className="widget">
 				<img 
 					src={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btnPackBeast.png"}

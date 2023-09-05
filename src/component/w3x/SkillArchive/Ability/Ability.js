@@ -8,28 +8,7 @@ import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.j
 import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
 // import Config from '../../../../w3x/SkillArchive/json/Config.json'
 
-//RefineAbilityJSON
-const AbilityJson = []
-let i = 0
-let mapstring = '{'
-while(i < AbilityParams["params"].length) {
-	let originjson = AbilityParams["params"][i]
-	let abilid = originjson["ID"]
-	let newjson = JSON.parse(JSON.stringify(originjson))
-	if (AbilityTooltips[abilid] !== undefined) {
-		newjson["TOOLTIP"] = AbilityTooltips[abilid]["TOOLTIP"]
-	}
-	AbilityJson.push(newjson)
-	//
-	if(i===0) {
-		mapstring = mapstring+'"'+originjson["ID"]+'":"'+String(i)+'"'
-	} else {
-		mapstring = mapstring+',"'+originjson["ID"]+'":"'+String(i)+'"'
-	}
-	i++
-}
-mapstring = mapstring + '}'
-const AbilityMap = JSON.parse(mapstring)
+const AbilityJson = AbilityParams["params"]
 const SearchField = {
 	NAME : "",
 	TIER : "",
@@ -37,13 +16,13 @@ const SearchField = {
 	CAST_TYPE : ""
 }
 
-//어빌리티 설명박스
-export function AbilityDescription(props) {
+//어빌리티 디스크립션 (상세or아이콘)
+function AbilityDescription(props) {
 	let abiljson = {}
 	let p = useParams()
 	if (props.json===undefined) {
 		//제이슨 없이 param으로 라우팅해서 컴포넨트 호출
-		abiljson = AbilityJson[AbilityMap[p.id]]
+		abiljson = AbilityJson.filter(item=>item["ID"]===p.id)[0]//AbilityJson[AbilityMap[p.id]]
 	} else {
 		//제이슨 줘서 컴포넨트 호출
 		abiljson = props.json
@@ -69,12 +48,12 @@ export function AbilityDescription(props) {
 			"IS_WEAPON":"false",
 		}
 	}
-	if(props.mode==='detail') {
+	if(props.viewMode==='detail') {
 		//디테일모드
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
-		return <div className="ability-description" style={stl}>
+		return <div className="ability-description w3font" style={stl}>
 			<div className="top">
 				<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 				<div className='name-and-tags'>
@@ -98,10 +77,22 @@ export function AbilityDescription(props) {
 				</div>
 			</div>
 			<div className="bottom">
-				<div className="cast-type">
-					{abiljson["CAST_TYPE"]!=="null"?CustomString[abiljson["CAST_TYPE"]]["NAME"]:""}
+				<div className = "cast-type-and-custom-cost">
+					<div className="cast-type">
+						{abiljson["CAST_TYPE"]!=="null"?CustomString[abiljson["CAST_TYPE"]]["NAME"]:""}
+					</div>
+					<div className="custom-cost" dangerouslySetInnerHTML={{__html:
+						AbilityTooltips[abiljson["ID"]]!==undefined?(
+							AbilityTooltips[abiljson["ID"]]["CUSTOM_COST"]!==undefined?AbilityTooltips[abiljson["ID"]]["CUSTOM_COST"]:""
+						):
+						""
+					}}>
+					</div>
 				</div>
-				<div className="tooltip" dangerouslySetInnerHTML={{__html:abiljson["TOOLTIP"]}}></div>
+				<div className="tooltip" dangerouslySetInnerHTML={{__html:
+					AbilityTooltips[abiljson["ID"]]!==undefined?AbilityTooltips[abiljson["ID"]]["TOOLTIP"]:""
+				}}>
+				</div>
 				<div className="statbonus">
 					<p>스탯 보너스 : </p>
 					<img 
@@ -128,13 +119,14 @@ export function AbilityDescription(props) {
 
 }
 
+//어빌리티 디스크립션 묶음
 function AbilityDescriptions(props) {
-	let mode = props.mode
+	let viewMode = props.viewMode
 	let abilityJson = props.abilityJson
 	return <>
 		{abilityJson.map(desc=>{
 			if(desc.ID[0] !== "e") {
-				return <AbilityDescription key={desc.ID} json={desc} mode={mode}/>		
+				return <AbilityDescription key={desc.ID} json={desc} viewMode={viewMode}/>		
 			} else {
 				return null
 			}
@@ -142,6 +134,7 @@ function AbilityDescriptions(props) {
 	</>
 }
 
+//어빌리티 디스크립션 한 개(상세)
 function AbilityDescriptionSingle() {
 	var navigate = useNavigate()
 	function goBack() {
@@ -151,116 +144,150 @@ function AbilityDescriptionSingle() {
 	//뒤로가기버튼
 	return <>
 		<div className='ability-single-container'>
-			<AbilityDescription mode='detail'/>
-			<div className='ability-single-back-div' onClick={goBack}>
+			<AbilityDescription viewMode='detail'/>
+			<div className='ability-single-back-div icon-button' onClick={goBack}>
 				<i className="fa-solid fa-reply"></i>
 			</div>
 		</div>
 	</>
 } 
 
-function AbilityDescriptionContainer(props) {
-	const [searchField,modifySearchField] = useState(SearchField)
-	let viewMode = props.viewMode
-	let setViewMode = props.viewModeModifier
-	let abilityJsonModifier = props.abilityJsonModifier
+//어빌리티 검색창
+function AbilitySearchController(props) {
+	const viewMode = props.viewMode
+	const modifyViewMode = props.modifyViewMode
+	const searchField = props.searchField
+	const modifySearchField = props.modifySearchField
 
-	function modifier_modifySearchField(field,val) {
-		let sf = JSON.parse(JSON.stringify(searchField))
-		sf[field] = val
-		modifySearchField(sf)
-		abilityJsonModifier.query(AbilityJson,sf)
+	return <>
+	{/*컨트롤러 */}
+	<div className="ability-view-controller w3font">
+		{/*체크박스 */}
+		<div className="ability-viewmode-switch rel">
+			<p>상세보기</p>
+			<input
+				type="checkbox"
+				checked={viewMode}
+				onChange={(event)=>{modifyViewMode.set(event.target.checked)}}
+			/>
+		</div>
+		{/*이름검색*/}
+		<div className="rel">
+			<p>이름 : </p>
+			<input 
+				type="text"
+				value={searchField["NAME"]}
+				onChange={(event)=>{modifySearchField.query("NAME",event.target.value)}}
+			/>
+		</div>
+		{/*티어필터링*/}
+		<div className="rel">
+			<p>티어 : </p>
+			<select 
+				value={searchField["TIER"]}
+				onChange={(event)=>{modifySearchField.query("TIER",event.target.value)}}
+			>
+				<option value="">전체</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+		{/*태그검색*/}
+		<div className="rel">
+			<p>태그 : </p>
+			<input 
+				type="text"
+				value={searchField["TAG"]}
+				onChange={(event)=>{modifySearchField.query("TAG",event.target.value)}}
+			/>
+		</div>
+		{/*캐스트타입검색*/}
+		<div className="rel">
+			<p>유형 : </p>
+			<select
+				value={searchField["CAST_TYPE"]}
+				onChange={(event)=>{modifySearchField.query("CAST_TYPE",event.target.value)}}
+			>
+				<option value="">전체</option>
+				<option value="지점 목표물">지점 목표물</option>
+				<option value="유닛 목표물">유닛 목표물</option>
+				<option value="즉시 사용">즉시 사용</option>
+				<option value="끌어서 사용">끌어서 사용</option>
+				<option value="지속효과">지속효과</option>
+				<option value="무기">무기</option>
+				<option value="칭호">칭호</option>
+			</select>
+		</div>
+		{/*버튼스페이스*/}
+		<div className="button-space rel">
+			{/*필터초기화*/}
+			<div className="icon-button" title='필터 초기화' onClick={
+				modifySearchField.clear
+			}>
+				<i class="fa-solid fa-arrows-rotate"></i>
+			</div>
+		</div>
+	</div>
+	</>
+}
+
+//어빌리티 디스크립션 관리자
+function AbilityDescriptionContainer(props) {
+	const [searchField,setSearchField] = useState(SearchField)
+	const viewMode = props.viewMode
+	const modifyViewMode = props.modifyViewMode
+	const modifyAbilityJson = props.modifyAbilityJson
+
+	const modifySearchField = {
+		query : (field,val) =>{
+			let sf = JSON.parse(JSON.stringify(searchField))
+			sf[field] = val
+			setSearchField(sf)
+			modifyAbilityJson.query(AbilityJson,sf)
+		},
+		clear : () =>{
+			setSearchField(SearchField)
+			modifyAbilityJson.clear()
+		}
 	}
 
 	//viewmode에 따라 분기
 	return <>
-		{/*컨트롤러 */}
-		<div className="ability-view-controller">
-			{/*체크박스 */}
-			<div className="ability-viewmode-switch">
-				<p>상세보기</p>
-				<input
-					type="checkbox"
-					checked={viewMode}
-					onChange={(event)=>{setViewMode(event.target.checked)}}
-				/>
-			</div>
-			{/*이름검색*/}
-			<div>
-				<p>이름 : </p>
-				<input 
-					type="text"
-					value={searchField["NAME"]}
-					onChange={(event)=>{modifier_modifySearchField("NAME",event.target.value)}}
-				/>
-			</div>
-			{/*티어필터링*/}
-			<div>
-				<p>티어 : </p>
-				<select 
-					value={searchField["TIER"]}
-					onChange={(event)=>{modifier_modifySearchField("TIER",event.target.value)}}
-				>
-					<option value="">전체</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-				</select>
-			</div>
-			{/*태그검색*/}
-			<div>
-				<p>태그 : </p>
-				<input 
-					type="text"
-					value={searchField["TAG"]}
-					onChange={(event)=>{modifier_modifySearchField("TAG",event.target.value)}}
-				/>
-			</div>
-			{/*캐스트타입검색*/}
-			<div>
-				<p>유형 : </p>
-				<select
-					value={searchField["CAST_TYPE"]}
-					onChange={(event)=>{modifier_modifySearchField("CAST_TYPE",event.target.value)}}
-				>
-					<option value="">전체</option>
-					<option value="지점 목표물">지점 목표물</option>
-					<option value="유닛 목표물">유닛 목표물</option>
-					<option value="즉시 사용">즉시 사용</option>
-					<option value="끌어서 사용">끌어서 사용</option>
-					<option value="지속효과">지속효과</option>
-					<option value="무기">무기</option>
-					<option value="장비">장비</option>
-				</select>
-			</div>
-		</div>
+		<AbilitySearchController viewMode={viewMode} modifyViewMode={modifyViewMode} searchField={searchField} modifySearchField={modifySearchField}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
 			<div className="ability-description-container">
-				<AbilityDescriptions mode='detail' abilityJson={props.abilityJson} abilityJsonModifier={props.abilityJsonModifier}/>
+				<AbilityDescriptions viewMode='detail' abilityJson={props.abilityJson} modifyAbilityJson={props.modifyAbilityJson}/>
 			</div>
 			:
 			<div className="ability-icon-container">
-				<AbilityDescriptions mode='icon' abilityJson={props.abilityJson} abilityJsonModifier={props.abilityJsonModifier}/>
+				<AbilityDescriptions viewMode='icon' abilityJson={props.abilityJson} modifyAbilityJson={props.modifyAbilityJson}/>
 			</div>
 		}
 	</>
 }
 
+//어빌리티 메인 컨테이너
 export function Ability(props) {
 	const [viewMode,setViewMode] = useState(false)
-	const [abilityJson,modifyAbilityJson] = useState(AbilityJson)
-	function modifier_setViewMode(val) {
-		setViewMode(val)
+	const [abilityJson,setAbilityJson] = useState(AbilityJson)
+	const modifyViewMode = {
+		set:(val) => {
+			setViewMode(val)
+		},
+		toggle: ()=> {
+			setViewMode(!viewMode)
+		}
 	}
-	const modifier_modifyAbilityJson = {
-		generic:(val) => {
-			modifyAbilityJson(val)
+	const modifyAbilityJson = {
+		clear:() => {
+			setAbilityJson(AbilityJson)
 		},
 		query:(target,form) => {
-			modifyAbilityJson(target.filter(item =>
+			setAbilityJson(target.filter(item =>
 				/*어빌리티이름*/ 
 				( form["NAME"]===""?true:
 					item["NAME"].includes(form["NAME"]) 
@@ -284,14 +311,14 @@ export function Ability(props) {
 		}
 	}
 	return <div className="ability-container">
-		{props.mode==='single'?
+		{props.isSingle===true?
 			<AbilityDescriptionSingle/>
 			:
 			<AbilityDescriptionContainer 
 				viewMode={viewMode} 
-				viewModeModifier={modifier_setViewMode} 
+				modifyViewMode={modifyViewMode} 
 				abilityJson={abilityJson} 
-				abilityJsonModifier={modifier_modifyAbilityJson}
+				modifyAbilityJson={modifyAbilityJson}
 			/>
 		}
 	</div>

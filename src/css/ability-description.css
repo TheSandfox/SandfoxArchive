@@ -4,10 +4,11 @@
 	right:16px;
 	display: flex;
 	flex-direction: column;
-	background-color: #1a2864;
+	background-color: #464546;/*#1a2864;*/
 	border-radius: 8px;
 	padding:16px;
 	color:#ffffff;
+	z-index:100;
 }
 
 .ability-view-controller>* {
@@ -20,6 +21,20 @@
 	text-align: left;
 	align-items: center;
 	justify-content: center;
+	position:relative;
+}
+
+.ability-view-controller>.button-space {
+	margin-top:16px;
+}
+
+.ability-view-controller>.button-space>div {
+	width:32px;
+	height:32px;
+}
+
+.ability-single-back-div>i {
+	color: rgb(90,73,55);
 }
 
 .ability-view-controller>*>* {
@@ -60,11 +75,6 @@
 	max-width:960px;
 }
 
-@font-face {
-	font-family: 'W2002'; /* 폰트 이름 설정 */
-	src: url('./2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
-}
-
 .ability-description {
 	/*width:100%;*/
 	margin:16px;
@@ -74,8 +84,6 @@
 	border-radius: 16px;
 	display: flex;
 	flex-direction: column;
-	font-family: 'W2002', sans-serif;
-	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ability-description>.top{
@@ -175,8 +183,20 @@
 	color:#ffcc99;
 }
 
-.ability-description>.bottom>.cast-type {
+.cast-type-and-custom-cost {
+	display: flex;
+	flex-direction: row;
+}
+
+.cast-type{
+	text-align: left;
+	flex:0.5;
 	color: #00ffff;
+}
+
+.custom-cost{
+	text-align: right;
+	flex:0.5;
 }
 
 .ability-description>.bottom>.statbonus{
@@ -228,18 +248,7 @@
 
 .ability-single-back-div {
 	margin-top: 32px;
-	border-radius: 8px;
-	background: rgb(228,208,163);
 	width:64px;
 	height:32px;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	cursor: pointer;
-}
-
-.ability-single-back-div>i {
-	color: rgb(90,73,55);
 }
 

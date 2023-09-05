@@ -75,3 +75,40 @@ a:active {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #fff1c3;
 }
+
+.rel {
+	position:relative;
+}
+
+.abs {
+	position:absolute;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+@font-face {
+	font-family: 'W2002'; /* 폰트 이름 설정 */
+	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
+}
+
+.w3font {
+	font-family: 'W2002', sans-serif;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.icon-button {
+	border-radius: 8px;
+	background: rgb(228,208,163);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	cursor: pointer;
+}
+
+.icon-button>i {
+	color: rgb(90,73,55);
+	text-shadow: none;
+}
