@@ -156,6 +156,7 @@ function monotag(main,par) {
 		default :
 			did = getProperty(par)
 		}
+		// console.log(currentAbilityId+"----"+did)
 		//json
 		rs_json = rs_json+'<span style=\\\"color: #'+CustomString[did]["COLOR"]+';\\\">'+CustomString[did]["NAME"]+'</span>'
 		//j
@@ -310,6 +311,7 @@ function modepush(main,par) {
 	switch (main) {
 		case 'c' :
 			var color = ''
+			// console.log(currentAbilityId+"++++"+par)
 			switch (par[0]) {
 			case '#' :
 				color = getProperty(par)
@@ -320,6 +322,7 @@ function modepush(main,par) {
 			default :
 				color = CustomString[getProperty(par)]["COLOR"]
 			}
+			// console.log(currentAbilityId+"----"+color)
 			//json
 			rs_json = rs_json+'<span style=\\\"color: #'+color+';\\\">'
 			//j

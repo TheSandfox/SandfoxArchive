@@ -23,7 +23,7 @@
 	"CONFIG_STAT_DEFENSE":{
 		"ARRNAME":"STAT",
 		"NAME":"방어력",
-		"COLOR":"999999",
+		"COLOR":"ffcc99",
 		"ICON":"ui/widgets/tooltips/human/tooltipdefenceicon.png",
 		"DESCRIPTION":"null"
 	},
@@ -449,7 +449,14 @@
 	},
 	"CONFIG_DAMAGE_TARGET":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"단일피해",
+		"NAME":"타겟팅",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_NONTARGET":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"논타겟",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -457,6 +464,27 @@
 	"CONFIG_DAMAGE_AOE":{
 		"ARRNAME":"DAMAGE",
 		"NAME":"범위피해",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_NONAOE":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"단일피해",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_ONHIT":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"적중",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_NONHIT":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"비적중",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -471,6 +499,20 @@
 	"CONFIG_DAMAGE_MELEE":{
 		"ARRNAME":"DAMAGE",
 		"NAME":"근접공격",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_RANGED_SUB":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"원거리",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_MELEE_SUB":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"근접",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -744,6 +786,20 @@
 	"CONFIG_ABILITY_TAG_NATURE":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"자연",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_SUMMON":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"소환수",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_SERVANT":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"하수인",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"

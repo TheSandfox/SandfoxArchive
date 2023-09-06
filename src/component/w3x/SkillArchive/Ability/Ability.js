@@ -48,7 +48,7 @@ function AbilityDescription(props) {
 			"IS_WEAPON":"false",
 		}
 	}
-	if(props.viewMode==='detail') {
+	if(props.viewMode===true) {
 		//디테일모드
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
@@ -120,13 +120,11 @@ function AbilityDescription(props) {
 }
 
 //어빌리티 디스크립션 묶음
-function AbilityDescriptions(props) {
-	let viewMode = props.viewMode
-	let abilityJson = props.abilityJson
+function AbilityDescriptions({state}) {
 	return <>
-		{abilityJson.map(desc=>{
+		{state.abilityJson.map(desc=>{
 			if(desc.ID[0] !== "e") {
-				return <AbilityDescription key={desc.ID} json={desc} viewMode={viewMode}/>		
+				return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode}/>		
 			} else {
 				return null
 			}
@@ -144,7 +142,7 @@ function AbilityDescriptionSingle() {
 	//뒤로가기버튼
 	return <>
 		<div className='ability-single-container'>
-			<AbilityDescription viewMode='detail'/>
+			<AbilityDescription viewMode={true}/>
 			<div className='ability-single-back-div icon-button' onClick={goBack}>
 				<i className="fa-solid fa-reply"></i>
 			</div>
@@ -153,12 +151,11 @@ function AbilityDescriptionSingle() {
 } 
 
 //어빌리티 검색창
-function AbilitySearchController(props) {
-	const viewMode = props.viewMode
-	const modifyViewMode = props.modifyViewMode
-	const searchField = props.searchField
-	const modifySearchField = props.modifySearchField
-
+function AbilitySearchController({state}) {
+	const viewMode = state.viewMode
+	const modifyViewMode = state.modifyViewMode
+	const searchField = state.searchField
+	const modifySearchField = state.modifySearchField
 	return <>
 	{/*컨트롤러 */}
 	<div className="ability-view-controller w3font">
@@ -215,6 +212,7 @@ function AbilitySearchController(props) {
 				<option value="지점 목표물">지점 목표물</option>
 				<option value="유닛 목표물">유닛 목표물</option>
 				<option value="즉시 사용">즉시 사용</option>
+				<option value="변신">변신</option>
 				<option value="끌어서 사용">끌어서 사용</option>
 				<option value="지속효과">지속효과</option>
 				<option value="무기">무기</option>
@@ -227,7 +225,7 @@ function AbilitySearchController(props) {
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear
 			}>
-				<i class="fa-solid fa-arrows-rotate"></i>
+				<i className="fa-solid fa-arrows-rotate"></i>
 			</div>
 		</div>
 	</div>
@@ -235,36 +233,20 @@ function AbilitySearchController(props) {
 }
 
 //어빌리티 디스크립션 관리자
-function AbilityDescriptionContainer(props) {
-	const [searchField,setSearchField] = useState(SearchField)
-	const viewMode = props.viewMode
-	const modifyViewMode = props.modifyViewMode
-	const modifyAbilityJson = props.modifyAbilityJson
-
-	const modifySearchField = {
-		query : (field,val) =>{
-			let sf = JSON.parse(JSON.stringify(searchField))
-			sf[field] = val
-			setSearchField(sf)
-			modifyAbilityJson.query(AbilityJson,sf)
-		},
-		clear : () =>{
-			setSearchField(SearchField)
-			modifyAbilityJson.clear()
-		}
-	}
+function AbilityDescriptionContainer({state}) {
+	const viewMode = state.viewMode
 
 	//viewmode에 따라 분기
 	return <>
-		<AbilitySearchController viewMode={viewMode} modifyViewMode={modifyViewMode} searchField={searchField} modifySearchField={modifySearchField}/>
+		<AbilitySearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
 			<div className="ability-description-container">
-				<AbilityDescriptions viewMode='detail' abilityJson={props.abilityJson} modifyAbilityJson={props.modifyAbilityJson}/>
+				<AbilityDescriptions state={state}/>
 			</div>
 			:
 			<div className="ability-icon-container">
-				<AbilityDescriptions viewMode='icon' abilityJson={props.abilityJson} modifyAbilityJson={props.modifyAbilityJson}/>
+				<AbilityDescriptions state={state}/>
 			</div>
 		}
 	</>
@@ -274,6 +256,7 @@ function AbilityDescriptionContainer(props) {
 export function Ability(props) {
 	const [viewMode,setViewMode] = useState(false)
 	const [abilityJson,setAbilityJson] = useState(AbilityJson)
+	const [searchField,setSearchField] = useState(SearchField)
 	const modifyViewMode = {
 		set:(val) => {
 			setViewMode(val)
@@ -310,15 +293,32 @@ export function Ability(props) {
 			))
 		}
 	}
+	const modifySearchField = {
+		query : (field,val) =>{
+			let sf = JSON.parse(JSON.stringify(searchField))
+			sf[field] = val
+			setSearchField(sf)
+			modifyAbilityJson.query(AbilityJson,sf)
+		},
+		clear : () =>{
+			setSearchField(SearchField)
+			modifyAbilityJson.clear()
+		}
+	}
+	const state = {
+		viewMode:viewMode,
+		modifyViewMode:modifyViewMode,
+		abilityJson:abilityJson,
+		modifyAbilityJson:modifyAbilityJson,
+		searchField:searchField,
+		modifySearchField:modifySearchField
+	}
 	return <div className="ability-container">
 		{props.isSingle===true?
 			<AbilityDescriptionSingle/>
 			:
 			<AbilityDescriptionContainer 
-				viewMode={viewMode} 
-				modifyViewMode={modifyViewMode} 
-				abilityJson={abilityJson} 
-				modifyAbilityJson={modifyAbilityJson}
+				state={state}
 			/>
 		}
 	</div>
