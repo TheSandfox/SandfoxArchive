@@ -53,7 +53,7 @@ function AbilityDescription(props) {
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
-		return <div className="ability-description w3font" style={stl}>
+		return <div className="ability-description description-box w3font" style={stl}>
 			<div className="top">
 				<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 				<div className='name-and-tags'>
@@ -110,7 +110,7 @@ function AbilityDescription(props) {
 		</div>
 	} else {
 		//아이콘모드
-		return <div className='ability-icon'>
+		return <div className='w3x-icon'>
 			<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]} title={abiljson["NAME"]}>
 			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 			</Link>
@@ -123,11 +123,7 @@ function AbilityDescription(props) {
 function AbilityDescriptions({state}) {
 	return <>
 		{state.abilityJson.map(desc=>{
-			if(desc.ID[0] !== "e") {
-				return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode}/>		
-			} else {
-				return null
-			}
+			return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode}/>		
 		})}
 	</>
 }
@@ -158,27 +154,32 @@ function AbilitySearchController({state}) {
 	const modifySearchField = state.modifySearchField
 	return <>
 	{/*컨트롤러 */}
-	<div className="ability-view-controller w3font">
+	<div className="controller w3font">
 		{/*체크박스 */}
-		<div className="ability-viewmode-switch rel">
-			<p>상세보기</p>
-			<input
-				type="checkbox"
-				checked={viewMode}
-				onChange={(event)=>{modifyViewMode.set(event.target.checked)}}
-			/>
+		<div className="rel horizon-left vertical-top h64">
+			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
+				<i className="fa-solid fa-border-all"></i>
+			</div>
+			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
+				<i className="fa-solid fa-bars"></i>
+			</div>
 		</div>
 		{/*이름검색*/}
-		<div className="rel">
+		<div className="rel h24 horizon-left vertical-center">
 			<p>이름 : </p>
 			<input 
 				type="text"
 				value={searchField["NAME"]}
 				onChange={(event)=>{modifySearchField.query("NAME",event.target.value)}}
 			/>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("NAME","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
 		</div>
 		{/*티어필터링*/}
-		<div className="rel">
+		<div className="rel h24 horizon-left vertical-center">
 			<p>티어 : </p>
 			<select 
 				value={searchField["TIER"]}
@@ -191,18 +192,28 @@ function AbilitySearchController({state}) {
 				<option value="4">4</option>
 				<option value="5">5</option>
 			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("TIER","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
 		</div>
 		{/*태그검색*/}
-		<div className="rel">
+		<div className="rel h24 horizon-left vertical-center">
 			<p>태그 : </p>
 			<input 
 				type="text"
 				value={searchField["TAG"]}
 				onChange={(event)=>{modifySearchField.query("TAG",event.target.value)}}
 			/>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("TAG","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
 		</div>
 		{/*캐스트타입검색*/}
-		<div className="rel">
+		<div className="rel h24 horizon-left vertical-center">
 			<p>유형 : </p>
 			<select
 				value={searchField["CAST_TYPE"]}
@@ -212,15 +223,18 @@ function AbilitySearchController({state}) {
 				<option value="지점 목표물">지점 목표물</option>
 				<option value="유닛 목표물">유닛 목표물</option>
 				<option value="즉시 사용">즉시 사용</option>
-				<option value="변신">변신</option>
 				<option value="끌어서 사용">끌어서 사용</option>
 				<option value="지속효과">지속효과</option>
 				<option value="무기">무기</option>
-				<option value="칭호">칭호</option>
 			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("CAST_TYPE","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
 		</div>
 		{/*버튼스페이스*/}
-		<div className="button-space rel">
+		<div className="rel horizon-center vertical-bottom h64">
 			{/*필터초기화*/}
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear
@@ -241,11 +255,11 @@ function AbilityDescriptionContainer({state}) {
 		<AbilitySearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
-			<div className="ability-description-container">
+			<div className="description-container">
 				<AbilityDescriptions state={state}/>
 			</div>
 			:
-			<div className="ability-icon-container">
+			<div className="grid8x">
 				<AbilityDescriptions state={state}/>
 			</div>
 		}

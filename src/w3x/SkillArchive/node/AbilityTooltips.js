@@ -51,55 +51,60 @@ function main() {
 			}
 			currentAbilityId = rows[i][0]
 			j = descriptioncol
-			//텍매열기
-			fs.appendFileSync(outputJ,"\n//! textmacro abilityTooltip"+rows[i][0],'utf-8')
-			//json괄호열기
-			if (i==0) {
-				fs.appendFileSync(outFile,'\n\t"'+currentAbilityId+'":{','utf-8')
-			} else {
-				fs.appendFileSync(outFile,',\n\t"'+currentAbilityId+'":{','utf-8')
-			}
-			//ID JSON
-			fs.appendFileSync(outFile,'\n\t\t"ID":"'+currentAbilityId+'",','utf-8')
-			while(j<=customcostcol) {
-				if (rows[i][j]===null||rows[i][j]===undefined) {
+			try {
+				//텍매열기
+				fs.appendFileSync(outputJ,"\n//! textmacro abilityTooltip"+rows[i][0],'utf-8')
+				//json괄호열기
+				if (i==0) {
+					fs.appendFileSync(outFile,'\n\t"'+currentAbilityId+'":{','utf-8')
+				} else {
+					fs.appendFileSync(outFile,',\n\t"'+currentAbilityId+'":{','utf-8')
+				}
+				//ID JSON
+				fs.appendFileSync(outFile,'\n\t\t"ID":"'+currentAbilityId+'",','utf-8')
+				while(j<=customcostcol) {
+					if (rows[i][j]===null||rows[i][j]===undefined) {
+						j++;
+						continue;
+					}
+					//함수이름
+					switch (j) {
+					case descriptioncol :
+						fs.appendFileSync(outputJ,"\nmethod relativeTooltip takes nothing returns string\n\treturn ",'utf-8')
+						break;
+					case customcostcol :
+						fs.appendFileSync(outputJ,"\nmethod customCostTooltip takes nothing returns string\n\treturn ",'utf-8')
+						break;
+					}
+					//내용JSON
+					switch (j) {
+					case descriptioncol:
+						fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
+						break;
+					case customcostcol:
+						fs.appendFileSync(outFile,',\n\t\t"CUSTOM_COST":"','utf-8')
+						break;
+					}
+					fs.appendFileSync(outFile,pars_json(rows[i][j])["JSON"],'utf-8')
+					fs.appendFileSync(outFile,'"','utf-8')
+					//내용J
+					let jstring = pars_json(rows[i][j])["J"]
+					if (jstring[jstring.length-1]=='+') {
+						jstring = jstring.slice(0,-1)
+					}
+					fs.appendFileSync(outputJ,jstring,'utf-8')
+					//괄호닫기
+					fs.appendFileSync(outputJ,"\nendmethod",'utf-8')
 					j++;
-					continue;
 				}
-				//함수이름
-				switch (j) {
-				case descriptioncol :
-					fs.appendFileSync(outputJ,"\nmethod relativeTooltip takes nothing returns string\n\treturn ",'utf-8')
-					break;
-				case customcostcol :
-					fs.appendFileSync(outputJ,"\nmethod customCostTooltip takes nothing returns string\n\treturn ",'utf-8')
-					break;
-				}
-				//내용JSON
-				switch (j) {
-				case descriptioncol:
-					fs.appendFileSync(outFile,'\n\t\t"TOOLTIP":"','utf-8')
-					break;
-				case customcostcol:
-					fs.appendFileSync(outFile,',\n\t\t"CUSTOM_COST":"','utf-8')
-					break;
-				}
-				fs.appendFileSync(outFile,pars_json(rows[i][j])["JSON"],'utf-8')
-				fs.appendFileSync(outFile,'"','utf-8')
-				//내용J
-				let jstring = pars_json(rows[i][j])["J"]
-				if (jstring[jstring.length-1]=='+') {
-					jstring = jstring.slice(0,-1)
-				}
-				fs.appendFileSync(outputJ,jstring,'utf-8')
-				//괄호닫기
-				fs.appendFileSync(outputJ,"\nendmethod",'utf-8')
-				j++;
+				//json괄호닫기
+				fs.appendFileSync(outFile,"\n\t}")
+				//텍매닫기
+				fs.appendFileSync(outputJ,"\n//! endtextmacro",'utf-8')
+			} catch(err) {
+				console.log(err.message)
+				console.log("범인:================'"+currentAbilityId+"'================")
 			}
-			//json괄호닫기
-			fs.appendFileSync(outFile,"\n\t}")
-			//텍매닫기
-			fs.appendFileSync(outputJ,"\n//! endtextmacro",'utf-8')
 			i++;
 		}
 		//대괄호닫기
@@ -284,6 +289,16 @@ function monotag(main,par) {
 		//jass
 		rs_jass = rs_jass+'"|cff'+CustomString["CONFIG_STAT_LUCK"]["COLOR"]+'"+'+'R2SW(.owner.getLuckyPercent('+(p1/100.)+','+p2+')*100.,1,1)+"%|r"+'
 		rs_jass = rs_jass+'CustomString.shiftStatTooltip(CONFIG_STAT_LUCK)+'
+		break;
+	case 'multiply' :
+		var quoteind = par.indexOf(',')
+		var p1 = getProperty(par.substring(0,quoteind))
+		var p2 = getProperty(par.substring(quoteind+1,par.length))
+		var val = Number.isInteger(p1*p2)?String(Number(p1*p2).toFixed(1)):String(p1*p2)
+		//json
+		rs_json = rs_json+val
+		//jass
+		rs_jass = rs_jass+val
 		break;
 	case 'unitInfo' :
 		var did = getProperty(par)

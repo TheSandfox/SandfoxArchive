@@ -10,7 +10,7 @@ export default function Nav() {
 				/>
 				<p>스킬/아이템 정보</p>
 			</Link>
-			<Link className="widget">
+			<Link to="/w3x/SkillArchive/Unit" className="widget">
 				<img 
 					src={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btnfootman.png"}
 					alt={".png"}

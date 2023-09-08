@@ -127,7 +127,7 @@
 	},
 	"0200":{
 		"ID":"0200",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도</span><span style=\"color: #ffff99;\">가 30%</span>, <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 10%</span> 증가하며 <span style=\"color: #ff9900;\">기본공격</span><span style=\"color: #ff9900;\">의 적중 피해량이 0.175×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도</span><span style=\"color: #ffff99;\">가 30%</span>, <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 10%</span> 증가하며 <span style=\"color: #ff9900;\">기본</span><span style=\"color: #ff9900;\">공격의 적중 피해량이 0.175×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>증가합니다."
 	},
 	"0230":{
 		"ID":"0230",
@@ -135,7 +135,7 @@
 	},
 	"0240":{
 		"ID":"0240",
-		"TOOLTIP":"대상에게 <span style=\"color: #ffffff;\">0.6×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 무작위 카드를 투척합니다. <span style=\"color: #00cc00;\">25%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 한 장의 카드를 추가로 투척합니다. 피해유형과 공격유형이 카드의 색깔에 따라 달라집니다.<br><br><span style=\"color: #ff0000;\">빨간색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #3333ff;\">파란색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #ff9900;\">기본공격</span><br><span style=\"color: #ffff00;\">황금색 카드 : </span><span style=\"color: #ff9900;\">물리피해</span>, <span style=\"color: #9999ff;\">스킬공격</span><br><span style=\"color: #ff00ff;\">보라색 카드 : </span><span style=\"color: #9999ff;\">마법피해</span>, <span style=\"color: #9999ff;\">스킬공격</span>"
+		"TOOLTIP":"대상에게 <span style=\"color: #ffffff;\">0.6×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 무작위 카드를 투척합니다. <span style=\"color: #00cc00;\">25%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 한 장의 카드를 추가로 투척합니다. 피해유형과 공격유형이 카드의 색깔에 따라 달라집니다.<br><br><span style=\"color: #ff0000;\">빨간색 카드 : </span><span style=\"color: #ff9900;\">물리</span>, <span style=\"color: #ff9900;\">기본</span><br><span style=\"color: #3333ff;\">파란색 카드 : </span><span style=\"color: #9999ff;\">마법</span>, <span style=\"color: #ff9900;\">기본</span><br><span style=\"color: #ffff00;\">황금색 카드 : </span><span style=\"color: #ff9900;\">물리</span>, <span style=\"color: #9999ff;\">스킬</span><br><span style=\"color: #ff00ff;\">보라색 카드 : </span><span style=\"color: #9999ff;\">마법</span>, <span style=\"color: #9999ff;\">스킬</span>"
 	},
 	"0250":{
 		"ID":"0250",
@@ -274,10 +274,10 @@
 	},
 	"0500":{
 		"ID":"0500",
-		"TOOLTIP":"화룡의 불길로 매 <span style=\"color: #ffffff;\">0.2초</span>마다 지정 범위 내의 적들에게 <span style=\"color: #9999ff;\">0.67×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 해당 공격은 <span style=\"color: #00ff99;\">대상의 저항력을 50%</span> 무시합니다.<br><br> - 공격횟수 : <span style=\"color: #ffffff;\">15회</span>(최대 피해량 : <span style=\"color: #9999ff;\">0.67×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)×(15)</span>)<br><br><span style=\"color: #999999;\">다른 행동 중에 사용할 수 있습니다.</span>"
+		"TOOLTIP":"화룡의 불길로 매 <span style=\"color: #ffffff;\">0.2초</span>마다 지정 범위 내의 적들에게 <span style=\"color: #9999ff;\">0.67×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 해당 공격은 <span style=\"color: #00ff99;\">대상의 저항력을 50%</span> 무시합니다.<br><br> - 공격횟수 : <span style=\"color: #ffffff;\">15회</span>(최대 피해량 : <span style=\"color: #9999ff;\">10.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>)<br><br><span style=\"color: #999999;\">다른 행동 중에 사용할 수 있습니다.</span>"
 	},
 	"0510":{
 		"ID":"0510",
-		"TOOLTIP":"지정한 방향으로 무차별 난사하여 <span style=\"color: #ffffff;\">0.125초</span>마다 범위 내의 적들에게 <span style=\"color: #ff9900;\">0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br> - 공격횟수 : <span style=\"color: #ffffff;\">20회</span>(최대 피해량 : <span style=\"color: #ff9900;\">0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)×(20)</span>)"
+		"TOOLTIP":"지정한 방향으로 무차별 난사하여 <span style=\"color: #ffffff;\">0.125초</span>마다 범위 내의 적들에게 <span style=\"color: #ff9900;\">0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다.<br><br> - 공격횟수 : <span style=\"color: #ffffff;\">20회</span>(최대 피해량 : <span style=\"color: #ff9900;\">11.0×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>)"
 	}
 }

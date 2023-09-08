@@ -20,21 +20,6 @@
 	height:48px;
 }
 
-.main-links-icon {
-	display:flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	margin-left: 4px;
-	margin-right: 4px;
-	padding:4px;
-	width:32px;
-	height:32px;
-	font-size:24px;
-	border-radius: 8px;
-	background-color: rgb(228,208,163);
-}
-
 .youtube {
 	color:#c4302b;
 }

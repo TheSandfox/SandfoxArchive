@@ -13,7 +13,8 @@ import './App.css';
 import './css/top-bar.css'
 import './css/mid.css'
 import './css/bottom-bar.css'
-import './css/ability-description.css'
+import './css/ability.css'
+import './css/unit.css'
 import './css/nav.css'
 import './css/main.css'
 

@@ -13,7 +13,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"도내 SSR급 굳건이"
 	},
 	{
 		"ID":"HR01",
@@ -29,7 +30,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"칼 든 사람보다 무서운 총 든 사람"
 	},
 	{
 		"ID":"HR02",
@@ -45,7 +47,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"몽둥이가 압권인 전사"
 	},
 	{
 		"ID":"HR03",
@@ -61,7 +64,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"현실세계에선 스토커였던 내가 이세계에서는 0티어 도적?"
 	},
 	{
 		"ID":"HR04",
@@ -77,7 +81,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"정말로 강한 마법사이다. 왜 강한지는…"
 	},
 	{
 		"ID":"HR05",
@@ -93,7 +98,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"전우애로 똘똘 뭉친 사람"
 	},
 	{
 		"ID":"HR06",
@@ -109,7 +115,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"트롤인데다 광전사이다. 말이 필요한가?"
 	},
 	{
 		"ID":"HR07",
@@ -125,7 +132,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"벼르고 있는 사람들이 많다. 잡히면 어떻게 될까?"
 	},
 	{
 		"ID":"HR08",
@@ -141,7 +149,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"현실에선 주술이라고는 인디안식 기우제밖에 몰랐지만 여기선 다르다."
 	},
 	{
 		"ID":"HR09",
@@ -157,7 +166,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"카드값'이 많이 나오는 사람"
 	},
 	{
 		"ID":"HR0a",
@@ -173,7 +183,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"힘이 센 불한당"
 	},
 	{
 		"ID":"HR0b",
@@ -189,7 +200,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"해녀라고 부르면 화를 낸다."
 	},
 	{
 		"ID":"HR0c",
@@ -205,7 +217,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"마법이 소용없다고 주장하는 사람"
 	},
 	{
 		"ID":"HR0d",
@@ -221,7 +234,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"지상 최강의 막노동꾼"
 	},
 	{
 		"ID":"HR0e",
@@ -237,7 +251,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"대지마법을 사용할 수 있다는 오해를 자주 산다."
 	},
 	{
 		"ID":"HR0f",
@@ -253,7 +268,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"뀨"
 	},
 	{
 		"ID":"SP00",
@@ -269,7 +285,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"탑승감 좋은 군마"
 	},
 	{
 		"ID":"SP03",
@@ -285,7 +302,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"꾸이이익"
 	},
 	{
 		"ID":"SP04",
@@ -301,7 +319,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"지성도 없고 고통도 모르니 가장 무서운 존재가 아닐까?"
 	},
 	{
 		"ID":"SP05",
@@ -317,7 +336,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"튼튼한 정찰탑"
 	},
 	{
 		"ID":"SP06",
@@ -333,7 +353,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"이세계에서도 범죄자 소탕에 많이 활용되는 기구"
 	},
 	{
 		"ID":"SP07",
@@ -349,7 +370,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"늑대의 형상을 한 정령"
 	},
 	{
 		"ID":"SP08",
@@ -365,7 +387,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"싫어하는 학교는 연세대학교"
 	},
 	{
 		"ID":"NP00",
@@ -381,7 +404,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"무슨 설명을 적어놓으려고 했더라?"
 	},
 	{
 		"ID":"NP01",
@@ -397,7 +421,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"물고기 잡는 법 보다 더 중요한 것은 낚시대를 만드는 법"
 	},
 	{
 		"ID":"NP02",
@@ -413,7 +438,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"NP03",
@@ -429,7 +455,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"NP04",
@@ -445,7 +472,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"U000",
@@ -461,7 +489,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"U001",
@@ -477,7 +506,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"U002",
@@ -493,7 +523,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"U003",
@@ -509,7 +540,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"U004",
@@ -525,7 +557,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"G000",
@@ -541,7 +574,8 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	},
 	{
 		"ID":"G001",
@@ -557,6 +591,7 @@
 		"INITIAL_ABILITY7":"null",
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
-		"INITIAL_ABILITY10":"null"
+		"INITIAL_ABILITY10":"null",
+		"TOOLTIP":"null"
 	}
 ]}

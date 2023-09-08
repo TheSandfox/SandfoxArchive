@@ -372,77 +372,77 @@
 	},
 	"CONFIG_DAMAGE_BASIC":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"기본공격",
+		"NAME":"기본",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_SPELL":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"스킬공격",
+		"NAME":"스킬",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_HYBRID":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"복합공격",
+		"NAME":"복합",
 		"COLOR":"ff00ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_ETC":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"추가피해",
+		"NAME":"추가",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_PHYSICAL":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"물리피해",
+		"NAME":"물리",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_MAGICAL":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"마법피해",
+		"NAME":"마법",
 		"COLOR":"9999ff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_TRUE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"고정피해",
+		"NAME":"고정",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_SINGLE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"단발피해",
+		"NAME":"단발",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_PERIODIC":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"지속피해",
+		"NAME":"지속",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_OUTTER":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"외부피해",
+		"NAME":"외부",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_INNER":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"내부피해",
+		"NAME":"내부",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -463,14 +463,14 @@
 	},
 	"CONFIG_DAMAGE_AOE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"범위피해",
+		"NAME":"범위",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_NONAOE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"단일피해",
+		"NAME":"단일",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -491,29 +491,22 @@
 	},
 	"CONFIG_DAMAGE_RANGED":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"원거리공격",
+		"NAME":"원거리",
 		"COLOR":"00ffff",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_DAMAGE_MELEE":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"근접공격",
-		"COLOR":"00ffff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_DAMAGE_RANGED_SUB":{
-		"ARRNAME":"DAMAGE",
-		"NAME":"원거리",
-		"COLOR":"00ffff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_DAMAGE_MELEE_SUB":{
-		"ARRNAME":"DAMAGE",
 		"NAME":"근접",
 		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_DAMAGE_UNDEFINED":{
+		"ARRNAME":"DAMAGE",
+		"NAME":"미정의",
+		"COLOR":"999999",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
@@ -664,27 +657,6 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"CONFIG_CAST_TYPE_TRANSFORM":{
-		"ARRNAME":"CAST_TYPE",
-		"NAME":"변신",
-		"COLOR":"00ffff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_CAST_TYPE_EQUIP":{
-		"ARRNAME":"CAST_TYPE",
-		"NAME":"장비",
-		"COLOR":"00ffff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_CAST_TYPE_CHINGHO":{
-		"ARRNAME":"CAST_TYPE",
-		"NAME":"칭호",
-		"COLOR":"00ffff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
 	"CONFIG_ABILITY_TAG_BASH":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"강한타격",
@@ -800,6 +772,20 @@
 	"CONFIG_ABILITY_TAG_SERVANT":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"하수인",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_TRANSFORM":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"변신",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_CHINGHO":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"칭호",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"

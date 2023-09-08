@@ -8,14 +8,17 @@ function main() {
 	function wwrite(rows,mode) {
 		var outJson = ''
 		var outJass = ''
+		var outMap = ''
 		var prefix = ''
 		if (mode==='ability') {
 			outJson = '../json/AbilityParams.json'
 			outJass = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityParams.j'
+			outMap = '../json/AbilityMap.json'
 			prefix = 'private'
 		} else if (mode==='buff') {
 			outJson = '../json/BuffParams.json'
 			outJass = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedBuffParams.j'
+			outMap = '../json/BuffMap.json'
 			prefix = 'public'
 		}
 		var datafromX = 3;
@@ -25,6 +28,7 @@ function main() {
 		var j = datafromX;
 		fs.writeFileSync(outJson, '{"params":[','utf-8');
 		fs.writeFileSync(outJass,'','utf-8');
+		fs.writeFileSync(outMap, '{','utf-8');
 		while (true) {
 			//끝까지가면 루프탈출
 			if (j==rows[0].length||rows[0][j]==null) {
@@ -35,6 +39,12 @@ function main() {
 				fs.appendFileSync(outJson, '\n\t\{','utf-8');
 			} else {
 				fs.appendFileSync(outJson, ',\n\t\{','utf-8');
+			}
+			//맵 기록
+			if (j==datafromX) {
+				fs.appendFileSync(outMap,'"'+rows[0][j]+'":"'+(j-datafromX)+'"')
+			} else {
+				fs.appendFileSync(outMap,',"'+rows[0][j]+'":"'+(j-datafromX)+'"')
 			}
 			//텍매열기J
 			fs.appendFileSync(outJass, '//! textmacro '+mode+'DataHeader'+rows[0][j]+"\nglobals\n",'utf-8');
@@ -151,6 +161,7 @@ function main() {
 			j++;
 		}
 		fs.appendFileSync(outJson, "\n]}",'utf-8');
+		fs.appendFileSync(outMap, "}",'utf-8');
 	} 
 
 	excelReader(xlsx,{ sheet: 'AbilityParams' }).then((rrows) => {

@@ -88,6 +88,15 @@ a:active {
 	cursor: pointer;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
+.white {
+	color:white;
+}
+
+/*폰트설정*/
 @font-face {
 	font-family: 'W2002'; /* 폰트 이름 설정 */
 	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
@@ -98,7 +107,17 @@ a:active {
 	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.font16 {
+	font-size: 16px;
+}
+
+.font24 {
+	font-size:24px;
+}
+
+/*아이콘버튼*/
 .icon-button {
+	margin:4px;
 	border-radius: 8px;
 	background: rgb(228,208,163);
 	text-align: center;
@@ -106,9 +125,173 @@ a:active {
 	justify-content: center;
 	display: flex;
 	cursor: pointer;
+	min-width:32px;
+	height:32px;
+	box-sizing: border-box;
+}
+
+.icon-button:hover {
+	background: rgb(90,73,55);
+	border: 2px solid rgb(228,208,163);
+}
+
+.icon-button.hover {
+	background: rgb(90,73,55);
+	border: 2px solid rgb(228,208,163);
+	cursor: default;
 }
 
 .icon-button>i {
 	color: rgb(90,73,55);
 	text-shadow: none;
+}
+
+.icon-button:hover>i {
+	color: rgb(228,208,163);
+}
+
+.icon-button.hover>i {
+	color: rgb(228,208,163);
+}
+
+/*텍스트 중간에 들어가는 아이콘버튼*/
+.text-button {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	cursor: pointer;
+	width:1em;
+	height:1em;
+}
+
+.text-button>i {
+	color: inherit;
+	/*text-shadow: none;*/
+}
+
+/*툴팁박스*/
+.description-container {
+	display:flex;
+	flex-direction: column;
+	max-width:960px;
+}
+
+.description-box {
+	/*width:100%;*/
+	margin:16px;
+	margin-bottom:0px;
+	padding:16px;
+	background-color: #464546;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+/*64x64 워크아이콘*/
+.w3x-icon{
+	width:64px;
+	height:64px;
+	display: flex;
+}
+
+/*그리드*/
+.grid2x{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr); /* 8개의 열 정의 */
+}
+
+.grid8x{
+	display:grid;
+	grid-template-columns: repeat(8, 1fr); /* 8개의 열 정의 */
+}
+
+/*높이*/
+.h24{
+	height: 24px;
+}
+
+.h32{
+	height: 32px;
+}
+
+.h48{
+	height: 48px;
+}
+
+.h64{
+	height: 64px;
+}
+
+/*Align*/
+.horizon-left {
+	text-align: left;
+	justify-content: left;
+}
+
+.horizon-center {
+	text-align: center;
+	justify-content: center;
+}
+
+.horizon-right {
+	text-align: right;
+	justify-content: right;
+}
+
+.vertical-top {
+	align-items: flex-start;
+}
+
+.vertical-center {
+	align-items: center;
+}
+
+.vertical-bottom {
+	align-items: flex-end;
+}
+
+/*컨트롤러(우측상단검색창)*/
+.controller {
+	position:fixed;
+	top:56px;
+	right:16px;
+	display: flex;
+	flex-direction: column;
+	background-color: #464546;/*#1a2864;*/
+	border-radius: 8px;
+	padding:16px;
+	color:#ffffff;
+	z-index:100;
+}
+
+/*검색콘솔에 수직으로 깔리는 요소들*/
+.controller>* {
+	min-height:24px;
+	padding:none;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+}
+
+.controller>*>* {
+	box-sizing: border-box;
+}
+
+
+.controller>*>p {
+	width:56px;
+}
+
+.controller>*>input[type="checkbox"] {
+	text-align: center;
+	height:16px;
+}
+
+.controller>*>input[type="text"] {
+	width:160px;
+}
+
+.controller>*>select{
+	width:160px;
 }

@@ -1,62 +1,5 @@
-.ability-view-controller {
-	position:fixed;
-	top:56px;
-	right:16px;
-	display: flex;
-	flex-direction: column;
-	background-color: #464546;/*#1a2864;*/
-	border-radius: 8px;
-	padding:16px;
-	color:#ffffff;
-	z-index:100;
-}
-
-.ability-view-controller>* {
-	height:24px;
-	padding:none;
-	margin-bottom:4px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	text-align: left;
-	align-items: center;
-	justify-content: center;
-	position:relative;
-}
-
-.ability-view-controller>.button-space {
-	margin-top:16px;
-}
-
-.ability-view-controller>.button-space>div {
-	width:32px;
-	height:32px;
-}
-
 .ability-single-back-div>i {
 	color: rgb(90,73,55);
-}
-
-.ability-view-controller>*>* {
-	box-sizing: border-box;
-}
-
-
-.ability-view-controller>*>p {
-	width:64px;
-}
-
-.ability-view-controller>*>input[type="checkbox"] {
-	text-align: center;
-	height:16px;
-}
-
-.ability-view-controller>*>input[type="text"] {
-	width:192px;
-}
-
-.ability-view-controller>*>select{
-	width:192px;
 }
 
 .ability-container {
@@ -67,23 +10,6 @@
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-}
-
-.ability-description-container {
-	display:flex;
-	flex-direction: column;
-	max-width:960px;
-}
-
-.ability-description {
-	/*width:100%;*/
-	margin:16px;
-	margin-bottom:0px;
-	padding:16px;
-	background-color: #464546;
-	border-radius: 16px;
-	display: flex;
-	flex-direction: column;
 }
 
 .ability-description>.top{
@@ -223,18 +149,6 @@
 .ability-description>.bottom>.statbonus>img{
 	margin-left:16px;
 	height:32px;
-}
-
-.ability-icon-container{
-	max-width: 512px;
-	display:grid;
-	grid-template-columns: repeat(8, 1fr); /* 8개의 열 정의 */
-}
-
-.ability-icon{
-	width:64px;
-	height:64px;
-	display: flex;
 }
 
 .ability-single-container {

@@ -1,7 +1,8 @@
 #nav {
-	position:absolute;
+	position:fixed;
 	background-color: #464546;
 	transition: all 0.25s ease;
+	left:0px;
 	width:48px;
 	height: 100%;
 	display: block;
