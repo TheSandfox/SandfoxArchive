@@ -370,6 +370,13 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_STATUS_DUMMY":{
+		"ARRNAME":"STATUS",
+		"NAME":"더미표시",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_DAMAGE_BASIC":{
 		"ARRNAME":"DAMAGE",
 		"NAME":"기본",
@@ -758,6 +765,20 @@
 	"CONFIG_ABILITY_TAG_NATURE":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"자연",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_EARTH":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"대지",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_ARCANE":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"신비",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"

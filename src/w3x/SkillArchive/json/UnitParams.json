@@ -116,7 +116,7 @@
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
 		"INITIAL_ABILITY10":"null",
-		"TOOLTIP":"트롤인데다 광전사이다. 말이 필요한가?"
+		"TOOLTIP":"트롤인데다 광전사이다."
 	},
 	{
 		"ID":"HR07",
@@ -167,7 +167,7 @@
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
 		"INITIAL_ABILITY10":"null",
-		"TOOLTIP":"카드값'이 많이 나오는 사람"
+		"TOOLTIP":"[카드값]이 많이 나오는 사람"
 	},
 	{
 		"ID":"HR0a",
@@ -184,7 +184,7 @@
 		"INITIAL_ABILITY8":"null",
 		"INITIAL_ABILITY9":"null",
 		"INITIAL_ABILITY10":"null",
-		"TOOLTIP":"힘이 센 불한당"
+		"TOOLTIP":"물하기싫으니불한당"
 	},
 	{
 		"ID":"HR0b",
@@ -410,7 +410,7 @@
 	{
 		"ID":"NP01",
 		"NAME":"낚시꾼",
-		"ICON_PATH":"replaceabletextures/commandbuttons/BTNPandarenBrewmaster.png",
+		"ICON_PATH":"replaceabletextures/commandbuttons/BTNHeadhunter.png",
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"i110",
 		"INITIAL_ABILITY2":"02m0",
