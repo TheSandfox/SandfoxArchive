@@ -2,6 +2,9 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
+//import component
+import { AbilityWidget } from '../Ability/Ability'
+
 //import JSON
 import UnitParams from '../../../../w3x/SkillArchive/json/UnitParams.json'
 import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
@@ -38,7 +41,7 @@ function UnitDescription(props) {
 		let stl = {
 			border:'2px solid #ffffff'
 		}
-		console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
+		// console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
 		return <div className="unit-description description-box w3font" style={stl}>
 			<div className="horizon-left vertical-center">
 				<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
@@ -57,24 +60,16 @@ function UnitDescription(props) {
 			<div className="horizon-left vertical-center">
 				<p className='white'>고유 능력 : </p>
 				{json["INITIAL_ABILITY1"]!=="null"?
-					<Link to={"/w3x/SkillArchive/Ability/"+json["INITIAL_ABILITY1"]} title={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]["NAME"]}>
-						<img 
-						className='w3icon' 
-						src={process.env.PUBLIC_URL+"/resource/"+AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]["ICON_PATH"]} 
-						alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
-						/>
-					</Link>
+					<div className='m-left16'>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]}/>
+					</div>
 					:
 					<></>
 				}
 				{json["INITIAL_ABILITY2"]!=="null"?
-						<Link to={"/w3x/SkillArchive/Ability/"+json["INITIAL_ABILITY2"]} title={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]["NAME"]}>
-							<img 
-								className='w3icon' 
-								src={process.env.PUBLIC_URL+"/resource/"+AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]["ICON_PATH"]} 
-								alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
-							/>
-						</Link>
+					<div className='m-left16'>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]}/>
+					</div>
 					:
 					<></>
 				}
@@ -126,7 +121,7 @@ function UnitSearchController({state}) {
 	const modifySearchField = state.modifySearchField
 	return <>
 	{/*컨트롤러 */}
-	<div className="controller w3font">
+	<div className="controller w3font shadow">
 		{/*체크박스 */}
 		<div className="rel horizon-left vertical-top h64">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
@@ -138,7 +133,8 @@ function UnitSearchController({state}) {
 		</div>
 		{/*이름검색*/}
 		<div className="rel h24 horizon-left vertical-center">
-			<p>이름 : </p>
+			<p>이름</p>
+			<p> : </p>
 			<input 
 				type="text"
 				value={searchField["NAME"]}

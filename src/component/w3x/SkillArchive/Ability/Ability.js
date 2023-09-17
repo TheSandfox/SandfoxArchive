@@ -13,7 +13,29 @@ const SearchField = {
 	NAME : "",
 	TIER : "",
 	TAG : "",
-	CAST_TYPE : ""
+	CAST_TYPE : "",
+	DAMAGE_TYPE : "",
+	ATTACK_TYPE : ""
+}
+
+//어빌리티 위젯 
+export function AbilityWidget({json}) {
+	return <div className={'w3x-icon rel'}>
+		<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]}>
+			<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
+			<div className={'border-fill tier'+json["TIER"]}></div>
+			{/*무기어빌리티면 무기아이콘 표시*/}
+			{json["IS_WEAPON"]==="true"?
+				<img
+					className={'bottom-right abs icon-24x'}
+					src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipweaponicon.png"}
+					alt='...'
+				/>
+				:
+				<></>
+			}
+		</Link>
+	</div>
 }
 
 //어빌리티 디스크립션 (상세or아이콘)
@@ -98,23 +120,35 @@ function AbilityDescription(props) {
 					<img 
 						src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS1"]]["ICON"]}
 						title={CustomString[abiljson["STAT_BONUS1"]]["NAME"]}
-						alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
+						alt='...'
 					/>
 					<img 
 						src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS2"]]["ICON"]}
 						title={CustomString[abiljson["STAT_BONUS2"]]["NAME"]}
-						alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}
+						alt='...'
 					/>
 				</div>
 			</div>
 		</div>
 	} else {
 		//아이콘모드
-		return <div className='w3x-icon'>
-			<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]} title={abiljson["NAME"]}>
-			<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-			</Link>
-		</div>
+		return <AbilityWidget json={abiljson}/>
+		// <div className={'w3x-icon rel'}>
+		// 	<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]} title={abiljson["NAME"]}>
+		// 		<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt='...'/>
+		// 		<div className={'border-fill tier'+abiljson["TIER"]}></div>
+		// 		{/*무기어빌리티면 무기아이콘 표시*/}
+		// 		{abiljson["IS_WEAPON"]==="true"?
+		// 			<img
+		// 				className={'bottom-right abs icon-24x'}
+		// 				src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipweaponicon.png"}
+		// 				alt='...'
+		// 			/>
+		// 			:
+		// 			<></>
+		// 		}
+		// 	</Link>
+		// </div>
 	}
 
 }
@@ -154,7 +188,7 @@ function AbilitySearchController({state}) {
 	const modifySearchField = state.modifySearchField
 	return <>
 	{/*컨트롤러 */}
-	<div className="controller w3font">
+	<div className="controller w3font shadow">
 		{/*체크박스 */}
 		<div className="rel horizon-left vertical-top h64">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
@@ -166,7 +200,8 @@ function AbilitySearchController({state}) {
 		</div>
 		{/*이름검색*/}
 		<div className="rel h24 horizon-left vertical-center">
-			<p>이름 : </p>
+			<p>이름</p>
+			<p> : </p>
 			<input 
 				type="text"
 				value={searchField["NAME"]}
@@ -180,7 +215,8 @@ function AbilitySearchController({state}) {
 		</div>
 		{/*티어필터링*/}
 		<div className="rel h24 horizon-left vertical-center">
-			<p>티어 : </p>
+			<p>티어</p>
+			<p> : </p>
 			<select 
 				value={searchField["TIER"]}
 				onChange={(event)=>{modifySearchField.query("TIER",event.target.value)}}
@@ -191,6 +227,7 @@ function AbilitySearchController({state}) {
 				<option value="3">3</option>
 				<option value="4">4</option>
 				<option value="5">5</option>
+				<option value="0">0</option>
 			</select>
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("TIER","")}}
@@ -200,7 +237,8 @@ function AbilitySearchController({state}) {
 		</div>
 		{/*태그검색*/}
 		<div className="rel h24 horizon-left vertical-center">
-			<p>태그 : </p>
+			<p>태그</p>
+			<p> : </p>
 			<input 
 				type="text"
 				value={searchField["TAG"]}
@@ -214,7 +252,8 @@ function AbilitySearchController({state}) {
 		</div>
 		{/*캐스트타입검색*/}
 		<div className="rel h24 horizon-left vertical-center">
-			<p>유형 : </p>
+			<p>시전 유형</p>
+			<p> : </p>
 			<select
 				value={searchField["CAST_TYPE"]}
 				onChange={(event)=>{modifySearchField.query("CAST_TYPE",event.target.value)}}
@@ -229,6 +268,44 @@ function AbilitySearchController({state}) {
 			</select>
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("CAST_TYPE","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
+		</div>
+		{/*피해 유형*/}
+		<div className="rel h24 horizon-left vertical-center">
+			<p>피해 유형</p>
+			<p> : </p>
+			<select
+				value={searchField["DAMAGE_TYPE"]}
+				onChange={(event)=>{modifySearchField.query("DAMAGE_TYPE",event.target.value)}}
+			>
+				<option value="">전체</option>
+				<option value="물리">물리</option>
+				<option value="마법">마법</option>
+				<option value="미분류">미분류</option>
+			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("DAMAGE_TYPE","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
+		</div>
+		{/*공격 유형*/}
+		<div className="rel h24 horizon-left vertical-center">
+			<p>공격 유형</p>
+			<p> : </p>
+			<select
+				value={searchField["ATTACK_TYPE"]}
+				onChange={(event)=>{modifySearchField.query("ATTACK_TYPE",event.target.value)}}
+			>
+				<option value="">전체</option>
+				<option value="기본">기본공격</option>
+				<option value="스킬">스킬공격</option>
+				<option value="미분류">미분류</option>
+			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("ATTACK_TYPE","")}}
 			>
 				<i className="fa-solid fa-xmark"></i>
 			</div>
@@ -303,6 +380,14 @@ export function Ability(props) {
 				/*캐스트타입*/
 				( form["CAST_TYPE"]===""?true:
 					/*(CustomString[item["CAST_TYPE"]]!==undefined?*/CustomString[item["CAST_TYPE"]]["NAME"].includes(form["CAST_TYPE"])/*:false)*/
+				) &&
+				/*데미지 타입*/
+				( form["DAMAGE_TYPE"]===""?true:
+					(CustomString[item["DAMAGE_TYPE"]]!==undefined?CustomString[item["DAMAGE_TYPE"]]["NAME"].includes(form["DAMAGE_TYPE"]):false)
+				) &&
+				/*공격 타입*/
+				( form["ATTACK_TYPE"]===""?true:
+					(CustomString[item["ATTACK_TYPE"]]!==undefined?CustomString[item["ATTACK_TYPE"]]["NAME"].includes(form["ATTACK_TYPE"]):false)
 				)
 			))
 		}

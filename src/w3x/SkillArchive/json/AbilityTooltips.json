@@ -97,6 +97,10 @@
 		"ID":"01n0",
 		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">(0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다."
 	},
+	"01o0":{
+		"ID":"01o0",
+		"TOOLTIP":"대상에게 금화를 던져 <span style=\"color: #ff9900;\">1.0×<img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #00cc00;\">10%</span><img src=\"/resource/ui/widgets/tooltips/human/tooltipluckicon.png\" title=\"행운\"/> 확률로 <span style=\"color: #ffcc00;\">금화를 1</span> 획득합니다."
+	},
 	"u100":{
 		"ID":"u100",
 		"TOOLTIP":"대상에게 뛰어들어 <span style=\"color: #ff9900;\">2.0×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다."
@@ -212,6 +216,10 @@
 		"ID":"02m0",
 		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.25×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히는 창을 던집니다. 빈 땅을 우클릭하면 창을 던진 뒤 지정한 방향으로 짧은 거리 도약합니다."
 	},
+	"02n0":{
+		"ID":"02n0",
+		"TOOLTIP":"<span style=\"color: #ffffff;\">3.5초</span> 동안 <span style=\"color: #ffcc99;\">방어력</span>과 <span style=\"color: #00ff99;\">저항력</span>이 <span style=\"color: #ffffff;\">(35+<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>×1.5)%</span> 증가합니다."
+	},
 	"u200":{
 		"ID":"u200",
 		"TOOLTIP":"<span style=\"color: #ffffff;\">3.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도가 60%</span> 증가하고 <span style=\"color: #ff9900;\">기본공격의 피해량이 0.05×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가하는 대신 공격 시 <span style=\"color: #ff3333;\">5%의 체력을 소모</span>합니다.<br><br> - 해당 체력감소 효과로 <span style=\"color: #00ff00;\">체력이 10% 미만</span>으로 내려가지 않습니다.<br> - 근접 무기 장착 시에만 사용할 수 있습니다.<br> - 무기교체 시 강화효과가 사라집니다."
@@ -242,7 +250,7 @@
 	},
 	"0320":{
 		"ID":"0320",
-		"TOOLTIP":"정신집중하여 <span style=\"color: #ffffff;\">0.25초</span> 마다 대상에게 <span style=\"color: #9999ff;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #00ff00;\">원본 피해량의 40%에 해당하는 체력</span>을 회복하며 <span style=\"color: #ffffff;\">충전을 1 획득합니다.(최대 10까지 획득)</span> 충전이 1 이상일 때 <span style=\"color: #9999ff;\">스킬공격</span>으로 피해를 입히면 충전을 모두 소모해 소모한 충전 1당 <span style=\"color: #00ff00;\">피해량을 0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가시킵니다.(최대 피해량 : <span style=\"color: #00ff00;\">0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)×(10)</span>)<br><br> - <span style=\"color: #ffffff;\">충전</span>이 최대치일 때 이 스킬의 회복량이 <span style=\"color: #ffffff;\">50%</span>로 감소합니다.<br> - 정신집중 후 매 <span style=\"color: #ffffff;\">3번째</span> 공격만 적중 시 발생효과를 발생시킵니다."
+		"TOOLTIP":"정신집중하여 <span style=\"color: #ffffff;\">0.25초</span> 마다 대상에게 <span style=\"color: #9999ff;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #00ff00;\">원본 피해량의 40%에 해당하는 체력</span>을 회복하며 <span style=\"color: #ffffff;\">충전을 1 획득합니다.(최대 10까지 획득)</span> 충전이 1 이상일 때 <span style=\"color: #9999ff;\">스킬공격</span>으로 피해를 입히면 충전을 모두 소모해 소모한 충전 1당 <span style=\"color: #00ff00;\">피해량을 0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가시킵니다.(최대 피해량 : <span style=\"color: #00ff00;\">7.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>)<br><br> - <span style=\"color: #ffffff;\">충전</span>이 최대치일 때 이 스킬의 회복량이 <span style=\"color: #ffffff;\">50%</span>로 감소합니다.<br> - 정신집중 후 매 <span style=\"color: #ffffff;\">3번째</span> 공격만 적중 시 발생효과를 발생시킵니다."
 	},
 	"0330":{
 		"ID":"0330",

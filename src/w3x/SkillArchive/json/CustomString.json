@@ -216,31 +216,10 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
-	"CONFIG_STAT_BASIC_ATTACK":{
+	"CONFIG_STAT_GOLD":{
 		"ARRNAME":"STAT",
-		"NAME":"기본공격",
-		"COLOR":"ff9900",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_STAT_SPELL_ATTACK":{
-		"ARRNAME":"STAT",
-		"NAME":"스킬공격",
-		"COLOR":"9999ff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_STAT_RANGED":{
-		"ARRNAME":"STAT",
-		"NAME":"원거리",
-		"COLOR":"ff00ff",
-		"ICON":"ui/widgets/tooltips/human/null.png",
-		"DESCRIPTION":"null"
-	},
-	"CONFIG_STAT_MELEE":{
-		"ARRNAME":"STAT",
-		"NAME":"근접",
-		"COLOR":"ff9900",
+		"NAME":"금화",
+		"COLOR":"ffcc00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
@@ -512,7 +491,7 @@
 	},
 	"CONFIG_DAMAGE_UNDEFINED":{
 		"ARRNAME":"DAMAGE",
-		"NAME":"미정의",
+		"NAME":"미분류",
 		"COLOR":"999999",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
@@ -557,6 +536,27 @@
 		"NAME":"5티어",
 		"COLOR":"ff9900",
 		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_UPGRADE_GOLD":{
+		"ARRNAME":"UPGRADE",
+		"NAME":"금화",
+		"COLOR":"ffcc00",
+		"ICON":"ui/widgets/tooltips/human/tooltipgemgoldicon.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_UPGRADE_SKILL_POINT":{
+		"ARRNAME":"UPGRADE",
+		"NAME":"강화파편",
+		"COLOR":"ff9900",
+		"ICON":"ui/widgets/tooltips/human/tooltipgemorangeicon.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_UPGRADE_LUCK":{
+		"ARRNAME":"UPGRADE",
+		"NAME":"행운마일리지",
+		"COLOR":"00cc00",
+		"ICON":"ui/widgets/tooltips/human/tooltipgemgreenicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UNIT_CLASS_UNDEAD":{
@@ -779,6 +779,20 @@
 	"CONFIG_ABILITY_TAG_ARCANE":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"신비",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_WIND":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"바람",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_WILD":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"야성",
 		"COLOR":"ffff00",
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"

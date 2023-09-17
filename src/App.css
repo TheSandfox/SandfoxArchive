@@ -193,6 +193,12 @@ a:active {
 	width:64px;
 	height:64px;
 	display: flex;
+	box-sizing: border-box;
+}
+
+.icon-24x {
+	width:24px;
+	height:24px;
 }
 
 /*그리드*/
@@ -251,6 +257,11 @@ a:active {
 	align-items: flex-end;
 }
 
+.bottom-right {
+	bottom:0px;
+	right:0px
+}
+
 /*컨트롤러(우측상단검색창)*/
 .controller {
 	position:fixed;
@@ -278,9 +289,17 @@ a:active {
 	box-sizing: border-box;
 }
 
+/*검색필드 제목*/
+.controller>*>p:first-child {
+	width:72px;
+	text-align: left;
+}
 
-.controller>*>p {
-	width:56px;
+/*검색필드 제목 옆에 붙는 ':'*/
+.controller>*>p:nth-child(2) {
+	width:16px;
+	text-align: right;
+	padding-right: 8px;
 }
 
 .controller>*>input[type="checkbox"] {
@@ -294,4 +313,53 @@ a:active {
 
 .controller>*>select{
 	width:160px;
+}
+
+/*외곽선*/
+
+.tier0 {
+	box-sizing: border-box;
+	border:4px solid #cccccc99;
+}
+
+.tier1 {
+	box-sizing: border-box;
+	border:4px solid #ffffff99;
+}
+
+.tier2 {
+	box-sizing: border-box;
+	border:4px solid #00ff0099;
+}
+
+.tier3 {
+	box-sizing: border-box;
+	border:4px solid #0099ff99;
+}
+
+.tier4 {
+	box-sizing: border-box;
+	border:4px solid #cc00ff99;
+}
+
+.tier5 {
+	box-sizing: border-box;
+	border:4px solid #ff990099;
+}
+
+.border-fill {
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	position:absolute;
+}
+
+.shadow {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/*패딩, 마진*/
+.m-left16 {
+	margin-left:16px;
 }
