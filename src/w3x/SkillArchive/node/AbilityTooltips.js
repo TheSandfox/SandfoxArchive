@@ -255,14 +255,14 @@ function monotag(main,par) {
 		//json
 		rs_json = rs_json+"(1+스킬 레벨 당 "+jsn["DAMAGE_PER_LEVEL"]+")"
 		//j
-		rs_jass = rs_jass+"(1.+.level*DAMAGE_PER_LEVEL)"
+		rs_jass = rs_jass+"(1.+(.level-1)*DAMAGE_PER_LEVEL)"
 		break;
 	case 'skillLevel' :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
 		//json
 		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["NAME"]+'\\\"/>'
 		//j
-		rs_jass = rs_jass+".level"
+		rs_jass = rs_jass+"(.level-1)"
 		break;
 	case 'heroLevel' :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]

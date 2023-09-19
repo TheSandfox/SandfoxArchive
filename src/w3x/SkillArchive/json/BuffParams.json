@@ -16,9 +16,7 @@
 		"DAMAGE_STAT2":"CONFIG_STAT_ATTACK",
 		"USE_DAMAGE_FLAG":"false",
 		"DATA_REAL1":"15",
-		"DATA_REAL2":"1",
-		"DATA_DESCRIPTION_REAL1":"공격력 증폭",
-		"DATA_DESCRIPTION_REAL2":"공격력 증폭(레벨 당)"
+		"DATA_REAL2":"1"
 	},
 	{
 		"ID":"01g0",
@@ -35,8 +33,7 @@
 		"DAMAGE_AMPLIFIER1":"0.4",
 		"DAMAGE_STAT1":"CONFIG_STAT_ACCURACY",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_REAL1":"45",
-		"DATA_DESCRIPTION_REAL1":"둔화율"
+		"DATA_REAL1":"45"
 	},
 	{
 		"ID":"u110",
@@ -53,8 +50,7 @@
 		"DAMAGE_AMPLIFIER1":"0.03",
 		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_REAL1":"5.0",
-		"DATA_DESCRIPTION_REAL1":"둔화량"
+		"DATA_REAL1":"5.0"
 	},
 	{
 		"ID":"u140",
@@ -88,9 +84,7 @@
 		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
 		"USE_DAMAGE_FLAG":"false",
 		"DATA_REAL1":"30",
-		"DATA_REAL2":"10",
-		"DATA_DESCRIPTION_REAL1":"공속증가",
-		"DATA_DESCRIPTION_REAL2":"이속증가"
+		"DATA_REAL2":"10"
 	},
 	{
 		"ID":"0270",
@@ -117,8 +111,7 @@
 		"AOE_TYPE":"CONFIG_DAMAGE_NONAOE",
 		"ONHIT_TYPE":"CONFIG_DAMAGE_NONHIT",
 		"RANGE_TYPE":"CONFIG_DAMAGE_UNDEFINED",
-		"DATA_REAL1":"1.0",
-		"DATA_DESCRIPTION_REAL1":"대상체젠비례"
+		"DATA_REAL1":"1.0"
 	},
 	{
 		"ID":"02b0",
@@ -261,11 +254,7 @@
 		"DATA_REAL1":"13.5",
 		"DATA_REAL2":"1.5",
 		"DATA_INTEGER1":"60",
-		"DATA_INTEGER2":"3",
-		"DATA_DESCRIPTION_REAL1":"공속증가(기본)",
-		"DATA_DESCRIPTION_REAL2":"공속증가(레벨당)",
-		"DATA_DESCRIPTION_INTEGER1":"이속증가",
-		"DATA_DESCRIPTION_INTEGER2":"마나소모,마나회복"
+		"DATA_INTEGER2":"3"
 	},
 	{
 		"ID":"02k0",
@@ -285,10 +274,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"DATA_REAL1":"25",
 		"DATA_INTEGER1":"20",
-		"DATA_INTEGER2":"3",
-		"DATA_DESCRIPTION_REAL1":"최대체력증가",
-		"DATA_DESCRIPTION_INTEGER1":"이속증가",
-		"DATA_DESCRIPTION_INTEGER2":"마나소모"
+		"DATA_INTEGER2":"3"
 	},
 	{
 		"ID":"02n0",
@@ -322,10 +308,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"DATA_REAL1":"60",
 		"DATA_REAL2":"5",
-		"DATA_REAL3":"10",
-		"DATA_DESCRIPTION_REAL1":"공속보너스",
-		"DATA_DESCRIPTION_REAL2":"체력비용",
-		"DATA_DESCRIPTION_REAL3":"체력비율하한"
+		"DATA_REAL3":"10"
 	},
 	{
 		"ID":"u210",
@@ -342,8 +325,7 @@
 		"DAMAGE_AMPLIFIER1":"0.4",
 		"DAMAGE_STAT1":"CONFIG_STAT_ACCURACY",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_REAL1":"33",
-		"DATA_DESCRIPTION_REAL1":"감속"
+		"DATA_REAL1":"33"
 	},
 	{
 		"ID":"u240",
@@ -357,8 +339,7 @@
 		"TAG3":"null",
 		"TAG4":"null",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_REAL1":"75",
-		"DATA_DESCRIPTION_REAL1":"치감"
+		"DATA_REAL1":"75"
 	},
 	{
 		"ID":"0310",
@@ -375,8 +356,7 @@
 		"DAMAGE_AMPLIFIER1":"0.02",
 		"DAMAGE_STAT1":"CONFIG_STAT_MAGICPOWER",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_INTEGER1":"15",
-		"DATA_DESCRIPTION_INTEGER1":"이속감소"
+		"DATA_INTEGER1":"15"
 	},
 	{
 		"ID":"0330",
@@ -392,9 +372,6 @@
 		"USE_DAMAGE_FLAG":"false",
 		"DATA_REAL1":"40",
 		"DATA_REAL2":"0.1",
-		"DATA_REAL3":"0.25",
-		"DATA_DESCRIPTION_REAL1":"이속증가",
-		"DATA_DESCRIPTION_REAL2":"감속량",
-		"DATA_DESCRIPTION_REAL3":"감속간격"
+		"DATA_REAL3":"0.25"
 	}
 ]}

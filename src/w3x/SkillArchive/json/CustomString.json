@@ -559,6 +559,13 @@
 		"ICON":"ui/widgets/tooltips/human/tooltipgemgreenicon.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_UPGRADE_EXP":{
+		"ARRNAME":"UPGRADE",
+		"NAME":"경험마일리지",
+		"COLOR":"0099cc",
+		"ICON":"ui/widgets/tooltips/human/tooltipgemblueicon.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_UNIT_CLASS_UNDEAD":{
 		"ARRNAME":"UNIT_CLASS",
 		"NAME":"언데드",

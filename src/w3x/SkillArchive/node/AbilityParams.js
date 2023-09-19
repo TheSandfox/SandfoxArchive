@@ -55,7 +55,7 @@ function main() {
 					break;
 				}
 				//빈 값이 아닐때만
-				if (rows[i][j]!=null||rows[i][allowNull]==="true") {
+				if ((rows[i][j]!=null||rows[i][allowNull]==="true")&&rows[i][dataType]!=="ignore") {
 					//멤버네임JSON
 					if (i == 0) {
 						fs.appendFileSync(outJson, '\n\t\t"'+rows[i][0]+'":','utf-8');
@@ -96,6 +96,9 @@ function main() {
 								//아님
 								fs.appendFileSync(outJson, '"'+rows[i][j]+'"','utf-8');
 							}
+							break;
+						case 'ignore' :
+							/*기록안함*/
 							break;
 						default :
 							fs.appendFileSync(outJson, '"'+rows[i][j]+'"','utf-8');
@@ -142,6 +145,9 @@ function main() {
 								//아님
 								fs.appendFileSync(outJass, '\t'+prefix+' constant real '+rows[i][0]+" = "+rows[i][j]+"\n",'utf-8');
 							}
+							break;
+						case 'ignore' :
+							/*기록안함*/
 							break;
 						default :
 							fs.appendFileSync(outJass, '\t'+prefix+' constant ' +rows[i][dataType]+" "+rows[i][0]+" = "+rows[i][j]+"\n",'utf-8');

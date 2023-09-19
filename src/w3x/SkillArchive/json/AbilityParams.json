@@ -209,10 +209,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP",
 		"DATA_REAL1":"0.0325",
 		"DATA_REAL2":"0.85",
-		"DATA_REAL3":"9.0",
-		"DATA_DESCRIPTION_REAL1":"시전자 최대체력 비례 회복량",
-		"DATA_DESCRIPTION_REAL2":"주문력 비례 회복량",
-		"DATA_DESCRIPTION_REAL3":"시전자 레벨 비례 회복량"
+		"DATA_REAL3":"9.0"
 	},
 	{
 		"ID":"0160",
@@ -268,8 +265,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_MELEE",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY",
-		"DATA_REAL1":"24.0",
-		"DATA_DESCRIPTION_REAL1":"적중 시 마나 반환량"
+		"DATA_REAL1":"24.0"
 	},
 	{
 		"ID":"0180",
@@ -312,8 +308,8 @@
 	},
 	{
 		"ID":"0190",
-		"NAME":"강철망치",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNHammer.png",
+		"NAME":"곤봉",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Mace_10.png",
 		"TIER":"1",
 		"COST":"1",
 		"CAST_TYPE":"CONFIG_CAST_TYPE_WEAPON",
@@ -327,10 +323,10 @@
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
-		"WEAPON_DELAY":"2.0",
+		"WEAPON_DELAY":"1.5",
 		"DAMAGE_PER_LEVEL":"0.06",
-		"DAMAGE_AMPLIFIER1":"1.3",
-		"DAMAGE_AMPLIFIER2":"0.0165",
+		"DAMAGE_AMPLIFIER1":"0.85",
+		"DAMAGE_AMPLIFIER2":"0.015",
 		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
 		"DAMAGE_STAT2":"CONFIG_STAT_MAXHP",
 		"USE_DAMAGE_FLAG":"true",
@@ -347,7 +343,7 @@
 	},
 	{
 		"ID":"01a0",
-		"NAME":"강철검",
+		"NAME":"조잡한 검",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSteelMelee.png",
 		"TIER":"1",
 		"COST":"1",
@@ -470,13 +466,11 @@
 		"INTERVAL":"0.25",
 		"COUNT":"8",
 		"BUFF_ID1":"01d0",
-		"BUFF_DESCRIPTION1":"체젠,공증",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN",
-		"DATA_REAL1":"5.0",
-		"DATA_DESCRIPTION_REAL1":"소환수 지속시간 증가"
+		"DATA_REAL1":"5.0"
 	},
 	{
 		"ID":"01e0",
@@ -549,10 +543,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAGICPOWER",
 		"DATA_REAL1":"10.0",
 		"DATA_REAL2":"2.0",
-		"DATA_REAL3":"3.5",
-		"DATA_DESCRIPTION_REAL1":"마나 태우기(기본)",
-		"DATA_DESCRIPTION_REAL2":"마나 태우기(시전자 레벨 비례)",
-		"DATA_DESCRIPTION_REAL3":"소환수 지속시간 감소"
+		"DATA_REAL3":"3.5"
 	},
 	{
 		"ID":"01g0",
@@ -576,7 +567,6 @@
 		"STARTAT":"28.5",
 		"VELO":"1100.0",
 		"BUFF_ID1":"01g0",
-		"BUFF_DESCRIPTION1":"감속",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.06",
 		"DAMAGE_AMPLIFIER1":"0.5",
@@ -595,7 +585,7 @@
 	},
 	{
 		"ID":"01h0",
-		"NAME":"도끼 투척",
+		"NAME":"투척용 도끼",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNOrcMeleeUpOne.png",
 		"TIER":"1",
 		"COST":"1",
@@ -699,8 +689,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_RANGED",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN",
-		"DATA_REAL1":"12",
-		"DATA_DESCRIPTION_REAL1":"소모 체력(남은 체력의)"
+		"DATA_REAL1":"12"
 	},
 	{
 		"ID":"01k0",
@@ -760,8 +749,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_HPREGEN",
 		"STAT_BONUS2":"CONFIG_STAT_MPREGEN",
-		"DATA_REAL1":"8",
-		"DATA_DESCRIPTION_REAL1":"소모 체력(남은 체력의)"
+		"DATA_REAL1":"8"
 	},
 	{
 		"ID":"01m0",
@@ -872,10 +860,74 @@
 		"STAT_BONUS2":"CONFIG_STAT_LUCK",
 		"DATA_REAL1":"10",
 		"DATA_REAL2":"300.0",
-		"DATA_INTEGER1":"1",
-		"DATA_DESCRIPTION_REAL1":"골드획득확률(기본)",
-		"DATA_DESCRIPTION_REAL2":"행운상수",
-		"DATA_DESCRIPTION_INTEGER1":"골드획득량"
+		"DATA_INTEGER1":"1"
+	},
+	{
+		"ID":"01p0",
+		"NAME":"돌진",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_varian_charge.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_TARGET_LOCATION",
+		"TAG1":"CONFIG_ABILITY_TAG_BASH",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"9.0",
+		"COOLDOWN_MIN":"2.0",
+		"MANACOST":"30",
+		"BACKSWING":"0.15",
+		"RADIUS2":"75.0",
+		"CHARGE_DURATION":"0.5",
+		"CHARGE_SPEED":"1200.0",
+		"IS_WEAPON":"false",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.075",
+		"DAMAGE_STAT1":"CONFIG_STAT_MAXHP",
+		"USE_DAMAGE_FLAG":"true",
+		"DAMAGE_TYPE":"CONFIG_DAMAGE_PHYSICAL",
+		"ATTACK_TYPE":"CONFIG_DAMAGE_SPELL",
+		"INTERVAL_TYPE":"CONFIG_DAMAGE_SINGLE",
+		"VECTOR_TYPE":"CONFIG_DAMAGE_OUTTER",
+		"TARGET_TYPE":"CONFIG_DAMAGE_NONTARGET",
+		"AOE_TYPE":"CONFIG_DAMAGE_AOE",
+		"ONHIT_TYPE":"CONFIG_DAMAGE_ONHIT",
+		"RANGE_TYPE":"CONFIG_DAMAGE_MELEE",
+		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
+		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
+	},
+	{
+		"ID":"01q0",
+		"NAME":"단검",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_ShortBlade_10.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_WEAPON",
+		"TAG1":"CONFIG_ABILITY_TAG_SLASH",
+		"TAG2":"CONFIG_ABILITY_TAG_PIERCE",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"0.0",
+		"COOLDOWN_MIN":"0.0",
+		"MANACOST":"0",
+		"IS_WEAPON":"true",
+		"WEAPON_IS_RANGED":"false",
+		"WEAPON_RANGE":"100.0",
+		"WEAPON_DELAY":"1.0",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"DAMAGE_AMPLIFIER1":"0.7",
+		"DAMAGE_STAT1":"CONFIG_STAT_ATTACK",
+		"USE_DAMAGE_FLAG":"true",
+		"DAMAGE_TYPE":"CONFIG_DAMAGE_PHYSICAL",
+		"ATTACK_TYPE":"CONFIG_DAMAGE_BASIC",
+		"INTERVAL_TYPE":"CONFIG_DAMAGE_SINGLE",
+		"VECTOR_TYPE":"CONFIG_DAMAGE_OUTTER",
+		"TARGET_TYPE":"CONFIG_DAMAGE_TARGET",
+		"AOE_TYPE":"CONFIG_DAMAGE_NONAOE",
+		"ONHIT_TYPE":"CONFIG_DAMAGE_ONHIT",
+		"RANGE_TYPE":"CONFIG_DAMAGE_MELEE",
+		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
 		"ID":"u100",
@@ -930,7 +982,6 @@
 		"STARTAT":"25.0",
 		"VELO":"900.0",
 		"BUFF_ID1":"u110",
-		"BUFF_DESCRIPTION1":"감속",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"true",
 		"WEAPON_RANGE":"500.0",
@@ -1020,8 +1071,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_RANGED",
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
 		"STAT_BONUS2":"CONFIG_STAT_MAXMP",
-		"DATA_REAL1":"0.2",
-		"DATA_DESCRIPTION_REAL1":"마나 회복 배율"
+		"DATA_REAL1":"0.2"
 	},
 	{
 		"ID":"u140",
@@ -1039,7 +1089,6 @@
 		"MANACOST":"0",
 		"DURATION":"4.0",
 		"BUFF_ID1":"u140",
-		"BUFF_DESCRIPTION1":"체력감소",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1104,6 +1153,27 @@
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
 	},
 	{
+		"ID":"i120",
+		"NAME":"에메랄드",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGem.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"0.0",
+		"COOLDOWN_MIN":"0.0",
+		"MANACOST":"0",
+		"IS_WEAPON":"false",
+		"DAMAGE_BASE":"15",
+		"DAMAGE_PER_LEVEL":"1",
+		"USE_DAMAGE_FLAG":"false",
+		"STAT_BONUS1":"CONFIG_STAT_HPREGEN",
+		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+	},
+	{
 		"ID":"0200",
 		"NAME":"전투 자극제",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
@@ -1119,7 +1189,6 @@
 		"MANACOST":"35",
 		"DURATION":"5.0",
 		"BUFF_ID1":"0200",
-		"BUFF_DESCRIPTION1":"강화",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
@@ -1197,9 +1266,7 @@
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_LUCK",
 		"DATA_REAL1":"25",
-		"DATA_REAL2":"255.0",
-		"DATA_DESCRIPTION_REAL1":"추가 공격 기본확률",
-		"DATA_DESCRIPTION_REAL2":"추가 공격 행운상수"
+		"DATA_REAL2":"255.0"
 	},
 	{
 		"ID":"0250",
@@ -1236,8 +1303,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_RANGED",
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
 		"STAT_BONUS2":"CONFIG_STAT_MAGIC_PENET",
-		"DATA_REAL1":"1.25",
-		"DATA_DESCRIPTION_REAL1":"최대 사거리 배율"
+		"DATA_REAL1":"1.25"
 	},
 	{
 		"ID":"0260",
@@ -1297,7 +1363,6 @@
 		"DURATION":"5.0",
 		"COUNT":"3",
 		"BUFF_ID1":"0270",
-		"BUFF_DESCRIPTION1":"지속피해",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1340,7 +1405,7 @@
 	},
 	{
 		"ID":"0290",
-		"NAME":"돌진",
+		"NAME":"돌진 v2",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_varian_charge.png",
 		"TIER":"2",
 		"COST":"2",
@@ -1401,12 +1466,7 @@
 		"DATA_REAL2":"0.02",
 		"DATA_REAL3":"50",
 		"DATA_REAL4":"25",
-		"DATA_REAL5":"2.5",
-		"DATA_DESCRIPTION_REAL1":"돼지 공격력 증가량 배율",
-		"DATA_DESCRIPTION_REAL2":"돼지 공격력 증가량 배율(레벨 당)",
-		"DATA_DESCRIPTION_REAL3":"돼지 가하는 피해 배율",
-		"DATA_DESCRIPTION_REAL4":"돼지 잃은 체력 소환자 전이율",
-		"DATA_DESCRIPTION_REAL5":"돼지 잃은 체력 소환자 전이시간"
+		"DATA_REAL5":"2.5"
 	},
 	{
 		"ID":"02b0",
@@ -1424,7 +1484,6 @@
 		"MANACOST":"30",
 		"DURATION":"9.0",
 		"BUFF_ID1":"02b0",
-		"BUFF_DESCRIPTION1":"쉴드",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_RESISTANCE",
@@ -1446,7 +1505,6 @@
 		"MANACOST":"0",
 		"DURATION":"5.0",
 		"BUFF_ID1":"02c0",
-		"BUFF_DESCRIPTION1":"지속피해",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1484,9 +1542,7 @@
 		"MANACOST":"15",
 		"DURATION":"1.5",
 		"BUFF_ID1":"02d0",
-		"BUFF_DESCRIPTION1":"감속",
 		"BUFF_ID2":"02d1",
-		"BUFF_DESCRIPTION2":"추뎀",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
@@ -1564,10 +1620,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY",
 		"DATA_REAL1":"25",
 		"DATA_REAL2":"200.0",
-		"DATA_REAL3":"33",
-		"DATA_DESCRIPTION_REAL1":"분신생성확률",
-		"DATA_DESCRIPTION_REAL2":"(확률상수)",
-		"DATA_DESCRIPTION_REAL3":"주는 피해"
+		"DATA_REAL3":"33"
 	},
 	{
 		"ID":"02g0",
@@ -1585,7 +1638,6 @@
 		"MANACOST":"35",
 		"DURATION":"4.0",
 		"BUFF_ID1":"02g0",
-		"BUFF_DESCRIPTION1":"광폭화",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
@@ -1607,9 +1659,7 @@
 		"MANACOST":"10",
 		"VELO":"1080.0",
 		"BUFF_ID1":"02h0",
-		"BUFF_DESCRIPTION1":"캐스터",
 		"BUFF_ID2":"02h1",
-		"BUFF_DESCRIPTION2":"타겟",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
@@ -1637,8 +1687,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN",
-		"DATA_REAL1":"25",
-		"DATA_DESCRIPTION_REAL1":"체력 소모량(현재 체력의)"
+		"DATA_REAL1":"25"
 	},
 	{
 		"ID":"02j0",
@@ -1655,7 +1704,6 @@
 		"COOLDOWN_MIN":"1.5",
 		"MANACOST":"20",
 		"BUFF_ID1":"02j0",
-		"BUFF_DESCRIPTION1":"변신",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
@@ -1676,7 +1724,6 @@
 		"COOLDOWN_MIN":"1.5",
 		"MANACOST":"20",
 		"BUFF_ID1":"02k0",
-		"BUFF_DESCRIPTION1":"변신",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
@@ -1777,7 +1824,6 @@
 		"MANACOST":"17",
 		"DURATION":"3.5",
 		"BUFF_ID1":"02n0",
-		"BUFF_DESCRIPTION1":"방마저 증가",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_DEFENSE",
@@ -1799,7 +1845,6 @@
 		"MANACOST":"30",
 		"DURATION":"3.0",
 		"BUFF_ID1":"u200",
-		"BUFF_DESCRIPTION1":"광폭화",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
@@ -1827,7 +1872,6 @@
 		"STARTAT":"28.5",
 		"VELO":"1100.0",
 		"BUFF_ID1":"u210",
-		"BUFF_DESCRIPTION1":"감속",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.07",
 		"DAMAGE_AMPLIFIER1":"0.75",
@@ -1917,8 +1961,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_MAGICPOWER",
-		"DATA_REAL1":"66",
-		"DATA_DESCRIPTION_REAL1":"가하는 피해"
+		"DATA_REAL1":"66"
 	},
 	{
 		"ID":"u240",
@@ -1939,7 +1982,6 @@
 		"INTERVAL":"0.5",
 		"COUNT":"8",
 		"BUFF_ID1":"u240",
-		"BUFF_DESCRIPTION1":"지속피해",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.07",
 		"DAMAGE_AMPLIFIER1":"1.25",
@@ -2015,7 +2057,6 @@
 		"INTERVAL":"0.5",
 		"COUNT":"10",
 		"BUFF_ID1":"0310",
-		"BUFF_DESCRIPTION1":"감속",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.08",
 		"DAMAGE_AMPLIFIER1":"0.1",
@@ -2032,8 +2073,7 @@
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
 		"STAT_BONUS2":"CONFIG_STAT_MPREGEN",
 		"DATA_REAL1":"0.2",
-		"DATA_INTEGER1":"15",
-		"DATA_DESCRIPTION_INTEGER1":"이동속도 감소량(매 타격 당)"
+		"DATA_INTEGER1":"15"
 	},
 	{
 		"ID":"0320",
@@ -2074,11 +2114,7 @@
 		"DATA_REAL1":"40",
 		"DATA_REAL2":"50",
 		"DATA_INTEGER1":"10",
-		"DATA_INTEGER2":"3",
-		"DATA_DESCRIPTION_REAL1":"피해량 당 회복",
-		"DATA_DESCRIPTION_REAL2":"풀스택일때회복량",
-		"DATA_DESCRIPTION_INTEGER1":"최대 충전량",
-		"DATA_DESCRIPTION_INTEGER2":"온힛 필요타수"
+		"DATA_INTEGER2":"3"
 	},
 	{
 		"ID":"0330",
@@ -2099,7 +2135,6 @@
 		"STARTAT":"25.0",
 		"VELO":"1250.0",
 		"BUFF_ID1":"0330",
-		"BUFF_DESCRIPTION1":"이속증가",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"true",
 		"WEAPON_RANGE":"575.0",
@@ -2120,8 +2155,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_RANGED",
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY",
-		"DATA_REAL1":"400.0",
-		"DATA_DESCRIPTION_REAL1":"맥뎀거리"
+		"DATA_REAL1":"400.0"
 	},
 	{
 		"ID":"0340",
@@ -2181,8 +2215,7 @@
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_EVASION",
-		"DATA_INTEGER1":"110",
-		"DATA_DESCRIPTION_INTEGER1":"탑승시 이속증가"
+		"DATA_INTEGER1":"110"
 	},
 	{
 		"ID":"0360",
@@ -2414,8 +2447,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_RANGED",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_MAXMP",
-		"DATA_INTEGER1":"20",
-		"DATA_DESCRIPTION_REAL1":"공격 횟수"
+		"DATA_INTEGER1":"20"
 	},
 	{
 		"ID":"C000",

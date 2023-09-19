@@ -79,7 +79,7 @@ function AbilityDescription(props) {
 			<div className="top">
 				<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 				<div className='name-and-tags'>
-					<div className="ability-name">#{abiljson["ID"]} {abiljson["NAME"]}</div>
+					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
 					<div className="ability-tags">
 						{abiljson["TAG1"]!=="null"?CustomString[abiljson["TAG1"]]["NAME"]:""}
 						{abiljson["TAG2"]!=="null"?", "+CustomString[abiljson["TAG2"]]["NAME"]:""}

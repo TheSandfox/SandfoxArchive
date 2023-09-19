@@ -33,6 +33,10 @@ function main() {
 				if (i===rows.length) {
 					break;
 				}
+				if (rows[i][dataType]==="ignore") {
+					i++;
+					continue;
+				}
 				//dataType로 분기JSON
 				switch(rows[i][dataType]) {
 				case 'id' :
