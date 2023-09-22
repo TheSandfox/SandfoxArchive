@@ -76,6 +76,16 @@ a:active {
 	background-color: #fff1c3;
 }
 
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
 .rel {
 	position:relative;
 }
@@ -88,12 +98,39 @@ a:active {
 	cursor: pointer;
 }
 
+.non-focus {
+	pointer-events: none;
+}
+
 .hidden {
 	visibility: hidden;
 }
 
 .white {
 	color:white;
+}
+
+.fill {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+}
+
+.highlight {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	opacity: 33%;
+	background-color:#ffffff;
+	visibility: hidden;
+}
+
+*:hover>.highlight {
+	visibility: visible;
 }
 
 /*폰트설정*/
@@ -184,12 +221,11 @@ a:active {
 	padding:16px;
 	background-color: #464546;
 	border-radius: 16px;
-	display: flex;
-	flex-direction: column;
+	width:720px;
 }
 
 /*64x64 워크아이콘*/
-.w3x-icon{
+.w3x-icon {
 	width:64px;
 	height:64px;
 	display: flex;
@@ -210,6 +246,11 @@ a:active {
 .grid8x{
 	display:grid;
 	grid-template-columns: repeat(8, 1fr); /* 8개의 열 정의 */
+}
+
+/*너비*/
+.width-half{
+	width:50%;
 }
 
 /*높이*/
@@ -362,4 +403,12 @@ a:active {
 /*패딩, 마진*/
 .m-left16 {
 	margin-left:16px;
+}
+
+.m-right16 {
+	margin-right:16px;
+}
+
+.m-bottom16 {
+	margin-bottom: 16px;
 }

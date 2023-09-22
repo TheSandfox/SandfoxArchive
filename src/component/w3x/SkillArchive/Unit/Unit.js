@@ -42,22 +42,24 @@ function UnitDescription(props) {
 			border:'2px solid #ffffff'
 		}
 		// console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
-		return <div className="unit-description description-box w3font" style={stl}>
-			<div className="horizon-left vertical-center">
-				<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-				<div className='name-and-tags'>
-					<div className="font24 white">#{json["ID"]} {json["NAME"]}</div>
+		return <div className="unit-description description-box w3font row rel" style={stl}>
+			<div className='col width-half'>
+				<div className="horizon-left vertical-center row">
+					<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+					<div className='name-and-tags'>
+						<div className="font24 white">#{json["ID"]} {json["NAME"]}</div>
+					</div>
 				</div>
-			</div>
-			<br/>
-			<div className="horizon-left vertical-top">
-				<div className="tooltip white" >
-					{json["TOOLTIP"]}
+				<br/>
+				<div className="horizon-left vertical-top">
+					<div className="tooltip white" >
+						{json["TOOLTIP"]}
+					</div>
 				</div>
 			</div>
 			<br/>
 			{/*고유능력 아이콘*/}
-			<div className="horizon-left vertical-center">
+			<div className="horizon-center vertical-center width-half">
 				<p className='white'>고유 능력 : </p>
 				{json["INITIAL_ABILITY1"]!=="null"?
 					<div className='m-left16'>
@@ -77,10 +79,11 @@ function UnitDescription(props) {
 		</div>
 	} else {
 		//아이콘모드
-		return <div className='w3x-icon'>
+		return <div className='w3x-icon rel'>
 			<Link to={"/w3x/SkillArchive/Unit/"+json["ID"]} title={json["NAME"]}>
-			<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+				<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 			</Link>
+			<div className={'highlight non-focus'}></div>
 		</div>
 	}
 

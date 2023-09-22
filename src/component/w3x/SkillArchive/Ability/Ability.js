@@ -4,11 +4,14 @@ import { useState } from 'react'
 
 //import JSON
 import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
+import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
+import AbilityMix from '../../../../w3x/SkillArchive/json/AbilityMix.json'
 import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.json'
 import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
 // import Config from '../../../../w3x/SkillArchive/json/Config.json'
 
 const AbilityJson = AbilityParams["params"]
+const AbilityMixJson = AbilityMix["params"]
 const SearchField = {
 	NAME : "",
 	TIER : "",
@@ -35,7 +38,53 @@ export function AbilityWidget({json}) {
 				<></>
 			}
 		</Link>
+		<div className={'highlight non-focus'}></div>
 	</div>
+}
+
+//어빌리티 조합
+function AbilityMixTable() {
+	let id = useParams().id
+	/*이 어빌을 만들기 위한 재료*/
+	let lower = AbilityMixJson.filter(item=>item["RESULT"]===id)
+	/*이 어빌로 만들 수 있는 어빌*/
+	let upper = AbilityMixJson.filter(item=>item["ID1"]===id||item["ID2"]===id)
+	let i = 0
+	if (lower.length<=0) {lower=[]}
+	if (upper.length<=0) {upper=[]}
+	return <>{lower.length>0||upper.length>0?
+		<div className='description-box w3font row rel'>
+			<div className='col rel width-half'>
+				<div className='w3font font16 m-bottom16 white horizon-center col'>
+					조합법
+				</div>
+				{lower.map(json=>{
+					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]}/>
+						<p className='m-left16 m-right16'>+</p>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]}/>
+						<p className='m-left16 m-right16'>=</p>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
+					</div>
+				})}
+			</div>
+			<div className='col rel width-half'>
+				<div className='w3font font16 m-bottom16 white horizon-center col'>
+					조합 가능 스킬
+				</div>
+				{upper.map(json=>{
+					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]}/>
+						<p className='m-left16 m-right16'>+</p>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]}/>
+						<p className='m-left16 m-right16'>=</p>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
+				</div>
+				})}
+			</div>
+		</div>:
+		<></>}
+	</>
 }
 
 //어빌리티 디스크립션 (상세or아이콘)
@@ -77,7 +126,8 @@ function AbilityDescription(props) {
 		}
 		return <div className="ability-description description-box w3font" style={stl}>
 			<div className="top">
-				<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+				<AbilityWidget json={abiljson}/>
+				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
 				<div className='name-and-tags'>
 					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
 					<div className="ability-tags">
@@ -173,6 +223,7 @@ function AbilityDescriptionSingle() {
 	return <>
 		<div className='ability-single-container'>
 			<AbilityDescription viewMode={true}/>
+			<AbilityMixTable/>
 			<div className='ability-single-back-div icon-button' onClick={goBack}>
 				<i className="fa-solid fa-reply"></i>
 			</div>
