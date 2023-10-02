@@ -1,6 +1,6 @@
 {"params":[
 	{
-		"ID":"0100",
+		"ID":"1000",
 		"NAME":"방패 밀어치기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Warrior_ShieldBash.png",
 		"TIER":"1",
@@ -37,7 +37,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"0110",
+		"ID":"1010",
 		"NAME":"쌍극의 번개",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/btnAbility_protoss-doubleshieldrecharge.png",
 		"TIER":"1",
@@ -70,7 +70,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAGIC_PENET"
 	},
 	{
-		"ID":"0120",
+		"ID":"1020",
 		"NAME":"구식 저격총",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNDwarvenLongRifle.png",
 		"TIER":"1",
@@ -109,7 +109,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"0130",
+		"ID":"1030",
 		"NAME":"화염구",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFireBolt.png",
 		"TIER":"1",
@@ -146,7 +146,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_SPELL_BOOST"
 	},
 	{
-		"ID":"0140",
+		"ID":"1040",
 		"NAME":"연쇄번개",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/btnAbility_swarm-kerrigan-chainreaction.png",
 		"TIER":"1",
@@ -184,7 +184,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"0150",
+		"ID":"1050",
 		"NAME":"신성의 빛",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNHolyBolt.png",
 		"TIER":"1",
@@ -212,7 +212,7 @@
 		"DATA_REAL3":"9.0"
 	},
 	{
-		"ID":"0160",
+		"ID":"1060",
 		"NAME":"점멸",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBlink.png",
 		"TIER":"1",
@@ -233,7 +233,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"0170",
+		"ID":"1070",
 		"NAME":"순보",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_SavageStrike.png",
 		"TIER":"1",
@@ -268,7 +268,7 @@
 		"DATA_REAL1":"24.0"
 	},
 	{
-		"ID":"0180",
+		"ID":"1080",
 		"NAME":"다중사격",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Multishot.png",
 		"TIER":"1",
@@ -307,7 +307,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"0190",
+		"ID":"1090",
 		"NAME":"곤봉",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Mace_10.png",
 		"TIER":"1",
@@ -342,7 +342,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
 	},
 	{
-		"ID":"01a0",
+		"ID":"10a0",
 		"NAME":"조잡한 검",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSteelMelee.png",
 		"TIER":"1",
@@ -375,7 +375,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"01b0",
+		"ID":"10b0",
 		"NAME":"짓밟기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNWarStomp.png",
 		"TIER":"1",
@@ -410,7 +410,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
 	},
 	{
-		"ID":"01c0",
+		"ID":"10c0",
 		"NAME":"뾰족한 가시",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNQuillSprayOff.png",
 		"TIER":"1",
@@ -446,7 +446,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"01d0",
+		"ID":"10d0",
 		"NAME":"사기의 외침",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shout1.png",
 		"TIER":"1",
@@ -465,7 +465,7 @@
 		"ROTSPEED":"6.0",
 		"INTERVAL":"0.25",
 		"COUNT":"8",
-		"BUFF_ID1":"01d0",
+		"BUFF_ID1":"10d0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
@@ -473,7 +473,7 @@
 		"DATA_REAL1":"5.0"
 	},
 	{
-		"ID":"01e0",
+		"ID":"10e0",
 		"NAME":"박치기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNDizzy.png",
 		"TIER":"1",
@@ -508,7 +508,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"01f0",
+		"ID":"10f0",
 		"NAME":"역류의 칼날",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFeedBack.png",
 		"TIER":"1",
@@ -546,7 +546,7 @@
 		"DATA_REAL3":"3.5"
 	},
 	{
-		"ID":"01g0",
+		"ID":"10g0",
 		"NAME":"그물 던지기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNEnsnare.png",
 		"TIER":"1",
@@ -566,7 +566,7 @@
 		"RADIUS2":"55.0",
 		"STARTAT":"28.5",
 		"VELO":"1100.0",
-		"BUFF_ID1":"01g0",
+		"BUFF_ID1":"10g0",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.06",
 		"DAMAGE_AMPLIFIER1":"0.5",
@@ -584,7 +584,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_EVASION"
 	},
 	{
-		"ID":"01h0",
+		"ID":"10h0",
 		"NAME":"투척용 도끼",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNOrcMeleeUpOne.png",
 		"TIER":"1",
@@ -620,7 +620,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"01i0",
+		"ID":"10i0",
 		"NAME":"가우스 라이플",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/btnAbility_tychus-weapons-level4.png",
 		"TIER":"1",
@@ -658,7 +658,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"01j0",
+		"ID":"10j0",
 		"NAME":"청록의 파동",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Nature_AbolishMagic.png",
 		"TIER":"1",
@@ -692,7 +692,7 @@
 		"DATA_REAL1":"12"
 	},
 	{
-		"ID":"01k0",
+		"ID":"10k0",
 		"NAME":"사냥꾼의 장궁",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNImprovedBows.png",
 		"TIER":"1",
@@ -728,7 +728,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"01l0",
+		"ID":"10l0",
 		"NAME":"전기충격기 건설",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPowerGenerator.png",
 		"TIER":"1",
@@ -752,7 +752,7 @@
 		"DATA_REAL1":"8"
 	},
 	{
-		"ID":"01m0",
+		"ID":"10m0",
 		"NAME":"전기충격",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/btnability-protoss-beambounce.png",
 		"TIER":"1",
@@ -790,7 +790,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"01n0",
+		"ID":"10n0",
 		"NAME":"번개 발톱",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNShamanAdept.png",
 		"TIER":"1",
@@ -825,7 +825,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAGICPOWER"
 	},
 	{
-		"ID":"01o0",
+		"ID":"10o0",
 		"NAME":"행운의 금화",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNMGExchange.png",
 		"TIER":"1",
@@ -863,7 +863,7 @@
 		"DATA_INTEGER1":"1"
 	},
 	{
-		"ID":"01p0",
+		"ID":"10p0",
 		"NAME":"돌진",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_varian_charge.png",
 		"TIER":"1",
@@ -897,7 +897,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"01q0",
+		"ID":"10q0",
 		"NAME":"단검",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_ShortBlade_10.png",
 		"TIER":"1",
@@ -930,7 +930,70 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"u100",
+		"ID":"10r0",
+		"NAME":"힘의 장갑",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGauntletsOfOgrePower.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"0.0",
+		"COOLDOWN_MIN":"0.0",
+		"MANACOST":"0",
+		"IS_WEAPON":"false",
+		"DAMAGE_BASE":"10",
+		"DAMAGE_PER_LEVEL":"1",
+		"USE_DAMAGE_FLAG":"false",
+		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
+		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+	},
+	{
+		"ID":"10s0",
+		"NAME":"날카로운 갈고리",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNClawsOfAttack.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"0.0",
+		"COOLDOWN_MIN":"0.0",
+		"MANACOST":"0",
+		"IS_WEAPON":"false",
+		"DAMAGE_BASE":"10",
+		"DAMAGE_PER_LEVEL":"1",
+		"USE_DAMAGE_FLAG":"false",
+		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
+		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
+	},
+	{
+		"ID":"10t0",
+		"NAME":"에메랄드",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGem.png",
+		"TIER":"1",
+		"COST":"1",
+		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"COOLDOWN_MAX":"0.0",
+		"COOLDOWN_MIN":"0.0",
+		"MANACOST":"0",
+		"IS_WEAPON":"false",
+		"DAMAGE_BASE":"15",
+		"DAMAGE_PER_LEVEL":"1",
+		"USE_DAMAGE_FLAG":"false",
+		"STAT_BONUS1":"CONFIG_STAT_HPREGEN",
+		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
+	},
+	{
+		"ID":"10u0",
 		"NAME":"뛰어들기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGhoulFrenzy.png",
 		"TIER":"1",
@@ -964,7 +1027,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"u110",
+		"ID":"10v0",
 		"NAME":"끈적거미",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_MonsterSpiderCarapace_01.png",
 		"TIER":"1",
@@ -981,7 +1044,7 @@
 		"BACKSWING":"0.25",
 		"STARTAT":"25.0",
 		"VELO":"900.0",
-		"BUFF_ID1":"u110",
+		"BUFF_ID1":"10v0",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"true",
 		"WEAPON_RANGE":"500.0",
@@ -1002,7 +1065,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"u120",
+		"ID":"10w0",
 		"NAME":"치고 빠지기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shadow_Shadowfury.png",
 		"TIER":"1",
@@ -1036,7 +1099,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"u130",
+		"ID":"10x0",
 		"NAME":"암흑의 마법봉",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNWandSkull.png",
 		"TIER":"1",
@@ -1074,7 +1137,7 @@
 		"DATA_REAL1":"0.2"
 	},
 	{
-		"ID":"u140",
+		"ID":"10y0",
 		"NAME":"오염된 식칼",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_slam.png",
 		"TIER":"1",
@@ -1088,7 +1151,7 @@
 		"COOLDOWN_MIN":"0.0",
 		"MANACOST":"0",
 		"DURATION":"4.0",
-		"BUFF_ID1":"u140",
+		"BUFF_ID1":"10y0",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1111,70 +1174,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
 	},
 	{
-		"ID":"i100",
-		"NAME":"힘의 장갑",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGauntletsOfOgrePower.png",
-		"TIER":"1",
-		"COST":"1",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"null",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"DAMAGE_BASE":"10",
-		"DAMAGE_PER_LEVEL":"1",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
-		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
-	},
-	{
-		"ID":"i110",
-		"NAME":"날카로운 갈고리",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNClawsOfAttack.png",
-		"TIER":"1",
-		"COST":"1",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"null",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"DAMAGE_BASE":"10",
-		"DAMAGE_PER_LEVEL":"1",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
-		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
-	},
-	{
-		"ID":"i120",
-		"NAME":"에메랄드",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNGem.png",
-		"TIER":"1",
-		"COST":"1",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"null",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"DAMAGE_BASE":"15",
-		"DAMAGE_PER_LEVEL":"1",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_HPREGEN",
-		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
-	},
-	{
-		"ID":"0200",
+		"ID":"2000",
 		"NAME":"전투 자극제",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
 		"TIER":"2",
@@ -1188,14 +1188,14 @@
 		"COOLDOWN_MIN":"2.0",
 		"MANACOST":"35",
 		"DURATION":"5.0",
-		"BUFF_ID1":"0200",
+		"BUFF_ID1":"2000",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN"
 	},
 	{
-		"ID":"0230",
+		"ID":"2030",
 		"NAME":"칼날바람",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNWhirlwind.png",
 		"TIER":"2",
@@ -1229,7 +1229,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"0240",
+		"ID":"2040",
 		"NAME":"마법 카드패",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_PickACard.png",
 		"TIER":"2",
@@ -1269,7 +1269,7 @@
 		"DATA_REAL2":"255.0"
 	},
 	{
-		"ID":"0250",
+		"ID":"2050",
 		"NAME":"암흑비전파동",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_ArchonQ.png",
 		"TIER":"2",
@@ -1306,7 +1306,7 @@
 		"DATA_REAL1":"1.25"
 	},
 	{
-		"ID":"0260",
+		"ID":"2060",
 		"NAME":"수리검 투척",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shuriken.png",
 		"TIER":"2",
@@ -1347,7 +1347,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"0270",
+		"ID":"2070",
 		"NAME":"불붙은 시미터",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Gangplank_Passive.png",
 		"TIER":"2",
@@ -1362,7 +1362,7 @@
 		"MANACOST":"0",
 		"DURATION":"5.0",
 		"COUNT":"3",
-		"BUFF_ID1":"0270",
+		"BUFF_ID1":"2070",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1383,7 +1383,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN"
 	},
 	{
-		"ID":"0280",
+		"ID":"2080",
 		"NAME":"낚시",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Fishingpole.png",
 		"TIER":"2",
@@ -1404,7 +1404,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_LUCK"
 	},
 	{
-		"ID":"0290",
+		"ID":"2090",
 		"NAME":"돌진 v2",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_varian_charge.png",
 		"TIER":"2",
@@ -1438,7 +1438,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"02a0",
+		"ID":"20a0",
 		"NAME":"돼지 조련술",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPig.png",
 		"TIER":"2",
@@ -1469,7 +1469,7 @@
 		"DATA_REAL5":"2.5"
 	},
 	{
-		"ID":"02b0",
+		"ID":"20b0",
 		"NAME":"퇴마의 장막",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpellBreakerMagicDefend.png",
 		"TIER":"2",
@@ -1483,14 +1483,14 @@
 		"COOLDOWN_MIN":"2.0",
 		"MANACOST":"30",
 		"DURATION":"9.0",
-		"BUFF_ID1":"02b0",
+		"BUFF_ID1":"20b0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_RESISTANCE",
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
 	},
 	{
-		"ID":"02c0",
+		"ID":"20c0",
 		"NAME":"맹독 칼날",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNEnvenomedSpear.png",
 		"TIER":"2",
@@ -1504,7 +1504,7 @@
 		"COOLDOWN_MIN":"0.0",
 		"MANACOST":"0",
 		"DURATION":"5.0",
-		"BUFF_ID1":"02c0",
+		"BUFF_ID1":"20c0",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"false",
 		"WEAPON_RANGE":"125.0",
@@ -1527,7 +1527,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"02d0",
+		"ID":"20d0",
 		"NAME":"회심의 일격",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Paladin_SwiftRetribution.png",
 		"TIER":"2",
@@ -1541,15 +1541,15 @@
 		"COOLDOWN_MIN":"1.75",
 		"MANACOST":"15",
 		"DURATION":"1.5",
-		"BUFF_ID1":"02d0",
-		"BUFF_ID2":"02d1",
+		"BUFF_ID1":"20d0",
+		"BUFF_ID2":"20d1",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"02e0",
+		"ID":"20e0",
 		"NAME":"도약강타",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_sonya_leap.png",
 		"TIER":"2",
@@ -1584,7 +1584,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
 	},
 	{
-		"ID":"02f0",
+		"ID":"20f0",
 		"NAME":"악령의 칼날",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shadow_RitualOfSacrifice.png",
 		"TIER":"2",
@@ -1623,7 +1623,7 @@
 		"DATA_REAL3":"33"
 	},
 	{
-		"ID":"02g0",
+		"ID":"20g0",
 		"NAME":"광폭화",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBerserkForTrolls.png",
 		"TIER":"2",
@@ -1637,14 +1637,14 @@
 		"COOLDOWN_MIN":"2.0",
 		"MANACOST":"35",
 		"DURATION":"4.0",
-		"BUFF_ID1":"02g0",
+		"BUFF_ID1":"20g0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"02h0",
+		"ID":"20h0",
 		"NAME":"자연의 결속",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNManaFlare.png",
 		"TIER":"2",
@@ -1658,15 +1658,15 @@
 		"COOLDOWN_MIN":"1.5",
 		"MANACOST":"10",
 		"VELO":"1080.0",
-		"BUFF_ID1":"02h0",
-		"BUFF_ID2":"02h1",
+		"BUFF_ID1":"20h0",
+		"BUFF_ID2":"20h1",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_MAXMP"
 	},
 	{
-		"ID":"02i0",
+		"ID":"20i0",
 		"NAME":"정찰탑 건설",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNHumanWatchTower.png",
 		"TIER":"2",
@@ -1690,7 +1690,7 @@
 		"DATA_REAL1":"25"
 	},
 	{
-		"ID":"02j0",
+		"ID":"20j0",
 		"NAME":"늑대의 상",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpiritWolf.png",
 		"TIER":"2",
@@ -1703,14 +1703,14 @@
 		"COOLDOWN_MAX":"1.5",
 		"COOLDOWN_MIN":"1.5",
 		"MANACOST":"20",
-		"BUFF_ID1":"02j0",
+		"BUFF_ID1":"20j0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"02k0",
+		"ID":"20k0",
 		"NAME":"고대 코끼리의 상",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBlackMammoth.png",
 		"TIER":"2",
@@ -1723,14 +1723,14 @@
 		"COOLDOWN_MAX":"1.5",
 		"COOLDOWN_MIN":"1.5",
 		"MANACOST":"20",
-		"BUFF_ID1":"02k0",
+		"BUFF_ID1":"20k0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
 		"STAT_BONUS2":"CONFIG_STAT_HPREGEN"
 	},
 	{
-		"ID":"02l0",
+		"ID":"20l0",
 		"NAME":"달빛 글레이브",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNUpgradeMoonGlaive.png",
 		"TIER":"2",
@@ -1770,7 +1770,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"02m0",
+		"ID":"20m0",
 		"NAME":"투창",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSteelRanged.png",
 		"TIER":"2",
@@ -1809,7 +1809,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ARMOR_PENET"
 	},
 	{
-		"ID":"02n0",
+		"ID":"20n0",
 		"NAME":"보강",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAdvStruct.png",
 		"TIER":"2",
@@ -1823,14 +1823,14 @@
 		"COOLDOWN_MIN":"5.0",
 		"MANACOST":"17",
 		"DURATION":"3.5",
-		"BUFF_ID1":"02n0",
+		"BUFF_ID1":"20n0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_DEFENSE",
 		"STAT_BONUS2":"CONFIG_STAT_RESISTANCE"
 	},
 	{
-		"ID":"u200",
+		"ID":"20o0",
 		"NAME":"광란",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNUnholyFrenzy.png",
 		"TIER":"2",
@@ -1844,14 +1844,14 @@
 		"COOLDOWN_MIN":"5.0",
 		"MANACOST":"30",
 		"DURATION":"3.0",
-		"BUFF_ID1":"u200",
+		"BUFF_ID1":"20o0",
 		"IS_WEAPON":"false",
 		"USE_DAMAGE_FLAG":"false",
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
 	},
 	{
-		"ID":"u210",
+		"ID":"20p0",
 		"NAME":"산성 거미줄",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Web0.png",
 		"TIER":"2",
@@ -1871,7 +1871,7 @@
 		"RADIUS2":"55.0",
 		"STARTAT":"28.5",
 		"VELO":"1100.0",
-		"BUFF_ID1":"u210",
+		"BUFF_ID1":"20p0",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.07",
 		"DAMAGE_AMPLIFIER1":"0.75",
@@ -1889,7 +1889,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ATTACK"
 	},
 	{
-		"ID":"u220",
+		"ID":"20q0",
 		"NAME":"그림자 화살",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shadow_PainSpike.png",
 		"TIER":"2",
@@ -1931,7 +1931,7 @@
 		"DATA_REAL3":"33"
 	},
 	{
-		"ID":"u230",
+		"ID":"20r0",
 		"NAME":"해골 전사 소환",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSkeletonWarrior.png",
 		"TIER":"2",
@@ -1964,7 +1964,7 @@
 		"DATA_REAL1":"66"
 	},
 	{
-		"ID":"u240",
+		"ID":"20s0",
 		"NAME":"부패가스",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPlagueCloud.png",
 		"TIER":"2",
@@ -1981,7 +1981,7 @@
 		"RADIUS3":"200.0",
 		"INTERVAL":"0.5",
 		"COUNT":"8",
-		"BUFF_ID1":"u240",
+		"BUFF_ID1":"20s0",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.07",
 		"DAMAGE_AMPLIFIER1":"1.25",
@@ -1999,7 +1999,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_RESISTANCE"
 	},
 	{
-		"ID":"0300",
+		"ID":"3000",
 		"NAME":"기관총 난사",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFlakCannons.png",
 		"TIER":"3",
@@ -2036,7 +2036,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_ACCURACY"
 	},
 	{
-		"ID":"0310",
+		"ID":"3010",
 		"NAME":"감속",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSlow.png",
 		"TIER":"3",
@@ -2056,7 +2056,7 @@
 		"RADIUS3":"200.0",
 		"INTERVAL":"0.5",
 		"COUNT":"10",
-		"BUFF_ID1":"0310",
+		"BUFF_ID1":"3010",
 		"IS_WEAPON":"false",
 		"DAMAGE_PER_LEVEL":"0.08",
 		"DAMAGE_AMPLIFIER1":"0.1",
@@ -2076,7 +2076,7 @@
 		"DATA_INTEGER1":"15"
 	},
 	{
-		"ID":"0320",
+		"ID":"3020",
 		"NAME":"착취의 보옥",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNOrbOfDeath.png",
 		"TIER":"3",
@@ -2117,7 +2117,7 @@
 		"DATA_INTEGER2":"3"
 	},
 	{
-		"ID":"0330",
+		"ID":"3030",
 		"NAME":"전격 구체",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNOrbOfLightning.png",
 		"TIER":"3",
@@ -2134,7 +2134,7 @@
 		"BACKSWING":"0.25",
 		"STARTAT":"25.0",
 		"VELO":"1250.0",
-		"BUFF_ID1":"0330",
+		"BUFF_ID1":"3030",
 		"IS_WEAPON":"true",
 		"WEAPON_IS_RANGED":"true",
 		"WEAPON_RANGE":"575.0",
@@ -2158,7 +2158,7 @@
 		"DATA_REAL1":"400.0"
 	},
 	{
-		"ID":"0340",
+		"ID":"3040",
 		"NAME":"바람 칼날",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_WindBlade0.png",
 		"TIER":"3",
@@ -2197,7 +2197,7 @@
 		"DATA_REAL3":"2000.0"
 	},
 	{
-		"ID":"0350",
+		"ID":"3050",
 		"NAME":"강철 군마",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRiderlessHorse.png",
 		"TIER":"3",
@@ -2218,7 +2218,7 @@
 		"DATA_INTEGER1":"110"
 	},
 	{
-		"ID":"0360",
+		"ID":"3060",
 		"NAME":"갈고리 던지기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_hook.png",
 		"TIER":"3",
@@ -2255,7 +2255,7 @@
 		"DATA_REAL3":"155.0"
 	},
 	{
-		"ID":"0370",
+		"ID":"3070",
 		"NAME":"용암채찍",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_LavaSwip.png",
 		"TIER":"3",
@@ -2297,7 +2297,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAGICPOWER"
 	},
 	{
-		"ID":"0400",
+		"ID":"4000",
 		"NAME":"미사일 컨테이너",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNClusterRockets.png",
 		"TIER":"4",
@@ -2338,7 +2338,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_SPELL_BOOST"
 	},
 	{
-		"ID":"0410",
+		"ID":"4010",
 		"NAME":"불사조",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_kaelthas_phoenix.png",
 		"TIER":"4",
@@ -2374,7 +2374,7 @@
 		"STAT_BONUS2":"CONFIG_STAT_MAXMP"
 	},
 	{
-		"ID":"0500",
+		"ID":"5000",
 		"NAME":"화룡의 숨결",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_deathwing_molten_flame.png",
 		"TIER":"5",
@@ -2410,7 +2410,7 @@
 		"DATA_REAL1":"50"
 	},
 	{
-		"ID":"0510",
+		"ID":"5010",
 		"NAME":"종막: 이스보셋",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Isubosete.png",
 		"TIER":"5",
@@ -2448,176 +2448,5 @@
 		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
 		"STAT_BONUS2":"CONFIG_STAT_MAXMP",
 		"DATA_INTEGER1":"20"
-	},
-	{
-		"ID":"C000",
-		"NAME":"새내기",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNMurgalSlave.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_LUCK",
-		"STAT_BONUS2":"CONFIG_STAT_HPREGEN"
-	},
-	{
-		"ID":"C001",
-		"NAME":"동인천 역가드",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSacrifice.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_ACCURACY",
-		"STAT_BONUS2":"CONFIG_STAT_EVASION"
-	},
-	{
-		"ID":"C002",
-		"NAME":"가짜광기",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBerserkForTrolls.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_ATTACK",
-		"STAT_BONUS2":"CONFIG_STAT_EVASION"
-	},
-	{
-		"ID":"C003",
-		"NAME":"꿈나무",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAcorn.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_MAXHP",
-		"STAT_BONUS2":"CONFIG_STAT_MAXMP"
-	},
-	{
-		"ID":"C004",
-		"NAME":"아이돌",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSorceress.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_SPELL_BOOST",
-		"STAT_BONUS2":"CONFIG_STAT_MPREGEN"
-	},
-	{
-		"ID":"C005",
-		"NAME":"정의의 사도",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRacoon.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_DEFENSE",
-		"STAT_BONUS2":"CONFIG_STAT_RESISTANCE"
-	},
-	{
-		"ID":"C006",
-		"NAME":"치유계",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNFountainOfLife.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_HPREGEN",
-		"STAT_BONUS2":"CONFIG_STAT_MAGICPOWER"
-	},
-	{
-		"ID":"C007",
-		"NAME":"패셔니스타",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNRobeOfTheMagi.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_EVASION",
-		"STAT_BONUS2":"CONFIG_STAT_MAXHP"
-	},
-	{
-		"ID":"C008",
-		"NAME":"밤의 일족",
-		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNElunesBlessing.png",
-		"TIER":"0",
-		"COST":"0",
-		"CAST_TYPE":"CONFIG_CAST_TYPE_PASSIVE",
-		"TAG1":"CONFIG_ABILITY_TAG_CHINGHO",
-		"TAG2":"null",
-		"TAG3":"null",
-		"TAG4":"null",
-		"COOLDOWN_MAX":"0.0",
-		"COOLDOWN_MIN":"0.0",
-		"MANACOST":"0",
-		"IS_WEAPON":"false",
-		"USE_DAMAGE_FLAG":"false",
-		"STAT_BONUS1":"CONFIG_STAT_MAGICPOWER",
-		"STAT_BONUS2":"CONFIG_STAT_RESISTANCE"
 	}
 ]}

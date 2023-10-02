@@ -4,8 +4,8 @@
 		"NAME":"전사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNFootman.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01a0",
-		"INITIAL_ABILITY2":"0230",
+		"INITIAL_ABILITY1":"10a0",
+		"INITIAL_ABILITY2":"2030",
 		"TOOLTIP":"도내 SSR급 굳건이"
 	},
 	{
@@ -13,8 +13,8 @@
 		"NAME":"총잡이",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNRifleMan.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0120",
-		"INITIAL_ABILITY2":"02d0",
+		"INITIAL_ABILITY1":"1020",
+		"INITIAL_ABILITY2":"20d0",
 		"TOOLTIP":"칼 든 사람보다 무서운 총 든 사람"
 	},
 	{
@@ -22,8 +22,8 @@
 		"NAME":"붉은기사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNUnit_RedFootman.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0190",
-		"INITIAL_ABILITY2":"02e0",
+		"INITIAL_ABILITY1":"1090",
+		"INITIAL_ABILITY2":"20e0",
 		"TOOLTIP":"몽둥이가 압권인 전사"
 	},
 	{
@@ -31,8 +31,8 @@
 		"NAME":"어둠추적자",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNSatyrTrickster.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0170",
-		"INITIAL_ABILITY2":"02f0",
+		"INITIAL_ABILITY1":"1070",
+		"INITIAL_ABILITY2":"20f0",
 		"TOOLTIP":"현실세계에선 스토커였던 내가 이세계에서는 0티어 도적?"
 	},
 	{
@@ -40,8 +40,8 @@
 		"NAME":"흑마법사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNGuldan.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0130",
-		"INITIAL_ABILITY2":"0250",
+		"INITIAL_ABILITY1":"1030",
+		"INITIAL_ABILITY2":"2050",
 		"TOOLTIP":"정말로 강한 마법사이다. 왜 강한지는…"
 	},
 	{
@@ -49,8 +49,8 @@
 		"NAME":"해병",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNMarine.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01i0",
-		"INITIAL_ABILITY2":"0200",
+		"INITIAL_ABILITY1":"10i0",
+		"INITIAL_ABILITY2":"2000",
 		"TOOLTIP":"전우애로 똘똘 뭉친 사람"
 	},
 	{
@@ -58,8 +58,8 @@
 		"NAME":"트롤 광전사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNForestTrollTrapper.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01h0",
-		"INITIAL_ABILITY2":"02g0",
+		"INITIAL_ABILITY1":"10h0",
+		"INITIAL_ABILITY2":"20g0",
 		"TOOLTIP":"트롤인데다 광전사이다."
 	},
 	{
@@ -67,8 +67,8 @@
 		"NAME":"자객",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNAssassin.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0170",
-		"INITIAL_ABILITY2":"0260",
+		"INITIAL_ABILITY1":"1070",
+		"INITIAL_ABILITY2":"2060",
 		"TOOLTIP":"벼르고 있는 사람들이 많다. 잡히면 어떻게 될까?"
 	},
 	{
@@ -76,8 +76,8 @@
 		"NAME":"주술사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNShaman.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01n0",
-		"INITIAL_ABILITY2":"02j0",
+		"INITIAL_ABILITY1":"10n0",
+		"INITIAL_ABILITY2":"20j0",
 		"TOOLTIP":"현실에선 주술이라고는 인디안식 기우제밖에 몰랐지만 여기선 다르다."
 	},
 	{
@@ -85,8 +85,8 @@
 		"NAME":"마술사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNVillagerMan1.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0160",
-		"INITIAL_ABILITY2":"0240",
+		"INITIAL_ABILITY1":"1060",
+		"INITIAL_ABILITY2":"2040",
 		"TOOLTIP":"[카드값]이 많이 나오는 사람"
 	},
 	{
@@ -94,8 +94,8 @@
 		"NAME":"불한당",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNBandit.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0100",
-		"INITIAL_ABILITY2":"0290",
+		"INITIAL_ABILITY1":"1000",
+		"INITIAL_ABILITY2":"2090",
 		"TOOLTIP":"물하기싫으니불한당"
 	},
 	{
@@ -103,8 +103,8 @@
 		"NAME":"바다사냥꾼",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNSeaWitch.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01g0",
-		"INITIAL_ABILITY2":"02c0",
+		"INITIAL_ABILITY1":"10g0",
+		"INITIAL_ABILITY2":"20c0",
 		"TOOLTIP":"해녀라고 부르면 화를 낸다."
 	},
 	{
@@ -112,8 +112,8 @@
 		"NAME":"주문파괴자",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNSpellBreaker.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01f0",
-		"INITIAL_ABILITY2":"02b0",
+		"INITIAL_ABILITY1":"10f0",
+		"INITIAL_ABILITY2":"20b0",
 		"TOOLTIP":"마법이 소용없다고 주장하는 사람"
 	},
 	{
@@ -121,8 +121,8 @@
 		"NAME":"기술자",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNPeasant.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01l0",
-		"INITIAL_ABILITY2":"02i0",
+		"INITIAL_ABILITY1":"10l0",
+		"INITIAL_ABILITY2":"20i0",
 		"TOOLTIP":"지상 최강의 막노동꾼"
 	},
 	{
@@ -130,8 +130,8 @@
 		"NAME":"돼지술사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNRazorback.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01d0",
-		"INITIAL_ABILITY2":"02a0",
+		"INITIAL_ABILITY1":"10d0",
+		"INITIAL_ABILITY2":"20a0",
 		"TOOLTIP":"대지마법을 사용할 수 있다는 오해를 자주 산다."
 	},
 	{
@@ -139,8 +139,8 @@
 		"NAME":"요정용",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNFaerieDragon.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01j0",
-		"INITIAL_ABILITY2":"02h0",
+		"INITIAL_ABILITY1":"10j0",
+		"INITIAL_ABILITY2":"20h0",
 		"TOOLTIP":"뀨"
 	},
 	{
@@ -148,8 +148,8 @@
 		"NAME":"군마",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNRiderlessHorse.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01b0",
-		"INITIAL_ABILITY2":"0290",
+		"INITIAL_ABILITY1":"10b0",
+		"INITIAL_ABILITY2":"2090",
 		"TOOLTIP":"탑승감 좋은 군마"
 	},
 	{
@@ -157,8 +157,8 @@
 		"NAME":"돼지",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNRazorback.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01c0",
-		"INITIAL_ABILITY2":"0290",
+		"INITIAL_ABILITY1":"10c0",
+		"INITIAL_ABILITY2":"2090",
 		"TOOLTIP":"꾸이이익"
 	},
 	{
@@ -166,8 +166,8 @@
 		"NAME":"해골 전사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNSkeletonWarrior.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01a0",
-		"INITIAL_ABILITY2":"0230",
+		"INITIAL_ABILITY1":"10a0",
+		"INITIAL_ABILITY2":"2030",
 		"TOOLTIP":"지성도 없고 고통도 모르니 가장 무서운 존재가 아닐까?"
 	},
 	{
@@ -175,8 +175,8 @@
 		"NAME":"정찰탑",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNHumanWatchTower.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01k0",
-		"INITIAL_ABILITY2":"02n0",
+		"INITIAL_ABILITY1":"10k0",
+		"INITIAL_ABILITY2":"20n0",
 		"TOOLTIP":"튼튼한 정찰탑"
 	},
 	{
@@ -184,8 +184,8 @@
 		"NAME":"전기충격기",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNPowerGenerator.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01m0",
-		"INITIAL_ABILITY2":"02n0",
+		"INITIAL_ABILITY1":"10m0",
+		"INITIAL_ABILITY2":"20n0",
 		"TOOLTIP":"이세계에서도 범죄자 소탕에 많이 활용되는 기구"
 	},
 	{
@@ -193,8 +193,8 @@
 		"NAME":"늑대정령",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNSpiritWolf.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01n0",
-		"INITIAL_ABILITY2":"0290",
+		"INITIAL_ABILITY1":"10n0",
+		"INITIAL_ABILITY2":"2090",
 		"TOOLTIP":"늑대의 형상을 한 정령"
 	},
 	{
@@ -202,8 +202,8 @@
 		"NAME":"고대 코끼리",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNBlackMammoth.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01b0",
-		"INITIAL_ABILITY2":"0290",
+		"INITIAL_ABILITY1":"10b0",
+		"INITIAL_ABILITY2":"2090",
 		"TOOLTIP":"싫어하는 학교는 연세대학교"
 	},
 	{
@@ -211,8 +211,8 @@
 		"NAME":"마법 금고",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNMagicVault.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"01o0",
-		"INITIAL_ABILITY2":"02n0",
+		"INITIAL_ABILITY1":"10o0",
+		"INITIAL_ABILITY2":"20n0",
 		"TOOLTIP":"귀엽고 든든한 마법 금고"
 	},
 	{
@@ -229,8 +229,8 @@
 		"NAME":"낚시꾼",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNHeadhunter.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"i110",
-		"INITIAL_ABILITY2":"02m0",
+		"INITIAL_ABILITY1":"null",
+		"INITIAL_ABILITY2":"20m0",
 		"TOOLTIP":"물고기 잡는 법 보다 더 중요한 것은 낚시대를 만드는 법"
 	},
 	{
@@ -265,8 +265,8 @@
 		"NAME":"구울",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNGhoul.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"u100",
-		"INITIAL_ABILITY2":"u200",
+		"INITIAL_ABILITY1":"10u0",
+		"INITIAL_ABILITY2":"20o0",
 		"TOOLTIP":"null"
 	},
 	{
@@ -274,8 +274,8 @@
 		"NAME":"지하마귀",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNCryptFiend.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"u110",
-		"INITIAL_ABILITY2":"u210",
+		"INITIAL_ABILITY1":"10v0",
+		"INITIAL_ABILITY2":"20p0",
 		"TOOLTIP":"null"
 	},
 	{
@@ -283,8 +283,8 @@
 		"NAME":"가고일",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNGargoyle.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"u120",
-		"INITIAL_ABILITY2":"u220",
+		"INITIAL_ABILITY1":"10w0",
+		"INITIAL_ABILITY2":"20q0",
 		"TOOLTIP":"null"
 	},
 	{
@@ -292,8 +292,8 @@
 		"NAME":"강령술사",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNNecromancer.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"u130",
-		"INITIAL_ABILITY2":"u230",
+		"INITIAL_ABILITY1":"10x0",
+		"INITIAL_ABILITY2":"20r0",
 		"TOOLTIP":"null"
 	},
 	{
@@ -301,8 +301,8 @@
 		"NAME":"살덩이 골렘",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNAbomination.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"u140",
-		"INITIAL_ABILITY2":"u240",
+		"INITIAL_ABILITY1":"10y0",
+		"INITIAL_ABILITY2":"20s0",
 		"TOOLTIP":"null"
 	},
 	{
@@ -310,8 +310,8 @@
 		"NAME":"수호자",
 		"ICON_PATH":"replaceabletextures/commandbuttons/BTNArmorGolem.png",
 		"MODEL_PATH":"null",
-		"INITIAL_ABILITY1":"0100",
-		"INITIAL_ABILITY2":"0190",
+		"INITIAL_ABILITY1":"1000",
+		"INITIAL_ABILITY2":"1090",
 		"TOOLTIP":"null"
 	},
 	{

@@ -1,6 +1,6 @@
 {"params":[
 	{
-		"ID":"01d0",
+		"ID":"10d0",
 		"NAME":"사기의 외침",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Shout1.png",
 		"INDIVISUAL":"2",
@@ -19,7 +19,7 @@
 		"DATA_REAL2":"1"
 	},
 	{
-		"ID":"01g0",
+		"ID":"10g0",
 		"NAME":"그물 던지기",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNEnsnare.png",
 		"INDIVISUAL":"0",
@@ -36,7 +36,7 @@
 		"DATA_REAL1":"45"
 	},
 	{
-		"ID":"u110",
+		"ID":"10v0",
 		"NAME":"끈적 거미",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_MonsterSpiderCarapace_01.png",
 		"INDIVISUAL":"1",
@@ -53,7 +53,7 @@
 		"DATA_REAL1":"5.0"
 	},
 	{
-		"ID":"u140",
+		"ID":"10y0",
 		"NAME":"오염된 식칼",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_storm_ui_icon_stitches_slam.png",
 		"INDIVISUAL":"1",
@@ -69,7 +69,7 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
-		"ID":"0200",
+		"ID":"2000",
 		"NAME":"전투자극제",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
 		"INDIVISUAL":"0",
@@ -87,13 +87,13 @@
 		"DATA_REAL2":"10"
 	},
 	{
-		"ID":"0270",
+		"ID":"2070",
 		"NAME":"불붙은 시미터",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Gangplank_Passive.png",
 		"INDIVISUAL":"1",
 		"POSITIVE":"0",
 		"USE_DAMAGE_TAG":"true",
-		"DAMAGE_ID":"0271",
+		"DAMAGE_ID":"2071",
 		"TAG1":"CONFIG_ABILITY_TAG_FIRE",
 		"TAG2":"null",
 		"TAG3":"null",
@@ -114,7 +114,7 @@
 		"DATA_REAL1":"1.0"
 	},
 	{
-		"ID":"02b0",
+		"ID":"20b0",
 		"NAME":"퇴마의 장막",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpellBreakerMagicDefend.png",
 		"INDIVISUAL":"0",
@@ -132,13 +132,13 @@
 		"DATA_REAL1":"20"
 	},
 	{
-		"ID":"02c0",
+		"ID":"20c0",
 		"NAME":"맹독 칼날",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNEnvenomedSpear.png",
 		"INDIVISUAL":"1",
 		"POSITIVE":"0",
 		"USE_DAMAGE_TAG":"true",
-		"DAMAGE_ID":"02c1",
+		"DAMAGE_ID":"20c1",
 		"TAG1":"CONFIG_ABILITY_TAG_POISON",
 		"TAG2":"null",
 		"TAG3":"null",
@@ -158,7 +158,7 @@
 		"RANGE_TYPE":"CONFIG_DAMAGE_UNDEFINED"
 	},
 	{
-		"ID":"02d0",
+		"ID":"20d0",
 		"NAME":"회심의 일격(감속)",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Paladin_SwiftRetribution.png",
 		"INDIVISUAL":"0",
@@ -172,7 +172,7 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
-		"ID":"02d1",
+		"ID":"20d1",
 		"NAME":"회심의 일격(추뎀)",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Paladin_SwiftRetribution.png",
 		"INDIVISUAL":"0",
@@ -188,7 +188,7 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
-		"ID":"02g0",
+		"ID":"20g0",
 		"NAME":"광폭화",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBerserkForTrolls.png",
 		"INDIVISUAL":"0",
@@ -205,7 +205,7 @@
 		"DATA_REAL1":"50"
 	},
 	{
-		"ID":"02h0",
+		"ID":"20h0",
 		"NAME":"자연의 결속(캐스터)",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNManaFlare.png",
 		"INDIVISUAL":"2",
@@ -218,7 +218,7 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
-		"ID":"02h1",
+		"ID":"20h1",
 		"NAME":"자연의 결속(타겟)",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNManaFlare.png",
 		"INDIVISUAL":"2",
@@ -236,7 +236,7 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
-		"ID":"02j0",
+		"ID":"20j0",
 		"NAME":"늑대의 상",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSpiritWolf.png",
 		"INDIVISUAL":"0",
@@ -257,7 +257,7 @@
 		"DATA_INTEGER2":"3"
 	},
 	{
-		"ID":"02k0",
+		"ID":"20k0",
 		"NAME":"고대코끼리의 상",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNBlackMammoth.png",
 		"INDIVISUAL":"0",
@@ -277,7 +277,7 @@
 		"DATA_INTEGER2":"3"
 	},
 	{
-		"ID":"02n0",
+		"ID":"20n0",
 		"NAME":"보강",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAdvStruct.png",
 		"INDIVISUAL":"0",
@@ -292,7 +292,7 @@
 		"DATA_REAL2":"1.5"
 	},
 	{
-		"ID":"u200",
+		"ID":"20o0",
 		"NAME":"광란",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNUnholyFrenzy.png",
 		"INDIVISUAL":"0",
@@ -311,7 +311,7 @@
 		"DATA_REAL3":"10"
 	},
 	{
-		"ID":"u210",
+		"ID":"20p0",
 		"NAME":"산성 거미줄",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Web0.png",
 		"INDIVISUAL":"0",
@@ -328,7 +328,7 @@
 		"DATA_REAL1":"33"
 	},
 	{
-		"ID":"u240",
+		"ID":"20s0",
 		"NAME":"부패가스",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNPlagueCloud.png",
 		"INDIVISUAL":"0",
@@ -342,7 +342,7 @@
 		"DATA_REAL1":"75"
 	},
 	{
-		"ID":"0310",
+		"ID":"3010",
 		"NAME":"감속",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNSlow.png",
 		"INDIVISUAL":"1",
@@ -359,7 +359,7 @@
 		"DATA_INTEGER1":"15"
 	},
 	{
-		"ID":"0330",
+		"ID":"3030",
 		"NAME":"전격구체",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNOrbOfLightning.png",
 		"INDIVISUAL":"0",

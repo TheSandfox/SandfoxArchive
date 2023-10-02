@@ -34,17 +34,19 @@ function main() {
 			if (j==rows[0].length||rows[0][j]==null) {
 				break;
 			}
-			//괄호 열기
-			if (j==datafromX) {
-				fs.appendFileSync(outJson, '\n\t\{','utf-8');
-			} else {
-				fs.appendFileSync(outJson, ',\n\t\{','utf-8');
-			}
-			//맵 기록
-			if (j==datafromX) {
-				fs.appendFileSync(outMap,'"'+rows[0][j]+'":"'+(j-datafromX)+'"')
-			} else {
-				fs.appendFileSync(outMap,',"'+rows[0][j]+'":"'+(j-datafromX)+'"')
+			if(rows[0][j][0]!=="C") {
+				//괄호 열기
+				if (j==datafromX) {
+					fs.appendFileSync(outJson, '\n\t\{','utf-8');
+				} else {
+					fs.appendFileSync(outJson, ',\n\t\{','utf-8');
+				}
+				//맵 기록
+				if (j==datafromX) {
+					fs.appendFileSync(outMap,'"'+rows[0][j]+'":"'+(j-datafromX)+'"')
+				} else {
+					fs.appendFileSync(outMap,',"'+rows[0][j]+'":"'+(j-datafromX)+'"')
+				}
 			}
 			//텍매열기J
 			fs.appendFileSync(outJass, '//! textmacro '+mode+'DataHeader'+rows[0][j]+"\nglobals\n",'utf-8');
@@ -56,53 +58,55 @@ function main() {
 				}
 				//빈 값이 아닐때만
 				if ((rows[i][j]!=null||rows[i][allowNull]==="true")&&rows[i][dataType]!=="ignore") {
-					//멤버네임JSON
-					if (i == 0) {
-						fs.appendFileSync(outJson, '\n\t\t"'+rows[i][0]+'":','utf-8');
-					} else {
-						fs.appendFileSync(outJson, ',\n\t\t"'+rows[i][0]+'":','utf-8');
-					}
-					//내용JSON
-					switch (rows[i][dataType]) {
-						case 'iconpath' :
-							fs.appendFileSync(outJson, '"ReplaceableTextures/CommandButtons/'+rows[i][j]+'.png"','utf-8');
-							break;
-						case 'abilitytag' :
-							if (rows[i][j]!=null) {
-								fs.appendFileSync(outJson, '"CONFIG_ABILITY_TAG_'+rows[i][j]+'"','utf-8');
-							} else {
-								fs.appendFileSync(outJson, '"null"','utf-8');
-							}
-							break;
-						case 'casttype' :
-							if (rows[i][j]!=null) {
-								fs.appendFileSync(outJson, '"CONFIG_CAST_TYPE_'+rows[i][j]+'"','utf-8');
-							} else {
-								fs.appendFileSync(outJson, '"null"','utf-8');
-							}
-							break;
-						case 'configinteger' :
-							if (rows[i][j]!=null) {
-								fs.appendFileSync(outJson, '"CONFIG_'+rows[i][j]+'"','utf-8');
-							} else {
-								fs.appendFileSync(outJson, '"null"','utf-8');
-							}
-							break;
-						case 'real' :
-							if (rows[i][j][rows[i][j].length-1]==='%') {
-								//퍼센트임
-								fs.appendFileSync(outJson, '"'+rows[i][j].substring(0,rows[i][j].length-1)+'"','utf-8');
-							} else {
-								//아님
+					if(rows[0][j][0]!=="C") {
+						//멤버네임JSON
+						if (i == 0) {
+							fs.appendFileSync(outJson, '\n\t\t"'+rows[i][0]+'":','utf-8');
+						} else {
+							fs.appendFileSync(outJson, ',\n\t\t"'+rows[i][0]+'":','utf-8');
+						}
+						//내용JSON(칭호제외)
+						switch (rows[i][dataType]) {
+							case 'iconpath' :
+								fs.appendFileSync(outJson, '"ReplaceableTextures/CommandButtons/'+rows[i][j]+'.png"','utf-8');
+								break;
+							case 'abilitytag' :
+								if (rows[i][j]!=null) {
+									fs.appendFileSync(outJson, '"CONFIG_ABILITY_TAG_'+rows[i][j]+'"','utf-8');
+								} else {
+									fs.appendFileSync(outJson, '"null"','utf-8');
+								}
+								break;
+							case 'casttype' :
+								if (rows[i][j]!=null) {
+									fs.appendFileSync(outJson, '"CONFIG_CAST_TYPE_'+rows[i][j]+'"','utf-8');
+								} else {
+									fs.appendFileSync(outJson, '"null"','utf-8');
+								}
+								break;
+							case 'configinteger' :
+								if (rows[i][j]!=null) {
+									fs.appendFileSync(outJson, '"CONFIG_'+rows[i][j]+'"','utf-8');
+								} else {
+									fs.appendFileSync(outJson, '"null"','utf-8');
+								}
+								break;
+							case 'real' :
+								if (rows[i][j][rows[i][j].length-1]==='%') {
+									//퍼센트임
+									fs.appendFileSync(outJson, '"'+rows[i][j].substring(0,rows[i][j].length-1)+'"','utf-8');
+								} else {
+									//아님
+									fs.appendFileSync(outJson, '"'+rows[i][j]+'"','utf-8');
+								}
+								break;
+							case 'ignore' :
+								/*기록안함*/
+								break;
+							default :
 								fs.appendFileSync(outJson, '"'+rows[i][j]+'"','utf-8');
-							}
-							break;
-						case 'ignore' :
-							/*기록안함*/
-							break;
-						default :
-							fs.appendFileSync(outJson, '"'+rows[i][j]+'"','utf-8');
-							break;
+								break;
+						}
 					}
 					//내용J
 					switch (rows[i][dataType]) {
@@ -159,8 +163,10 @@ function main() {
 				//인덱스
 				i++;
 			}
-			//괄호 닫기
-			fs.appendFileSync(outJson, "\n\t}",'utf-8');
+			if(rows[0][j][0]!=="C") {
+				//괄호 닫기
+				fs.appendFileSync(outJson, "\n\t}",'utf-8');
+			}
 			//괄호닫기J
 			fs.appendFileSync(outJass, "endglobals\n//! endtextmacro\n",'utf-8');
 			//인덱스 ++

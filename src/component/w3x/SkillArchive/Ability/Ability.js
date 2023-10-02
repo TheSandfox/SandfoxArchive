@@ -18,7 +18,9 @@ const SearchField = {
 	TAG : "",
 	CAST_TYPE : "",
 	DAMAGE_TYPE : "",
-	ATTACK_TYPE : ""
+	ATTACK_TYPE : "",
+	STAT_BONUS1 : "",
+	STAT_BONUS2 : ""
 }
 
 //어빌리티 위젯 
@@ -361,6 +363,66 @@ function AbilitySearchController({state}) {
 				<i className="fa-solid fa-xmark"></i>
 			</div>
 		</div>
+		{/*스탯보너스1*/}
+		<div className="rel h24 horizon-left vertical-center">
+			<p>스탯1</p>
+			<p> : </p>
+			<select
+				value={searchField["STAT_BONUS1"]}
+				onChange={(event)=>{modifySearchField.query("STAT_BONUS1",event.target.value)}}
+			>
+				<option value="">선택안함</option>
+				<option value="CONFIG_STAT_MAXHP">체력</option>
+				<option value="CONFIG_STAT_MAXMP">마나</option>
+				<option value="CONFIG_STAT_ATTACK">공격력</option>
+				<option value="CONFIG_STAT_DEFENSE">방어력</option>
+				<option value="CONFIG_STAT_MAGICPOWER">주문력</option>
+				<option value="CONFIG_STAT_RESISTANCE">저항력</option>
+				<option value="CONFIG_STAT_ACCURACY">정확도</option>
+				<option value="CONFIG_STAT_EVASION">회피치</option>
+				<option value="CONFIG_STAT_ARMOR_PENET">방어관통</option>
+				<option value="CONFIG_STAT_MAGIC_PENET">저항관통</option>
+				<option value="CONFIG_STAT_SPELL_BOOST">주문가속</option>
+				<option value="CONFIG_STAT_LUCK">행운</option>
+				<option value="CONFIG_STAT_HPREGEN">체력재생</option>
+				<option value="CONFIG_STAT_MPREGEN">마나재생</option>
+			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("STAT_BONUS1","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
+		</div>
+		{/*스탯보너스2*/}
+		<div className="rel h24 horizon-left vertical-center">
+			<p>스탯2</p>
+			<p> : </p>
+			<select
+				value={searchField["STAT_BONUS2"]}
+				onChange={(event)=>{modifySearchField.query("STAT_BONUS2",event.target.value)}}
+			>
+				<option value="">선택안함</option>
+				<option value="CONFIG_STAT_MAXHP">체력</option>
+				<option value="CONFIG_STAT_MAXMP">마나</option>
+				<option value="CONFIG_STAT_ATTACK">공격력</option>
+				<option value="CONFIG_STAT_DEFENSE">방어력</option>
+				<option value="CONFIG_STAT_MAGICPOWER">주문력</option>
+				<option value="CONFIG_STAT_RESISTANCE">저항력</option>
+				<option value="CONFIG_STAT_ACCURACY">정확도</option>
+				<option value="CONFIG_STAT_EVASION">회피치</option>
+				<option value="CONFIG_STAT_ARMOR_PENET">방어관통</option>
+				<option value="CONFIG_STAT_MAGIC_PENET">저항관통</option>
+				<option value="CONFIG_STAT_SPELL_BOOST">주문가속</option>
+				<option value="CONFIG_STAT_LUCK">행운</option>
+				<option value="CONFIG_STAT_HPREGEN">체력재생</option>
+				<option value="CONFIG_STAT_MPREGEN">마나재생</option>
+			</select>
+			<div className="text-button"
+				onClick={()=>{modifySearchField.query("STAT_BONUS2","")}}
+			>
+				<i className="fa-solid fa-xmark"></i>
+			</div>
+		</div>
 		{/*버튼스페이스*/}
 		<div className="rel horizon-center vertical-bottom h64">
 			{/*필터초기화*/}
@@ -439,6 +501,20 @@ export function Ability(props) {
 				/*공격 타입*/
 				( form["ATTACK_TYPE"]===""?true:
 					(CustomString[item["ATTACK_TYPE"]]!==undefined?CustomString[item["ATTACK_TYPE"]]["NAME"].includes(form["ATTACK_TYPE"]):false)
+				) &&
+				/*스탯보너스*/
+				( form["STAT_BONUS1"]===""&&form["STAT_BONUS2"]===""?
+					/*둘 다 비어있으면 걍 트루*/
+					true:
+					/*둘 다 빈값이 아니면*/
+					form["STAT_BONUS1"]!==""&&form["STAT_BONUS2"]!==""?
+						((item["STAT_BONUS1"]===form["STAT_BONUS1"])||(item["STAT_BONUS1"]===form["STAT_BONUS2"]))&&
+						((item["STAT_BONUS2"]===form["STAT_BONUS1"])||(item["STAT_BONUS2"]===form["STAT_BONUS2"])):
+						/*한 필드만 작성돼있으면 */
+						(item["STAT_BONUS1"]===form["STAT_BONUS1"])||
+						(item["STAT_BONUS1"]===form["STAT_BONUS2"])||
+						(item["STAT_BONUS2"]===form["STAT_BONUS1"])||
+						(item["STAT_BONUS2"]===form["STAT_BONUS2"])
 				)
 			))
 		}
