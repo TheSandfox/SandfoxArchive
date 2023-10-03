@@ -65,7 +65,7 @@
 	},
 	"10g0":{
 		"ID":"10g0",
-		"TOOLTIP":"그물을 던져 처음 적중한 적에게 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 적중당한 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #99ccff;\">회피치</span><span style=\"color: #99ccff;\">가 0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 45%</span> 감소하며 이동기 사용이 제한됩니다."
+		"TOOLTIP":"그물을 던져 처음 적중한 적에게 <span style=\"color: #ff9900;\">0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 적중당한 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #99ccff;\">회피치</span><span style=\"color: #99ccff;\">가 0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소하고 <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 33%</span> 감소하며 이동기 사용이 제한됩니다."
 	},
 	"10h0":{
 		"ID":"10h0",

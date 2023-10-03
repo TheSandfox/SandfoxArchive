@@ -30,10 +30,10 @@
 		"TAG3":"null",
 		"TAG4":"null",
 		"DAMAGE_PER_LEVEL":"0.06",
-		"DAMAGE_AMPLIFIER1":"0.4",
+		"DAMAGE_AMPLIFIER1":"0.2",
 		"DAMAGE_STAT1":"CONFIG_STAT_ACCURACY",
 		"USE_DAMAGE_FLAG":"false",
-		"DATA_REAL1":"45"
+		"DATA_REAL1":"33"
 	},
 	{
 		"ID":"10v0",
