@@ -804,6 +804,20 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_ABILITY_TAG_FOOD":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"음식",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_ABILITY_TAG_POTION":{
+		"ARRNAME":"ABILITY_TAG",
+		"NAME":"포션",
+		"COLOR":"ffff00",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_ABILITY_TAG_SUMMON":{
 		"ARRNAME":"ABILITY_TAG",
 		"NAME":"소환수",

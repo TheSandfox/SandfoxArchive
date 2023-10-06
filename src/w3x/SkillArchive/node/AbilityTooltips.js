@@ -262,7 +262,7 @@ function monotag(main,par) {
 		//json
 		rs_json = rs_json+'<img src=\\\"/resource/'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["ICON"]+'\\\" title=\\\"'+CustomString["CONFIG_STAT_SKILL_LEVEL"]["NAME"]+'\\\"/>'
 		//j
-		rs_jass = rs_jass+"(.level-1)"
+		rs_jass = rs_jass+".level"
 		break;
 	case 'heroLevel' :
 		jsn = AbilityParams["params"][AbilityMap[currentAbilityId]]
