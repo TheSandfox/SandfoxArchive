@@ -69,6 +69,38 @@
 		"USE_DAMAGE_FLAG":"false"
 	},
 	{
+		"ID":"10z0",
+		"NAME":"맑은 물",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Water0.png",
+		"INDIVISUAL":"2",
+		"POSITIVE":"1",
+		"USE_DAMAGE_TAG":"false",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_BASE":"50.0",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"USE_DAMAGE_FLAG":"false",
+		"DATA_INTEGER1":"50"
+	},
+	{
+		"ID":"10A0",
+		"NAME":"빵",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_Pan0.png",
+		"INDIVISUAL":"2",
+		"POSITIVE":"1",
+		"USE_DAMAGE_TAG":"false",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"DAMAGE_BASE":"100.0",
+		"DAMAGE_PER_LEVEL":"0.06",
+		"USE_DAMAGE_FLAG":"false",
+		"DATA_INTEGER1":"50"
+	},
+	{
 		"ID":"2000",
 		"NAME":"전투자극제",
 		"ICON_PATH":"ReplaceableTextures/CommandButtons/BTNAbility_terran-stimpack-color.png",
@@ -373,5 +405,30 @@
 		"DATA_REAL1":"40",
 		"DATA_REAL2":"0.1",
 		"DATA_REAL3":"0.25"
+	},
+	{
+		"ID":"g000",
+		"NAME":"포만감",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/null.png",
+		"INDIVISUAL":"2",
+		"POSITIVE":"0",
+		"USE_DAMAGE_TAG":"false",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null",
+		"USE_DAMAGE_FLAG":"false"
+	},
+	{
+		"ID":"g001",
+		"NAME":"포션중독",
+		"ICON_PATH":"ReplaceableTextures/CommandButtons/null.png",
+		"INDIVISUAL":"2",
+		"POSITIVE":"0",
+		"USE_DAMAGE_TAG":"false",
+		"TAG1":"null",
+		"TAG2":"null",
+		"TAG3":"null",
+		"TAG4":"null"
 	}
 ]}

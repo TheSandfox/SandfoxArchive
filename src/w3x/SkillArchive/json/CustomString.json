@@ -629,6 +629,20 @@
 		"ICON":"ui/widgets/tooltips/human/null.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_UNIT_CLASS_ADDICT":{
+		"ARRNAME":"UNIT_CLASS",
+		"NAME":"포션중독",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_UNIT_CLASS_POMANGAM":{
+		"ARRNAME":"UNIT_CLASS",
+		"NAME":"포만감",
+		"COLOR":"00ffff",
+		"ICON":"ui/widgets/tooltips/human/null.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_CAST_TYPE_TARGET_LOCATION":{
 		"ARRNAME":"CAST_TYPE",
 		"NAME":"지점 목표물",

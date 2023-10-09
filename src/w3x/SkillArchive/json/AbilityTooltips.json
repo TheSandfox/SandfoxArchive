@@ -141,6 +141,14 @@
 		"ID":"10y0",
 		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">(0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.01×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 대상은 <span style=\"color: #ffffff;\">4.0초</span> 동안 <span style=\"color: #00ff00;\">최대체력</span><span style=\"color: #00ff00;\">이 0.025×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpicon.png\" title=\"최대체력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소합니다.<br><br> - 해당 약화효과는 중첩됩니다."
 	},
+	"10z0":{
+		"ID":"10z0",
+		"TOOLTIP":"<span style=\"color: #ffffff;\">10.0초</span>에 걸쳐 <span style=\"color: #0099ff;\">마나를 50.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복합니다."
+	},
+	"10A0":{
+		"ID":"10A0",
+		"TOOLTIP":"<span style=\"color: #ffffff;\">10.0초</span>에 걸쳐 <span style=\"color: #00ff00;\">체력을 100.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복합니다."
+	},
 	"2000":{
 		"ID":"2000",
 		"TOOLTIP":"<span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">공격속도</span><span style=\"color: #ffff99;\">가 30%</span>, <span style=\"color: #ffff99;\">이동속도</span><span style=\"color: #ffff99;\">가 10%</span> 증가하며 <span style=\"color: #ff9900;\">기본</span><span style=\"color: #ff9900;\">공격의 적중 피해량이 0.175×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>증가합니다."
