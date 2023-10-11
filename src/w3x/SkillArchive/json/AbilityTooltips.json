@@ -86,8 +86,8 @@
 	},
 	"10l0":{
 		"ID":"10l0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP06\">전기충격기</a>를 건설합니다. <span style=\"color: #c3dbff;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 사용 무기 : </span><span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/10m0\">전기충격</a></span>",
-		"CUSTOM_COST":"<span style=\"color: #ff3333;\">현재 체력의 8% 소모</span>"
+		"TOOLTIP":"<span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/></span> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Unit/SP06\">전기충격기</a>를 건설합니다. 전기충격기는 <span style=\"color: #ff9900;\">기본공격으로 가하는 피해가 50%</span> 증가하고 <span style=\"color: #c3dbff;\">10.0초</span> 동안 지속됩니다.<br><br><span style=\"color: #00ffff;\">전기충격기 사용 무기 : </span><span style=\"color: #ffffff;\">레벨 1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/> <a class=\"unitinfo\" href=\"/w3x/SkillArchive/Ability/10m0\">전기충격</a></span>",
+		"CUSTOM_COST":"<span style=\"color: #ff3333;\">현재 체력의 10% 소모</span>"
 	},
 	"10m0":{
 		"ID":"10m0",
@@ -143,11 +143,11 @@
 	},
 	"10z0":{
 		"ID":"10z0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">10.0초</span>에 걸쳐 <span style=\"color: #0099ff;\">마나를 50.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #0099ff;\">마나가 40.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
 	},
 	"10A0":{
 		"ID":"10A0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">10.0초</span>에 걸쳐 <span style=\"color: #00ff00;\">체력을 100.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #00ff00;\">체력이 100.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
 	},
 	"2000":{
 		"ID":"2000",
