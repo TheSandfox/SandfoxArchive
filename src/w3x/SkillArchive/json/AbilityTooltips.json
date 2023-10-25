@@ -143,11 +143,11 @@
 	},
 	"10z0":{
 		"ID":"10z0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #0099ff;\">마나가 40.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #0099ff;\">마나가 20.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
 	},
 	"10A0":{
 		"ID":"10A0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #00ff00;\">체력이 100.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">20.0초</span>에 걸쳐 <span style=\"color: #00ff00;\">체력이 50.0×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 회복되며 <span style=\"color: #00ffff;\">포만감이 50</span> 증가합니다."
 	},
 	"2000":{
 		"ID":"2000",
@@ -291,6 +291,10 @@
 	"3070":{
 		"ID":"3070",
 		"TOOLTIP":"전방의 적들을 휩쓸어 <span style=\"color: #9999ff;\">(0.65×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.55×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>)×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #ffffff;\">매 3번째</span> 공격은 직선상의 적들에게 <span style=\"color: #ffffff;\">150%</span>의 피해를 입힙니다."
+	},
+	"3080":{
+		"ID":"3080",
+		"TOOLTIP":"지정한 위치로 순간이동한 뒤 경로상의 적들에게 <span style=\"color: #ff9900;\">(1.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>+0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>)×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 한 기 이상의 적에게 적중하면 <span style=\"color: #0099ff;\">마나를 26.0</span> 회복합니다."
 	},
 	"4000":{
 		"ID":"4000",

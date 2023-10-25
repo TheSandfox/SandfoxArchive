@@ -322,5 +322,23 @@
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
 		"TOOLTIP":"null"
+	},
+	{
+		"ID":"B000",
+		"NAME":"대지령",
+		"ICON_PATH":"replaceabletextures/commandbuttons/BTNRockGolem.png",
+		"MODEL_PATH":"null",
+		"INITIAL_ABILITY1":"null",
+		"INITIAL_ABILITY2":"null",
+		"TOOLTIP":"null"
+	},
+	{
+		"ID":"B001",
+		"NAME":"기계난동꾼",
+		"ICON_PATH":"replaceabletextures/commandbuttons/BTNROBOGOBLIN.png",
+		"MODEL_PATH":"null",
+		"INITIAL_ABILITY1":"null",
+		"INITIAL_ABILITY2":"null",
+		"TOOLTIP":"null"
 	}
 ]}
