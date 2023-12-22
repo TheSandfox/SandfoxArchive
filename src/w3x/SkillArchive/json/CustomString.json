@@ -554,14 +554,14 @@
 	},
 	"CONFIG_UPGRADE_LUCK":{
 		"ARRNAME":"UPGRADE",
-		"NAME":"행운마일리지",
+		"NAME":"행운포인트",
 		"COLOR":"00cc00",
 		"ICON":"ui/widgets/tooltips/human/tooltipgemgreenicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_UPGRADE_EXP":{
 		"ARRNAME":"UPGRADE",
-		"NAME":"경험마일리지",
+		"NAME":"경험포인트",
 		"COLOR":"0099cc",
 		"ICON":"ui/widgets/tooltips/human/tooltipgemblueicon.png",
 		"DESCRIPTION":"null"

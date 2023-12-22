@@ -279,6 +279,12 @@ function monotag(main,par) {
 		//j
 		rs_jass = rs_jass+".owner.getCarculatedStatValue("+did+")"
 		break;
+	case 'icon' :
+		var did = getProperty(par)
+		// console.log(did)
+		//json
+		rs_json = rs_json+/*CustomString[did]["NAME"]*/''+'<img src=\\\"/resource/'+did["ICON"]+'\\\" title=\\\"'+did["NAME"]+'\\\"/>'
+		break;
 	case 'lucky' :
 		var quoteind = par.indexOf(',')
 		var p1 = getProperty(par.substring(0,quoteind))
