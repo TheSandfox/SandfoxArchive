@@ -6,6 +6,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10a0",
 		"INITIAL_ABILITY2":"2030",
+		"ABILITY1":"20e0",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"도내 SSR급 굳건이"
 	},
 	{
@@ -15,6 +23,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1020",
 		"INITIAL_ABILITY2":"20d0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"칼 든 사람보다 무서운 총 든 사람"
 	},
 	{
@@ -24,6 +40,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1090",
 		"INITIAL_ABILITY2":"20e0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"몽둥이가 압권인 전사"
 	},
 	{
@@ -33,6 +57,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1070",
 		"INITIAL_ABILITY2":"20f0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"현실세계에선 스토커였던 내가 이세계에서는 0티어 도적?"
 	},
 	{
@@ -42,6 +74,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1030",
 		"INITIAL_ABILITY2":"2050",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"정말로 강한 마법사이다. 왜 강한지는…"
 	},
 	{
@@ -51,6 +91,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10i0",
 		"INITIAL_ABILITY2":"2000",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"전우애로 똘똘 뭉친 사람"
 	},
 	{
@@ -60,6 +108,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10h0",
 		"INITIAL_ABILITY2":"20g0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"트롤인데다 광전사이다."
 	},
 	{
@@ -69,6 +125,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1070",
 		"INITIAL_ABILITY2":"2060",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"벼르고 있는 사람들이 많다. 잡히면 어떻게 될까?"
 	},
 	{
@@ -78,6 +142,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10n0",
 		"INITIAL_ABILITY2":"20j0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"현실에선 주술이라고는 인디안식 기우제밖에 몰랐지만 여기선 다르다."
 	},
 	{
@@ -87,6 +159,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1060",
 		"INITIAL_ABILITY2":"2040",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"[카드값]이 많이 나오는 사람"
 	},
 	{
@@ -96,6 +176,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1000",
 		"INITIAL_ABILITY2":"2090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"물하기싫으니불한당"
 	},
 	{
@@ -105,6 +193,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10g0",
 		"INITIAL_ABILITY2":"20c0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"해녀라고 부르면 화를 낸다."
 	},
 	{
@@ -114,6 +210,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10f0",
 		"INITIAL_ABILITY2":"20b0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"마법이 소용없다고 주장하는 사람"
 	},
 	{
@@ -123,6 +227,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10l0",
 		"INITIAL_ABILITY2":"20i0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"지상 최강의 막노동꾼"
 	},
 	{
@@ -132,6 +244,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10d0",
 		"INITIAL_ABILITY2":"20a0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"대지마법을 사용할 수 있다는 오해를 자주 산다."
 	},
 	{
@@ -141,6 +261,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10j0",
 		"INITIAL_ABILITY2":"20h0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"뀨"
 	},
 	{
@@ -150,6 +278,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10b0",
 		"INITIAL_ABILITY2":"2090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"탑승감 좋은 군마"
 	},
 	{
@@ -159,6 +295,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10c0",
 		"INITIAL_ABILITY2":"2090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"꾸이이익"
 	},
 	{
@@ -168,6 +312,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10a0",
 		"INITIAL_ABILITY2":"2030",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"지성도 없고 고통도 모르니 가장 무서운 존재가 아닐까?"
 	},
 	{
@@ -177,6 +329,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10k0",
 		"INITIAL_ABILITY2":"20n0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"튼튼한 정찰탑"
 	},
 	{
@@ -186,6 +346,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10m0",
 		"INITIAL_ABILITY2":"20n0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"이세계에서도 범죄자 소탕에 많이 활용되는 기구"
 	},
 	{
@@ -195,6 +363,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10n0",
 		"INITIAL_ABILITY2":"2090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"늑대의 형상을 한 정령"
 	},
 	{
@@ -204,6 +380,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10b0",
 		"INITIAL_ABILITY2":"2090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"싫어하는 학교는 연세대학교"
 	},
 	{
@@ -213,6 +397,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10o0",
 		"INITIAL_ABILITY2":"20n0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"귀엽고 든든한 마법 금고"
 	},
 	{
@@ -222,6 +414,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"무슨 설명을 적어놓으려고 했더라?"
 	},
 	{
@@ -231,6 +431,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"20m0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"물고기 잡는 법 보다 더 중요한 것은 낚시대를 만드는 법"
 	},
 	{
@@ -240,6 +448,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -249,6 +465,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -258,6 +482,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -267,6 +499,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10u0",
 		"INITIAL_ABILITY2":"20o0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -276,6 +516,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10v0",
 		"INITIAL_ABILITY2":"20p0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -285,6 +533,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10w0",
 		"INITIAL_ABILITY2":"20q0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -294,6 +550,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10x0",
 		"INITIAL_ABILITY2":"20r0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -303,6 +567,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"10y0",
 		"INITIAL_ABILITY2":"20s0",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -312,6 +584,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"1000",
 		"INITIAL_ABILITY2":"1090",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -321,6 +601,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -330,6 +618,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	},
 	{
@@ -339,6 +635,14 @@
 		"MODEL_PATH":"null",
 		"INITIAL_ABILITY1":"null",
 		"INITIAL_ABILITY2":"null",
+		"ABILITY1":"null",
+		"ABILITY2":"null",
+		"ABILITY3":"null",
+		"ABILITY4":"null",
+		"ABILITY5":"null",
+		"ABILITY6":"null",
+		"ABILITY7":"null",
+		"ABILITY8":"null",
 		"TOOLTIP":"null"
 	}
 ]}

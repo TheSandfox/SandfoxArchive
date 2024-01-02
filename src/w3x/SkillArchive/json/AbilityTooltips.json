@@ -155,7 +155,7 @@
 	},
 	"10C0":{
 		"ID":"10C0",
-		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #00ffff;\">광물</span>타입의 적을 대상으로 할 경우 <span style=\"color: #ff9900;\">3.0×1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해량이 대신 적용됩니다."
+		"TOOLTIP":"대상에게 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. <span style=\"color: #00ffff;\">광물</span>타입의 적에게는 <span style=\"color: #ff9900;\">3.0×1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다."
 	},
 	"2000":{
 		"ID":"2000",

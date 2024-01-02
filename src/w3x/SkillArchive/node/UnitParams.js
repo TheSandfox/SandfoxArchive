@@ -11,14 +11,16 @@ function main() {
 		let i = 0
 		let j = dataFrom
 		let iaindex = 0
+		let taindex = 0
 
 		//JSON,JASS열기
 		fs.writeFileSync(outJson,'{"params":[','utf-8')
 		fs.writeFileSync(outJass,'','utf-8')
 
 		while(j<rows[0].length) {
-			i = 0
-			iaindex = 0
+			i = 0;
+			iaindex = 0;
+			taindex = 0;
 			//JSON유닛필드열기
 			if (j==dataFrom) {
 				fs.appendFileSync(outJson,'\n\t{')
@@ -60,7 +62,13 @@ function main() {
 					case 'iconpath' :
 						fs.appendFileSync(outJass,'\n\t\tcall UnitData.setIconPath("ReplaceableTextures\\\\CommandButtons\\\\'+rows[i][j]+'.blp")')
 						break;
+					case 'ability' :
+						/*테이블에 추가할 어빌*/
+						fs.appendFileSync(outJass,'\n\t\tcall UnitData.setExtraAbility('+String(taindex)+','+"'"+rows[i][j]+"'"+')')
+						taindex++
+						break;
 					case 'initialability' :
+						/*고유어빌*/
 						fs.appendFileSync(outJass,'\n\t\tcall UnitData.setInitialAbility('+String(iaindex)+','+"'"+rows[i][j]+"'"+')')
 						iaindex++
 						break;
