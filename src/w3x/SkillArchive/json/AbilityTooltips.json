@@ -238,7 +238,7 @@
 	},
 	"20l0":{
 		"ID":"20l0",
-		"TOOLTIP":"대상에게 글레이브를 던져 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 글레이브는 적중한 뒤 가까운 다른 대상에게 튕겨 <span style=\"color: #ffffff;\">이전 피해량의 75%</span>에 해당하는 피해를 입힙니다. 튕김 횟수가 남은 상태에서 튕길 대상이 없을 경우 마지막으로 타격한 적을 한 번 더 타격하여 <span style=\"color: #ffffff;\">이전 피해량의 40%</span>에 해당하는 피해를 입힙니다.<br><br> - 주 대상을 포함하여 최대 <span style=\"color: #ffffff;\">3기</span>의 대상을 공격할 수 있습니다."
+		"TOOLTIP":"대상에게 글레이브를 던져 <span style=\"color: #ff9900;\">1.1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipattackicon.png\" title=\"공격력\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입힙니다. 글레이브는 적중한 뒤 가까운 다른 대상에게 튕겨 <span style=\"color: #ffffff;\">이전 피해량의 75%</span>에 해당하는 피해를 입힙니다. 튕김 횟수가 남은 상태에서 튕길 대상이 없을 경우 마지막으로 타격한 적을 한 번 더 타격하여 <span style=\"color: #ffffff;\">이전 피해량의 40%</span>에 해당하는 피해를 입히고 소멸합니다.<br><br> - 주 대상을 포함하여 최대 <span style=\"color: #ffffff;\">3기</span>의 대상을 공격할 수 있습니다."
 	},
 	"20m0":{
 		"ID":"20m0",

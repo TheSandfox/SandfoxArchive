@@ -280,7 +280,6 @@ function AbilitySearchController({state}) {
 				<option value="3">3</option>
 				<option value="4">4</option>
 				<option value="5">5</option>
-				<option value="0">0</option>
 			</select>
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("TIER","")}}
