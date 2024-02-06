@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### MY MEMO
 
-끼얏호우
+끼얏호우2
