@@ -1,166 +1,144 @@
-.ability-container {
-	width:100%;
+/* .abilityContainer {
+	width:1280px;
+	margin: 10% auto;
 	height:100%;
 	display: flex;
 	flex-direction: row;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-}
+} */
 
-.ability-description>.top{
-	display: flex;
-	flex-direction: row;
-	height: 64px;
-}
-
-.ability-description>.top>.name-and-tags{
-	flex:auto;
-	display: inline-flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-}
-
-.ability-description>.top>.cooldown-and-manacost{
-	max-width: 192px;
-	flex:0.4;
+.abilityDescriptionContainer {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 	align-items: center;
-	max-height: 64px;
+	padding: 64px 0;
+	gap: 16px;
 }
 
-.ability-description>.top>.cooldown-and-manacost>div{
-	width:100%;
-	position:relative;
-	max-height: 32px;
+.abilityGridContainer {
+	padding: 64px;
+	display: grid;
+	grid-template-columns: repeat(8, 64px);
+}
+
+.abilityDescription{
+	&>.top {
+		display: flex;
+		flex-direction: row;
+		height: 64px;
+		/* 어빌이름&태그 */
+		&>.name-and-tags{
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 16px;
+			&>.ability-name{
+				color:#cccccc;
+				font-size: 24px;
+			}
+			&>.ability-tags{
+				color:#ffff00;
+				font-size: 16px;
+			}
+		}
+		/* 우상단 쿨다운&마나(사거리) */
+		&>.cooldown-and-manacost{
+			width: 128px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 8px;
+			&>div{
+				width:100%;
+				display: flex;
+				gap: 8px;
+				align-items: center;
+				&>img{
+					width: 24px;
+					height: 24px;
+				}
+				&>p{
+					flex: 1;
+					color:#ffffff;
+					text-align: left;
+				}
+			}
+		}
+	}
+	&>.bottom{
+		margin-top:16px;
+		text-align: left;
+		color:#cccccc;
+		&>.cast-type-and-custom-cost {
+			display: flex;
+			flex-direction: row;
+			&>.cast-type{
+				text-align: left;
+				flex:1;
+				color: #00ffff;
+			}
+			&>.custom-cost{
+				text-align: right;
+				flex:1;
+			}
+		}
+		&>.tooltip{
+			margin-top:16px;
+			& img{
+				width: 24px; /* 폰트 크기와 동일한 크기로 설정 */
+				height: 24px; /* 폰트 크기와 동일한 크기로 설정 */
+				vertical-align: middle; /* 이미지를 텍스트의 중앙에 맞춤 */
+			}
+			& .unitinfo{
+				text-decoration: underline;
+				color:#ffcc99;
+				&:visited{
+					text-decoration: inherit;
+					color:#ffcc99;
+				}
+				&:active{
+					text-decoration: underline;
+					color:#ffcc99;
+				}
+			}
+		}
+		&>.statbonus{
+			display:flex;
+			margin-top:16px;
+			height: 32px;
+			text-align: left;
+			align-items: center;
+			gap: 16px;
+			&>p{
+				display: flex;
+				color:#00ffff;
+				text-align: left;
+				align-items: center;
+			}
+			&>img{
+				height:32px;
+			}
+		}
+	}
+}
+
+.abilitySingleContainer {
 	display: flex;
-	flex-direction: row;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-}
-
-.ability-description>.top>.cooldown-and-manacost>div>img{
-	left:16px;
-	position:absolute;
-	max-width:24px;
-	max-height: 24px;
-}
-
-.ability-description>.top>.cooldown-and-manacost>div>p{
-	width:100%;
-	flex:auto;
-	max-height: 24px;
-	text-align: left;
-	padding-left:48px;
-	color:#ffffff;
-}
-
-.ability-description>.top>.name-and-tags>div{
-	font-size: 24px;
-}
-
-.ability-description>.top>div>.ability-name{
-	color:#cccccc;
-	font-size: 24px;
-}
-
-.ability-description>.top>div>.ability-tags{
-	color:#ffff00;
-	padding-left:16px;
-	font-size: 16px;
-}
-
-.ability-description>.bottom{
-	margin-top:16px;
-	text-align: left;
-	color:#cccccc;
-}
-
-.ability-description>.bottom>.tooltip{
-	margin-top:16px;
-}
-
-.ability-description>.bottom>.tooltip img{
-	width: 24px; /* 폰트 크기와 동일한 크기로 설정 */
-	height: 24px; /* 폰트 크기와 동일한 크기로 설정 */
-	vertical-align: middle; /* 이미지를 텍스트의 중앙에 맞춤 */
-}
-
-.ability-description>.bottom>.tooltip .unitinfo{
-	text-decoration: underline;
-	color:#ffcc99;
-}
-
-.ability-description>.bottom>.tooltip .unitinfo:visited{
-	text-decoration: inherit;
-	color:#ffcc99;
-}
-
-.ability-description>.bottom>.tooltip .unitinfo:active{
-	text-decoration: underline;
-	color:#ffcc99;
-}
-
-.cast-type-and-custom-cost {
-	display: flex;
-	flex-direction: row;
-}
-
-.cast-type{
-	text-align: left;
-	flex:0.5;
-	color: #00ffff;
-}
-
-.custom-cost{
-	text-align: right;
-	flex:0.5;
-}
-
-.ability-description>.bottom>.statbonus{
-	position:relative;
-	display:flex;
-	flex-direction: row;
-	margin-top:16px;
-	max-height: 32px;
-	text-align: left;
-	align-items: center;
-	justify-content: left;
-}
-
-.ability-description>.bottom>.statbonus>p{
-	display: flex;
-	color:#00ffff;
-	text-align: left;
-	align-items: center;
-	justify-content: left;
-	height: 32px;
-	margin:0px;
-}
-
-.ability-description>.bottom>.statbonus>img{
-	margin-left:16px;
-	height:32px;
-}
-
-.ability-single-container {
-	max-width:960px;
-	display: flex;
+	height: 100%;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-}
-
-.ability-single-back-div {
-	margin-top: 32px;
-	width:64px;
-	height:32px;
-	&>i {
-		color: rgb(90,73,55);
+	gap: 32px;
+	&>.btn-container {
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+		&>.icon-button {
+			width: 64px;
+		}
 	}
 }

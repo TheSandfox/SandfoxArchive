@@ -24,17 +24,15 @@ function App() {
 		<BrowserRouter>
 		<div className="App">
 			<TopBar/>
+			<Nav/>
 			<div className="mid">
-				<Nav/>
 				<div className="contents">
 				<Routes>
 					<Route exact path="/" element={<Main/>}/>
 					<Route path="/w3x//*" element={<W3X/>}/>
 				</Routes>
 				</div>
-			</div>
-
-			
+			</div>			
 		</div>
 		</BrowserRouter>
 	);

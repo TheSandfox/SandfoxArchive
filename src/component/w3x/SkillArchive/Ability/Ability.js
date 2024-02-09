@@ -126,7 +126,7 @@ function AbilityDescription(props) {
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
-		return <div className="ability-description description-box w3font" style={stl}>
+		return <div className="abilityDescription description-box w3font" style={stl}>
 			<div className="top">
 				<AbilityWidget json={abiljson}/>
 				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
@@ -220,14 +220,22 @@ function AbilityDescriptionSingle() {
 	function goBack() {
 		navigate(-1)
 	}
+	function goList() {
+		navigate(process.env.PUBLIC_URL+'/w3x/SkillArchive/Ability')
+	}
 	//어빌툴팁 상세
 	//뒤로가기버튼
 	return <>
-		<div className='ability-single-container'>
+		<div className='abilitySingleContainer'>
 			<AbilityDescription viewMode={true}/>
 			<AbilityMixTable/>
-			<div className='ability-single-back-div icon-button' onClick={goBack}>
-				<i className="fa-solid fa-reply"></i>
+			<div className='btn-container'>
+				<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
+					<i className="fa-solid fa-reply"></i>
+				</div>
+				<div className='icon-button' onClick={goList} title={'목록'}>
+					<i className="fa-solid fa-bars"></i>
+				</div>
 			</div>
 		</div>
 	</>
@@ -444,11 +452,11 @@ function AbilityDescriptionContainer({state}) {
 		<AbilitySearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
-			<div className="description-container">
+			<div className="abilityDescriptionContainer">
 				<AbilityDescriptions state={state}/>
 			</div>
 			:
-			<div className="grid8x">
+			<div className="abilityGridContainer">
 				<AbilityDescriptions state={state}/>
 			</div>
 		}
@@ -538,7 +546,7 @@ export function Ability(props) {
 		searchField:searchField,
 		modifySearchField:modifySearchField
 	}
-	return <div className="ability-container">
+	return <>
 		{props.isSingle===true?
 			<AbilityDescriptionSingle/>
 			:
@@ -546,5 +554,5 @@ export function Ability(props) {
 				state={state}
 			/>
 		}
-	</div>
+	</>
 }

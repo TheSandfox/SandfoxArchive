@@ -167,7 +167,6 @@ a {
 	cursor: pointer;
 	min-width:32px;
 	height:32px;
-	box-sizing: border-box;
 	&:hover {
 		background-color: rgb(90,73,55);
 		border: 2px solid rgb(228,208,163);
@@ -213,12 +212,12 @@ a {
 
 .description-box {
 	/*width:100%;*/
-	margin:16px;
-	margin-bottom:0px;
 	padding:16px;
 	background-color: #464546;
 	border-radius: 16px;
 	width:720px;
+	display: flex;
+	flex-direction: column;
 }
 
 /*64x64 워크아이콘*/
@@ -226,7 +225,6 @@ a {
 	width:64px;
 	height:64px;
 	display: flex;
-	box-sizing: border-box;
 }
 
 .icon-24x {
@@ -316,7 +314,6 @@ a {
 	&>* {
 		min-height:24px;
 		padding:none;
-		box-sizing: border-box;
 		display: flex;
 		flex-direction: row;
 		&>p {
@@ -348,32 +345,26 @@ a {
 /*외곽선*/
 
 .tier0 {
-	box-sizing: border-box;
 	border:4px solid #cccccc99;
 }
 
 .tier1 {
-	box-sizing: border-box;
 	border:4px solid #ffffff99;
 }
 
 .tier2 {
-	box-sizing: border-box;
 	border:4px solid #00ff0099;
 }
 
 .tier3 {
-	box-sizing: border-box;
 	border:4px solid #0099ff99;
 }
 
 .tier4 {
-	box-sizing: border-box;
 	border:4px solid #cc00ff99;
 }
 
 .tier5 {
-	box-sizing: border-box;
 	border:4px solid #ff990099;
 }
 
