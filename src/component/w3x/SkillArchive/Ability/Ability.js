@@ -55,10 +55,10 @@ function AbilityMixTable() {
 	if (lower.length<=0) {lower=[]}
 	if (upper.length<=0) {upper=[]}
 	return <>{lower.length>0||upper.length>0?
-		<div className='description-box w3font row rel'>
-			<div className='col rel width-half'>
-				<div className='w3font font16 m-bottom16 white horizon-center col'>
-					조합법
+		<div className={'abilityMixContainer'}>
+			{lower.length>0?<div className={'description-box'}>
+				<div className='title w3font font16 m-bottom16 white'>
+					<i className="fi fi-rr-code-pull-request"></i>조합법
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
@@ -69,10 +69,10 @@ function AbilityMixTable() {
 						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
 					</div>
 				})}
-			</div>
-			<div className='col rel width-half'>
-				<div className='w3font font16 m-bottom16 white horizon-center col'>
-					조합 가능 스킬
+			</div>:<></>}
+			{upper.length>0?<div className={'description-box'}>
+				<div className='title w3font font16 m-bottom16 white'>
+					<i className="fi fi-rs-code-fork"></i>조합 가능 스킬
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
@@ -83,7 +83,7 @@ function AbilityMixTable() {
 						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
 				</div>
 				})}
-			</div>
+			</div>:<></>}
 		</div>:
 		<></>}
 	</>
@@ -163,10 +163,12 @@ function AbilityDescription(props) {
 					}}>
 					</div>
 				</div>
+				{/* 툴팁 */}
 				<div className="tooltip" dangerouslySetInnerHTML={{__html:
 					AbilityTooltips[abiljson["ID"]]!==undefined?AbilityTooltips[abiljson["ID"]]["TOOLTIP"]:""
 				}}>
 				</div>
+				{/* 하단스탯보너스 */}
 				<div className="statbonus">
 					<p>스탯 보너스 : </p>
 					<img 
@@ -185,22 +187,6 @@ function AbilityDescription(props) {
 	} else {
 		//아이콘모드
 		return <AbilityWidget json={abiljson}/>
-		// <div className={'w3x-icon rel'}>
-		// 	<Link to={"/w3x/SkillArchive/Ability/"+abiljson["ID"]} title={abiljson["NAME"]}>
-		// 		<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt='...'/>
-		// 		<div className={'border-fill tier'+abiljson["TIER"]}></div>
-		// 		{/*무기어빌리티면 무기아이콘 표시*/}
-		// 		{abiljson["IS_WEAPON"]==="true"?
-		// 			<img
-		// 				className={'bottom-right abs icon-24x'}
-		// 				src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipweaponicon.png"}
-		// 				alt='...'
-		// 			/>
-		// 			:
-		// 			<></>
-		// 		}
-		// 	</Link>
-		// </div>
 	}
 
 }
@@ -220,9 +206,6 @@ function AbilityDescriptionSingle() {
 	function goBack() {
 		navigate(-1)
 	}
-	function goList() {
-		navigate(process.env.PUBLIC_URL+'/w3x/SkillArchive/Ability')
-	}
 	//어빌툴팁 상세
 	//뒤로가기버튼
 	return <>
@@ -231,11 +214,13 @@ function AbilityDescriptionSingle() {
 			<AbilityMixTable/>
 			<div className='btn-container'>
 				<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
-					<i className="fa-solid fa-reply"></i>
+				<i className={"fi fi-bs-angle-left"}></i>
 				</div>
-				<div className='icon-button' onClick={goList} title={'목록'}>
-					<i className="fa-solid fa-bars"></i>
-				</div>
+				{/* <Link to={"/w3x/SkillArchive/Ability/"}>
+					<div className='icon-button' title={'목록'}>
+						<i className="fa-solid fa-bars"></i>
+					</div>
+				</Link> */}
 			</div>
 		</div>
 	</>
@@ -253,10 +238,10 @@ function AbilitySearchController({state}) {
 		{/*체크박스 */}
 		<div className="rel horizon-left vertical-top h64">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
-				<i className="fa-solid fa-border-all"></i>
+				<i className="fi fi-rs-apps"></i>
 			</div>
 			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
-				<i className="fa-solid fa-bars"></i>
+				<i className="fi fi-br-menu-burger"></i>
 			</div>
 		</div>
 		{/*이름검색*/}
@@ -271,7 +256,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("NAME","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*티어필터링*/}
@@ -292,7 +277,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("TIER","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*태그검색*/}
@@ -307,7 +292,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("TAG","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*캐스트타입검색*/}
@@ -329,7 +314,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("CAST_TYPE","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*피해 유형*/}
@@ -348,7 +333,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("DAMAGE_TYPE","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*공격 유형*/}
@@ -367,7 +352,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("ATTACK_TYPE","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*스탯보너스1*/}
@@ -397,7 +382,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("STAT_BONUS1","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*스탯보너스2*/}
@@ -427,7 +412,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("STAT_BONUS2","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*버튼스페이스*/}
@@ -436,7 +421,7 @@ function AbilitySearchController({state}) {
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear
 			}>
-				<i className="fa-solid fa-arrows-rotate"></i>
+				<i className="fi fi-rr-refresh"></i>
 			</div>
 		</div>
 	</div>

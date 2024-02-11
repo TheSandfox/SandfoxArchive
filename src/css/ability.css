@@ -137,8 +137,26 @@
 		display: flex;
 		gap: 16px;
 		justify-content: center;
-		&>.icon-button {
+		& .icon-button {
 			width: 64px;
+		}
+	}
+}
+
+.abilityMixContainer {
+	display: flex;
+	flex-direction: row;
+	width: initial;
+	gap: 32px;
+	&>.description-box {
+		width:initial;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		&>.title {
+			display: flex;
+			gap: 8px;
+			align-items: center;
 		}
 	}
 }

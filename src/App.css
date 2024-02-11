@@ -1,3 +1,5 @@
+@import "~@flaticon/flaticon-uicons/css/all/all";
+
 .App {
   text-align: center;
   display: flex;
@@ -64,6 +66,12 @@ a {
 ::-webkit-scrollbar {
 	z-index: 200;
 	width:8px;
+	height:8px;
+}
+
+i {
+	display: flex;
+	align-items: center;
 }
 
 ::-webkit-scrollbar-track {
@@ -158,7 +166,6 @@ a {
 
 /*아이콘버튼*/
 .icon-button {
-	margin:4px;
 	border-radius: 8px;
 	background-color: rgb(228,208,163);
 	align-items: center;
@@ -184,7 +191,8 @@ a {
 	}
 	&>i {
 		color: rgb(90,73,55);
-	text-shadow: none;
+		text-shadow: none;
+		font-size: 16px;
 	}
 }
 

@@ -6,12 +6,12 @@ export default function Main() {
 		<div className="main-links">
 			<Link to="https://www.youtube.com/@THESANDFOX49" target="_blank">
 				<div className="icon-button">
-					<i className="youtube fa-brands fa-youtube"></i>
+					<i className="fi fi-brands-youtube"></i>
 				</div>
 			</Link>
 			<Link to="https://github.com/TheSandfox" target="_blank">
 				<div className="icon-button github">
-					<i className="github fa-brands fa-github"></i>
+					<i className="fi fi-brands-github"></i>
 				</div>
 			</Link>
 		</div>
