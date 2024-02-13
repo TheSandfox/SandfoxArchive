@@ -58,7 +58,7 @@ function AbilityMixTable() {
 		<div className={'abilityMixContainer'}>
 			{lower.length>0?<div className={'description-box'}>
 				<div className='title w3font font16 m-bottom16 white'>
-					<i className="fi fi-rr-code-pull-request"></i>조합법
+					<i className="fi fi-rs-code-merge"></i>조합법
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
@@ -72,7 +72,7 @@ function AbilityMixTable() {
 			</div>:<></>}
 			{upper.length>0?<div className={'description-box'}>
 				<div className='title w3font font16 m-bottom16 white'>
-					<i className="fi fi-rs-code-fork"></i>조합 가능 스킬
+					<i className="fi fi-rs-code-branch"></i>조합 가능 스킬
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
