@@ -174,7 +174,7 @@ i {
 	cursor: pointer;
 	min-width:32px;
 	height:32px;
-	&:hover {
+	&:hover,.hover {
 		background-color: rgb(90,73,55);
 		border: 2px solid rgb(228,208,163);
 		&>i {
@@ -182,12 +182,12 @@ i {
 		}
 	}
 	&.hover {
-		background-color: rgb(90,73,55);
-		border: 2px solid rgb(228,208,163);
+		/* background-color: rgb(90,73,55);
+		border: 2px solid rgb(228,208,163); */
 		cursor: default;
-		&>i {
+		/* &>i {
 			color: rgb(228,208,163);
-		}
+		} */
 	}
 	&>i {
 		color: rgb(90,73,55);
@@ -238,17 +238,6 @@ i {
 .icon-24x {
 	width:24px;
 	height:24px;
-}
-
-/*그리드*/
-.grid2x{
-	display:grid;
-	grid-template-columns: repeat(2, 1fr); /* 8개의 열 정의 */
-}
-
-.grid8x{
-	display:grid;
-	grid-template-columns: repeat(8, 1fr); /* 8개의 열 정의 */
 }
 
 /*너비*/
