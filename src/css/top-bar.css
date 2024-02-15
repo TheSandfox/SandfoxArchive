@@ -1,21 +1,20 @@
 .top-bar {
-	background: rgb(228,208,163);
-	color: rgb(90,73,55);
+	background: var(--color-light);
+	color: var(--color-dark);
 	display: flex;
 	width:100%;
-	font-weight: 600;
-	font-size:20px;
 	position:fixed;
 	top:0;
 	left:0;
 	z-index: 100;
 	height: 40px;
-	text-align: left;
 	align-items: center;
 	justify-content: left;
 }
 
 .top-bar>a>.title {
+	font-weight: 600;
+	font-size:20px;
 	padding-left:8px;
 }
 

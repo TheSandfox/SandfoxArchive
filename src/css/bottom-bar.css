@@ -1,6 +1,6 @@
 .bottom-bar {
-	background: rgb(228,208,163);
-	color: rgb(90,73,55);
+	background: var(--color-light);
+	color: var(--color-dark);
 	display: flex;
 	width:100%;
 	min-height: 40px;

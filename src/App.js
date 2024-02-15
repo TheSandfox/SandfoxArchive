@@ -3,10 +3,9 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 //import component
-import TopBar from './component/TopBar';
-import Nav from './component/Nav';
-import Main from './component/Main';
-import W3X from './component/w3x/W3X';
+import TopBar from 'component/TopBar';
+import Main from 'component/Main';
+import W3X from 'component/w3x/W3X';
 
 //import logo from './logo.png';
 import './App.css';
@@ -24,7 +23,6 @@ function App() {
 		<BrowserRouter>
 		<div className="App">
 			<TopBar/>
-			<Nav/>
 			<div className="mid">
 				<div className="contents">
 				<Routes>

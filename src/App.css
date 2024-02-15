@@ -1,5 +1,12 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 
+:root {
+	--color-light: rgb(228,208,163);
+	--color-dark: rgb(90,73,55);
+	--color-gray: #464546;
+	--color-dark-gray: rgb(33,33,33);
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -167,7 +174,7 @@ i {
 /*아이콘버튼*/
 .icon-button {
 	border-radius: 8px;
-	background-color: rgb(228,208,163);
+	background-color: var(--color-light);
 	align-items: center;
 	justify-content: center;
 	display: flex;
@@ -175,22 +182,22 @@ i {
 	min-width:32px;
 	height:32px;
 	&:hover,.hover {
-		background-color: rgb(90,73,55);
-		border: 2px solid rgb(228,208,163);
+		background-color: var(--color-dark);
+		border: 2px solid var(--color-light);
 		&>i {
-			color: rgb(228,208,163);
+			color: var(--color-light);
 		}
 	}
 	&.hover {
-		/* background-color: rgb(90,73,55);
-		border: 2px solid rgb(228,208,163); */
+		background-color: var(--color-dark);
+		border: 2px solid var(--color-light);
 		cursor: default;
-		/* &>i {
-			color: rgb(228,208,163);
-		} */
+		&>i {
+			color: var(--color-light);
+		}
 	}
 	&>i {
-		color: rgb(90,73,55);
+		color: var(--color-dark);
 		text-shadow: none;
 		font-size: 16px;
 	}
@@ -221,7 +228,7 @@ i {
 .description-box {
 	/*width:100%;*/
 	padding:16px;
-	background-color: #464546;
+	background-color: var(--color-gray);
 	border-radius: 16px;
 	width:720px;
 	display: flex;
@@ -302,7 +309,7 @@ i {
 	right:16px;
 	display: flex;
 	flex-direction: column;
-	background-color: #464546;/*#1a2864;*/
+	background-color: var(--color-gray);
 	border-radius: 8px;
 	padding:16px;
 	color:#ffffff;
@@ -363,6 +370,10 @@ i {
 
 .tier5 {
 	border:4px solid #ff990099;
+}
+
+.tier-this {
+	border:4px solid #ffff0099;
 }
 
 .border-fill {

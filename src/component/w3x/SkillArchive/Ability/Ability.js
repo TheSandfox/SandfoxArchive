@@ -3,11 +3,16 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 //import JSON
-import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
-import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
-import AbilityMix from '../../../../w3x/SkillArchive/json/AbilityMix.json'
-import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.json'
-import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
+import AbilityParams from 'w3x/SkillArchive/json/AbilityParams.json'
+import AbilityMap from 'w3x/SkillArchive/json/AbilityMap.json'
+import AbilityMix from 'w3x/SkillArchive/json/AbilityMix.json'
+import AbilityTooltips from 'w3x/SkillArchive/json/AbilityTooltips.json'
+import CustomString from 'w3x/SkillArchive/json/CustomString.json'
+// import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
+// import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
+// import AbilityMix from '../../../../w3x/SkillArchive/json/AbilityMix.json'
+// import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.json'
+// import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
 // import Config from '../../../../w3x/SkillArchive/json/Config.json'
 
 const AbilityJson = AbilityParams["params"]
@@ -24,11 +29,11 @@ const SearchField = {
 }
 
 //어빌리티 위젯 
-export function AbilityWidget({json}) {
+export function AbilityWidget({json, thisabil}) {
 	return <div className={'w3x-icon rel'}>
 		<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]}>
 			<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
-			<div className={'border-fill tier'+json["TIER"]}></div>
+			<div className={thisabil?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
 			{/*무기어빌리티면 무기아이콘 표시*/}
 			{json["IS_WEAPON"]==="true"?
 				<img
@@ -62,11 +67,11 @@ function AbilityMixTable() {
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} thisabil={json["ID1"]===id}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} thisabil={json["ID2"]===id}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} thisabil={json["RESULT"]===id}/>
 					</div>
 				})}
 			</div>:<></>}
@@ -76,11 +81,11 @@ function AbilityMixTable() {
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} thisabil={json["ID1"]===id}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} thisabil={json["ID2"]===id}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} thisabil={json["RESULT"]===id}/>
 				</div>
 				})}
 			</div>:<></>}
