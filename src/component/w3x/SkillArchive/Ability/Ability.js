@@ -221,11 +221,11 @@ function AbilityDescriptionSingle() {
 				<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
 				<i className={"fi fi-bs-angle-left"}></i>
 				</div>
-				{/* <Link to={"/w3x/SkillArchive/Ability/"}>
+				<Link to={"/w3x/SkillArchive/Ability/"}>
 					<div className='icon-button' title={'목록'}>
 						<i className="fa-solid fa-bars"></i>
 					</div>
-				</Link> */}
+				</Link>
 			</div>
 		</div>
 	</>
@@ -540,7 +540,7 @@ export function Ability(props) {
 		{props.isSingle===true?
 			<AbilityDescriptionSingle/>
 			:
-			<AbilityDescriptionContainer 
+			<AbilityDescriptionContainer
 				state={state}
 			/>
 		}
