@@ -4,7 +4,7 @@ function main() {
 	var fs = require('fs');
 	
 	excelReader(xlsx,{ sheet: 'AbilityMix' }).then((rows) => {
-		var outJson = '../json/AbilityMix.json'
+		var outJson = './AbilityMix.json'
 		var outJass = 'C:/war3lib/maps/SkillArchive/Ability/GeneratedAbilityMix.j'
 		var i = 1;/*두 번째 행부터*/
 		var data1 	= 0	/*main_id*/

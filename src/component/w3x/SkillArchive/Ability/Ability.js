@@ -3,17 +3,18 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 //import JSON
-import AbilityParams from 'w3x/SkillArchive/json/AbilityParams.json'
-import AbilityMap from 'w3x/SkillArchive/json/AbilityMap.json'
-import AbilityMix from 'w3x/SkillArchive/json/AbilityMix.json'
-import AbilityTooltips from 'w3x/SkillArchive/json/AbilityTooltips.json'
-import CustomString from 'w3x/SkillArchive/json/CustomString.json'
+import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json'
+import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
+import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json'
+import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json'
+import CustomString from 'json/w3x/SkillArchive/CustomString.json'
 // import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
 // import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
 // import AbilityMix from '../../../../w3x/SkillArchive/json/AbilityMix.json'
 // import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.json'
 // import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
 // import Config from '../../../../w3x/SkillArchive/json/Config.json'
+import 'css/w3x/SkillArchive/Ability/ability.css'
 
 const AbilityJson = AbilityParams["params"]
 const AbilityMixJson = AbilityMix["params"]

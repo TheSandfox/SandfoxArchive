@@ -6,9 +6,12 @@ import { useState } from 'react'
 import { AbilityWidget } from '../Ability/Ability'
 
 //import JSON
-import UnitParams from '../../../../w3x/SkillArchive/json/UnitParams.json'
-import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
-import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
+import UnitParams from 'json/w3x/SkillArchive/UnitParams.json'
+import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json'
+import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
+
+//import css
+import 'css/w3x/SkillArchive/Unit/unit.css'
 
 const AbilityJson = AbilityParams["params"]
 const UnitJson = UnitParams["params"]
@@ -128,10 +131,10 @@ function UnitSearchController({state}) {
 		{/*체크박스 */}
 		<div className="rel horizon-left vertical-top h64">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
-				<i className="fa-solid fa-border-all"></i>
+				<i className="fi fi-rs-apps"></i>
 			</div>
 			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
-				<i className="fa-solid fa-bars"></i>
+				<i className="fi fi-br-menu-burger"></i>
 			</div>
 		</div>
 		{/*이름검색*/}
@@ -146,7 +149,7 @@ function UnitSearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("NAME","")}}
 			>
-				<i className="fa-solid fa-xmark"></i>
+				<i className="fi fi-rr-cross-small"></i>
 			</div>
 		</div>
 		{/*버튼스페이스*/}
@@ -155,7 +158,7 @@ function UnitSearchController({state}) {
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear
 			}>
-				<i className="fa-solid fa-arrows-rotate"></i>
+				<i className="fi fi-rr-refresh"></i>
 			</div>
 		</div>
 	</div>

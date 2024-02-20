@@ -9,13 +9,12 @@ import W3X from 'component/w3x/W3X';
 
 //import logo from './logo.png';
 import './App.css';
-import './css/top-bar.css'
-import './css/mid.css'
-import './css/bottom-bar.css'
-import './css/ability.css'
-import './css/unit.css'
-import './css/nav.css'
-import './css/main.css'
+import './css/top-bar.css';
+import './css/mid.css';
+// import './css/unit.css';
+import './css/nav.css';
+import './css/main.css';
+import './css/controller.css';
 
 function App() {
 

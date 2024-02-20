@@ -2,7 +2,7 @@ function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var fs = require('fs');
-	var outFile = '../json/CustomString.json'
+	var outFile = './CustomString.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Game/GeneratedCustomString.j'
 	excelReader(xlsx,{ sheet: 'CustomString' }).then((rows) => {
 		//json

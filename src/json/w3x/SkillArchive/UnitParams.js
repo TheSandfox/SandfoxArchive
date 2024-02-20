@@ -2,7 +2,7 @@ function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
 	var fs = require('fs');
-	var outJson = '../json/UnitParams.json'
+	var outJson = './UnitParams.json'
 	var outJass = 'C:/war3lib/maps/SkillArchive/Unit/GeneratedUnitParams.j'
 	var dataFrom = 2
 	var dataType = 1

@@ -1,9 +1,0 @@
-.bottom-bar {
-	background: var(--color-light);
-	color: var(--color-dark);
-	display: flex;
-	width:100%;
-	min-height: 40px;
-	overflow-y: auto;
-	z-index: 5;
-}

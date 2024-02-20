@@ -1,14 +1,11 @@
 .main-container {
-	flex:1;
+	padding-top: 128px;
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 	align-items: center;
-	justify-content: center;
-}
-
-.main-container>img{
-	border-radius: 16px;
+	&>img {
+		border-radius: 16px;
+	}
 }
 
 .main-links {

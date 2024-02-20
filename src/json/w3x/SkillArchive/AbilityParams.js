@@ -1,4 +1,4 @@
-const CustomString = require('../json/CustomString.json')
+// const CustomString = require('../json/CustomString.json')
 
 function main() {
 	var excelReader = require('read-excel-file/node')
@@ -11,14 +11,14 @@ function main() {
 		var outMap = ''
 		var prefix = ''
 		if (mode==='ability') {
-			outJson = '../json/AbilityParams.json'
+			outJson = './AbilityParams.json'
 			outJass = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityParams.j'
-			outMap = '../json/AbilityMap.json'
+			outMap = './AbilityMap.json'
 			prefix = 'private'
 		} else if (mode==='buff') {
-			outJson = '../json/BuffParams.json'
+			outJson = './BuffParams.json'
 			outJass = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedBuffParams.j'
-			outMap = '../json/BuffMap.json'
+			outMap = './BuffMap.json'
 			prefix = 'public'
 		}
 		var datafromX = 3;

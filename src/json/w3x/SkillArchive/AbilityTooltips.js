@@ -1,7 +1,7 @@
-const CustomString = require('../json/CustomString.json')
-const AbilityParams = require('../json/AbilityParams.json')
-const BuffParams = require('../json/BuffParams.json')
-const UnitParams = require('../json/UnitParams.json')
+const CustomString = require('./CustomString.json')
+const AbilityParams = require('./AbilityParams.json')
+const BuffParams = require('./BuffParams.json')
+const UnitParams = require('./UnitParams.json')
 
 var mode = [0]
 var param = ['']
@@ -35,7 +35,7 @@ const UnitMap = refineMap(UnitParams)
 function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
-	var outFile = '../json/AbilityTooltips.json'
+	var outFile = './AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	var descriptioncol = 2
 	var customcostcol = 3
