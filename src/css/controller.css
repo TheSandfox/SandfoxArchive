@@ -10,34 +10,48 @@
 	padding:16px;
 	color:#ffffff;
 	z-index:100;
-	/*검색콘솔에 수직으로 깔리는 요소들*/
-	&>* {
-		min-height:24px;
-		padding:none;
+	min-width:256px;
+	/*상단 뷰모드 컨테이너*/
+	&>.radio {
 		display: flex;
-		flex-direction: row;
-		&>p {
-			/*검색필드 제목*/
-			&:first-child {
-				width:72px;
-				text-align: left;
-			}
-			/*검색필드 제목 옆에 붙는 ':'*/
-			&:nth-child(2) {
-				width:16px;
-				text-align: right;
-				padding-right: 8px;
+		gap: 8px;
+		margin-bottom: 16px;
+	}
+	/*검색콘솔에 수직으로 깔리는 요소들*/
+	&>.item {
+		height: 24px;
+		display: flex;
+		align-items: center;
+		&>.name {
+			width:72px;
+			text-align: left;
+			position: relative;
+			&::before {
+				position: absolute;
+				content: ':';
+				display: block;
+				right:4px;
+				top: -2px;
+				user-select: none;
+				/* vertical-align: middle; */
 			}
 		}
 		&>input[type="checkbox"] {
 			text-align: center;
 			height:16px;
 		}
-		&>input[type="text"] {
-			width:160px;
-		}
 		&>select{
-			width:160px;
+			flex:1;
 		}
+		&>input[type="text"] {
+			flex:1;
+		}
+	}
+	/* 하단버튼스페이스 */
+	&>.buttonSpace {
+		margin-top: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

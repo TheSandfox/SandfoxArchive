@@ -1,4 +1,8 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
+@font-face {
+	font-family: 'W2002'; /* 폰트 이름 설정 */
+	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
+}
 
 :root {
 	--color-light: rgb(228,208,163);
@@ -58,7 +62,8 @@
 }
 
 body {
-	font-family: 'Malgun Gothic';
+	font-family: 'W2002', sans-serif;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 a {
@@ -157,11 +162,6 @@ i {
 }
 
 /*폰트설정*/
-@font-face {
-	font-family: 'W2002'; /* 폰트 이름 설정 */
-	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
-}
-
 .w3font {
 	font-family: 'W2002', sans-serif;
 	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);

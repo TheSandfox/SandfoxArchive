@@ -3,16 +3,12 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 //import component
-import TopBar from 'component/TopBar';
+import Header from 'component/Header';
 import Main from 'component/Main';
 import W3X from 'component/w3x/W3X';
 
-//import logo from './logo.png';
 import './App.css';
-import './css/top-bar.css';
 import './css/mid.css';
-// import './css/unit.css';
-import './css/nav.css';
 import './css/main.css';
 import './css/controller.css';
 
@@ -21,7 +17,7 @@ function App() {
 	return (
 		<BrowserRouter>
 		<div className="App">
-			<TopBar/>
+			<Header/>
 			<div className="mid">
 				<div className="contents">
 				<Routes>

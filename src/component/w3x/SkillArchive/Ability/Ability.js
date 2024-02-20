@@ -224,7 +224,7 @@ function AbilityDescriptionSingle() {
 				</div>
 				<Link to={"/w3x/SkillArchive/Ability/"}>
 					<div className='icon-button' title={'목록'}>
-						<i className="fa-solid fa-bars"></i>
+						<i className="fi fi-br-menu-burger"></i>
 					</div>
 				</Link>
 			</div>
@@ -242,7 +242,7 @@ function AbilitySearchController({state}) {
 	{/*컨트롤러 */}
 	<div className="controller w3font shadow">
 		{/*체크박스 */}
-		<div className="rel horizon-left vertical-top h64">
+		<div className="radio">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
 				<i className="fi fi-rs-apps"></i>
 			</div>
@@ -251,9 +251,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*이름검색*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>이름</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">이름</p>
 			<input 
 				type="text"
 				value={searchField["NAME"]}
@@ -266,9 +265,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*티어필터링*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>티어</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">티어</p>
 			<select 
 				value={searchField["TIER"]}
 				onChange={(event)=>{modifySearchField.query("TIER",event.target.value)}}
@@ -287,9 +285,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*태그검색*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>태그</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">태그</p>
 			<input 
 				type="text"
 				value={searchField["TAG"]}
@@ -302,9 +299,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*캐스트타입검색*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>시전 유형</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">시전 유형</p>
 			<select
 				value={searchField["CAST_TYPE"]}
 				onChange={(event)=>{modifySearchField.query("CAST_TYPE",event.target.value)}}
@@ -324,9 +320,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*피해 유형*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>피해 유형</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">피해 유형</p>
 			<select
 				value={searchField["DAMAGE_TYPE"]}
 				onChange={(event)=>{modifySearchField.query("DAMAGE_TYPE",event.target.value)}}
@@ -343,9 +338,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*공격 유형*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>공격 유형</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">공격 유형</p>
 			<select
 				value={searchField["ATTACK_TYPE"]}
 				onChange={(event)=>{modifySearchField.query("ATTACK_TYPE",event.target.value)}}
@@ -362,9 +356,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*스탯보너스1*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>스탯1</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">스탯1</p>
 			<select
 				value={searchField["STAT_BONUS1"]}
 				onChange={(event)=>{modifySearchField.query("STAT_BONUS1",event.target.value)}}
@@ -392,9 +385,8 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*스탯보너스2*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>스탯2</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">스탯2</p>
 			<select
 				value={searchField["STAT_BONUS2"]}
 				onChange={(event)=>{modifySearchField.query("STAT_BONUS2",event.target.value)}}
@@ -422,7 +414,7 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 		{/*버튼스페이스*/}
-		<div className="rel horizon-center vertical-bottom h64">
+		<div className="buttonSpace">
 			{/*필터초기화*/}
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear

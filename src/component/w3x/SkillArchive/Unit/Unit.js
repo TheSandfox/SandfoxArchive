@@ -129,7 +129,7 @@ function UnitSearchController({state}) {
 	{/*컨트롤러 */}
 	<div className="controller w3font shadow">
 		{/*체크박스 */}
-		<div className="rel horizon-left vertical-top h64">
+		<div className="radio">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
 				<i className="fi fi-rs-apps"></i>
 			</div>
@@ -138,9 +138,8 @@ function UnitSearchController({state}) {
 			</div>
 		</div>
 		{/*이름검색*/}
-		<div className="rel h24 horizon-left vertical-center">
-			<p>이름</p>
-			<p> : </p>
+		<div className="item">
+			<p className="name">이름</p>
 			<input 
 				type="text"
 				value={searchField["NAME"]}
@@ -153,7 +152,7 @@ function UnitSearchController({state}) {
 			</div>
 		</div>
 		{/*버튼스페이스*/}
-		<div className="rel horizon-center vertical-bottom h64">
+		<div className="buttonSpace">
 			{/*필터초기화*/}
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear

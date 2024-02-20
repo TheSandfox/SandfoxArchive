@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 
-export default function TopBar() {
+import 'css/header.css';
+
+export default function Header() {
 	return (
-		<div className="top-bar">
+		<header>
 			<Link to="/"><h1 className="title">SandfoxArchive.info</h1></Link>
-		</div>
+		</header>
 	);
 }

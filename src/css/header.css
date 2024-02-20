@@ -1,4 +1,4 @@
-.top-bar {
+header {
 	background: var(--color-light);
 	color: var(--color-dark);
 	display: flex;
@@ -10,15 +10,17 @@
 	height: 40px;
 	align-items: center;
 	justify-content: left;
+	font-family: 'Malgun Gothic';
+	text-shadow: none;
 }
 
-.top-bar>a>.title {
+header>a>.title {
 	font-weight: 600;
 	font-size:20px;
 	padding-left:8px;
 }
 
-.top-bar>.subtitle {
+header>.subtitle {
 	font-size:16px;
 	font-weight:100;
 }

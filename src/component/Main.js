@@ -1,9 +1,28 @@
 import { Link } from "react-router-dom"
 
+function W3xWidget({route}) {
+	return <Link to={route}>
+		<div className="menu icon-button">
+						
+		</div>
+	</Link>
+}
+
 export default function Main() {
-	return <div className="main-container">
+	return <div className="mainContainer">
+		<div className="title">
+			모래여우저장소	
+		</div>
 		<img src={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-		<div className="main-links">
+		<div className="mainMenu">
+			<div className="title">
+				.w3x
+			</div>
+			<div className="list">
+				<W3xWidget route="/w3x/SkillArchive"/>
+			</div>
+		</div>
+		<div className="mainLinks">
 			<Link to="https://www.youtube.com/@THESANDFOX49" target="_blank">
 				<div className="icon-button">
 					<i className="fi fi-brands-youtube"></i>
