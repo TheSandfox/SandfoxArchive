@@ -10,14 +10,11 @@ function W3xWidget({route}) {
 
 export default function Main() {
 	return <div className="mainContainer">
-		<div className="title">
+		<h2>
 			모래여우저장소	
-		</div>
+		</h2>
 		<img src={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 		<div className="mainMenu">
-			<div className="title">
-				.w3x
-			</div>
 			<div className="list">
 				<W3xWidget route="/w3x/SkillArchive"/>
 			</div>

@@ -1,24 +1,27 @@
-/* .abilityContainer {
-	width:1280px;
-	margin: 10% auto;
-	height:100%;
+.abilityContainer {
+	/* width: 100%; */
 	display: flex;
-	flex-direction: row;
-	text-align: center;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-} */
+	padding: 64px;
+	@media screen and (max-width:1280px) {
+		align-items: flex-start;
+	}
+	@media screen and (max-width:960px) {
+		& .controller {
+			position: static;
+		}
+	}
+}
 
 .abilityDescriptionContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 64px 0;
 	gap: 16px;
 }
 
 .abilityGridContainer {
-	padding: 64px;
 	display: grid;
 	grid-template-columns: repeat(8, 64px);
 }

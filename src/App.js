@@ -19,12 +19,10 @@ function App() {
 		<div className="App">
 			<Header/>
 			<div className="mid">
-				<div className="contents">
 				<Routes>
 					<Route exact path="/" element={<Main/>}/>
 					<Route path="/w3x//*" element={<W3X/>}/>
 				</Routes>
-				</div>
 			</div>			
 		</div>
 		</BrowserRouter>

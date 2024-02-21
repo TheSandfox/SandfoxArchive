@@ -1,16 +1,26 @@
 nav {
-	position:fixed;
-	background-color: var(--color-gray);
-	transition: all 0.25s ease;
+	position:relative;
 	left:0px;
 	width:48px;
-	height: 100%;
+	/* height: 100%; */
 	display: block;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	z-index: 4;
+	z-index: 5;
+	box-shadow: 0px 0px 0px #0003;
+	&::before {
+		pointer-events: none;
+		position: absolute;
+		content: '';
+		transition: all 0.25s ease;
+		width: 48px;
+		height: 100%;
+		z-index: 4;
+		background-color: var(--color-gray);
+	}
 	&:hover {
-		width:256px;
+		&::before{
+			width:256px;
+			box-shadow: 8px 0px 16px #0003;
+		}
 		&>.container {
 			& .widget {
 				&>p {
@@ -19,7 +29,8 @@ nav {
 			}
 		}
 	}
-	&>.container {	
+	&>.container {
+		position: absolute;
 		display:flex;
 		flex-direction: column;
 		width: 256px;
@@ -28,6 +39,7 @@ nav {
 		overflow-x: hidden;
 		padding: 8px;
 		gap:8px;
+		z-index: 6;
 		& .widget {
 			display: flex;
 			align-items: center;

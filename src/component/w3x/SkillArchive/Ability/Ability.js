@@ -431,7 +431,7 @@ function AbilityDescriptionContainer({state}) {
 	const viewMode = state.viewMode
 
 	//viewmode에 따라 분기
-	return <>
+	return <div className="abilityContainer">
 		<AbilitySearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
@@ -443,7 +443,7 @@ function AbilityDescriptionContainer({state}) {
 				<AbilityDescriptions state={state}/>
 			</div>
 		}
-	</>
+	</div>
 }
 
 //어빌리티 메인 컨테이너
