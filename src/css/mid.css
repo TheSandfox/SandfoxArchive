@@ -1,6 +1,7 @@
+/* 좌측 내비,우측 메인 */
 .mid {
 	width: 100%;
-	min-height: calc(100% - 40px);
-	background-color: var(--color-dark-gray);
+	overflow-x: hidden;
 	display: flex;
+	padding-left: var(--nav-width);
 }

@@ -1,11 +1,12 @@
 header {
+	position: fixed;
 	background: var(--color-light);
 	color: var(--color-dark);
 	display: flex;
 	width:100%;
-	position:sticky;
+	left: 0;
 	top:0;
-	z-index: 100;
+	z-index: var(--z-header);
 	height: 40px;
 	align-items: center;
 	justify-content: left;

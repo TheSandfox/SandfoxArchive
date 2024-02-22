@@ -1,15 +1,35 @@
 .abilityContainer {
-	/* width: 100%; */
+	/* min-width: 100%; */
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 64px;
+	padding-left: calc(64px + var(--nav-width));
+	/* 디스크립션 왼쪽으로 밀착 */
 	@media screen and (max-width:1280px) {
+		width: initial;
 		align-items: flex-start;
 	}
+	/* 검색창 상단으로 */
 	@media screen and (max-width:960px) {
-		& .controller {
-			position: static;
+		width: 100%;
+		align-items: center;
+		gap: 32px;
+	}
+	/* 패딩제거, 컨트롤러 찰싹붙이기 */
+	@media screen and (max-width:600px) {
+		padding: 32px;
+		padding-left: calc(32px + var(--nav-width));
+		padding-top: calc(32px + var(--header-height));
+		/* padding-top: var(--header-height); */
+		gap: 0;
+		/* align-items: center; */
+		& .abilityGridContainer {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 }
@@ -30,10 +50,11 @@
 	&>.top {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 		height: 64px;
 		/* 어빌이름&태그 */
 		&>.name-and-tags{
-			flex: 1;
+			/* flex: 1; */
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -45,6 +66,23 @@
 			&>.ability-tags{
 				color:#ffff00;
 				font-size: 16px;
+			}
+			@media screen and (max-width:600px) {
+				flex-direction: column;
+				gap: 8px;
+				white-space: nowrap;
+				min-width: 92px;
+				padding: 4px 0;
+				&>.ability-name {
+					text-overflow: ellipsis;
+					overflow-x: hidden;
+					font-size: 18px;
+				}
+				&>.ability-tags {
+					text-overflow: ellipsis;
+					overflow-x: hidden;
+					font-size: 12px;
+				}
 			}
 		}
 		/* 우상단 쿨다운&마나(사거리) */
@@ -62,6 +100,10 @@
 				&>img{
 					width: 24px;
 					height: 24px;
+					@media screen and (max-width:600px) {
+						width: 20px;
+						height: 20px;
+					}
 				}
 				&>p{
 					flex: 1;
@@ -94,6 +136,10 @@
 				width: 24px; /* 폰트 크기와 동일한 크기로 설정 */
 				height: 24px; /* 폰트 크기와 동일한 크기로 설정 */
 				vertical-align: middle; /* 이미지를 텍스트의 중앙에 맞춤 */
+				@media screen and (max-width:600px) {
+					width: 20px;
+					height: 20px;
+				}
 			}
 			& .unitinfo{
 				text-decoration: underline;
@@ -123,6 +169,10 @@
 			}
 			&>img{
 				height:32px;
+				@media screen and (max-width:600px) {
+					width: 24px;
+					height: 24px;
+				}
 			}
 		}
 	}

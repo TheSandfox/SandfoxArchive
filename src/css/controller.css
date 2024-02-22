@@ -9,7 +9,7 @@
 	border-radius: 8px;
 	padding:16px;
 	color:#ffffff;
-	z-index:100;
+	z-index: var(--z-controller);
 	min-width:256px;
 	/*상단 뷰모드 컨테이너*/
 	&>.radio {
@@ -24,6 +24,7 @@
 		align-items: center;
 		&>.name {
 			width:72px;
+			min-width:72px;
 			text-align: left;
 			position: relative;
 			&::before {
@@ -42,9 +43,11 @@
 		}
 		&>select{
 			flex:1;
+			min-width:0;
 		}
 		&>input[type="text"] {
 			flex:1;
+			min-width:0;
 		}
 	}
 	/* 하단버튼스페이스 */
@@ -53,5 +56,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	@media screen and (max-width:960px) {
+		width: calc(64px * 8);
+		position: sticky;
+		top: 48px;
+	}
+	@media screen and (max-width:600px) {
+		background-color: var(--color-dark-gray);
+		box-shadow: none;
+		width: 100%;
+		top: 0;
+		right: 0;
 	}
 }

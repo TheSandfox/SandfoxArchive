@@ -16,15 +16,11 @@ function App() {
 
 	return (
 		<BrowserRouter>
-		<div className="App">
 			<Header/>
-			<div className="mid">
-				<Routes>
-					<Route exact path="/" element={<Main/>}/>
-					<Route path="/w3x//*" element={<W3X/>}/>
-				</Routes>
-			</div>			
-		</div>
+			<Routes>
+				<Route exact path="/" element={<Main/>}/>
+				<Route path="/w3x//*" element={<W3X/>}/>
+			</Routes>	
 		</BrowserRouter>
 	);
 	// <div className="bottom-bar">
