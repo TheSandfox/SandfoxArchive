@@ -5,7 +5,6 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 64px;
-	padding-left: calc(64px + var(--nav-width));
 	/* 디스크립션 왼쪽으로 밀착 */
 	@media screen and (max-width:1280px) {
 		width: initial;
@@ -19,9 +18,7 @@
 	}
 	/* 패딩제거, 컨트롤러 찰싹붙이기 */
 	@media screen and (max-width:600px) {
-		padding: 32px;
-		padding-left: calc(32px + var(--nav-width));
-		padding-top: calc(32px + var(--header-height));
+		padding: 16px;
 		/* padding-top: var(--header-height); */
 		gap: 0;
 		/* align-items: center; */
@@ -51,7 +48,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		height: 64px;
+		/* height: 64px; */
 		/* 어빌이름&태그 */
 		&>.name-and-tags{
 			/* flex: 1; */
@@ -84,6 +81,9 @@
 					font-size: 12px;
 				}
 			}
+			@media screen and (max-width:400px) {
+				width: calc(240px - 64px);
+			}
 		}
 		/* 우상단 쿨다운&마나(사거리) */
 		&>.cooldown-and-manacost{
@@ -109,6 +109,26 @@
 					flex: 1;
 					color:#ffffff;
 					text-align: left;
+				}
+			}
+		}
+		/* 320에서 마나&쿨다운 밑줄로 내리기 */
+		@media screen and (max-width:400px) {
+			width:240px;
+			flex-wrap: wrap;
+			justify-content: initial;
+			&>.cooldown-and-manacost{
+				width:100%;
+				padding-left: 50%;
+				margin-top: 8px;
+				flex-direction: row;
+				justify-content: flex-end;
+				&>div {
+					justify-content: flex-end;
+					&>p {
+						text-align: right;
+						padding-right: 8px;
+					}
 				}
 			}
 		}
@@ -174,6 +194,17 @@
 					height: 24px;
 				}
 			}
+		}
+	}
+	@media screen and (max-width:768px) {
+		/* 셀렉터 우선순위 이슈때문에 더 붙여줌 */
+		&.description-box {
+			width: calc(64px * 8);
+		}
+	}
+	@media screen and (max-width:600px) {
+		&.description-box {
+			width: 100%;
 		}
 	}
 }

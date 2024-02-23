@@ -70,6 +70,10 @@ body {
 	background-color: var(--color-dark-gray);
 }
 
+ul, li, ol {
+	list-style: none;
+}
+
 a {
 	text-decoration: none;
 	color:inherit;
@@ -234,19 +238,17 @@ i {
 }
 
 .description-box {
-	/*width:100%;*/
 	padding:16px;
 	background-color: var(--color-gray);
 	border-radius: 16px;
 	width:720px;
 	display: flex;
 	flex-direction: column;
-	@media screen and (max-width:768px) {
-		width: calc(64px * 8);
-	}
 	@media screen and (max-width:600px) {
-		width: 100%;
 		font-size: 12px;
+	}
+	@media screen and (max-width:400px) {
+		padding: 8px;
 	}
 }
 

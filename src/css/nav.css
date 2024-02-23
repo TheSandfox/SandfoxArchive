@@ -1,46 +1,58 @@
 nav {
 	position:fixed;
 	left:0px;
-	top: 0px;
-	width:48px;
-	min-width:48px;
+	top: var(--header-height);
+	width: var(--nav-width);
 	height: 10000%;
+	/* min-width:48px; */
 	display: block;
 	z-index: var(--z-nav);
 	box-shadow: 0px 0px 0px #0003;
 	overflow: hidden;
-	transition: all 0.25s ease;
 	background-color: var(--color-gray);
-	&:hover {
-		box-shadow: 8px 0px 16px #0003;
-		width:256px;
-		&>.container {
-			pointer-events: initial;
-			& .widget {
-				&>p {
-					opacity: 1;
+	/* 320에서 가로배치 */
+	@media screen and (max-width:320px) {
+		width: 100%;
+		height: var(--nav-width);
+	}
+	@media screen and (min-width:321px) {
+		transition: all 0.25s ease;
+		&:hover {
+			
+			box-shadow: 8px 0px 16px #0003;
+			width:256px;
+			
+			&>.container {
+				& .widget {
+					&>p {
+						opacity: 1;
+					}
 				}
 			}
 		}
 	}
 	&>.container {
-		pointer-events: none;
-		position: fixed;
+		/* position: absolute; */
 		display:flex;
 		flex-direction: column;
 		width: 256px;
 		height: 100%;
-		top: 40px;
 		transition: all 0.25s ease;
 		overflow-x: hidden;
 		padding: 8px;
 		gap:8px;
+		@media screen and (max-width:320px) {
+			flex-direction: row;
+			justify-content: center;
+			width: 100%;
+			height: var(--nav-width);
+		}
 		/* z-index: 6; */
 		& .widget {
 			display: flex;
 			align-items: center;
 			color: #fff;
-			white-space: nowrap;
+			/* white-space: nowrap; */
 			gap: 8px;
 			&>img {
 				width:32px;
@@ -52,6 +64,10 @@ nav {
 				transition: opacity 0.25s ease;
 				font-size: 16px;
 				text-align: left;
+				/* 320에서 항목이름 비표시 */
+				@media screen and (max-width:320px) {
+					display: none;
+				}
 			}
 		}
 	}

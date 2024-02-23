@@ -6,7 +6,7 @@
 	align-items: center;
 	/* justify-content: space-between; */
 	color: #fff;
-	padding: 48px;
+	padding-top: var(--header-height);
 	&>h2 {
 		font-size: 24px;
 		font-weight: initial;
