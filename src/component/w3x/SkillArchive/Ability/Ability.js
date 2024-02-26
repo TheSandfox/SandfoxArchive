@@ -8,12 +8,6 @@ import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
 import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json'
 import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json'
 import CustomString from 'json/w3x/SkillArchive/CustomString.json'
-// import AbilityParams from '../../../../w3x/SkillArchive/json/AbilityParams.json'
-// import AbilityMap from '../../../../w3x/SkillArchive/json/AbilityMap.json'
-// import AbilityMix from '../../../../w3x/SkillArchive/json/AbilityMix.json'
-// import AbilityTooltips from '../../../../w3x/SkillArchive/json/AbilityTooltips.json'
-// import CustomString from '../../../../w3x/SkillArchive/json/CustomString.json'
-// import Config from '../../../../w3x/SkillArchive/json/Config.json'
 import 'css/w3x/SkillArchive/Ability/ability.css'
 
 const AbilityJson = AbilityParams["params"]
@@ -32,21 +26,31 @@ const SearchField = {
 //어빌리티 위젯 
 export function AbilityWidget({json, thisabil}) {
 	return <div className={'w3x-icon rel'}>
-		<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]}>
-			<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
-			<div className={thisabil?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
-			{/*무기어빌리티면 무기아이콘 표시*/}
-			{json["IS_WEAPON"]==="true"?
-				<img
-					className={'bottom-right abs icon-24x'}
-					src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipweaponicon.png"}
-					alt='...'
-				/>
-				:
-				<></>
-			}
-		</Link>
-		<div className={'highlight non-focus'}></div>
+		{/* json값을 undefined값을 줘서 '비어있는 어빌리티' 표현함 */}
+		{/* 그렇지 않은 경우 정상적으로 어빌리티 위젯 표시 */}
+		{json !== undefined ?
+		<>
+			<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]}>
+				<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
+				<div className={thisabil?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
+				{/*무기어빌리티면 무기아이콘 표시*/}
+				{json["IS_WEAPON"]==="true"?
+					<img
+						className={'bottom-right abs icon-24x'}
+						src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipweaponicon.png"}
+						alt='...'
+					/>
+					:
+					<></>
+				}
+			</Link>
+			<div className={'highlight non-focus'}></div>
+		</>
+		:
+		<>
+			<img src={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"} alt='...'/>
+		</>
+		}
 	</div>
 }
 
@@ -215,18 +219,20 @@ function AbilityDescriptionSingle() {
 	//어빌툴팁 상세
 	//뒤로가기버튼
 	return <>
-		<div className='abilitySingleContainer'>
-			<AbilityDescription viewMode={true}/>
-			<AbilityMixTable/>
-			<div className='btn-container'>
-				<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
-				<i className={"fi fi-bs-angle-left"}></i>
-				</div>
-				<Link to={"/w3x/SkillArchive/Ability/"}>
-					<div className='icon-button' title={'목록'}>
-						<i className="fi fi-br-menu-burger"></i>
+		<div className='abilityContainer'>
+			<div className='abilitySingleContainer'>
+				<AbilityDescription viewMode={true}/>
+				<AbilityMixTable/>
+				<div className='btn-container'>
+					<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
+					<i className={"fi fi-bs-angle-left"}></i>
 					</div>
-				</Link>
+					<Link to={"/w3x/SkillArchive/Ability/"}>
+						<div className='icon-button' title={'목록'}>
+							<i className="fi fi-br-menu-burger"></i>
+						</div>
+					</Link>
+				</div>
 			</div>
 		</div>
 	</>

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Ability } from "./Ability/Ability";
 import { Unit } from "./Unit/Unit";
 import Nav from "component/Nav";
+import Remote from "component/Remote";
 
 export default function SkillArchive() {
 	return <>
@@ -26,5 +27,6 @@ export default function SkillArchive() {
 				<Route path="/Unit/:id" element={<Unit isSingle={true}/>}/>
 			</Routes>
 		</div>
+		<Remote />
 	</>
 }

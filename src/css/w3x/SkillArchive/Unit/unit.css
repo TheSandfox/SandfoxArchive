@@ -1,22 +1,95 @@
-.unit-container {
-	width:100%;
-	height:100%;
+.unitContainer {
+	position: relative;
 	display: flex;
-	flex-direction: row;
-	text-align: center;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	padding: 64px;
+	/* 디스크립션 왼쪽으로 밀착 */
+	@media screen and (max-width:1280px) {
+		width: initial;
+		align-items: flex-start;
+	}
+	/* 검색창 상단으로 */
+	@media screen and (max-width:960px) {
+		width: 100%;
+		align-items: center;
+		gap: 32px;
+	}
+	/* 패딩제거, 컨트롤러 찰싹붙이기 */
+	@media screen and (max-width:600px) {
+		padding: 16px;
+		gap: 0;
+		& .unitGridContainer {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
 }
 
-.unit-description {
+.unitDescriptionContainer {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
 }
 
-.unit-description>* {
+.unitDescription {
 	display: flex;
+	&>.left {
+		flex: 1;
+		&>.top {
+			display: flex;
+			gap: 16px;
+			align-items: center;
+		}
+	}
+	&>.right {
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-start;
+		gap: 16px;
+		@media screen and (max-width:600px) {
+			justify-content: center;
+		}
+		&>p {
+			height: 64px;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: flex-start;
+			@media screen and (max-width:320px) {
+				display: none;
+			}
+		}
+		/* &>div {
+			width: 64px;
+			height: 64px;
+		} */
+	}
+	@media screen and (max-width:768px) {
+		/* 셀렉터 우선순위 이슈때문에 더 붙여줌 */
+		&.description-box {
+			width: calc(64px * 8);
+			flex-direction: column;
+		}
+	}
+	@media screen and (max-width:600px) {
+		&.description-box {
+			width: 100%;
+		}
+	}
 }
 
-.unit-single-container {
+.unitGridContainer {
+	display: grid;
+	grid-template-columns: repeat(8, 64px);
+}
+
+.unitSingleContainer {
 	max-width:960px;
 	display: flex;
 	flex-direction: column;

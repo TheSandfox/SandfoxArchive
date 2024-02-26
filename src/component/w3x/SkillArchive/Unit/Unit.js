@@ -45,16 +45,16 @@ function UnitDescription(props) {
 			border:'2px solid #ffffff'
 		}
 		// console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
-		return <div className="unit-description description-box w3font row rel" style={stl}>
-			<div className='col width-half'>
-				<div className="horizon-left vertical-center row">
+		return <div className="unitDescription description-box" style={stl}>
+			<div className='left'>
+				<div className='top'>
 					<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 					<div className='name-and-tags'>
-						<div className="font24 white">#{json["ID"]} {json["NAME"]}</div>
+						<div className="font24 white">{json["NAME"]}</div>
 					</div>
 				</div>
 				<br/>
-				<div className="horizon-left vertical-top">
+				<div className="bottom">
 					<div className="tooltip white" >
 						{json["TOOLTIP"]}
 					</div>
@@ -62,21 +62,25 @@ function UnitDescription(props) {
 			</div>
 			<br/>
 			{/*고유능력 아이콘*/}
-			<div className="horizon-center vertical-center width-half">
+			<div className="right">
 				<p className='white'>고유 능력 : </p>
 				{json["INITIAL_ABILITY1"]!=="null"?
-					<div className='m-left16'>
+					<div>
 						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]}/>
 					</div>
 					:
-					<></>
+					<div style={{opacity:0.3}}>
+						<AbilityWidget json={undefined}/>
+					</div>
 				}
 				{json["INITIAL_ABILITY2"]!=="null"?
-					<div className='m-left16'>
+					<div>
 						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]}/>
 					</div>
 					:
-					<></>
+					<div style={{opacity:0.3}}>
+						<AbilityWidget json={undefined}/>
+					</div>
 				}
 			</div>
 		</div>
@@ -110,10 +114,12 @@ function UnitDescriptionSingle() {
 	//유닛툴팁 상세
 	//뒤로가기버튼
 	return <>
-		<div className='unit-single-container'>
-			<UnitDescription viewMode={true}/>
-			<div className='unit-single-back-div icon-button' onClick={goBack}>
-				<i className="fa-solid fa-reply"></i>
+		<div className='unitContainer'>
+			<div className='unitSingleContainer'>
+				<UnitDescription viewMode={true}/>
+				<div className='unit-single-back-div icon-button' onClick={goBack}>
+					<i className="fa-solid fa-reply"></i>
+				</div>
 			</div>
 		</div>
 	</>
@@ -173,11 +179,11 @@ function UnitDescriptionContainer({state}) {
 		<UnitSearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
-			<div className="description-container">
+			<div className="unitDescriptionContainer">
 				<UnitDescriptions state={state}/>
 			</div>
 			:
-			<div className="grid8x">
+			<div className="unitGridContainer">
 				<UnitDescriptions state={state}/>
 			</div>
 		}
@@ -229,7 +235,7 @@ export function Unit(props) {
 		searchField:searchField,
 		modifySearchField:modifySearchField
 	}
-	return <div className="unit-container">
+	return <div className="unitContainer">
 	{props.isSingle===true?
 		<UnitDescriptionSingle/>
 		:

@@ -19,7 +19,7 @@ export default function Main() {
 				<W3xWidget route="/w3x/SkillArchive"/>
 			</div>
 		</div>
-		<div className="mainLinks">
+		<div className="bottomRightButtonContainer">
 			<Link to="https://www.youtube.com/@THESANDFOX49" target="_blank">
 				<div className="icon-button">
 					<i className="fi fi-brands-youtube"></i>

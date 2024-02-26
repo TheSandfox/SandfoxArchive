@@ -44,6 +44,7 @@
 }
 
 .abilityDescription{
+	flex-direction: column;
 	&>.top {
 		display: flex;
 		flex-direction: row;
@@ -210,12 +211,11 @@
 }
 
 .abilitySingleContainer {
+	position: relative;
 	display: flex;
-	height: 100%;
 	flex-direction: column;
-	text-align: center;
 	align-items: center;
-	justify-content: center;
+	padding: 64px;
 	gap: 32px;
 	&>.btn-container {
 		display: flex;
@@ -242,5 +242,8 @@
 			gap: 8px;
 			align-items: center;
 		}
+	}
+	@media screen and (max-width:768px) {
+		flex-direction: column;
 	}
 }
