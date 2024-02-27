@@ -1,7 +1,7 @@
 /*컨트롤러(우측상단검색창)*/
 .controller {
 	position:fixed;
-	top:56px;
+	top:calc(var(--header-height) + 16px);
 	right:16px;
 	display: flex;
 	flex-direction: column;
@@ -59,8 +59,7 @@
 	}
 	@media screen and (max-width:960px) {
 		width: calc(64px * 8);
-		position: sticky;
-		top: 48px;
+		position: static;
 	}
 	@media screen and (max-width:600px) {
 		background-color: var(--color-dark-gray);

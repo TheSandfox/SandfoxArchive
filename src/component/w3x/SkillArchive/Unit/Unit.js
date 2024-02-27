@@ -114,11 +114,11 @@ function UnitDescriptionSingle() {
 	//유닛툴팁 상세
 	//뒤로가기버튼
 	return <>
-		<div className='unitContainer'>
+		<div className='unitContainer single'>
 			<div className='unitSingleContainer'>
 				<UnitDescription viewMode={true}/>
 				<div className='unit-single-back-div icon-button' onClick={goBack}>
-					<i className="fa-solid fa-reply"></i>
+				<i className={"fi fi-bs-angle-left"}></i>
 				</div>
 			</div>
 		</div>
@@ -175,7 +175,7 @@ function UnitDescriptionContainer({state}) {
 	const viewMode = state.viewMode
 
 	//viewmode에 따라 분기
-	return <>
+	return <div className="unitContainer">
 		<UnitSearchController state={state}/>
 		{/*뷰모드 분기(상세설명들로 채우냐, 아이콘들로 채우냐) */}
 		{viewMode===true?
@@ -187,7 +187,7 @@ function UnitDescriptionContainer({state}) {
 				<UnitDescriptions state={state}/>
 			</div>
 		}
-	</>
+	</div>
 }
 
 export function Unit(props) {
@@ -235,7 +235,7 @@ export function Unit(props) {
 		searchField:searchField,
 		modifySearchField:modifySearchField
 	}
-	return <div className="unitContainer">
+	return <>
 	{props.isSingle===true?
 		<UnitDescriptionSingle/>
 		:
@@ -243,5 +243,5 @@ export function Unit(props) {
 			state={state}
 		/>
 	}
-</div>
+</>
 }

@@ -67,7 +67,7 @@ function AbilityMixTable() {
 	return <>{lower.length>0||upper.length>0?
 		<div className={'abilityMixContainer'}>
 			{lower.length>0?<div className={'description-box'}>
-				<div className='title w3font font16 m-bottom16 white'>
+				<div className='title w3font font16 white'>
 					<i className="fi fi-rs-code-merge"></i>조합법
 				</div>
 				{lower.map(json=>{
@@ -81,7 +81,7 @@ function AbilityMixTable() {
 				})}
 			</div>:<></>}
 			{upper.length>0?<div className={'description-box'}>
-				<div className='title w3font font16 m-bottom16 white'>
+				<div className='title w3font font16 white'>
 					<i className="fi fi-rs-code-branch"></i>조합 가능 스킬
 				</div>
 				{upper.map(json=>{
@@ -219,7 +219,7 @@ function AbilityDescriptionSingle() {
 	//어빌툴팁 상세
 	//뒤로가기버튼
 	return <>
-		<div className='abilityContainer'>
+		<div className='abilityContainer single'>
 			<div className='abilitySingleContainer'>
 				<AbilityDescription viewMode={true}/>
 				<AbilityMixTable/>

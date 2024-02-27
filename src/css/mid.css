@@ -1,5 +1,6 @@
 /* 좌측 내비,우측 메인 */
 .mid {
+	position: relative;
 	padding-left: var(--nav-width);
 	padding-top: var(--header-height);
 	/* 내비세로배치 */
