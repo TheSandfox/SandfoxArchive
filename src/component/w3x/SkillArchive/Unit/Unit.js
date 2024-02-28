@@ -45,7 +45,7 @@ function UnitDescription(props) {
 			border:'2px solid #ffffff'
 		}
 		// console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
-		return <div className="unitDescription description-box" style={stl}>
+		return <div className="unitDescription descriptionBox" style={stl}>
 			<div className='left'>
 				<div className='top'>
 					<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>

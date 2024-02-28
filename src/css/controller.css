@@ -11,6 +11,12 @@
 	color:#ffffff;
 	z-index: var(--z-controller);
 	min-width:256px;
+	& i.favorite {
+		color: #999;
+		&.active {
+			color: #ffcc00;
+		}
+	}
 	/*상단 뷰모드 컨테이너*/
 	&>.radio {
 		display: flex;

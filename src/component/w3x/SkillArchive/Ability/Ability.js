@@ -1,18 +1,19 @@
 //import react
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 //import JSON
-import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json'
-import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
-import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json'
-import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json'
-import CustomString from 'json/w3x/SkillArchive/CustomString.json'
-import 'css/w3x/SkillArchive/Ability/ability.css'
+import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json';
+import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json';
+import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json';
+import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json';
+import CustomString from 'json/w3x/SkillArchive/CustomString.json';
+import 'css/w3x/SkillArchive/Ability/ability.css';
 
-const AbilityJson = AbilityParams["params"]
-const AbilityMixJson = AbilityMix["params"]
+const AbilityJson = AbilityParams["params"];
+const AbilityMixJson = AbilityMix["params"];
 const SearchField = {
+	FAVORITE : false,
 	NAME : "",
 	TIER : "",
 	TAG : "",
@@ -21,18 +22,19 @@ const SearchField = {
 	ATTACK_TYPE : "",
 	STAT_BONUS1 : "",
 	STAT_BONUS2 : ""
-}
+};
+const Favorite = [...localStorage.getItem('favorite')||[]];
 
 //어빌리티 위젯 
-export function AbilityWidget({json, thisabil}) {
+export function AbilityWidget({json, isThisAbility, isSingle}) {
 	return <div className={'w3x-icon rel'}>
 		{/* json값을 undefined값을 줘서 '비어있는 어빌리티' 표현함 */}
 		{/* 그렇지 않은 경우 정상적으로 어빌리티 위젯 표시 */}
 		{json !== undefined ?
 		<>
-			<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]}>
+			<Link to={"/w3x/SkillArchive/Ability/"+json["ID"]} title={json["NAME"]} className={isSingle||isThisAbility?'disabled':''}>
 				<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
-				<div className={thisabil?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
+				<div className={isThisAbility?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
 				{/*무기어빌리티면 무기아이콘 표시*/}
 				{json["IS_WEAPON"]==="true"?
 					<img
@@ -44,7 +46,7 @@ export function AbilityWidget({json, thisabil}) {
 					<></>
 				}
 			</Link>
-			<div className={'highlight non-focus'}></div>
+			{!(isSingle||isThisAbility)?<div className={'highlight non-focus'}></div>:<></>}
 		</>
 		:
 		<>
@@ -66,31 +68,31 @@ function AbilityMixTable() {
 	if (upper.length<=0) {upper=[]}
 	return <>{lower.length>0||upper.length>0?
 		<div className={'abilityMixContainer'}>
-			{lower.length>0?<div className={'description-box'}>
+			{lower.length>0?<div className={'descriptionBox'}>
 				<div className='title w3font font16 white'>
 					<i className="fi fi-rs-code-merge"></i>조합법
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} thisabil={json["ID1"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} thisabil={json["ID2"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} thisabil={json["RESULT"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false}/>
 					</div>
 				})}
 			</div>:<></>}
-			{upper.length>0?<div className={'description-box'}>
+			{upper.length>0?<div className={'descriptionBox'}>
 				<div className='title w3font font16 white'>
 					<i className="fi fi-rs-code-branch"></i>조합 가능 스킬
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} thisabil={json["ID1"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} thisabil={json["ID2"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} thisabil={json["RESULT"]===id}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false}/>
 				</div>
 				})}
 			</div>:<></>}
@@ -136,9 +138,9 @@ function AbilityDescription(props) {
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
-		return <div className="abilityDescription description-box w3font" style={stl}>
+		return <div className="abilityDescription descriptionBox w3font" style={stl}>
 			<div className="top">
-				<AbilityWidget json={abiljson}/>
+				<AbilityWidget json={abiljson} isSingle={props.isSingle}/>
 				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
 				<div className='name-and-tags'>
 					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
@@ -205,7 +207,7 @@ function AbilityDescription(props) {
 function AbilityDescriptions({state}) {
 	return <>
 		{state.abilityJson.map(desc=>{
-			return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode}/>		
+			return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode} isSingle={false}/>		
 		})}
 	</>
 }
@@ -221,7 +223,7 @@ function AbilityDescriptionSingle() {
 	return <>
 		<div className='abilityContainer single'>
 			<div className='abilitySingleContainer'>
-				<AbilityDescription viewMode={true}/>
+				<AbilityDescription viewMode={true} isSingle={true}/>
 				<AbilityMixTable/>
 				<div className='btn-container'>
 					<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
@@ -255,6 +257,19 @@ function AbilitySearchController({state}) {
 			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
 				<i className="fi fi-br-menu-burger"></i>
 			</div>
+			{/* 즐찾 */}
+			<div className={searchField["FAVORITE"]?"icon-button hover":"icon-button"} title='즐겨찾기' onClick={
+				searchField["FAVORITE"]?()=>{
+					modifySearchField.modify("FAVORITE",false);
+					modifySearchField.query();
+				}:
+				()=>{
+					modifySearchField.modify("FAVORITE",true);
+					modifySearchField.query();
+				}
+			}>
+				<i className={searchField["FAVORITE"]?"fi fi-sr-star favorite active":"fi fi-rr-star favorite"}></i>
+			</div>
 		</div>
 		{/*이름검색*/}
 		<div className="item">
@@ -262,10 +277,10 @@ function AbilitySearchController({state}) {
 			<input 
 				type="text"
 				value={searchField["NAME"]}
-				onChange={(event)=>{modifySearchField.query("NAME",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("NAME",event.target.value)}}
 			/>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("NAME","")}}
+				onClick={()=>{modifySearchField.modify("NAME","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -275,7 +290,7 @@ function AbilitySearchController({state}) {
 			<p className="name">티어</p>
 			<select 
 				value={searchField["TIER"]}
-				onChange={(event)=>{modifySearchField.query("TIER",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("TIER",event.target.value)}}
 			>
 				<option value="">전체</option>
 				<option value="1">1</option>
@@ -285,7 +300,7 @@ function AbilitySearchController({state}) {
 				<option value="5">5</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("TIER","")}}
+				onClick={()=>{modifySearchField.modify("TIER","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -296,10 +311,10 @@ function AbilitySearchController({state}) {
 			<input 
 				type="text"
 				value={searchField["TAG"]}
-				onChange={(event)=>{modifySearchField.query("TAG",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("TAG",event.target.value)}}
 			/>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("TAG","")}}
+				onClick={()=>{modifySearchField.modify("TAG","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -309,7 +324,7 @@ function AbilitySearchController({state}) {
 			<p className="name">시전 유형</p>
 			<select
 				value={searchField["CAST_TYPE"]}
-				onChange={(event)=>{modifySearchField.query("CAST_TYPE",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("CAST_TYPE",event.target.value)}}
 			>
 				<option value="">전체</option>
 				<option value="지점 목표물">지점 목표물</option>
@@ -320,7 +335,7 @@ function AbilitySearchController({state}) {
 				<option value="무기">무기</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("CAST_TYPE","")}}
+				onClick={()=>{modifySearchField.modify("CAST_TYPE","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -330,7 +345,7 @@ function AbilitySearchController({state}) {
 			<p className="name">피해 유형</p>
 			<select
 				value={searchField["DAMAGE_TYPE"]}
-				onChange={(event)=>{modifySearchField.query("DAMAGE_TYPE",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("DAMAGE_TYPE",event.target.value)}}
 			>
 				<option value="">전체</option>
 				<option value="물리">물리</option>
@@ -338,7 +353,7 @@ function AbilitySearchController({state}) {
 				<option value="미분류">미분류</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("DAMAGE_TYPE","")}}
+				onClick={()=>{modifySearchField.modify("DAMAGE_TYPE","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -348,7 +363,7 @@ function AbilitySearchController({state}) {
 			<p className="name">공격 유형</p>
 			<select
 				value={searchField["ATTACK_TYPE"]}
-				onChange={(event)=>{modifySearchField.query("ATTACK_TYPE",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("ATTACK_TYPE",event.target.value)}}
 			>
 				<option value="">전체</option>
 				<option value="기본">기본공격</option>
@@ -356,7 +371,7 @@ function AbilitySearchController({state}) {
 				<option value="미분류">미분류</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("ATTACK_TYPE","")}}
+				onClick={()=>{modifySearchField.modify("ATTACK_TYPE","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -366,7 +381,7 @@ function AbilitySearchController({state}) {
 			<p className="name">스탯1</p>
 			<select
 				value={searchField["STAT_BONUS1"]}
-				onChange={(event)=>{modifySearchField.query("STAT_BONUS1",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("STAT_BONUS1",event.target.value)}}
 			>
 				<option value="">선택안함</option>
 				<option value="CONFIG_STAT_MAXHP">체력</option>
@@ -385,7 +400,7 @@ function AbilitySearchController({state}) {
 				<option value="CONFIG_STAT_MPREGEN">마나재생</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("STAT_BONUS1","")}}
+				onClick={()=>{modifySearchField.modify("STAT_BONUS1","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -395,7 +410,7 @@ function AbilitySearchController({state}) {
 			<p className="name">스탯2</p>
 			<select
 				value={searchField["STAT_BONUS2"]}
-				onChange={(event)=>{modifySearchField.query("STAT_BONUS2",event.target.value)}}
+				onChange={(event)=>{modifySearchField.modify("STAT_BONUS2",event.target.value)}}
 			>
 				<option value="">선택안함</option>
 				<option value="CONFIG_STAT_MAXHP">체력</option>
@@ -414,7 +429,7 @@ function AbilitySearchController({state}) {
 				<option value="CONFIG_STAT_MPREGEN">마나재생</option>
 			</select>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("STAT_BONUS2","")}}
+				onClick={()=>{modifySearchField.modify("STAT_BONUS2","")}}
 			>
 				<i className="fi fi-rr-cross-small"></i>
 			</div>
@@ -473,6 +488,12 @@ export function Ability(props) {
 		},
 		query:(target,form) => {
 			setAbilityJson(target.filter(item =>
+				/*즐찾*/
+				( form["FAVORITE"]?
+					Favorite.includes(item["ID"])
+					:
+					true
+				) &&
 				/*어빌리티이름*/ 
 				( form["NAME"]===""?true:
 					item["NAME"].includes(form["NAME"]) 
@@ -518,15 +539,17 @@ export function Ability(props) {
 		}
 	}
 	const modifySearchField = {
-		query : (field,val) =>{
+		modify : (field,val) =>{
 			let sf = JSON.parse(JSON.stringify(searchField))
 			sf[field] = val
 			setSearchField(sf)
-			modifyAbilityJson.query(AbilityJson,sf)
 		},
 		clear : () =>{
 			setSearchField(SearchField)
 			modifyAbilityJson.clear()
+		},
+		query : () =>{
+			modifyAbilityJson.query(AbilityJson,JSON.parse(JSON.stringify(searchField)))
 		}
 	}
 	const state = {

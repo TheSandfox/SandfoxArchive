@@ -3,6 +3,9 @@
 	position: relative;
 	padding-left: var(--nav-width);
 	padding-top: var(--header-height);
+	&.hideNav {
+		padding-left:0;
+	}
 	/* 내비세로배치 */
 	@media screen and (max-width:320px) {
 		padding-left: 0;

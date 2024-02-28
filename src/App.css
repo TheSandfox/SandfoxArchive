@@ -17,45 +17,6 @@
 	--nav-width: 48px;
 }
 
-/* .App {
-	overflow-x: hidden;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /*RESET*/
 
 * {
@@ -83,9 +44,17 @@ a {
 	&:active {
 		color:inherit;
 	}
+	&.disabled {
+		pointer-events: none;
+	}
+}
+
+img {
+	user-select: none;
 }
 
 ::-webkit-scrollbar {
+	position: absolute;
 	z-index: 200;
 	width:8px;
 	height:8px;
@@ -203,7 +172,6 @@ i {
 	&.hover {
 		background-color: var(--color-dark);
 		border: 2px solid var(--color-light);
-		cursor: default;
 		&>i {
 			color: var(--color-light);
 		}
@@ -230,7 +198,7 @@ i {
 	}
 }
 
-.description-box {
+.descriptionBox {
 	padding:16px;
 	background-color: var(--color-gray);
 	border-radius: 16px;
@@ -243,7 +211,7 @@ i {
 	@media screen and (max-width:600px) {
 		font-size: 12px;
 	}
-	@media screen and (max-width:400px) {
+	@media screen and (max-width:320px) {
 		padding: 8px;
 	}
 }
@@ -270,6 +238,7 @@ i {
 .w3x-icon {
 	width:64px;
 	height:64px;
+	font-size: 0;
 	display: flex;
 }
 
