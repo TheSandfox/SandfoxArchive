@@ -233,7 +233,24 @@ i {
 		}
 	}
 }
-
+/* 즐찾 */
+.favoriteButton {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top:0;
+	left:0;
+	width:24px;
+	height:24px;
+	background-color: #0009;
+	border-radius: 0 0 4px 0;
+	&>i {
+		text-align: center;
+		font-size: 16px;
+		color: #fc0;
+	}
+}
 /*64x64 워크아이콘*/
 .w3x-icon {
 	width:64px;

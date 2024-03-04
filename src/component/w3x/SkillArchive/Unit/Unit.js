@@ -13,9 +13,9 @@ import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
 //import css
 import 'css/w3x/SkillArchive/Unit/unit.css'
 
-const AbilityJson = AbilityParams["params"]
-const UnitJson = UnitParams["params"]
-const SearchField = {
+let AbilityJson = AbilityParams["params"]
+let UnitJson = UnitParams["params"]
+let SearchField = {
 	NAME : ""
 }
 

@@ -16,13 +16,12 @@ nav {
 		height: var(--nav-width);
 		box-shadow: 0px 8px 16px #0003;
 	}
-	@media screen and (min-width:321px) {
+	/* 321이상에서 마우스 호버 시 내비 확장 */
+	@media screen and (min-width:321px) and (hover: hover) {
 		transition: all 0.25s ease;
 		&:hover {
-			
 			box-shadow: 8px 0px 16px #0003;
 			width:256px;
-			
 			&>.container {
 				& .widget {
 					&>p {
