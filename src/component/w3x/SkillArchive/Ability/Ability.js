@@ -23,11 +23,44 @@ let SearchField = {
 	STAT_BONUS1 : "",
 	STAT_BONUS2 : ""
 };
-let Favorite = [...localStorage.getItem('favorite')||[]];
+let FavoritePrefix = "w3x_sa_ability_favorite_";
+
+//즐찾에 있는지 판별하는 함수
+function isFavorite(findfor) {
+	console.log(localStorage.getItem(FavoritePrefix+findfor));
+	return localStorage.getItem(FavoritePrefix+findfor)!==null;
+}
+//즐찾 넣기,빼기
+function addFavorite(val) {
+	localStorage.setItem(FavoritePrefix+val,"true");
+}
+function removeFavorite(val) {
+	localStorage.removeItem(FavoritePrefix+val);
+}
+function toggleFavorite(val) {
+	if (isFavorite(val)) {
+		removeFavorite(val);
+	} else {
+		addFavorite(val);
+	}
+}
 
 //어빌리티 위젯에 붙는 즐찾버튼
-function FavoriteWidget({json, flag, forceDisplay}) {
-	return <div className={'favoriteButton'}>
+function FavoriteWidget({json, interact}) {
+	let flag = isFavorite(json["ID"]);
+	// flag만 참이면 즐찾 돼있을 때에만 별 출력
+	// interact상태일 때 즐찾버튼
+	return <div className={
+			'favoriteButton'+
+			(!interact?' disabled':'')+
+			(flag||interact?'':' hidden')
+		}
+		onClick={
+			()=>{
+				toggleFavorite(json["ID"]);
+			}	
+		}
+	>
 		<i className={flag?"fi fi-sr-star active":"fi fi-rr-star"}></i>
 	</div>;
 }
@@ -37,7 +70,7 @@ export function AbilityWidget({
 	json/*받는 어빌 json*/, 
 	isThisAbility,/*믹스테이블에 들어갈 때 '이 어빌리티'와 같은지 하이라이트*/
 	isSingle,/*상세보기에서 보고있는가*/
-	displayFavorite,/*즐찾 위젯 보임*/
+	interactFavorite,/*즐찾위젯 상호작용 여부*/
 	inFavorite/*즐찾에 있는가*/
 }) {
 	return <div className={'w3x-icon rel'}>
@@ -49,7 +82,6 @@ export function AbilityWidget({
 				title={json["NAME"]}/*어빌리티 이름*/ 
 				className={isSingle||isThisAbility?'disabled':''}/*클릭 막기*/
 			>
-				<FavoriteWidget json={json} flag={inFavorite} forceDisplay={displayFavorite}/>:
 				<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt='...'/>
 				<div className={isThisAbility?'border-fill tier-this':'border-fill tier'+json["TIER"]}></div>
 				{/*무기어빌리티면 무기아이콘 표시*/}
@@ -65,6 +97,8 @@ export function AbilityWidget({
 			</Link>
 			{/*클릭 막기*/}
 			{!(isSingle||isThisAbility)?<div className={'highlight non-focus'}></div>:<></>}
+			{/*즐찾 위젯*/}
+			<FavoriteWidget json={json} flag={inFavorite} interact={interactFavorite}/>
 		</>
 		:
 		<>
@@ -92,11 +126,11 @@ function AbilityMixTable() {
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false}/>
 					</div>
 				})}
 			</div>:<></>}
@@ -106,11 +140,11 @@ function AbilityMixTable() {
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} displayFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false}/>
 				</div>
 				})}
 			</div>:<></>}
@@ -158,7 +192,7 @@ function AbilityDescription(props) {
 		}
 		return <div className="abilityDescription descriptionBox w3font" style={stl}>
 			<div className="top">
-				<AbilityWidget json={abiljson} isSingle={props.isSingle} displayFavorite={true} inFavorite={Favorite.indexOf(abiljson["ID"])>=0}/>
+				<AbilityWidget json={abiljson} isSingle={props.isSingle} interactFavorite={true} inFavorite={isFavorite(abiljson["ID"])}/>
 				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
 				<div className='name-and-tags'>
 					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
@@ -216,7 +250,7 @@ function AbilityDescription(props) {
 		</div>
 	} else {
 		//아이콘모드
-		return <AbilityWidget json={abiljson} displayFavorite={true}/>
+		return <AbilityWidget json={abiljson} interactFavorite={false}/>
 	}
 
 }
@@ -508,7 +542,7 @@ export function Ability(props) {
 			setAbilityJson(target.filter(item =>
 				/*즐찾*/
 				( form["FAVORITE"]?
-					Favorite.includes(item["ID"])
+					isFavorite(item["ID"])
 					:
 					true
 				) &&

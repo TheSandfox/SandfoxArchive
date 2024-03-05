@@ -245,10 +245,23 @@ i {
 	height:24px;
 	background-color: #0009;
 	border-radius: 0 0 4px 0;
+	cursor: pointer;
 	&>i {
 		text-align: center;
 		font-size: 16px;
-		color: #fc0;
+		color: #999;
+		&.active {
+			color: #fc0;
+		}
+	}
+	&.disabled {
+		opacity: 0.75;
+		cursor: default;
+		pointer-events: none;
+		background: none;
+	}
+	&.hidden {
+		display: none;
 	}
 }
 /*64x64 워크아이콘*/
