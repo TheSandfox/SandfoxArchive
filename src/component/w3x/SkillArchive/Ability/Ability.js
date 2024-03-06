@@ -298,26 +298,8 @@ function AbilityDescriptionSingle() {
 function AbilitySearchController({state}) {
 	const viewMode = state.viewMode;
 	const modifyViewMode = state.modifyViewMode;
-	const modifyAbilityJson = state.modifyAbilityJson;
-	const [searchField,setSearchField] = useState(SearchField);
-	const modifySearchField = {
-		modify : (field,val) =>{
-			let sf = searchField;
-			sf[field] = val;
-			// setSearchField(JSON.parse(JSON.stringify(sf)));
-			setSearchField(sf);
-			// console.log(val+", "+searchField["FAVORITE"]);
-			modifyAbilityJson.query(AbilityJson,searchField);
-		},
-		clear : () =>{
-			setSearchField(JSON.parse(JSON.stringify(SearchField)));
-			// setSearchField(SearchField);
-			modifyAbilityJson.clear();
-		},
-		query : () =>{
-			modifyAbilityJson.query(AbilityJson,searchField);
-		}
-	}
+	const searchField = state.searchField;
+	const modifySearchField = state.modifySearchField;
 	return <>
 	{/*컨트롤러 */}
 	<div className="controller w3font shadow">
@@ -541,7 +523,7 @@ function AbilityDescriptionContainer({state}) {
 export function Ability(props) {
 	const [viewMode,setViewMode] = useState(false);
 	const [abilityJson,setAbilityJson] = useState(AbilityJson);
-	
+	const [searchField,setSearchField] = useState(SearchField);
 	const modifyViewMode = {
 		set:(val) => {
 			setViewMode(val);
@@ -606,12 +588,32 @@ export function Ability(props) {
 			));
 		}
 	}
-	
+	const modifySearchField = {
+		modify : (field,val) =>{
+			// let sf = searchField;
+			let sf = JSON.parse(JSON.stringify(searchField));
+			sf[field] = val;
+			// setSearchField(JSON.parse(JSON.stringify(sf)));
+			setSearchField(sf);
+			// console.log(val+", "+searchField["FAVORITE"]);
+			modifyAbilityJson.query(AbilityJson,sf);
+		},
+		clear : () =>{
+			// setSearchField(JSON.parse(JSON.stringify(SearchField)));
+			setSearchField(SearchField);
+			modifyAbilityJson.clear();
+		},
+		query : () =>{
+			modifyAbilityJson.query(AbilityJson,searchField);
+		}
+	}
 	const state = {
 		viewMode:viewMode,
 		modifyViewMode:modifyViewMode,
 		abilityJson:abilityJson,
 		modifyAbilityJson:modifyAbilityJson,
+		searchField:searchField,
+		modifySearchField:modifySearchField
 	}
 	return <>
 		{props.isSingle===true?
