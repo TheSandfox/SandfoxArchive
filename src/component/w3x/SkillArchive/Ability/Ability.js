@@ -27,7 +27,7 @@ let FavoritePrefix = "w3x_sa_ability_favorite_";
 
 //즐찾에 있는지 판별하는 함수
 function isFavorite(findfor) {
-	console.log(localStorage.getItem(FavoritePrefix+findfor));
+	// console.log(localStorage.getItem(FavoritePrefix+findfor));
 	return localStorage.getItem(FavoritePrefix+findfor)!==null;
 }
 //즐찾 넣기,빼기
@@ -490,7 +490,7 @@ function AbilitySearchController({state}) {
 		<div className="buttonSpace">
 			{/*필터초기화*/}
 			<div className="icon-button" title='필터 초기화' onClick={
-				modifySearchField.clear
+				()=>{modifySearchField.clear()}
 			}>
 				<i className="fi fi-rr-refresh"></i>
 			</div>
@@ -612,7 +612,7 @@ export function Ability(props) {
 		abilityJson:abilityJson,
 		modifyAbilityJson:modifyAbilityJson,
 		searchField:searchField,
-		modifySearchField:modifySearchField,
+		modifySearchField:modifySearchField
 	}
 	return <>
 		{props.isSingle===true?
