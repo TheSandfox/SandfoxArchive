@@ -263,6 +263,11 @@ i {
 	&.hidden {
 		display: none;
 	}
+	&:hover {
+		&>i {
+			color: #fc0;
+		}
+	}
 }
 /*64x64 워크아이콘*/
 .w3x-icon {

@@ -10,9 +10,9 @@ import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json';
 import CustomString from 'json/w3x/SkillArchive/CustomString.json';
 import 'css/w3x/SkillArchive/Ability/ability.css';
 
-let AbilityJson = AbilityParams["params"];
-let AbilityMixJson = AbilityMix["params"];
-let SearchField = {
+const AbilityJson = AbilityParams["params"];
+const AbilityMixJson = AbilityMix["params"];
+const SearchField = {
 	FAVORITE : false,
 	NAME : "",
 	TIER : "",
@@ -23,7 +23,7 @@ let SearchField = {
 	STAT_BONUS1 : "",
 	STAT_BONUS2 : ""
 };
-let FavoritePrefix = "w3x_sa_ability_favorite_";
+const FavoritePrefix = "w3x_sa_ability_favorite_";
 
 //즐찾에 있는지 판별하는 함수
 function isFavorite(findfor) {
@@ -40,14 +40,16 @@ function removeFavorite(val) {
 function toggleFavorite(val) {
 	if (isFavorite(val)) {
 		removeFavorite(val);
+		return false;
 	} else {
 		addFavorite(val);
+		return true;
 	}
 }
 
 //어빌리티 위젯에 붙는 즐찾버튼
 function FavoriteWidget({json, interact}) {
-	let flag = isFavorite(json["ID"]);
+	const [flag,setFlag] = useState(isFavorite(json["ID"]));
 	// flag만 참이면 즐찾 돼있을 때에만 별 출력
 	// interact상태일 때 즐찾버튼
 	return <div className={
@@ -57,7 +59,7 @@ function FavoriteWidget({json, interact}) {
 		}
 		onClick={
 			()=>{
-				toggleFavorite(json["ID"]);
+				setFlag(toggleFavorite(json["ID"]));
 			}	
 		}
 	>
@@ -294,10 +296,28 @@ function AbilityDescriptionSingle() {
 
 //어빌리티 검색창
 function AbilitySearchController({state}) {
-	const viewMode = state.viewMode
-	const modifyViewMode = state.modifyViewMode
-	const searchField = state.searchField
-	const modifySearchField = state.modifySearchField
+	const viewMode = state.viewMode;
+	const modifyViewMode = state.modifyViewMode;
+	const modifyAbilityJson = state.modifyAbilityJson;
+	const [searchField,setSearchField] = useState(SearchField);
+	const modifySearchField = {
+		modify : (field,val) =>{
+			let sf = searchField;
+			sf[field] = val;
+			// setSearchField(JSON.parse(JSON.stringify(sf)));
+			setSearchField(sf);
+			// console.log(val+", "+searchField["FAVORITE"]);
+			modifyAbilityJson.query(AbilityJson,searchField);
+		},
+		clear : () =>{
+			setSearchField(JSON.parse(JSON.stringify(SearchField)));
+			// setSearchField(SearchField);
+			modifyAbilityJson.clear();
+		},
+		query : () =>{
+			modifyAbilityJson.query(AbilityJson,searchField);
+		}
+	}
 	return <>
 	{/*컨트롤러 */}
 	<div className="controller w3font shadow">
@@ -310,14 +330,10 @@ function AbilitySearchController({state}) {
 				<i className="fi fi-br-menu-burger"></i>
 			</div>
 			{/* 즐찾 */}
+			{/* {console.log(searchField["FAVORITE"])} */}
 			<div className={searchField["FAVORITE"]?"icon-button hover":"icon-button"} title='즐겨찾기' onClick={
-				searchField["FAVORITE"]?()=>{
-					modifySearchField.modify("FAVORITE",false);
-					// modifySearchField.query();
-				}:
 				()=>{
-					modifySearchField.modify("FAVORITE",true);
-					// modifySearchField.query();
+					modifySearchField.modify("FAVORITE",!searchField["FAVORITE"]);
 				}
 			}>
 				<i className={searchField["FAVORITE"]?"fi fi-sr-star favorite active":"fi fi-rr-star favorite"}></i>
@@ -496,7 +512,7 @@ function AbilitySearchController({state}) {
 			</div>
 		</div>
 	</div>
-	</>
+	</>;
 }
 
 //어빌리티 디스크립션 관리자
@@ -525,7 +541,7 @@ function AbilityDescriptionContainer({state}) {
 export function Ability(props) {
 	const [viewMode,setViewMode] = useState(false);
 	const [abilityJson,setAbilityJson] = useState(AbilityJson);
-	const [searchField,setSearchField] = useState(SearchField);
+	
 	const modifyViewMode = {
 		set:(val) => {
 			setViewMode(val);
@@ -590,29 +606,12 @@ export function Ability(props) {
 			));
 		}
 	}
-	const modifySearchField = {
-		modify : (field,val) =>{
-			let sf = searchField;
-			sf[field] = val;
-			setSearchField(sf);
-			// console.log(val+", "+searchField["FAVORITE"]);
-			modifyAbilityJson.query(AbilityJson,searchField);
-		},
-		clear : () =>{
-			setSearchField(SearchField);
-			modifyAbilityJson.clear();
-		},
-		query : () =>{
-			modifyAbilityJson.query(AbilityJson,searchField);
-		}
-	}
+	
 	const state = {
 		viewMode:viewMode,
 		modifyViewMode:modifyViewMode,
 		abilityJson:abilityJson,
 		modifyAbilityJson:modifyAbilityJson,
-		searchField:searchField,
-		modifySearchField:modifySearchField
 	}
 	return <>
 		{props.isSingle===true?
