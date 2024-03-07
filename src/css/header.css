@@ -18,6 +18,12 @@ header>a>.title {
 	font-weight: 600;
 	font-size:20px;
 	padding-left:8px;
+	@media screen and (max-width:280px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width:180px) {
+		font-size: 14px;
+	}
 }
 
 header>.subtitle {

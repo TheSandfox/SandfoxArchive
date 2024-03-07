@@ -8,6 +8,7 @@
 	--color-lightest: rgb(252,255,214);
 	--color-light: rgb(228,208,163);
 	--color-dark: rgb(90,73,55);
+	--color-light-gray: #999;
 	--color-gray: #464546;
 	--color-dark-gray: rgb(33,33,33);
 	--z-controller: 2;
@@ -162,16 +163,14 @@ i {
 	cursor: pointer;
 	min-width:32px;
 	height:32px;
-	&:hover,.hover {
+	color: var(--color-dark);
+	text-shadow: none;
+	user-select: none;
+	border: 2px solid var(--color-light);
+	&:hover, &.hover {
 		background-color: var(--color-dark);
 		border: 2px solid var(--color-light);
-		&>i {
-			color: var(--color-light);
-		}
-	}
-	&.hover {
-		background-color: var(--color-dark);
-		border: 2px solid var(--color-light);
+		color: var(--color-light);
 		&>i {
 			color: var(--color-light);
 		}
@@ -181,6 +180,19 @@ i {
 		text-shadow: none;
 		font-size: 16px;
 	}
+	&.disabled {
+		border-color: var(--color-gray);
+		background-color: var(--color-light-gray);
+		color: var(--color-gray);
+		pointer-events: none;
+	}
+}
+
+.icon-text {
+	vertical-align: bottom;
+	width:1.25em;
+	height:1.25em;
+	margin-right: 0.25em;
 }
 
 /*텍스트 중간에 들어가는 아이콘버튼*/
@@ -228,12 +240,19 @@ i {
 	& .icon-button {
 		width:40px;
 		height:40px;
+		box-shadow: 0 0 8px #0003;
 		&>i {
 			font-size: 24px;
 		}
 	}
 }
 /* 즐찾 */
+*:hover>.favoriteButton {
+	&.disabled {
+		color: #ff9;
+		opacity: 1;
+	}
+}
 .favoriteButton {
 	position: absolute;
 	display: flex;

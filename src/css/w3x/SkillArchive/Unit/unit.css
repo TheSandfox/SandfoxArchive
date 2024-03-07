@@ -77,13 +77,14 @@
 	}
 	@media screen and (max-width:768px) {
 		/* 셀렉터 우선순위 이슈때문에 더 붙여줌 */
-		&.descriptionBox {
+		/* &.descriptionBox {
 			width: calc(64px * 8);
 			flex-direction: column;
-		}
+		} */
 	}
 	@media screen and (max-width:600px) {
 		&.descriptionBox {
+			flex-direction: column;
 			width: 100%;
 		}
 	}

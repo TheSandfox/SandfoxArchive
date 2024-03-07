@@ -1,10 +1,38 @@
 import { Routes, Route } from "react-router-dom";
 import { Ability } from "./Ability/Ability";
 import { Unit } from "./Unit/Unit";
+import { useState } from "react";
 import Nav from "component/Nav";
 import Remote from "component/Remote";
 
+const LocalFavoritePrefix = "w3x_sa_ability_favorite_";
+
 export default function SkillArchive() {
+	const [favorite,setFavorite] = useState({});
+	const modifyFavorite = {
+		isFavorite: (id)=> {
+			return localStorage.getItem(LocalFavoritePrefix+id)!==null;
+		},
+		add: (id)=> {
+			localStorage.setItem(LocalFavoritePrefix+id,'true');
+			setFavorite({});
+		},
+		remove: (id)=> {
+			localStorage.remove(LocalFavoritePrefix+id);
+			setFavorite({});
+		},
+		toggle: (id)=> {
+			if (this.isFavorite(id)) {
+				this.add(id);
+			} else {
+				this.remove(id);
+			}
+		}
+	}
+	const state = {
+		favorite: favorite,
+		modifyFavorite: modifyFavorite
+	}
 	return <>
 		<Nav form={[
 			{
@@ -22,9 +50,9 @@ export default function SkillArchive() {
 			<Routes>
 				<Route exact path="/" element={<div>K-스사막 소개페이지</div>}/>
 				<Route exact path="/Ability" element={<Ability/>}/>
-				<Route path="/Ability/:id" element={<Ability isSingle={true}/>}/>
+				<Route path="/Ability/:id" element={<Ability isSingle={true} state={state}/>}/>
 				<Route exact path="/Unit" element={<Unit/>}/>
-				<Route path="/Unit/:id" element={<Unit isSingle={true}/>}/>
+				<Route path="/Unit/:id" element={<Unit isSingle={true} state={state}/>}/>
 			</Routes>
 		</div>
 		<Remote />

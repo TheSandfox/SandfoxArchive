@@ -23,33 +23,13 @@ const SearchField = {
 	STAT_BONUS1 : "",
 	STAT_BONUS2 : ""
 };
-const FavoritePrefix = "w3x_sa_ability_favorite_";
 
-//즐찾에 있는지 판별하는 함수
-function isFavorite(findfor) {
-	// console.log(localStorage.getItem(FavoritePrefix+findfor));
-	return localStorage.getItem(FavoritePrefix+findfor)!==null;
-}
-//즐찾 넣기,빼기
-function addFavorite(val) {
-	localStorage.setItem(FavoritePrefix+val,"true");
-}
-function removeFavorite(val) {
-	localStorage.removeItem(FavoritePrefix+val);
-}
-function toggleFavorite(val) {
-	if (isFavorite(val)) {
-		removeFavorite(val);
-		return false;
-	} else {
-		addFavorite(val);
-		return true;
-	}
-}
+//로컬 스토리지 키
+const LocalViewmode = "w3x_sa_ability_viewmode";
 
 //어빌리티 위젯에 붙는 즐찾버튼
-function FavoriteWidget({json, interact}) {
-	const [flag,setFlag] = useState(isFavorite(json["ID"]));
+function FavoriteWidget({json, interact, state}) {
+	const flag = state.modifyFavorite.isFavorite(json["id"]);
 	// flag만 참이면 즐찾 돼있을 때에만 별 출력
 	// interact상태일 때 즐찾버튼
 	return <div className={
@@ -59,7 +39,7 @@ function FavoriteWidget({json, interact}) {
 		}
 		onClick={
 			()=>{
-				setFlag(toggleFavorite(json["ID"]));
+				state.modifyFavorite.toggle(json["ID"])
 			}	
 		}
 	>
@@ -73,7 +53,7 @@ export function AbilityWidget({
 	isThisAbility,/*믹스테이블에 들어갈 때 '이 어빌리티'와 같은지 하이라이트*/
 	isSingle,/*상세보기에서 보고있는가*/
 	interactFavorite,/*즐찾위젯 상호작용 여부*/
-	inFavorite/*즐찾에 있는가*/
+	state
 }) {
 	return <div className={'w3x-icon rel'}>
 		{/* json값을 undefined값을 줘서 '비어있는 어빌리티' 표현함 */}
@@ -100,7 +80,7 @@ export function AbilityWidget({
 			{/*클릭 막기*/}
 			{!(isSingle||isThisAbility)?<div className={'highlight non-focus'}></div>:<></>}
 			{/*즐찾 위젯*/}
-			<FavoriteWidget json={json} flag={inFavorite} interact={interactFavorite}/>
+			<FavoriteWidget json={json} state={state} interact={interactFavorite}/>
 		</>
 		:
 		<>
@@ -157,6 +137,7 @@ function AbilityMixTable() {
 
 //어빌리티 디스크립션 (상세or아이콘)
 function AbilityDescription(props) {
+	let viewMode = props.state.viewMode;
 	let abiljson = {}
 	let p = useParams()
 	if (props.json===undefined) {
@@ -187,14 +168,14 @@ function AbilityDescription(props) {
 			"IS_WEAPON":"false",
 		}
 	}
-	if(props.viewMode===true) {
+	if(viewMode===true) {
 		//디테일모드
 		let stl = {
 			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
 		}
 		return <div className="abilityDescription descriptionBox w3font" style={stl}>
 			<div className="top">
-				<AbilityWidget json={abiljson} isSingle={props.isSingle} interactFavorite={true} inFavorite={isFavorite(abiljson["ID"])}/>
+				<AbilityWidget json={abiljson} isSingle={props.isSingle} interactFavorite={true} state={props.state}/>
 				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
 				<div className='name-and-tags'>
 					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
@@ -252,7 +233,7 @@ function AbilityDescription(props) {
 		</div>
 	} else {
 		//아이콘모드
-		return <AbilityWidget json={abiljson} interactFavorite={false}/>
+		return <AbilityWidget json={abiljson} interactFavorite={false} state={props.state}/>
 	}
 
 }
@@ -261,16 +242,16 @@ function AbilityDescription(props) {
 function AbilityDescriptions({state}) {
 	return <>
 		{state.abilityJson.map(desc=>{
-			return <AbilityDescription key={desc.ID} json={desc} viewMode={state.viewMode} isSingle={false}/>		
+			return <AbilityDescription key={desc.ID} json={desc} state={state} isSingle={false}/>		
 		})}
 	</>
 }
 
 //어빌리티 디스크립션 한 개(상세)
 function AbilityDescriptionSingle() {
-	var navigate = useNavigate()
+	var navigate = useNavigate();
 	function goBack() {
-		navigate(-1)
+		navigate(-1);
 	}
 	//어빌툴팁 상세
 	//뒤로가기버튼
@@ -519,15 +500,24 @@ function AbilityDescriptionContainer({state}) {
 	</>
 }
 
+function getViewmode() {
+	return localStorage.getItem(LocalViewmode)!==null;
+}
+
 //어빌리티 메인 컨테이너
 export function Ability(props) {
-	const [viewMode,setViewMode] = useState(false);
+	const [viewMode,setViewMode] = useState(getViewmode());
 	const [abilityJson,setAbilityJson] = useState(AbilityJson);
 	const [searchField,setSearchField] = useState(SearchField);
 	const modifyViewMode = {
 		set:(val) => {
 			setViewMode(val);
-		},
+			if (val) {
+				localStorage.setItem(LocalViewmode,"true");
+			} else {
+				localStorage.removeItem(LocalViewmode);
+			}
+ 		},
 		toggle: ()=> {
 			setViewMode(!viewMode);
 		}
@@ -540,7 +530,7 @@ export function Ability(props) {
 			setAbilityJson(target.filter(item =>
 				/*즐찾*/
 				( form["FAVORITE"]?
-					isFavorite(item["ID"])
+					props.state.modifyFavorite.isFavorite(item["ID"])
 					:
 					true
 				) &&
@@ -613,7 +603,9 @@ export function Ability(props) {
 		abilityJson:abilityJson,
 		modifyAbilityJson:modifyAbilityJson,
 		searchField:searchField,
-		modifySearchField:modifySearchField
+		modifySearchField:modifySearchField,
+		favorite:props.state.favorite,
+		modifyFavorite:props.state.modifyFavorite
 	}
 	return <>
 		{props.isSingle===true?
