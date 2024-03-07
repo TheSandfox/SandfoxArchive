@@ -18,15 +18,16 @@ export default function SkillArchive() {
 			setFavorite({});
 		},
 		remove: (id)=> {
-			localStorage.remove(LocalFavoritePrefix+id);
+			localStorage.removeItem(LocalFavoritePrefix+id);
 			setFavorite({});
 		},
 		toggle: (id)=> {
-			if (this.isFavorite(id)) {
-				this.add(id);
+			if (localStorage.getItem(LocalFavoritePrefix+id)!==null) {
+				localStorage.removeItem(LocalFavoritePrefix+id);
 			} else {
-				this.remove(id);
+				localStorage.setItem(LocalFavoritePrefix+id,'true');
 			}
+			setFavorite({});
 		}
 	}
 	const state = {
@@ -49,9 +50,9 @@ export default function SkillArchive() {
 		<div className="mid">
 			<Routes>
 				<Route exact path="/" element={<div>K-스사막 소개페이지</div>}/>
-				<Route exact path="/Ability" element={<Ability/>}/>
+				<Route exact path="/Ability" element={<Ability state={state}/>}/>
 				<Route path="/Ability/:id" element={<Ability isSingle={true} state={state}/>}/>
-				<Route exact path="/Unit" element={<Unit/>}/>
+				<Route exact path="/Unit" element={<Unit state={state}/>}/>
 				<Route path="/Unit/:id" element={<Unit isSingle={true} state={state}/>}/>
 			</Routes>
 		</div>

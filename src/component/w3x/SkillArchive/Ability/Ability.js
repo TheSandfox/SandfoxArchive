@@ -29,7 +29,7 @@ const LocalViewmode = "w3x_sa_ability_viewmode";
 
 //어빌리티 위젯에 붙는 즐찾버튼
 function FavoriteWidget({json, interact, state}) {
-	const flag = state.modifyFavorite.isFavorite(json["id"]);
+	const flag = state.modifyFavorite.isFavorite(json["ID"]);
 	// flag만 참이면 즐찾 돼있을 때에만 별 출력
 	// interact상태일 때 즐찾버튼
 	return <div className={
@@ -91,7 +91,7 @@ export function AbilityWidget({
 }
 
 //어빌리티 조합
-function AbilityMixTable() {
+function AbilityMixTable({state}) {
 	let id = useParams().id
 	/*이 어빌을 만들기 위한 재료*/
 	let lower = AbilityMixJson.filter(item=>item["RESULT"]===id)
@@ -108,11 +108,11 @@ function AbilityMixTable() {
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
 					</div>
 				})}
 			</div>:<></>}
@@ -122,11 +122,11 @@ function AbilityMixTable() {
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
 				</div>
 				})}
 			</div>:<></>}
@@ -137,9 +137,14 @@ function AbilityMixTable() {
 
 //어빌리티 디스크립션 (상세or아이콘)
 function AbilityDescription(props) {
-	let viewMode = props.state.viewMode;
+	let viewMode
 	let abiljson = {}
 	let p = useParams()
+	if (props.viewMode===undefined) {
+		viewMode = props.state.viewMode;
+	} else {
+		viewMode = props.viewMode;
+	}
 	if (props.json===undefined) {
 		//제이슨 없이 param으로 라우팅해서 컴포넨트 호출
 		abiljson = AbilityJson.filter(item=>item["ID"]===p.id)[0]//AbilityJson[AbilityMap[p.id]]
@@ -248,7 +253,7 @@ function AbilityDescriptions({state}) {
 }
 
 //어빌리티 디스크립션 한 개(상세)
-function AbilityDescriptionSingle() {
+function AbilityDescriptionSingle({state}) {
 	var navigate = useNavigate();
 	function goBack() {
 		navigate(-1);
@@ -258,8 +263,8 @@ function AbilityDescriptionSingle() {
 	return <>
 		<div className='abilityContainer single'>
 			<div className='abilitySingleContainer'>
-				<AbilityDescription viewMode={true} isSingle={true}/>
-				<AbilityMixTable/>
+				<AbilityDescription viewMode={true} isSingle={true} state={state}/>
+				<AbilityMixTable state={state}/>
 				<div className='btn-container'>
 					<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
 					<i className={"fi fi-bs-angle-left"}></i>
@@ -609,7 +614,9 @@ export function Ability(props) {
 	}
 	return <>
 		{props.isSingle===true?
-			<AbilityDescriptionSingle/>
+			<AbilityDescriptionSingle
+				state={state}
+			/>
 			:
 			<AbilityDescriptionContainer
 				state={state}
