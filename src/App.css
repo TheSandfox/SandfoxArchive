@@ -241,7 +241,7 @@ i {
 		height:40px;
 		box-shadow: 0 0 8px #0003;
 		opacity: 0.66;
-		transition: opacity 0.25s;
+		transition: 0.25s;
 		&>svg {
 			font-size: 24px;
 		}
@@ -291,6 +291,9 @@ i {
 		cursor: default;
 		pointer-events: none;
 		background: none;
+		&>svg {
+			filter: drop-shadow(2px 2px #0009);
+		}
 	}
 	&.hidden {
 		display: none;

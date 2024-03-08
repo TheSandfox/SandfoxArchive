@@ -328,6 +328,7 @@ function AbilitySearchController({state}) {
 			<p className="name">이름</p>
 			<input 
 				type="text"
+				name="abilityname"
 				value={searchField["NAME"]}
 				onChange={(event)=>{modifySearchField.modify("NAME",event.target.value)}}
 			/>
@@ -341,6 +342,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">티어</p>
 			<select 
+				name="tier"
 				value={searchField["TIER"]}
 				onChange={(event)=>{modifySearchField.modify("TIER",event.target.value)}}
 			>
@@ -361,6 +363,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">태그</p>
 			<input 
+				name="tag"
 				type="text"
 				value={searchField["TAG"]}
 				onChange={(event)=>{modifySearchField.modify("TAG",event.target.value)}}
@@ -375,6 +378,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">시전 유형</p>
 			<select
+				name="casttype"
 				value={searchField["CAST_TYPE"]}
 				onChange={(event)=>{modifySearchField.modify("CAST_TYPE",event.target.value)}}
 			>
@@ -396,6 +400,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">피해 유형</p>
 			<select
+				name="damagetype"
 				value={searchField["DAMAGE_TYPE"]}
 				onChange={(event)=>{modifySearchField.modify("DAMAGE_TYPE",event.target.value)}}
 			>
@@ -414,6 +419,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">공격 유형</p>
 			<select
+				name="attacktype"
 				value={searchField["ATTACK_TYPE"]}
 				onChange={(event)=>{modifySearchField.modify("ATTACK_TYPE",event.target.value)}}
 			>
@@ -432,6 +438,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">스탯1</p>
 			<select
+				name="statbonus1"
 				value={searchField["STAT_BONUS1"]}
 				onChange={(event)=>{modifySearchField.modify("STAT_BONUS1",event.target.value)}}
 			>
@@ -461,6 +468,7 @@ function AbilitySearchController({state}) {
 		<div className="item">
 			<p className="name">스탯2</p>
 			<select
+				name="statbonus2"
 				value={searchField["STAT_BONUS2"]}
 				onChange={(event)=>{modifySearchField.modify("STAT_BONUS2",event.target.value)}}
 			>
@@ -614,7 +622,7 @@ export function Ability(props) {
 			setSearchField(SearchField);
 			modifyAbilityJson.clear();
 		},
-		query : () =>{
+		refresh : () =>{
 			modifyAbilityJson.query(AbilityJson,searchField);
 		}
 	}

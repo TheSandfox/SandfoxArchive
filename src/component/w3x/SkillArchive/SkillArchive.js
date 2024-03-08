@@ -64,7 +64,7 @@ export default function SkillArchive() {
 		modifyAbilityFavorite: new modifyAbilityFavorite(),
 		unitFavorite: unitFavorite,
 		modifyUnitFavorite: new modifyUnitFavorite()
-	}
+	};
 	return <>
 		<Nav form={[
 			{

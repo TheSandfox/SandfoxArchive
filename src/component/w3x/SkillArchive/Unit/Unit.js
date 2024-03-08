@@ -154,7 +154,8 @@ function UnitSearchController({state}) {
 		{/*이름검색*/}
 		<div className="item">
 			<p className="name">이름</p>
-			<input 
+			<input
+				name="unitname"
 				type="text"
 				value={searchField["NAME"]}
 				onChange={(event)=>{modifySearchField.query("NAME",event.target.value)}}
