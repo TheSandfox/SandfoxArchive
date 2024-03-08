@@ -11,7 +11,7 @@
 	color:#ffffff;
 	z-index: var(--z-controller);
 	min-width:256px;
-	& i.favorite {
+	& svg.favorite {
 		color: #999;
 		&.active {
 			color: #ffcc00;

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+import { FaYoutube, FaGithub } from "react-icons/fa";
+
 function W3xWidget({route,title,disabled,imgPath}) {
 	let title2 = title.replace('<br>','\n');
 	return <Link to={route} className={disabled?'disabled':''}>
@@ -29,12 +31,12 @@ export default function Main() {
 		<div className="bottomRightButtonContainer">
 			<Link to="https://www.youtube.com/@THESANDFOX49" target="_blank">
 				<div className="icon-button youtube">
-					<i className="fi fi-brands-youtube"></i>
+					<FaYoutube />
 				</div>
 			</Link>
 			<Link to="https://github.com/TheSandfox" target="_blank">
 				<div className="icon-button github">
-					<i className="fi fi-brands-github"></i>
+					<FaGithub />
 				</div>
 			</Link>
 		</div>

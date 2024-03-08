@@ -5,34 +5,65 @@ import { useState } from "react";
 import Nav from "component/Nav";
 import Remote from "component/Remote";
 
-const LocalFavoritePrefix = "w3x_sa_ability_favorite_";
+const LocalAbilityFavoritePrefix = "w3x_sa_ability_favorite_";
+const LocalUnitFavoritePrefix = "w3x_sa_unit_favorite_";
 
 export default function SkillArchive() {
-	const [favorite,setFavorite] = useState({});
-	const modifyFavorite = {
-		isFavorite: (id)=> {
-			return localStorage.getItem(LocalFavoritePrefix+id)!==null;
-		},
-		add: (id)=> {
-			localStorage.setItem(LocalFavoritePrefix+id,'true');
-			setFavorite({});
-		},
-		remove: (id)=> {
-			localStorage.removeItem(LocalFavoritePrefix+id);
-			setFavorite({});
-		},
-		toggle: (id)=> {
-			if (localStorage.getItem(LocalFavoritePrefix+id)!==null) {
-				localStorage.removeItem(LocalFavoritePrefix+id);
-			} else {
-				localStorage.setItem(LocalFavoritePrefix+id,'true');
-			}
-			setFavorite({});
+	const [abilityFavorite,setAbilityFavorite] = useState({});
+	const [unitFavorite,setUnitFavorite] = useState({});
+	class modifyAbilityFavorite {
+		isFavorite(id) {
+			return localStorage.getItem(LocalAbilityFavoritePrefix+id)!==null;
 		}
-	}
+		refresh() {
+			setAbilityFavorite({});
+		}
+		add(id) {
+			localStorage.setItem(LocalAbilityFavoritePrefix+id,'true');
+			this.refresh();
+		}
+		remove(id) {
+			localStorage.removeItem(LocalAbilityFavoritePrefix+id);
+			this.refresh();
+		}
+		toggle(id) {
+			if (this.isFavorite(id)) {
+				this.remove(id);
+			} else {
+				this.add(id);
+			}
+			//remove, add 내에서 리프레시
+		}
+	};
+	class modifyUnitFavorite {
+		isFavorite(id) {
+			return localStorage.getItem(LocalUnitFavoritePrefix+id)!==null;
+		}
+		refresh() {
+			setUnitFavorite({});
+		}
+		add(id) {
+			localStorage.setItem(LocalUnitFavoritePrefix+id,'true');
+			this.refresh();
+		}
+		remove(id) {
+			localStorage.removeItem(LocalUnitFavoritePrefix+id);
+			this.refresh();
+		}
+		toggle(id) {
+			if (this.isFavorite(id)) {
+				this.remove(id);
+			} else {
+				this.add(id);
+			}
+			//remove, add 내에서 리프레시
+		}
+	};
 	const state = {
-		favorite: favorite,
-		modifyFavorite: modifyFavorite
+		abilityFavorite: abilityFavorite,
+		modifyAbilityFavorite: new modifyAbilityFavorite(),
+		unitFavorite: unitFavorite,
+		modifyUnitFavorite: new modifyUnitFavorite()
 	}
 	return <>
 		<Nav form={[

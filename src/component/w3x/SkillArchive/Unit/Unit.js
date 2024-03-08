@@ -2,6 +2,13 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
+//import icons
+import { TfiLayoutGrid2 } from "react-icons/tfi";
+import { FiMenu } from "react-icons/fi";
+import { LuRefreshCw } from "react-icons/lu";
+import { IoIosArrowBack } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
+
 //import component
 import { AbilityWidget } from '../Ability/Ability'
 
@@ -16,6 +23,7 @@ import 'css/w3x/SkillArchive/Unit/unit.css'
 const AbilityJson = AbilityParams["params"]
 const UnitJson = UnitParams["params"]
 const SearchField = {
+	FAVORITE : false,
 	NAME : ""
 }
 
@@ -66,20 +74,20 @@ function UnitDescription(props) {
 				<p className='white'>고유 능력 : </p>
 				{json["INITIAL_ABILITY1"]!=="null"?
 					<div>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]} state={props.state}/>
 					</div>
 					:
 					<div style={{opacity:0.3}}>
-						<AbilityWidget json={undefined}/>
+						<AbilityWidget json={undefined} state={props.state}/>
 					</div>
 				}
 				{json["INITIAL_ABILITY2"]!=="null"?
 					<div>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]}/>
+						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]} state={props.state}/>
 					</div>
 					:
 					<div style={{opacity:0.3}}>
-						<AbilityWidget json={undefined}/>
+						<AbilityWidget json={undefined} state={props.state}/>
 					</div>
 				}
 			</div>
@@ -100,25 +108,25 @@ function UnitDescription(props) {
 function UnitDescriptions({state}) {
 	return <>
 		{state.unitJson.map(desc=>{
-			return <UnitDescription key={desc.ID} json={desc} viewMode={state.viewMode}/>		
+			return <UnitDescription key={desc.ID} json={desc} viewMode={state.viewMode} state={state}/>		
 		})}
 	</>
 }
 
 //유닛 디스크립션 한 개(상세)
-function UnitDescriptionSingle() {
+function UnitDescriptionSingle({state}) {
 	var navigate = useNavigate()
 	function goBack() {
-		navigate(-1)
+		navigate(-1);
 	}
 	//유닛툴팁 상세
 	//뒤로가기버튼
 	return <>
 		<div className='unitContainer single'>
 			<div className='unitSingleContainer'>
-				<UnitDescription viewMode={true}/>
+				<UnitDescription viewMode={true} state={state}/>
 				<div className='unit-single-back-div icon-button' onClick={goBack}>
-				<i className={"fi fi-bs-angle-left"}></i>
+					<IoIosArrowBack />
 				</div>
 			</div>
 		</div>
@@ -137,10 +145,10 @@ function UnitSearchController({state}) {
 		{/*체크박스 */}
 		<div className="radio">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
-				<i className="fi fi-rs-apps"></i>
+				<TfiLayoutGrid2 />
 			</div>
 			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
-				<i className="fi fi-br-menu-burger"></i>
+				<FiMenu />
 			</div>
 		</div>
 		{/*이름검색*/}
@@ -154,7 +162,7 @@ function UnitSearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.query("NAME","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*버튼스페이스*/}
@@ -163,7 +171,7 @@ function UnitSearchController({state}) {
 			<div className="icon-button" title='필터 초기화' onClick={
 				modifySearchField.clear
 			}>
-				<i className="fi fi-rr-refresh"></i>
+				<LuRefreshCw />
 			</div>
 		</div>
 	</div>
@@ -233,11 +241,17 @@ export function Unit(props) {
 		unitJson:unitJson,
 		modifyUnitJson:modifyUnitJson,
 		searchField:searchField,
-		modifySearchField:modifySearchField
+		modifySearchField:modifySearchField,
+		abilityFavorite:props.state.abilityFavorite,
+		modifyAbilityFavorite:props.state.modifyAbilityFavorite,
+		unitFavorite:props.state.unitFavorite,
+		modifyUnitFavorite:props.state.modifyUnitFavorite
 	}
 	return <>
 	{props.isSingle===true?
-		<UnitDescriptionSingle/>
+		<UnitDescriptionSingle
+			state={state}
+		/>
 		:
 		<UnitDescriptionContainer 
 			state={state}

@@ -2,6 +2,14 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
+//import icons
+import { FaStar, FaRegStar } from "react-icons/fa6";
+import { TfiLayoutGrid2 } from "react-icons/tfi";
+import { FiMenu } from "react-icons/fi";
+import { LuRefreshCw } from "react-icons/lu";
+import { IoIosArrowBack } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
+
 //import JSON
 import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json';
 import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json';
@@ -29,7 +37,7 @@ const LocalViewmode = "w3x_sa_ability_viewmode";
 
 //어빌리티 위젯에 붙는 즐찾버튼
 function FavoriteWidget({json, interact, state}) {
-	const flag = state.modifyFavorite.isFavorite(json["ID"]);
+	const flag = state.modifyAbilityFavorite.isFavorite(json["ID"]);
 	// flag만 참이면 즐찾 돼있을 때에만 별 출력
 	// interact상태일 때 즐찾버튼
 	return <div className={
@@ -39,11 +47,15 @@ function FavoriteWidget({json, interact, state}) {
 		}
 		onClick={
 			()=>{
-				state.modifyFavorite.toggle(json["ID"])
+				state.modifyAbilityFavorite.toggle(json["ID"])
 			}	
 		}
 	>
-		<i className={flag?"fi fi-sr-star active":"fi fi-rr-star"}></i>
+		{flag?
+			<FaStar className={"active"}></FaStar>
+			:
+			<FaRegStar></FaRegStar>
+		}
 	</div>;
 }
 
@@ -267,11 +279,11 @@ function AbilityDescriptionSingle({state}) {
 				<AbilityMixTable state={state}/>
 				<div className='btn-container'>
 					<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
-					<i className={"fi fi-bs-angle-left"}></i>
+						<IoIosArrowBack />
 					</div>
 					<Link to={"/w3x/SkillArchive/Ability/"}>
 						<div className='icon-button' title={'목록'}>
-							<i className="fi fi-br-menu-burger"></i>
+							<FiMenu />
 						</div>
 					</Link>
 				</div>
@@ -292,10 +304,10 @@ function AbilitySearchController({state}) {
 		{/*체크박스 */}
 		<div className="radio">
 			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
-				<i className="fi fi-rs-apps"></i>
+				<TfiLayoutGrid2 />
 			</div>
 			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
-				<i className="fi fi-br-menu-burger"></i>
+				<FiMenu />
 			</div>
 			{/* 즐찾 */}
 			{/* {console.log(searchField["FAVORITE"])} */}
@@ -304,7 +316,11 @@ function AbilitySearchController({state}) {
 					modifySearchField.modify("FAVORITE",!searchField["FAVORITE"]);
 				}
 			}>
-				<i className={searchField["FAVORITE"]?"fi fi-sr-star favorite active":"fi fi-rr-star favorite"}></i>
+				{searchField["FAVORITE"]?
+					<FaStar className='favorite active'/>
+					:
+					<FaRegStar className='favorite'/>
+				}
 			</div>
 		</div>
 		{/*이름검색*/}
@@ -318,7 +334,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("NAME","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*티어필터링*/}
@@ -338,7 +354,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("TIER","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*태그검색*/}
@@ -352,7 +368,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("TAG","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*캐스트타입검색*/}
@@ -373,7 +389,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("CAST_TYPE","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*피해 유형*/}
@@ -391,7 +407,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("DAMAGE_TYPE","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*공격 유형*/}
@@ -409,7 +425,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("ATTACK_TYPE","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*스탯보너스1*/}
@@ -438,7 +454,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("STAT_BONUS1","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*스탯보너스2*/}
@@ -467,7 +483,7 @@ function AbilitySearchController({state}) {
 			<div className="text-button"
 				onClick={()=>{modifySearchField.modify("STAT_BONUS2","")}}
 			>
-				<i className="fi fi-rr-cross-small"></i>
+				<RxCross2 />
 			</div>
 		</div>
 		{/*버튼스페이스*/}
@@ -476,7 +492,7 @@ function AbilitySearchController({state}) {
 			<div className="icon-button" title='필터 초기화' onClick={
 				()=>{modifySearchField.clear()}
 			}>
-				<i className="fi fi-rr-refresh"></i>
+				<LuRefreshCw />
 			</div>
 		</div>
 	</div>
@@ -535,7 +551,7 @@ export function Ability(props) {
 			setAbilityJson(target.filter(item =>
 				/*즐찾*/
 				( form["FAVORITE"]?
-					props.state.modifyFavorite.isFavorite(item["ID"])
+					props.state.modifyAbilityFavorite.isFavorite(item["ID"])
 					:
 					true
 				) &&
@@ -609,8 +625,8 @@ export function Ability(props) {
 		modifyAbilityJson:modifyAbilityJson,
 		searchField:searchField,
 		modifySearchField:modifySearchField,
-		favorite:props.state.favorite,
-		modifyFavorite:props.state.modifyFavorite
+		abilityFavorite:props.state.Favorite,
+		modifyAbilityFavorite:props.state.modifyAbilityFavorite
 	}
 	return <>
 		{props.isSingle===true?

@@ -9,15 +9,15 @@ header {
 	z-index: var(--z-header);
 	height: 40px;
 	align-items: center;
-	justify-content: left;
+	justify-content: space-between;
 	font-family: 'Malgun Gothic';
 	text-shadow: none;
+	padding: 8px;
 }
 
 header>a>.title {
 	font-weight: 600;
 	font-size:20px;
-	padding-left:8px;
 	@media screen and (max-width:280px) {
 		font-size: 16px;
 	}

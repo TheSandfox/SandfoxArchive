@@ -102,19 +102,13 @@
 }
 
 .youtube {
-	&>i {
-		transition: 0.2s;
-	}
-	&:hover>i {
+	&:hover>svg {
 		color:#c4302b;
 	}
 }
 
 .github{
-	&>i {
-		transition: 0.2s;
-	}
-	&:hover>i {
+	&:hover>svg {
 		color:#000;
 	}
 }

@@ -1,4 +1,3 @@
-@import "~@flaticon/flaticon-uicons/css/all/all";
 @font-face {
 	font-family: 'W2002'; /* 폰트 이름 설정 */
 	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
@@ -171,11 +170,11 @@ i {
 		background-color: var(--color-dark);
 		border: 2px solid var(--color-light);
 		color: var(--color-light);
-		&>i {
+		&>svg {
 			color: var(--color-light);
 		}
 	}
-	&>i {
+	&>svg {
 		color: var(--color-dark);
 		text-shadow: none;
 		font-size: 16px;
@@ -204,7 +203,7 @@ i {
 	cursor: pointer;
 	width:1em;
 	height:1em;
-	&>i {
+	&>svg {
 		color: inherit;
 		/*text-shadow: none;*/
 	}
@@ -241,8 +240,22 @@ i {
 		width:40px;
 		height:40px;
 		box-shadow: 0 0 8px #0003;
-		&>i {
+		opacity: 0.66;
+		transition: opacity 0.25s;
+		&>svg {
 			font-size: 24px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	@media screen and (max-width:320px) {
+		& .icon-button {
+			width:32px;
+			height:32px;
+			&>svg {
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -265,7 +278,7 @@ i {
 	background-color: #0009;
 	border-radius: 0 0 4px 0;
 	cursor: pointer;
-	&>i {
+	&>svg {
 		text-align: center;
 		font-size: 16px;
 		color: #999;
@@ -283,7 +296,7 @@ i {
 		display: none;
 	}
 	&:hover {
-		&>i {
+		&>svg {
 			color: #fc0;
 		}
 	}
