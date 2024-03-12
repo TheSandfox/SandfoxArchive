@@ -1,4 +1,4 @@
-@import url('https://thesandfox.github.io/mycolor.css');
+@import url('https://thesandfox.github.io/css/mycolor.css');
 @font-face {
 	font-family: 'W2002'; /* 폰트 이름 설정 */
 	src: url('./css/2002.ttf') format('truetype'); /* 폰트 파일 경로 설정 */
