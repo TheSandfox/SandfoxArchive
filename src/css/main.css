@@ -102,13 +102,17 @@
 }
 
 .youtube {
-	&:hover>svg {
-		color:#c4302b;
+	@media (pointer:fine){
+		&:hover>svg {
+			color:#c4302b;
+		}
 	}
 }
 
 .github{
-	&:hover>svg {
-		color:#000;
+	@media (pointer:fine){
+		&:hover>svg {
+			color:#000;
+		}
 	}
 }
