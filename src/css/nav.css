@@ -3,7 +3,7 @@ nav {
 	left:0px;
 	top: var(--header-height);
 	width: var(--nav-width);
-	height: 10000%;
+	height: calc(100vh - var(--header-height));
 	/* min-width:48px; */
 	display: block;
 	z-index: var(--z-nav);
