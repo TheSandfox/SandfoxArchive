@@ -15,14 +15,54 @@ header {
 	padding: 8px;
 }
 
-header>a>.title {
-	font-weight: 600;
-	font-size:20px;
-	@media screen and (max-width:280px) {
-		font-size: 16px;
+header>.titleAndRoutes {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	user-select: none;
+	&>a>.title {
+		font-weight: 600;
+		font-size:20px;
+		@media screen and (max-width:480px) {
+			font-size: 16px;
+		}
+		/* @media screen and (max-width:360px) {
+			font-size: 14px;
+		} */
 	}
-	@media screen and (max-width:180px) {
-		font-size: 14px;
+	&>.routes {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		font-weight: bold;
+		&>.route {
+			text-decoration: underline;
+			position: relative;
+			&.last {
+				text-decoration: none;
+				text-shadow: 2px 2px 0 #0003;
+				color: white;
+			}
+			&::before {
+				display: block;
+				position: absolute;
+				content: '/';
+				font-weight: bold;
+				width:16px;
+				height: 32px;
+				top:0;
+				left:-16px;
+				text-align: center;
+			}
+		}
+		/* 480px에서 축소 */
+		@media screen and (max-width:480px) {
+			font-size:12px;
+		}
+		/* 360px에서 비표시 */
+		@media screen and (max-width:360px) {
+			display: none;
+		}
 	}
 }
 

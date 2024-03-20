@@ -3,7 +3,6 @@ import { Ability } from "./Ability/Ability";
 import { Unit } from "./Unit/Unit";
 import { useState } from "react";
 import Nav from "component/Nav";
-import Remote from "component/Remote";
 
 const LocalAbilityFavoritePrefix = "w3x_sa_ability_favorite_";
 const LocalUnitFavoritePrefix = "w3x_sa_unit_favorite_";
@@ -87,6 +86,5 @@ export default function SkillArchive() {
 				<Route path="/Unit/:id" element={<Unit isSingle={true} state={state}/>}/>
 			</Routes>
 		</div>
-		<Remote />
 	</>
 }
