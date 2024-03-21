@@ -7,7 +7,7 @@ function HeaderRouter({pathName}) {
 	let jsxs = [];
 	let str = '';
 	stringArr.forEach((route,index) => {
-		if (route===''){return;}
+		if (route===''){return false;}
 		str+=`/${route}`;
 		if(index>=stringArr.length-1){
 			jsxs.push(<div className='route last' key={route}>{route}</div>);
