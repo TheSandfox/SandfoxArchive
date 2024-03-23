@@ -31,9 +31,6 @@ header>.titleAndRoutes {
 		} */
 	}
 	&>.routes {
-		display: flex !important;
-		align-items: center;
-		gap: 16px;
 		font-weight: bold;
 		&>.route {
 			text-decoration: underline;
@@ -54,6 +51,11 @@ header>.titleAndRoutes {
 				left:-16px;
 				text-align: center;
 			}
+		}
+		@media screen {
+			display: flex;
+			align-items: center;
+			gap: 16px;
 		}
 		/* 480px에서 축소 */
 		@media screen and (max-width:480px) {
