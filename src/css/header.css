@@ -31,7 +31,7 @@ header>.titleAndRoutes {
 		} */
 	}
 	&>.routes {
-		display: flex;
+		display: flex !important;
 		align-items: center;
 		gap: 16px;
 		font-weight: bold;

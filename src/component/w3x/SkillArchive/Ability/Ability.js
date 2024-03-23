@@ -281,7 +281,7 @@ function AbilityDescriptionSingle({state}) {
 					<div className='icon-button' onClick={goBack} title={'뒤로가기'}>
 						<IoIosArrowBack />
 					</div>
-					<Link to={"/w3x/SkillArchive/Ability/"}>
+					<Link to={"/w3x/SkillArchive/Ability"}>
 						<div className='icon-button' title={'목록'}>
 							<FiMenu />
 						</div>
