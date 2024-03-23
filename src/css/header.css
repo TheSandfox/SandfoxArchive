@@ -13,6 +13,9 @@ header {
 	font-family: 'Malgun Gothic';
 	text-shadow: none;
 	padding: 8px;
+	@media screen and (max-width:320px) {
+		justify-content: center;
+	}
 }
 
 header>.titleAndRoutes {
@@ -23,12 +26,25 @@ header>.titleAndRoutes {
 	&>a>.title {
 		font-weight: 600;
 		font-size:20px;
+		&>img {
+			width:100%;
+			height:100%;
+			display:none;
+		}
 		@media screen and (max-width:480px) {
 			font-size: 16px;
 		}
-		/* @media screen and (max-width:360px) {
-			font-size: 14px;
-		} */
+		@media screen and (max-width:320px) {
+			width: 32px;
+			height: 32px;
+			font-size: 0;
+			box-sizing: content-box;
+			border-radius: 4px;
+			border: 1px solid var(--color-dark);
+			&>img {
+				display: block;
+			}
+		}
 	}
 	&>.routes {
 		font-weight: bold;
@@ -53,8 +69,8 @@ header>.titleAndRoutes {
 			}
 		}
 		@media screen {
-			display: flex;
-			align-items: center;
+			display: flex !important;
+			align-items: center !important;
 			gap: 16px;
 		}
 		/* 480px에서 축소 */
@@ -63,7 +79,7 @@ header>.titleAndRoutes {
 		}
 		/* 360px에서 비표시 */
 		@media screen and (max-width:360px) {
-			display: none;
+			display: none !important;
 		}
 	}
 }

@@ -25,7 +25,7 @@ export default function Header() {
 	return (
 		<header>
 			<div className={'titleAndRoutes'}>
-			<Link to="/"><h1 className="title">SandfoxArchive.info</h1></Link>
+			<Link to="/"><h1 className="title">SandfoxArchive.info<img src={process.env.PUBLIC_URL+'/sandfoxmain.png'} alt='sandfoxarchive'/></h1></Link>
 			<HeaderRouter pathName={loc.pathname}/>
 			</div>
 		</header>
