@@ -17,15 +17,15 @@ export default function Main() {
 		<h2>
 			모래여우저장소	
 		</h2>
-		<img src={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
+		<img src={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 		<div className="mainMenu">
 			<p>
-				<img className={'icon-text'} src={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} alt='유즈맵 아이콘'/>
+				<img className={'icon-text'} src={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} alt='유즈맵 아이콘'/>
 				유즈맵 페이지:
 			</p>
 			<div className="list">
-				<W3xWidget route="/w3x/SkillArchive" title="K-스사막" imgPath={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} disabled={false}/>
-				<W3xWidget route="" title="피전트의 城교육<br>(준비중)" imgPath={process.env.PUBLIC_URL+"/sandfoxmainv2.png"} disabled={true}/>
+				<W3xWidget route="/w3x/SkillArchive" title="K-스사막" imgPath={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} disabled={false}/>
+				<W3xWidget route="" title="피전트의 城교육<br>(준비중)" imgPath={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} disabled={true}/>
 			</div>
 		</div>
 		<div className="bottomRightButtonContainer">

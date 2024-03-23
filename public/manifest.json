@@ -3,17 +3,17 @@
   "name": "Sandfox Archive",
   "icons": [
     {
-      "src": "sandfoxv2.ico",
+      "src": "icons/icon_main_small.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "sandfoxmainv2.png",
+      "src": "icons/icon_main_large.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "sandfoxmainv2.png",
+      "src": "icons/icon_main_large.png",
       "type": "image/png",
       "sizes": "512x512"
     }

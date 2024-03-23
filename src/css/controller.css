@@ -74,4 +74,9 @@
 		top: 0;
 		right: 0;
 	}
+	@media screen and (max-width:360px) {
+		&>.radio {
+			justify-content: center;
+		}
+	}
 }

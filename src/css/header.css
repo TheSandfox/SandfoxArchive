@@ -13,7 +13,7 @@ header {
 	font-family: 'Malgun Gothic';
 	text-shadow: none;
 	padding: 8px;
-	@media screen and (max-width:320px) {
+	@media screen and (max-width:360px) {
 		justify-content: center;
 	}
 }
@@ -31,16 +31,13 @@ header>.titleAndRoutes {
 			height:100%;
 			display:none;
 		}
-		@media screen and (max-width:480px) {
+		@media screen and (max-width:600px) {
 			font-size: 16px;
 		}
-		@media screen and (max-width:320px) {
+		@media screen and (max-width:360px) {
 			width: 32px;
 			height: 32px;
 			font-size: 0;
-			box-sizing: content-box;
-			border-radius: 4px;
-			border: 1px solid var(--color-dark);
 			&>img {
 				display: block;
 			}
@@ -74,7 +71,7 @@ header>.titleAndRoutes {
 			gap: 16px;
 		}
 		/* 480px에서 축소 */
-		@media screen and (max-width:480px) {
+		@media screen and (max-width:600px) {
 			font-size:12px;
 		}
 		/* 360px에서 비표시 */
