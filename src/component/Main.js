@@ -20,12 +20,12 @@ export default function Main() {
 		<img src={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
 		<div className="mainMenu">
 			<p>
-				<img className={'icon-text'} src={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} alt='유즈맵 아이콘'/>
+				<img className={'icon-text'} src={process.env.PUBLIC_URL+"/icons/icon_w3x.png"} alt='유즈맵 아이콘'/>
 				유즈맵 페이지:
 			</p>
 			<div className="list">
-				<W3xWidget route="/w3x/SkillArchive" title="K-스사막" imgPath={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} disabled={false}/>
-				<W3xWidget route="" title="피전트의 城교육<br>(준비중)" imgPath={process.env.PUBLIC_URL+"/icons/icon_main_large.png"} disabled={true}/>
+				<W3xWidget route="/w3x/SkillArchive" title="K-스사막" imgPath={process.env.PUBLIC_URL+"/icons/BTNicon_skill_archive.png"} disabled={false}/>
+				<W3xWidget route="" title="피전트의 城교육<br>(준비중)" imgPath={process.env.PUBLIC_URL+"/icons/BTNicon_castle_education.png"} disabled={true}/>
 			</div>
 		</div>
 		<div className="bottomRightButtonContainer">

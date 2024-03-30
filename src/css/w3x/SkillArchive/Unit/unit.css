@@ -45,13 +45,13 @@
 	&>.left {
 		flex: 1;
 		&>.top {
-			display: flex;
+			display: flex !important;
 			gap: 16px;
-			align-items: center;
+			align-items: center !important;
 		}
 	}
 	&>.right {
-		display: flex;
+		display: flex !important;
 		flex: 1;
 		flex-direction: row;
 		justify-content: flex-end;
@@ -62,12 +62,12 @@
 		}
 		&>p {
 			height: 64px;
-			display: flex;
+			display: flex !important;
 			align-items: center;
 			flex-direction: row;
 			justify-content: flex-start;
 			@media screen and (max-width:320px) {
-				display: none;
+				display: none !important;
 			}
 		}
 		/* &>div {
