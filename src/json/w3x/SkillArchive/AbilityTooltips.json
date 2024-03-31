@@ -254,7 +254,7 @@
 	},
 	"20p0":{
 		"ID":"20p0",
-		"TOOLTIP":"지정한 방향으로 거미줄을 발사하여 처음 적중하는 적에게 <span style=\"color: #ff9900;\">0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">이동속도를 33%</span>, <span style=\"color: #ffcc99;\">방어력을 0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소시키고 이동기 사용을 제한합니다."
+		"TOOLTIP":"지정한 방향으로 거미줄을 발사하여 처음 적중하는 적에게 <span style=\"color: #ff9900;\">0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #ffffff;\">5.0초</span> 동안 <span style=\"color: #ffff99;\">이동속도를 33%</span>, <span style=\"color: #ffcc99;\">방어력을 0.4×<img src=\"/resource/ui/widgets/tooltips/human/tooltipaccuracyicon.png\" title=\"정확도\"/>×(1+0.07×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 감소시키며 이동기 사용을 제한합니다."
 	},
 	"20q0":{
 		"ID":"20q0",
