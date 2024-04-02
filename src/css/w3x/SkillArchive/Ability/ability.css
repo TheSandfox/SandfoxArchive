@@ -55,7 +55,7 @@
 }
 
 .abilityDescription{
-	width: calc(64px * 8);
+	/* width: calc(64px * 8); */
 	min-width: 280px;
 	flex-direction: column;
 	&>.top {

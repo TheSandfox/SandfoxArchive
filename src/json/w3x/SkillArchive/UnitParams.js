@@ -1,6 +1,6 @@
 function main() {
 	var excelReader = require('read-excel-file/node')
-	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
+	var xlsx = './Master.xlsx';
 	var fs = require('fs');
 	var outJson = './UnitParams.json'
 	var outJass = 'C:/war3lib/maps/SkillArchive/Unit/GeneratedUnitParams.j'

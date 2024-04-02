@@ -34,7 +34,7 @@ const UnitMap = refineMap(UnitParams)
 
 function main() {
 	var excelReader = require('read-excel-file/node')
-	var xlsx = 'C:/war3lib/maps/SkillArchive/Master.xlsx'
+	var xlsx = './Master.xlsx';
 	var outFile = './AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	var descriptioncol = 2

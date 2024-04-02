@@ -1,3 +1,13 @@
+//import JSON
+import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json';
+import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json';
+import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json';
+import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json';
+import CustomString from 'json/w3x/SkillArchive/CustomString.json';
+
+//import css
+import 'css/w3x/SkillArchive/Ability/ability.css';
+
 //import react
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -8,15 +18,8 @@ import { TfiLayoutGrid2 } from "react-icons/tfi";
 import { FiMenu } from "react-icons/fi";
 import { LuRefreshCw } from "react-icons/lu";
 import { IoIosArrowBack } from "react-icons/io";
-import { RxCross2 } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";;
 
-//import JSON
-import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json';
-import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json';
-import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json';
-import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json';
-import CustomString from 'json/w3x/SkillArchive/CustomString.json';
-import 'css/w3x/SkillArchive/Ability/ability.css';
 
 const AbilityJson = AbilityParams["params"];
 const AbilityMixJson = AbilityMix["params"];
