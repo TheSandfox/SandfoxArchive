@@ -1,13 +1,12 @@
-var convertConfig = require('./Config.js');
-var convertCustomString = require('./CustomString.js');
-var convertAbilityParams = require('./AbilityParams.js');
-var convertUnitParams = require('./UnitParams.js');
-var convertAbilityTooltips = require('./AbilityTooltips.js');
-var convertAbilityMix = require('./AbilityMix.js');
-var convertAbilityTable = require('./AbilityTable.js');
+var convertConfig = require('./module_Config.js');
+var convertCustomString = require('./module_CustomString.js');
+var convertAbilityParams = require('./module_AbilityParams.js');
+var convertUnitParams = require('./module_UnitParams.js');
+var convertAbilityTooltips = require('./module_AbilityTooltips.js');
+var convertAbilityMix = require('./module_AbilityMix.js');
+var convertAbilityTable = require('./module_AbilityTable.js');
 
 async function main() {
-
 	await convertConfig();
 	console.log('config: complete');
 	await convertCustomString();
@@ -22,8 +21,7 @@ async function main() {
 	console.log('ability mix: complete');
 	await convertAbilityTable();
 	console.log('ability table: complete');
-
+	console.log('complete');
 }
 
 main();
-console.log('complete');
