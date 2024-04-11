@@ -1,7 +1,7 @@
-const CustomString = require('./CustomString.json')
-const AbilityParams = require('./AbilityParams.json')
-const BuffParams = require('./BuffParams.json')
-const UnitParams = require('./UnitParams.json')
+let CustomString// = require('./CustomString.json')
+let AbilityParams// = require('./AbilityParams.json')
+let BuffParams// = require('./BuffParams.json')
+let UnitParams// = require('./UnitParams.json')
 
 var mode = [0]
 var param = ['']
@@ -28,11 +28,19 @@ function refineMap(ojsn) {
 	return JSON.parse(mapstring)
 }
 
-const AbilityMap = refineMap(AbilityParams)
-const BuffMap = refineMap(BuffParams)
-const UnitMap = refineMap(UnitParams)
+let AbilityMap// = refineMap(AbilityParams)
+let BuffMap// = refineMap(BuffParams)
+let UnitMap// = refineMap(UnitParams)
 
 async function main() {
+	CustomString = require('./CustomString.json')
+	AbilityParams = require('./AbilityParams.json')
+	BuffParams = require('./BuffParams.json')
+	UnitParams = require('./UnitParams.json')
+	AbilityMap = refineMap(AbilityParams)
+	BuffMap = refineMap(BuffParams)
+	UnitMap = refineMap(UnitParams)
+	//
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var outFile = './AbilityTooltips.json'
