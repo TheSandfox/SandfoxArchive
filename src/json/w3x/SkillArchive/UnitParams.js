@@ -1,4 +1,4 @@
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var fs = require('fs');
@@ -7,7 +7,7 @@ function main() {
 	var dataFrom = 2
 	var dataType = 1
 
-	excelReader(xlsx,{ sheet: 'UnitParams' }).then((rows) => {
+	await excelReader(xlsx,{ sheet: 'UnitParams' }).then((rows) => {
 		let i = 0
 		let j = dataFrom
 		let iaindex = 0

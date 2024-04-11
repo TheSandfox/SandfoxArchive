@@ -1,9 +1,9 @@
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node');
 	var xlsx = './Master.xlsx';
 	var fs = require('fs');
 	
-	excelReader(xlsx,{ sheet: 'AbilityTable' }).then((rows) => {
+	await excelReader(xlsx,{ sheet: 'AbilityTable' }).then((rows) => {
 		// var outJson = '../json/AbilityTable.json';
 		var outJass = 'C:/war3lib/maps/SkillArchive/Ability/GeneratedAbilityTable.j';
 		var i = 2;/*두 번째 행부터*/

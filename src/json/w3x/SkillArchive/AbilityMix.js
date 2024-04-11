@@ -1,9 +1,9 @@
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var fs = require('fs');
 	
-	excelReader(xlsx,{ sheet: 'AbilityMix' }).then((rows) => {
+	await excelReader(xlsx,{ sheet: 'AbilityMix' }).then((rows) => {
 		var outJson = './AbilityMix.json'
 		var outJass = 'C:/war3lib/maps/SkillArchive/Ability/GeneratedAbilityMix.j'
 		var i = 1;/*두 번째 행부터*/

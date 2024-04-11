@@ -1,6 +1,6 @@
 // const CustomString = require('../json/CustomString.json')
 
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var fs = require('fs');
@@ -176,11 +176,11 @@ function main() {
 		fs.appendFileSync(outMap, "}",'utf-8');
 	} 
 
-	excelReader(xlsx,{ sheet: 'AbilityParams' }).then((rrows) => {
+	await excelReader(xlsx,{ sheet: 'AbilityParams' }).then((rrows) => {
 		wwrite(rrows,'ability')
 	});
 
-	excelReader(xlsx,{ sheet: 'BuffParams' }).then((rrows) => {
+	await excelReader(xlsx,{ sheet: 'BuffParams' }).then((rrows) => {
 		wwrite(rrows,'buff')
 	});
 }

@@ -32,14 +32,14 @@ const AbilityMap = refineMap(AbilityParams)
 const BuffMap = refineMap(BuffParams)
 const UnitMap = refineMap(UnitParams)
 
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var outFile = './AbilityTooltips.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Ability/AbilityData/GeneratedAbilityTooltips.j'
 	var descriptioncol = 2
 	var customcostcol = 3
-	excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
+	await excelReader(xlsx,{ sheet: 'AbilityTooltips' }).then((rows) => {
 		var i = 0
 		var j = descriptioncol
 		//대괄호열기

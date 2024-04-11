@@ -1,10 +1,10 @@
-function main() {
+async function main() {
 	var excelReader = require('read-excel-file/node')
 	var xlsx = './Master.xlsx';
 	var fs = require('fs');
 	var outFile = './Config.json'
 	var outputJ = 'C:/war3lib/maps/SkillArchive/Config.j'
- 	excelReader(xlsx,{ sheet: 'Config' }).then((rows) => {
+ 	await excelReader(xlsx,{ sheet: 'Config' }).then((rows) => {
 		var i = 0;
 		var first = true
 		fs.writeFileSync(outFile,'{','utf-8');
