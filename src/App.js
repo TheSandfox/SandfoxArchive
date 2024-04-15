@@ -19,12 +19,10 @@ function App() {
 			<Header/>
 			<Routes>
 				<Route exact path="/" element={<Main/>}/>
-				<Route path="/w3x//*" element={<W3X/>}/>
+				<Route path="/w3x/*" element={<W3X/>}/>
 			</Routes>	
 		</BrowserRouter>
 	);
-	// <div className="bottom-bar">
-	// </div>
 }
 
 export default App;
