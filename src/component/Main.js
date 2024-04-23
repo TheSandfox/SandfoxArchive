@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { FaYoutube, FaGithub } from "react-icons/fa";
 
 function W3xWidget({route,title,disabled,imgPath}) {
-	let title2 = title.replace('<br>','\n');
+	let title2 = title.replaceAll('<br>','\n');
 	return <Link to={route} className={disabled?'disabled':''}>
 		<div className={"menu icon-button"+(disabled?' disabled':'')}>
 			<img src={imgPath} alt=''/>
