@@ -246,7 +246,7 @@ export function Unit(props) {
 		abilityFavorite:props.state.abilityFavorite,
 		modifyAbilityFavorite:props.state.modifyAbilityFavorite,
 		unitFavorite:props.state.unitFavorite,
-		modifyUnitFavorite:props.state.modifyUnitFavorite
+		handleUnitFavorite:props.state.handleUnitFavorite
 	}
 	return <>
 	{props.isSingle===true?

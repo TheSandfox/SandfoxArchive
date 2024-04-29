@@ -10,7 +10,7 @@ const LocalUnitFavoritePrefix = "w3x_sa_unit_favorite_";
 export default function SkillArchive() {
 	const [abilityFavorite,setAbilityFavorite] = useState({});
 	const [unitFavorite,setUnitFavorite] = useState({});
-	const modifyAbilityFavorite = class {
+	const handleAbilityFavorite = class {
 		isFavorite(id) {
 			return localStorage.getItem(LocalAbilityFavoritePrefix+id)!==null;
 		}
@@ -34,7 +34,7 @@ export default function SkillArchive() {
 			//remove, add 내에서 리프레시
 		}
 	};
-	const modifyUnitFavorite = class {
+	const handleUnitFavorite = class {
 		isFavorite(id) {
 			return localStorage.getItem(LocalUnitFavoritePrefix+id)!==null;
 		}
@@ -60,9 +60,9 @@ export default function SkillArchive() {
 	};
 	const state = {
 		abilityFavorite: abilityFavorite,
-		modifyAbilityFavorite: new modifyAbilityFavorite(),
+		handleAbilityFavorite: new handleAbilityFavorite(),
 		unitFavorite: unitFavorite,
-		modifyUnitFavorite: new modifyUnitFavorite()
+		handleUnitFavorite: new handleUnitFavorite()
 	};
 	return <>
 		<Nav form={[
