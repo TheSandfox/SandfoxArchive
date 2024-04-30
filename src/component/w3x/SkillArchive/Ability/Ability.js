@@ -461,6 +461,7 @@ export function Ability(props) {
 		handleAbilityJson:handleAbilityJson,
 		searchField:searchField,
 		handleSearchField:handleSearchField,
+		// 어빌 따봉 핸들러
 		abilityFavorite:props.state.Favorite,
 		handleAbilityFavorite:props.state.handleAbilityFavorite
 	}

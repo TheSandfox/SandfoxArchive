@@ -1,6 +1,6 @@
 //import react
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useReducer, useState } from 'react'
 
 //import icons
 import { TfiLayoutGrid2 } from "react-icons/tfi";
@@ -9,100 +9,14 @@ import { LuRefreshCw } from "react-icons/lu";
 import { IoIosArrowBack } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 
-//import component
-import { AbilityWidget } from '../Ability/Ability'
-
-//import JSON
-import UnitParams from 'json/w3x/SkillArchive/UnitParams.json'
-import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json'
-import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json'
-
 //import css
 import 'css/w3x/SkillArchive/Unit/unit.css'
+import { unitJsonReducer, unitJsonDefault } from './_reducer/UnitJson';
+import { unitSearchFieldDefault, unitSearchFieldReducer } from './_reducer/UnitSearchField';
+import UnitDescription from './UnitDescription';
 
-const AbilityJson = AbilityParams["params"]
-const UnitJson = UnitParams["params"]
-const SearchField = {
-	FAVORITE : false,
-	NAME : ""
-}
-
-//유닛 디스크립션 (상세or아이콘)
-function UnitDescription(props) {
-	let json = {}
-	let p = useParams()
-	if (props.json===undefined) {
-		//제이슨 없이 param으로 라우팅해서 컴포넨트 호출
-		json = UnitJson.filter(item=>item["ID"]===p.id)[0]//UnitJson[UnitMap[p.id]]
-	} else {
-		//제이슨 줘서 컴포넨트 호출
-		json = props.json
-	}
-	
-	if (json===undefined) {
-		json = {
-			"ICON_PATH":"ReplaceableTextures/CommandButtons/btncancel.png",
-			"ID":"???",
-			"NAME":"Missing No.",
-			"TOOLTIP":"<b><span style=\"color:#ff0000;\">Tooltip Missing</span></b>"
-		}
-	}
-	if(props.viewMode===true) {
-		//디테일모드
-		let stl = {
-			border:'2px solid #ffffff'
-		}
-		// console.log("========================"+json["INITIAL_ABILITY1"]+"=======================")
-		return <div className="unitDescription descriptionBox" style={stl}>
-			<div className='left'>
-				<div className='top'>
-					<img className='w3icon' src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-					<div className='name-and-tags'>
-						<div className="font24 white">{json["NAME"]}</div>
-					</div>
-				</div>
-				<br/>
-				<div className="bottom">
-					<div className="tooltip white" >
-						{json["TOOLTIP"]}
-					</div>
-				</div>
-			</div>
-			<br/>
-			{/*고유능력 아이콘*/}
-			<div className="right">
-				<p className='white'>고유 능력 : </p>
-				{json["INITIAL_ABILITY1"]!=="null"?
-					<div>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY1"]]]} state={props.state}/>
-					</div>
-					:
-					<div style={{opacity:0.3}}>
-						<AbilityWidget json={undefined} state={props.state}/>
-					</div>
-				}
-				{json["INITIAL_ABILITY2"]!=="null"?
-					<div>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["INITIAL_ABILITY2"]]]} state={props.state}/>
-					</div>
-					:
-					<div style={{opacity:0.3}}>
-						<AbilityWidget json={undefined} state={props.state}/>
-					</div>
-				}
-			</div>
-		</div>
-	} else {
-		//아이콘모드
-		return <div className='w3x-icon rel'>
-			<Link to={"/w3x/SkillArchive/Unit/"+json["ID"]} title={json["NAME"]}>
-				<img src={process.env.PUBLIC_URL+"/resource/"+json["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-			</Link>
-			<div className={'highlight non-focus'}></div>
-		</div>
-	}
-
-}
+//로컬 스토리지 키
+const LocalViewmode = "w3x_sa_unit_viewmode";
 
 //유닛 디스크립션 묶음
 function UnitDescriptions({state}) {
@@ -136,18 +50,18 @@ function UnitDescriptionSingle({state}) {
 //유닛 검색창
 function UnitSearchController({state}) {
 	const viewMode = state.viewMode
-	const modifyViewMode = state.modifyViewMode
+	const handleViewMode = state.handleViewMode
 	const searchField = state.searchField
-	const modifySearchField = state.modifySearchField
+	const handleSearchField = state.handleSearchField
 	return <>
 	{/*컨트롤러 */}
 	<div className="controller w3font shadow">
 		{/*체크박스 */}
 		<div className="radio">
-			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{modifyViewMode.set(false)}:()=>{}}>
+			<div className={viewMode?"icon-button":"icon-button hover"} title='아이콘으로 보기' onClick={viewMode?()=>{handleViewMode.set(false)}:()=>{}}>
 				<TfiLayoutGrid2 />
 			</div>
-			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{modifyViewMode.set(true)}}>
+			<div className={viewMode?"icon-button hover":"icon-button"} title='상세 보기' onClick={viewMode?()=>{}:()=>{handleViewMode.set(true)}}>
 				<FiMenu />
 			</div>
 		</div>
@@ -158,10 +72,10 @@ function UnitSearchController({state}) {
 				name="unitname"
 				type="text"
 				value={searchField["NAME"]}
-				onChange={(event)=>{modifySearchField.query("NAME",event.target.value)}}
+				onChange={(event)=>{handleSearchField.query("NAME",event.target.value)}}
 			/>
 			<div className="text-button"
-				onClick={()=>{modifySearchField.query("NAME","")}}
+				onClick={()=>{handleSearchField.query("NAME","")}}
 			>
 				<RxCross2 />
 			</div>
@@ -170,7 +84,7 @@ function UnitSearchController({state}) {
 		<div className="buttonSpace">
 			{/*필터초기화*/}
 			<div className="icon-button" title='필터 초기화' onClick={
-				modifySearchField.clear
+				handleSearchField.clear
 			}>
 				<LuRefreshCw />
 			</div>
@@ -199,52 +113,58 @@ function UnitDescriptionContainer({state}) {
 	</div>
 }
 
+function getViewmode() {
+	return localStorage.getItem(LocalViewmode)!==null;
+}
+
 export function Unit(props) {
-	const [viewMode,setViewMode] = useState(false)
-	const [unitJson,setUnitJson] = useState(UnitJson)
-	const [searchField,setSearchField] = useState(SearchField)
-	const modifyViewMode = {
+	const [viewMode,setViewMode] = useState(getViewmode())
+	const [unitJson,dispatchUnitJson] = useReducer(unitJsonReducer,unitJsonDefault)
+	const [searchField,dispatchSearchField] = useReducer(unitSearchFieldReducer,unitSearchFieldDefault)
+	const handleViewMode = {
 		set:(val) => {
-			setViewMode(val)
-		},
+			setViewMode(val);
+			if (val) {
+				localStorage.setItem(LocalViewmode,"true");
+			} else {
+				localStorage.removeItem(LocalViewmode);
+			}
+ 		},
 		toggle: ()=> {
-			setViewMode(!viewMode)
+			setViewMode(!viewMode);
 		}
 	}
-	const modifyUnitJson = {
+	const handleUnitJson = {
 		clear:() => {
-			setUnitJson(UnitJson)
+			dispatchUnitJson({type:'clear'});
 		},
 		query:(target,form) => {
-			setUnitJson(target.filter(item =>
-				/*유닛이름*/ 
-				( form["NAME"]===""?true:
-					item["NAME"].includes(form["NAME"]) 
-				) 
-			))
+			dispatchUnitJson({type:'query',target:target,form:form})
 		}
 	}
-	const modifySearchField = {
-		query : (field,val) =>{
+	const handleSearchField = {
+		query : (fieldName,value) =>{
 			let sf = JSON.parse(JSON.stringify(searchField))
-			sf[field] = val
-			setSearchField(sf)
-			modifyUnitJson.query(UnitJson,sf)
+			sf[fieldName] = value
+			dispatchSearchField({type:'modify',fieldName:fieldName,value:value})
+			handleUnitJson.query(unitJsonDefault,sf)
 		},
 		clear : () =>{
-			setSearchField(SearchField)
-			modifyUnitJson.clear()
+			dispatchSearchField({type:'clear'})
+			handleUnitJson.clear()
 		}
 	}
 	const state = {
 		viewMode:viewMode,
-		modifyViewMode:modifyViewMode,
+		handleViewMode:handleViewMode,
 		unitJson:unitJson,
-		modifyUnitJson:modifyUnitJson,
+		handleUnitJson:handleUnitJson,
 		searchField:searchField,
-		modifySearchField:modifySearchField,
+		handleSearchField:handleSearchField,
+		// 어빌 따봉 핸들러
 		abilityFavorite:props.state.abilityFavorite,
-		modifyAbilityFavorite:props.state.modifyAbilityFavorite,
+		handleAbilityFavorite:props.state.handleAbilityFavorite,
+		// 유닛 따봉 핸들러
 		unitFavorite:props.state.unitFavorite,
 		handleUnitFavorite:props.state.handleUnitFavorite
 	}
