@@ -1,16 +1,13 @@
 //import JSON
-import AbilityParams from 'json/w3x/SkillArchive/AbilityParams.json';
-import AbilityMap from 'json/w3x/SkillArchive/AbilityMap.json';
+// import abilityJsonMap from 'json/w3x/SkillArchive/abilityJsonMap.json';
 import AbilityMix from 'json/w3x/SkillArchive/AbilityMix.json';
-import AbilityTooltips from 'json/w3x/SkillArchive/AbilityTooltips.json';
-import CustomString from 'json/w3x/SkillArchive/CustomString.json';
 
 //import css
 import 'css/w3x/SkillArchive/Ability/ability.css';
 
 //import react
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 
 //import icons
 import { FaStar, FaRegStar } from "react-icons/fa6";
@@ -18,22 +15,12 @@ import { TfiLayoutGrid2 } from "react-icons/tfi";
 import { FiMenu } from "react-icons/fi";
 import { LuRefreshCw } from "react-icons/lu";
 import { IoIosArrowBack } from "react-icons/io";
-import { RxCross2 } from "react-icons/rx";;
+import { RxCross2 } from "react-icons/rx";
+import { abilitySearchFieldDefault, abilitySearchFieldReducer } from './_reducer/AbilitySearchField';
+import { abilityJsonDefault, abilityJsonReducer, abilityJsonMap } from './_reducer/AbilityJson';
+import AbilityDescription from './AbilityDescription';
 
-
-const AbilityJson = AbilityParams["params"];
 const AbilityMixJson = AbilityMix["params"];
-const SearchField = {
-	FAVORITE : false,
-	NAME : "",
-	TIER : "",
-	TAG : "",
-	CAST_TYPE : "",
-	DAMAGE_TYPE : "",
-	ATTACK_TYPE : "",
-	STAT_BONUS1 : "",
-	STAT_BONUS2 : ""
-};
 
 //로컬 스토리지 키
 const LocalViewmode = "w3x_sa_ability_viewmode";
@@ -118,11 +105,11 @@ function AbilityMixTable({state}) {
 				</div>
 				{lower.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
 					</div>
 				})}
 			</div>:<></>}
@@ -132,125 +119,17 @@ function AbilityMixTable({state}) {
 				</div>
 				{upper.map(json=>{
 					return <div className='row w3font font24 vertical-center horizon-center white' key={i++}>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["ID1"]]]} isThisAbility={json["ID1"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>+</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["ID2"]]]} isThisAbility={json["ID2"]===id} isSingle={false} interactFavorite={false} state={state}/>
 						<p className='m-left16 m-right16'>=</p>
-						<AbilityWidget json={AbilityJson[AbilityMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
+						<AbilityWidget json={abilityJsonDefault[abilityJsonMap[json["RESULT"]]]} isThisAbility={json["RESULT"]===id} isSingle={false} interactFavorite={false} state={state}/>
 				</div>
 				})}
 			</div>:<></>}
 		</div>:
 		<></>}
 	</>
-}
-
-//어빌리티 디스크립션 (상세or아이콘)
-function AbilityDescription(props) {
-	let viewMode
-	let abiljson = {}
-	let p = useParams()
-	if (props.viewMode===undefined) {
-		viewMode = props.state.viewMode;
-	} else {
-		viewMode = props.viewMode;
-	}
-	if (props.json===undefined) {
-		//제이슨 없이 param으로 라우팅해서 컴포넨트 호출
-		abiljson = AbilityJson.filter(item=>item["ID"]===p.id)[0]//AbilityJson[AbilityMap[p.id]]
-	} else {
-		//제이슨 줘서 컴포넨트 호출
-		abiljson = props.json
-	}
-	
-	if (abiljson===undefined) {
-		abiljson = {
-			"TIER":"0",
-			"ICON_PATH":"ReplaceableTextures/CommandButtons/btncancel.png",
-			"ID":"???",
-			"NAME":"Missing No.",
-			"TAG1":"null",
-			"TAG2":"null",
-			"TAG3":"null",
-			"TAG4":"null",
-			"TOOLTIP":"<b><span style=\"color:#ff0000;\">Tooltip Missing</span></b>",
-			"CAST_TYPE":"null",
-			"MANACOST":"0",
-			"COOLDOWN_MAX":"0.0",
-			"COOLDOWN_MIN":"0.0",
-			"STAT_BONUS1":"CONFIG_STAT_CONSTANT",
-			"STAT_BONUS2":"CONFIG_STAT_CONSTANT",
-			"IS_WEAPON":"false",
-		}
-	}
-	if(viewMode===true) {
-		//디테일모드
-		let stl = {
-			border:'2px solid #'+CustomString["CONFIG_TIER_"+abiljson["TIER"]]["COLOR"]
-		}
-		return <div className="abilityDescription descriptionBox w3font" style={stl}>
-			<div className="top">
-				<AbilityWidget json={abiljson} isSingle={props.isSingle} interactFavorite={true} state={props.state}/>
-				{/*<img src={process.env.PUBLIC_URL+"/resource/"+abiljson["ICON_PATH"]} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>*/}
-				<div className='name-and-tags'>
-					<div className="ability-name">{/*#{abiljson["ID"]} */}{abiljson["NAME"]}</div>
-					<div className="ability-tags">
-						{abiljson["TAG1"]!=="null"?CustomString[abiljson["TAG1"]]["NAME"]:""}
-						{abiljson["TAG2"]!=="null"?", "+CustomString[abiljson["TAG2"]]["NAME"]:""}
-						{abiljson["TAG3"]!=="null"?", "+CustomString[abiljson["TAG3"]]["NAME"]:""}
-						{abiljson["TAG4"]!=="null"?", "+CustomString[abiljson["TAG4"]]["NAME"]:""}
-					</div>
-				</div>
-				<div className='cooldown-and-manacost'>
-					<div>
-						<img src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/"+(abiljson["IS_WEAPON"]==="true"?"tooltipattackrangeicon":"tooltipmanaicon")+".png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-						<p>{abiljson["IS_WEAPON"]==="true"?abiljson["WEAPON_RANGE"]:abiljson["MANACOST"]}</p>
-					</div>
-					<div>
-						<img src={process.env.PUBLIC_URL+"/resource/ui/widgets/tooltips/human/tooltipcooldownicon.png"} alt={process.env.PUBLIC_URL+"/resource/replaceabletextures/commandbuttons/btncancel.png"}/>
-						<p>{abiljson["IS_WEAPON"]==="true"?abiljson["WEAPON_DELAY"]:abiljson["COOLDOWN_MAX"]+"/("+abiljson["COOLDOWN_MIN"]+")"}</p>
-					</div>
-				</div>
-			</div>
-			<div className="bottom">
-				<div className = "cast-type-and-custom-cost">
-					<div className="cast-type">
-						{abiljson["CAST_TYPE"]!=="null"?CustomString[abiljson["CAST_TYPE"]]["NAME"]:""}
-					</div>
-					<div className="custom-cost" dangerouslySetInnerHTML={{__html:
-						AbilityTooltips[abiljson["ID"]]!==undefined?(
-							AbilityTooltips[abiljson["ID"]]["CUSTOM_COST"]!==undefined?AbilityTooltips[abiljson["ID"]]["CUSTOM_COST"]:""
-						):
-						""
-					}}>
-					</div>
-				</div>
-				{/* 툴팁 */}
-				<div className="tooltip" dangerouslySetInnerHTML={{__html:
-					AbilityTooltips[abiljson["ID"]]!==undefined?AbilityTooltips[abiljson["ID"]]["TOOLTIP"]:""
-				}}>
-				</div>
-				{/* 하단스탯보너스 */}
-				<div className="statbonus">
-					<p>스탯 보너스 : </p>
-					<img 
-						src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS1"]]["ICON"]}
-						title={CustomString[abiljson["STAT_BONUS1"]]["NAME"]}
-						alt='...'
-					/>
-					<img 
-						src={process.env.PUBLIC_URL+"/resource/"+CustomString[abiljson["STAT_BONUS2"]]["ICON"]}
-						title={CustomString[abiljson["STAT_BONUS2"]]["NAME"]}
-						alt='...'
-					/>
-				</div>
-			</div>
-		</div>
-	} else {
-		//아이콘모드
-		return <AbilityWidget json={abiljson} interactFavorite={false} state={props.state}/>
-	}
-
 }
 
 //어빌리티 디스크립션 묶음
@@ -534,8 +413,8 @@ function getViewmode() {
 //어빌리티 메인 컨테이너
 export function Ability(props) {
 	const [viewMode,setViewMode] = useState(getViewmode());
-	const [abilityJson,setAbilityJson] = useState(AbilityJson);
-	const [searchField,setSearchField] = useState(SearchField);
+	const [abilityJson,dispatchAbilityJson] = useReducer(abilityJsonReducer,abilityJsonDefault);
+	const [searchField,dispatchSearchField] = useReducer(abilitySearchFieldReducer,abilitySearchFieldDefault);
 	const handleViewMode = {
 		set:(val) => {
 			setViewMode(val);
@@ -551,77 +430,28 @@ export function Ability(props) {
 	}
 	const handleAbilityJson = {
 		clear:() => {
-			setAbilityJson(AbilityJson);
+			dispatchAbilityJson({type:'clear'});
 		},
-		query:(target,form) => {
-			setAbilityJson(target.filter(item =>
-				/*즐찾*/
-				( form["FAVORITE"]?
-					props.state.handleAbilityFavorite.isFavorite(item["ID"])
-					:
-					true
-				) &&
-				/*어빌리티이름*/ 
-				( form["NAME"]===""?true:
-					item["NAME"].includes(form["NAME"]) 
-				) &&
-				/*어빌리티티어*/
-				( form["TIER"]===""?true:
-					item["TIER"].includes(form["TIER"]) 
-				) &&
-				/*어빌리티태그(좀무거움)*/
-				( form["TAG"]===""?true:
-					(CustomString[item["TAG1"]]!==undefined?CustomString[item["TAG1"]]["NAME"].includes(form["TAG"]):false)||
-					(CustomString[item["TAG2"]]!==undefined?CustomString[item["TAG2"]]["NAME"].includes(form["TAG"]):false)||
-					(CustomString[item["TAG3"]]!==undefined?CustomString[item["TAG3"]]["NAME"].includes(form["TAG"]):false)||
-					(CustomString[item["TAG4"]]!==undefined?CustomString[item["TAG4"]]["NAME"].includes(form["TAG"]):false) 
-				) &&
-				/*캐스트타입*/
-				( form["CAST_TYPE"]===""?true:
-					/*(CustomString[item["CAST_TYPE"]]!==undefined?*/CustomString[item["CAST_TYPE"]]["NAME"].includes(form["CAST_TYPE"])/*:false)*/
-				) &&
-				/*데미지 타입*/
-				( form["DAMAGE_TYPE"]===""?true:
-					(CustomString[item["DAMAGE_TYPE"]]!==undefined?CustomString[item["DAMAGE_TYPE"]]["NAME"].includes(form["DAMAGE_TYPE"]):false)
-				) &&
-				/*공격 타입*/
-				( form["ATTACK_TYPE"]===""?true:
-					(CustomString[item["ATTACK_TYPE"]]!==undefined?CustomString[item["ATTACK_TYPE"]]["NAME"].includes(form["ATTACK_TYPE"]):false)
-				) &&
-				/*스탯보너스*/
-				( form["STAT_BONUS1"]===""&&form["STAT_BONUS2"]===""?
-					/*둘 다 비어있으면 걍 트루*/
-					true:
-					/*둘 다 빈값이 아니면*/
-					form["STAT_BONUS1"]!==""&&form["STAT_BONUS2"]!==""?
-						((item["STAT_BONUS1"]===form["STAT_BONUS1"])||(item["STAT_BONUS1"]===form["STAT_BONUS2"]))&&
-						((item["STAT_BONUS2"]===form["STAT_BONUS1"])||(item["STAT_BONUS2"]===form["STAT_BONUS2"])):
-						/*한 필드만 작성돼있으면 */
-						(item["STAT_BONUS1"]===form["STAT_BONUS1"])||
-						(item["STAT_BONUS1"]===form["STAT_BONUS2"])||
-						(item["STAT_BONUS2"]===form["STAT_BONUS1"])||
-						(item["STAT_BONUS2"]===form["STAT_BONUS2"])
-				)
-			));
+		query:(target,form,handleAbilityFavorite) => {
+			dispatchAbilityJson({type:'query',target:target,form:form,handleAbilityFavorite:handleAbilityFavorite});
 		}
 	}
 	const handleSearchField = {
-		modify : (field,val) =>{
-			// let sf = searchField;
-			let sf = JSON.parse(JSON.stringify(searchField));
-			sf[field] = val;
-			// setSearchField(JSON.parse(JSON.stringify(sf)));
-			setSearchField(sf);
-			// console.log(val+", "+searchField["FAVORITE"]);
-			handleAbilityJson.query(AbilityJson,sf);
+		get : (fieldName)=>{
+			return dispatchSearchField({type:'get',fieldName:fieldName});
+		},
+		modify : (fieldName,value) =>{
+			let sf = JSON.parse(JSON.stringify(searchField))
+			sf[fieldName] = value;
+			dispatchSearchField({type:'modify',fieldName:fieldName,value:value})
+			handleAbilityJson.query(abilityJsonDefault,sf,props.state.handleAbilityFavorite);
 		},
 		clear : () =>{
-			// setSearchField(JSON.parse(JSON.stringify(SearchField)));
-			setSearchField(SearchField);
+			dispatchSearchField({type:'clear'})
 			handleAbilityJson.clear();
 		},
 		refresh : () =>{
-			handleAbilityJson.query(AbilityJson,searchField);
+			handleAbilityJson.query(abilityJson,searchField,props.state.handleAbilityFavorite);
 		}
 	}
 	const state = {
