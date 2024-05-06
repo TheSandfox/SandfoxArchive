@@ -125,6 +125,13 @@
 		"ICON":"ui/widgets/tooltips/human/tooltiphealampicon.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_STAT_RODONG":{
+		"ARRNAME":"STAT",
+		"NAME":"노동력",
+		"COLOR":"cc9966",
+		"ICON":"ui/widgets/tooltips/human/tooltiprodongicon.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_STAT_UNIT_LEVEL":{
 		"ARRNAME":"STAT",
 		"NAME":"레벨",
