@@ -48,16 +48,17 @@ img {
 	user-select: none;
 }
 
+
+i {
+	display: flex;
+	align-items: center;
+}
+
 ::-webkit-scrollbar {
 	position: absolute;
 	z-index: 200;
 	width:8px;
 	height:8px;
-}
-
-i {
-	display: flex;
-	align-items: center;
 }
 
 ::-webkit-scrollbar-track {
