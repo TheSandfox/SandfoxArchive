@@ -132,6 +132,13 @@
 		"ICON":"ui/widgets/tooltips/human/tooltiprodongicon.png",
 		"DESCRIPTION":"null"
 	},
+	"CONFIG_STAT_LOVE":{
+		"ARRNAME":"STAT",
+		"NAME":"애정",
+		"COLOR":"ff3333",
+		"ICON":"ui/widgets/tooltips/human/tooltiploveicon.png",
+		"DESCRIPTION":"null"
+	},
 	"CONFIG_STAT_UNIT_LEVEL":{
 		"ARRNAME":"STAT",
 		"NAME":"레벨",
