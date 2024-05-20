@@ -53,7 +53,7 @@
 	},
 	"10d0":{
 		"ID":"10d0",
-		"TOOLTIP":"<span style=\"color: #ffffff;\">8.0초</span> 동안 자신을 제외한 주변 아군들의 <span style=\"color: #00ff00;\">체력재생</span><span style=\"color: #00ff00;\">이 (0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 (15+<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>×1)%</span> 증가합니다. 대상이 <span style=\"color: #00ffff;\">소환물</span>일 경우 <span style=\"color: #c3dbff;\">소환 지속시간</span><span style=\"color: #c3dbff;\">을 5.0초</span> 연장시킵니다."
+		"TOOLTIP":"<span style=\"color: #ffffff;\">8.0초</span> 동안 자신을 제외한 주변 아군들의 <span style=\"color: #00dd00;\">체력재생</span><span style=\"color: #00dd00;\">이 (0.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>)×(1+0.06×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>, <span style=\"color: #ff9900;\">공격력</span><span style=\"color: #ff9900;\">이 (15+<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>×1)%</span> 증가합니다. 대상이 <span style=\"color: #00ffff;\">소환물</span>일 경우 <span style=\"color: #c3dbff;\">소환 지속시간</span><span style=\"color: #c3dbff;\">을 5.0초</span> 연장시킵니다."
 	},
 	"10e0":{
 		"ID":"10e0",
@@ -119,7 +119,7 @@
 	},
 	"10t0":{
 		"ID":"10t0",
-		"TOOLTIP":"<span style=\"color: #00ff00;\">체력재생이 (15+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
+		"TOOLTIP":"<span style=\"color: #00dd00;\">체력재생이 (15+1×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)%</span> 증가합니다."
 	},
 	"10u0":{
 		"ID":"10u0",
@@ -278,7 +278,7 @@
 	},
 	"3020":{
 		"ID":"3020",
-		"TOOLTIP":"정신집중하여 <span style=\"color: #ffffff;\">0.25초</span> 마다 대상에게 <span style=\"color: #9999ff;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #00ff00;\">원본 피해량의 40%에 해당하는 체력</span>을 회복하며 <span style=\"color: #ffffff;\">충전을 1 획득합니다.(최대 10까지 획득)</span> 충전이 1 이상일 때 <span style=\"color: #9999ff;\">스킬공격</span>으로 피해를 입히면 충전을 모두 소모해 소모한 충전 1당 <span style=\"color: #00ff00;\">피해량을 0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가시킵니다.(최대 피해량 : <span style=\"color: #00ff00;\">7.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>)<br><br> - <span style=\"color: #ffffff;\">충전</span>이 최대치일 때 이 스킬의 회복량이 <span style=\"color: #ffffff;\">50%</span>로 감소합니다.<br> - 정신집중 후 매 <span style=\"color: #ffffff;\">3번째</span> 공격만 적중 시 발생효과를 발생시킵니다."
+		"TOOLTIP":"정신집중하여 <span style=\"color: #ffffff;\">0.25초</span> 마다 대상에게 <span style=\"color: #9999ff;\">0.2×<img src=\"/resource/ui/widgets/tooltips/human/tooltipmagicpowericon.png\" title=\"주문력\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>의 피해를 입히고 <span style=\"color: #00ff00;\">원본 피해량의 40%에 해당하는 체력</span>을 회복하며 <span style=\"color: #ffffff;\">충전을 1 획득합니다.(최대 10까지 획득)</span> 충전이 1 이상일 때 <span style=\"color: #9999ff;\">스킬공격</span>으로 피해를 입히면 충전을 모두 소모해 소모한 충전 1당 <span style=\"color: #00dd00;\">피해량을 0.75×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span> 증가시킵니다.(최대 피해량 : <span style=\"color: #00dd00;\">7.5×<img src=\"/resource/ui/widgets/tooltips/human/tooltiphpregenicon.png\" title=\"체력재생\"/>×(1+0.08×<img src=\"/resource/ui/widgets/tooltips/human/tooltipskilllevelicon.png\" title=\"스킬레벨\"/>)</span>)<br><br> - <span style=\"color: #ffffff;\">충전</span>이 최대치일 때 이 스킬의 회복량이 <span style=\"color: #ffffff;\">50%</span>로 감소합니다.<br> - 정신집중 후 매 <span style=\"color: #ffffff;\">3번째</span> 공격만 적중 시 발생효과를 발생시킵니다."
 	},
 	"3030":{
 		"ID":"3030",

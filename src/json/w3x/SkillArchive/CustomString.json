@@ -58,20 +58,20 @@
 	"CONFIG_STAT_ARMOR_PENET":{
 		"ARRNAME":"STAT",
 		"NAME":"방어관통",
-		"COLOR":"ff9900",
+		"COLOR":"ff6600",
 		"ICON":"ui/widgets/tooltips/human/tooltiparmorpeneticon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGIC_PENET":{
 		"ARRNAME":"STAT",
 		"NAME":"저항관통",
-		"COLOR":"9999ff",
+		"COLOR":"9999dd",
 		"ICON":"ui/widgets/tooltips/human/tooltipmagicpeneticon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SPELL_BOOST":{
 		"ARRNAME":"STAT",
-		"NAME":"주문가속",
+		"NAME":"스킬가속",
 		"COLOR":"ff99ff",
 		"ICON":"ui/widgets/tooltips/human/tooltipspellboosticon.png",
 		"DESCRIPTION":"null"
@@ -107,14 +107,14 @@
 	"CONFIG_STAT_HPREGEN":{
 		"ARRNAME":"STAT",
 		"NAME":"체력재생",
-		"COLOR":"00ff00",
+		"COLOR":"00dd00",
 		"ICON":"ui/widgets/tooltips/human/tooltiphpregenicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MPREGEN":{
 		"ARRNAME":"STAT",
 		"NAME":"마나재생",
-		"COLOR":"0099ff",
+		"COLOR":"0088dd",
 		"ICON":"ui/widgets/tooltips/human/tooltipmpregenicon.png",
 		"DESCRIPTION":"null"
 	},
@@ -137,6 +137,20 @@
 		"NAME":"애정",
 		"COLOR":"ff3333",
 		"ICON":"ui/widgets/tooltips/human/tooltiploveicon.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_STAT_INSIGHT":{
+		"ARRNAME":"STAT",
+		"NAME":"통찰",
+		"COLOR":"6666dd",
+		"ICON":"ui/widgets/tooltips/human/tooltipinsighticon.png",
+		"DESCRIPTION":"null"
+	},
+	"CONFIG_STAT_GREED":{
+		"ARRNAME":"STAT",
+		"NAME":"탐욕",
+		"COLOR":"ffcc00",
+		"ICON":"ui/widgets/tooltips/human/tooltipgoldicon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_UNIT_LEVEL":{
