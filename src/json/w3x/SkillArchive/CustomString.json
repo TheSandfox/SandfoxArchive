@@ -3,77 +3,77 @@
 		"ARRNAME":"STAT",
 		"NAME":"최대체력",
 		"COLOR":"00ff00",
-		"ICON":"ui/widgets/tooltips/human/tooltiphpicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_hp_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAXMP":{
 		"ARRNAME":"STAT",
 		"NAME":"최대마나",
 		"COLOR":"0099ff",
-		"ICON":"ui/widgets/tooltips/human/tooltipmanaicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_mp_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ATTACK":{
 		"ARRNAME":"STAT",
 		"NAME":"공격력",
 		"COLOR":"ff9900",
-		"ICON":"ui/widgets/tooltips/human/tooltipattackicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_attack_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_DEFENSE":{
 		"ARRNAME":"STAT",
 		"NAME":"방어력",
 		"COLOR":"ffcc99",
-		"ICON":"ui/widgets/tooltips/human/tooltipdefenceicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_defense_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGICPOWER":{
 		"ARRNAME":"STAT",
 		"NAME":"주문력",
 		"COLOR":"9999ff",
-		"ICON":"ui/widgets/tooltips/human/tooltipmagicpowericon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_magicpower_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_RESISTANCE":{
 		"ARRNAME":"STAT",
 		"NAME":"저항력",
 		"COLOR":"00ff99",
-		"ICON":"ui/widgets/tooltips/human/tooltipresistanceicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_resistance_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ACCURACY":{
 		"ARRNAME":"STAT",
 		"NAME":"정확도",
 		"COLOR":"ff00ff",
-		"ICON":"ui/widgets/tooltips/human/tooltipaccuracyicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_accuracy_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_EVASION":{
 		"ARRNAME":"STAT",
 		"NAME":"회피치",
 		"COLOR":"99ccff",
-		"ICON":"ui/widgets/tooltips/human/tooltipevasionicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_evasion_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ARMOR_PENET":{
 		"ARRNAME":"STAT",
 		"NAME":"방어관통",
 		"COLOR":"ff6600",
-		"ICON":"ui/widgets/tooltips/human/tooltiparmorpeneticon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_armorpenet_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MAGIC_PENET":{
 		"ARRNAME":"STAT",
 		"NAME":"저항관통",
 		"COLOR":"9999dd",
-		"ICON":"ui/widgets/tooltips/human/tooltipmagicpeneticon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_magicpenet_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_SPELL_BOOST":{
 		"ARRNAME":"STAT",
 		"NAME":"스킬가속",
 		"COLOR":"ff99ff",
-		"ICON":"ui/widgets/tooltips/human/tooltipspellboosticon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_spellboost_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MOVEMENT_SPEED":{
@@ -94,7 +94,7 @@
 		"ARRNAME":"STAT",
 		"NAME":"행운",
 		"COLOR":"00cc00",
-		"ICON":"ui/widgets/tooltips/human/tooltipluckicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_luck_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_ATTACK_RANGE":{
@@ -108,14 +108,14 @@
 		"ARRNAME":"STAT",
 		"NAME":"체력재생",
 		"COLOR":"00dd00",
-		"ICON":"ui/widgets/tooltips/human/tooltiphpregenicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_hpregen_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_MPREGEN":{
 		"ARRNAME":"STAT",
 		"NAME":"마나재생",
 		"COLOR":"0088dd",
-		"ICON":"ui/widgets/tooltips/human/tooltipmpregenicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_mpregen_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_HEAL_AMP":{
@@ -129,28 +129,28 @@
 		"ARRNAME":"STAT",
 		"NAME":"노동력",
 		"COLOR":"cc9966",
-		"ICON":"ui/widgets/tooltips/human/tooltiprodongicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_rodong_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_LOVE":{
 		"ARRNAME":"STAT",
 		"NAME":"애정",
 		"COLOR":"ff3333",
-		"ICON":"ui/widgets/tooltips/human/tooltiploveicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_love_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_INSIGHT":{
 		"ARRNAME":"STAT",
 		"NAME":"통찰",
 		"COLOR":"6666dd",
-		"ICON":"ui/widgets/tooltips/human/tooltipinsighticon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_insight_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_GREED":{
 		"ARRNAME":"STAT",
 		"NAME":"탐욕",
 		"COLOR":"ffcc00",
-		"ICON":"ui/widgets/tooltips/human/tooltipgoldicon.png",
+		"ICON":"ui/widgets/tooltips/human/stat_greed_icon.png",
 		"DESCRIPTION":"null"
 	},
 	"CONFIG_STAT_UNIT_LEVEL":{
